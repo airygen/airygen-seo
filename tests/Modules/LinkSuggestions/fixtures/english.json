@@ -1,0 +1,16 @@
+{
+  "language": "en",
+  "title": "Rust keyphrase extraction demo",
+  "description": "A short article describing how the keyphrase API works in a content platform.",
+  "content": "The keyphrase API processes an article, removes URLs and emails, and then counts how often prominent words appear. It boosts focus keywords, headings, titles, and descriptions to make related terms stand out. For example, if your content talks about Rust performance, memory safety, and developer productivity, the algorithm will stem the words and collapse variations so that rust and Rust both count. It also ignores stopwords and filters tokens that only contain special characters. After the words are tallied, the service sorts by frequency, applies the minimum threshold, and returns the top weighted terms. This makes it easy to suggest internal links, related posts, or SEO hints without scanning the whole document manually.",
+  "focus_keywords": ["rust", "performance", "memory safety"],
+  "headings": [
+    "Why memory safety matters",
+    "Boosting developer productivity with Rust"
+  ],
+  "options": {
+    "min_words": 50,
+    "attributes_weight": 3.0,
+    "max_terms": 50
+  }
+}

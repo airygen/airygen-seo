@@ -1,0 +1,13 @@
+[
+  {
+    "name": "code-snippets",
+    "path": "admin.php?page=airygen-settings#settings/codeSnippetManager",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "settings"
+      }
+    ],
+    "type": "admin"
+  }
+]

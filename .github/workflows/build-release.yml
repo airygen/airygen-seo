@@ -1,0 +1,144 @@
+name: Build and Deploy
+
+on:
+  release:
+    types: [published]
+
+env:
+  PLUGIN_SLUG: airygen-seo
+  PLUGIN_FILE: airygen-seo.php
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Inject version from release tag
+        run: |
+          set -euo pipefail
+          raw_tag="${{ github.event.release.tag_name }}"
+          version="${raw_tag#v}"
+          echo "Using release tag: ${raw_tag}"
+          echo "Resolved plugin version: ${version}"
+          sed -Ei "s/^(\s*\* Version:\s*).*/\1${version}/" airygen-seo.php
+          sed -Ei "s/^(define\( 'AIRYGEN_VERSION', ')[^']+(' \);)$/\1${version}\2/" airygen-seo.php
+          sed -Ei "s/^(Stable tag:\s*).*/\1${version}/" readme.txt
+
+      - name: Validate version and decide publish
+        id: validate
+        uses: airygen/actions/validate-plugin-version@main
+        with:
+          plugin_file: ${{ env.PLUGIN_FILE }}
+          placeholder_version: "0.0.0"
+          publish_prerelease: "true"
+
+      - name: Build
+        run: |
+          composer install --no-dev --optimize-autoloader
+
+      - name: Verify vendor folder
+        run: |
+          if [ ! -d vendor ]; then
+            echo "vendor/ was not generated. Check Composer logs and PHP platform constraints."
+            exit 1
+          fi
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: wp-cli
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.12.0
+
+      - name: Install JS dependencies
+        run: |
+          pnpm install --frozen-lockfile
+
+      - name: Build editor and admin bundles
+        run: pnpm run build
+
+      - name: Build translation artifacts
+        run: make i18n.build
+
+      - name: Prune translation source files from release package
+        run: |
+          set -euo pipefail
+          find languages -type f -name '*.po' -delete
+          rm -rf languages/untranslated
+
+      - name: Detect WordPress.org deployment eligibility
+        id: wordpress_org
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        run: |
+          set -euo pipefail
+          raw_tag="${{ github.event.release.tag_name }}"
+          if [[ ! "${raw_tag}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Tag ${raw_tag} is not a stable WordPress.org version; skipping SVN deploy."
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [[ -z "${SVN_USERNAME}" || -z "${SVN_PASSWORD}" ]]; then
+            echo "SVN credentials are not configured; skipping WordPress.org deploy."
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "deploy=true" >> "$GITHUB_OUTPUT"
+
+      - name: Assemble release directory
+        run: |
+          set -euo pipefail
+          rm -rf .release-build
+          mkdir -p .release-build
+          rsync -a assets build config languages packages resources src vendor .release-build/
+          cp airygen-seo.php uninstall.php LICENSE composer.json readme.txt .release-build/
+
+      - name: Create release zip
+        id: pack
+        run: |
+          set -euo pipefail
+          zip_path="$GITHUB_WORKSPACE/${{ env.PLUGIN_SLUG }}-${{ steps.validate.outputs.tag }}.zip"
+          rm -f "${zip_path}"
+          mkdir -p .release-zip/${{ env.PLUGIN_SLUG }}
+          rsync -a .release-build/ ".release-zip/${{ env.PLUGIN_SLUG }}/"
+          (
+            cd .release-zip
+            zip -rq "${zip_path}" "${{ env.PLUGIN_SLUG }}"
+          )
+          echo "zip_path=${zip_path}" >> "$GITHUB_OUTPUT"
+  
+      - name: Attach zip to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.release.tag_name }}
+          files: ${{ steps.pack.outputs.zip_path }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+
+      - name: Deploy stable release to WordPress.org SVN
+        if: steps.validate.outputs.publish == 'true' && steps.wordpress_org.outputs.deploy == 'true'
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: ${{ env.PLUGIN_SLUG }}
+          VERSION: ${{ steps.validate.outputs.tag }}
+          BUILD_DIR: .release-build

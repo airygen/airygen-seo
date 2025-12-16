@@ -1,0 +1,13 @@
+[
+  {
+    "name": "dashboard",
+    "path": "admin.php?page=airygen-dashboard",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "dashboard"
+      }
+    ],
+    "type": "admin"
+  }
+]

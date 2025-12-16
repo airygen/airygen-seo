@@ -1,0 +1,16 @@
+{
+  "language": "sv",
+  "title": "Exempelartikel om att extrahera nyckelord i Rust",
+  "description": "Den här texten förklarar hur Keyphrase API hittar viktiga ord i innehåll.",
+  "content": "Denna artikel beskriver ett API för nyckelord som tar bort URL:er och e-postadresser, tokeniserar texten och räknar hur ofta viktiga ord dyker upp. Fokusnyckelord, titel, beskrivning och rubriker får extra vikt så att relevanta termer framträder tydligare. Om artikeln handlar om Rust-prestanda, minnessäkerhet och utvecklarproduktivitet grupperar algoritmen samma begrepp via ordstammar för att summera dem. Token som bara innehåller specialtecken ignoreras. Därefter sorterar tjänsten efter frekvens, applicerar en miniminivå och returnerar de mest viktade termerna. På så sätt blir det enkelt att föreslå interna länkar, relaterade artiklar eller SEO-tips utan att manuellt granska hela dokumentet.",
+  "focus_keywords": ["Rust", "prestanda", "minnessäkerhet"],
+  "headings": [
+    "Varför minnessäkerhet är viktigt",
+    "Öka produktiviteten med Rust"
+  ],
+  "options": {
+    "min_words": 20,
+    "attributes_weight": 3.0,
+    "max_terms": 50
+  }
+}

@@ -1,0 +1,40 @@
+name: Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Docker Compose
+        uses: KengoTODA/actions-setup-docker-compose@v1
+        if: ${{ env.ACT }}
+        with:
+          version: '2.14.2'
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache PHP packages
+        uses: actions/cache@v4
+        with:
+          path: vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install Dependencies
+        run: docker compose run --rm wordpress composer install
+
+      - name: Run PHP Code Sniffer
+        run: docker compose run --rm wordpress make phpcs
+
+      - name: Run PHPStan Code Analysis
+        run:  docker compose run --rm wordpress make phpstan
+
+      - name: Run Unit Tests
+        run: docker compose run --rm wordpress sh -c 'cd /var/www/html/wp-content/plugins/airygen-seo && php -d xdebug.mode=off vendor/bin/phpunit --testdox'

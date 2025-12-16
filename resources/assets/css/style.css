@@ -1,0 +1,22 @@
+.airygen-metabox__item {
+    width: 100%;
+    max-width: 500px;
+}
+
+.airygen-metabox__item textarea {
+    resize: none;
+    width: 100%;
+    height: 100px;
+}
+
+.airygen-metabox__item input {
+    width: 100%;
+}
+
+.airygen-metabox__item-row {
+    padding: 0.25rem 0;
+}
+
+.airygen-metabox__seo-status {
+    float: right;
+}

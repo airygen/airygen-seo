@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Coding Standards for Plugins">
+	<description>Generally-applicable sniffs for WordPress plugins</description>
+
+	<rule ref="WordPress">
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName" />
+		<exclude name="WordPress.DateTime.RestrictedFunctions.date_date" />
+		<exclude name="Squiz.Commenting.FileComment.MissingPackageTag" />
+		<exclude name="Squiz.Commenting.FunctionComment.MissingShort" />
+		<exclude name="Squiz.Commenting.ClassComment.Missing" />
+		<exclude name="Squiz.Commenting.ClassComment.MissingShort" />
+		<exclude name="Squiz.Commenting.FileComment.MissingShort" />
+		<exclude name="Squiz.Commenting.InlineComment.InvalidEndChar" />
+		<exclude name="Squiz.Commenting.FunctionComment" />
+		<exclude name="Squiz.Commenting.ClassComment" />
+		<exclude name="Squiz.Commenting.FileComment" />
+		<exclude name="Generic.Commenting.DocComment" />
+		<exclude name="Squiz.Commenting.VariableComment.Missing" />
+		<exclude name="WordPress.DB.PreparedSQL.InterpolatedNotPrepared" />
+		<exclude name="WordPress.DB.PreparedSQL.NotPrepared" />
+		<exclude name="WordPress.DB.PreparedSQLPlaceholders.*" />
+		<exclude name="WordPress.Security.EscapeOutput.OutputNotEscaped" />
+		<exclude name="WordPress.NamingConventions.ValidVariableName.PropertyNotSnakeCase" />
+		<exclude name="WordPress.NamingConventions.ValidVariableName.NotSnakeCase" />
+	</rule>
+
+	<file>src</file>
+	<file>config</file>
+	<file>tests</file>
+	<file>resources/views</file>
+
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+
+	<!-- Relax docblock rules for test fixtures -->
+	<rule ref="Squiz.Commenting.FunctionComment">
+		<exclude-pattern>*/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.ClassComment">
+		<exclude-pattern>*/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Squiz.Commenting.FileComment">
+		<exclude-pattern>*/tests/*</exclude-pattern>
+	</rule>
+	<rule ref="Generic.WhiteSpace.ScopeIndent">
+		<properties>
+			<property name="indent" value="4" />
+			<property name="exact" value="true" />
+			<property name="tabIndent" value="true" />
+		</properties>
+	</rule>
+</ruleset>

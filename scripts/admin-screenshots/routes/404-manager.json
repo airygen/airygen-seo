@@ -1,0 +1,18 @@
+[
+  {
+    "name": "404-manager",
+    "path": "admin.php?page=airygen-settings#settings/notFoundManager",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "settings"
+      },
+      {
+        "name": "records",
+        "waitAfterClick": 400,
+        "click": "[data-airygen-e2e='tab-records']"
+      }
+    ],
+    "type": "admin"
+  }
+]

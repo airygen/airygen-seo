@@ -1,0 +1,16 @@
+{
+  "language": "de",
+  "title": "Beispielartikel zur Extraktion von Schlüsselbegriffen in Rust",
+  "description": "Dieser Text beschreibt, wie der Keyphrase-API-Algorithmus wichtige Wörter in Inhalten findet.",
+  "content": "Dieser Artikel erklärt eine Keyphrase API, die URLs und E-Mail-Adressen entfernt, den Text tokenisiert und zählt, wie oft wichtige Wörter erscheinen. Fokus-Keywords, Titel, Beschreibungen und Überschriften werden stärker gewichtet, damit relevante Begriffe deutlicher werden. Wenn der Artikel über Rust-Performance, Speichersicherheit und Entwicklerproduktivität spricht, fasst der Algorithmus Wortstämme zusammen, damit Varianten zusammengezählt werden. Tokens, die nur aus Sonderzeichen bestehen, werden ignoriert. Anschließend sortiert der Service nach Häufigkeit, wendet eine Mindestschwelle an und gibt die am höchsten gewichteten Begriffe zurück. So lassen sich interne Links, verwandte Beiträge oder SEO-Hinweise automatisiert vorschlagen.",
+  "focus_keywords": ["Rust", "Performance", "Speichersicherheit"],
+  "headings": [
+    "Warum Speichersicherheit wichtig ist",
+    "Entwicklerproduktivität mit Rust steigern"
+  ],
+  "options": {
+    "min_words": 20,
+    "attributes_weight": 3.0,
+    "max_terms": 50
+  }
+}

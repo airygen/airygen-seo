@@ -1,0 +1,50 @@
+{
+    "name": "airygen/airygen-seo",
+    "version": "0.0.0",
+    "type": "wordpress-plugin",
+    "keywords": [
+      "wordpress",
+      "wordpress-seo",
+      "wordpress-plugin"
+    ],
+    "description": "A lightweight WordPress plugin offering essential SEO tools without the bloat.",
+    "homepage": "https://airygen.com",
+    "license": "GPL-3.0",
+    "authors": [
+      {
+        "name": "Terry Lin",
+        "email": "contact@terryl.in",
+        "homepage": "https://airygen.com",
+        "role": "Developer"
+      }
+    ],
+    "autoload": {
+      "psr-4": {
+        "Airygen\\": "src/",
+        "AirygenTest\\": "tests/"
+      }
+    },
+    "require": {
+      "php": ">=8.1",
+        "woocommerce/action-scheduler": "^3.9",
+        "wamania/php-stemmer": "^4.0",
+        "erusev/parsedown": "1.8.0",
+        "league/html-to-markdown": "^5.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "wp-coding-standards/wpcs": "^3.2",
+        "phpstan/extension-installer": "^1.4",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "wp-phpunit/wp-phpunit": "^6.8",
+        "phpunit/phpunit": "^8.0",
+        "yoast/phpunit-polyfills": "^4.0",
+        "php-stubs/woocommerce-stubs": "^10.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        }
+    }
+}

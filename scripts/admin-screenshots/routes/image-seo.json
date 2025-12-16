@@ -1,0 +1,25 @@
+[
+  {
+    "name": "image-seo",
+    "path": "admin.php?page=airygen-settings#settings/imageSeo",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "settings",
+        "drags": [
+          {
+            "source": "[data-airygen-e2e='template-token-button-image-seo-alt-counter']",
+            "target": "[data-airygen-e2e='template-token-selected-image-seo-alt']",
+            "wait": 300
+          },
+          {
+            "source": "[data-airygen-e2e='template-token-button-image-seo-alt-focus_keyphase']",
+            "target": "[data-airygen-e2e='template-token-selected-image-seo-alt']",
+            "wait": 300
+          }
+        ]
+      }
+    ],
+    "type": "admin"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "name": "alerts-digest",
+    "path": "admin.php?page=airygen-notify#notify/notifyDigest",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "digest"
+      },
+      {
+        "name": "digestLogs",
+        "waitAfterClick": 400,
+        "click": "[data-airygen-e2e='tab-logs']"
+      }
+    ],
+    "type": "admin"
+  },
+  {
+    "name": "alerts-channel",
+    "path": "admin.php?page=airygen-notify#notify/notifyEmail",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "channel"
+      }
+    ],
+    "type": "admin"
+  }
+]

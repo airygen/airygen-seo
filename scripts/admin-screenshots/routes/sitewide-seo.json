@@ -1,0 +1,13 @@
+[
+  {
+    "name": "sitewide-seo",
+    "path": "admin.php?page=airygen-settings#settings/siteHealth",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "settings"
+      }
+    ],
+    "type": "admin"
+  }
+]

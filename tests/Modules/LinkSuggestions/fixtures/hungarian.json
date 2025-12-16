@@ -1,0 +1,16 @@
+{
+  "language": "hu",
+  "title": "Példa cikk a kulcsszó-kinyerésről Rustban",
+  "description": "Ez a szöveg leírja, hogyan találja meg a Keyphrase API a fontos szavakat a tartalomban.",
+  "content": "Ez a cikk egy kulcsszó API-t mutat be, amely eltávolítja az URL-eket és az e-maileket, tokenizálja a szöveget, és megszámolja, hányszor jelennek meg a fontos szavak. A fókusz kulcsszavak, a cím, a leírás és az alcímek extra súlyt kapnak, hogy a releváns kifejezések jobban kiemelkedjenek. Ha a cikk Rust teljesítményről, memóriabiztonságról és fejlesztői produktivitásról szól, az algoritmus azonos fogalmakat a szóalapokon keresztül összegzi. Azokat a tokeneket, amelyek csak speciális karaktereket tartalmaznak, figyelmen kívül hagyja. Ezután gyakoriság szerint rendez, alkalmaz egy minimális küszöböt, és visszaadja a legnagyobb súlyú kifejezéseket. Így könnyű automatikusan javasolni belső linkeket, kapcsolódó cikkeket vagy SEO-tippeket anélkül, hogy végigolvasnánk az egész dokumentumot.",
+  "focus_keywords": ["Rust", "teljesítmény", "memóriabiztonság"],
+  "headings": [
+    "Miért fontos a memóriabiztonság",
+    "Produktivitás növelése Rusttal"
+  ],
+  "options": {
+    "min_words": 20,
+    "attributes_weight": 3.0,
+    "max_terms": 50
+  }
+}

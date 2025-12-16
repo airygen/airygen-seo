@@ -1,0 +1,13 @@
+[
+  {
+    "name": "deep-faq",
+    "path": "admin.php?page=airygen-ai#ai/faq",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "ai"
+      }
+    ],
+    "type": "admin"
+  }
+]

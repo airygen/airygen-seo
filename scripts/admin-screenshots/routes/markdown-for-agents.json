@@ -1,0 +1,44 @@
+[
+  {
+    "name": "markdown-for-agents-settings",
+    "path": "admin.php?page=airygen-settings#settings/markdownForAgents",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "settings"
+      },
+      {
+        "name": "snapshots",
+        "waitAfterClick": 400,
+        "click": "[data-airygen-e2e='tab-snapshots']"
+      },
+      {
+        "name": "preview",
+        "waitAfterClick": 400,
+        "click": "[data-airygen-e2e='tab-preview']"
+      }
+    ],
+    "type": "admin"
+  },
+  {
+    "name": "markdown-for-agents-editor",
+    "path": "post.php?post={POST_ID}&action=edit",
+    "waitFor": ".editor-post-title",
+    "views": [
+      {
+        "name": "editor",
+        "clicks": [
+          {
+            "selector": "button[aria-controls='airygen-seo-sidebar:airygen-seo-sidebar']",
+            "wait": 2000
+          },
+          {
+            "selector": "[data-airygen-e2e='editor-panel-promptsForAgents'] .components-panel__body-toggle",
+            "wait": 400
+          }
+        ]
+      }
+    ],
+    "type": "editor"
+  }
+]

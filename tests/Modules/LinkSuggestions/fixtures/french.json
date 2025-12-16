@@ -1,0 +1,16 @@
+{
+  "language": "fr",
+  "title": "Article de démonstration sur l'extraction de mots-clés en Rust",
+  "description": "Ce texte explique comment l'API de mots-clés identifie les termes importants dans un contenu.",
+  "content": "Cet article décrit une API de mots-clés qui supprime les URL et les emails, tokenize le texte et compte la fréquence des mots importants. Les mots-clés de focus, le titre, la description et les sous-titres sont davantage pondérés pour faire ressortir les termes pertinents. Si l'article parle des performances de Rust, de la sécurité mémoire et de la productivité des développeurs, l'algorithme regroupe les thèmes identiques via les racines pour les additionner. Les tokens contenant uniquement des caractères spéciaux sont ignorés. Ensuite, il trie par fréquence, applique un seuil minimal et renvoie les termes les plus pondérés. Cela permet de suggérer des liens internes, des articles liés ou des pistes SEO sans relire tout le document.",
+  "focus_keywords": ["Rust", "performance", "sécurité mémoire"],
+  "headings": [
+    "Pourquoi la sécurité mémoire est importante",
+    "Améliorer la productivité avec Rust"
+  ],
+  "options": {
+    "min_words": 20,
+    "attributes_weight": 3.0,
+    "max_terms": 50
+  }
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "name": "article-builder",
+    "path": "admin.php?page=airygen-ai#ai/articleBuilder",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "ai"
+      }
+    ],
+    "type": "admin"
+  }
+]

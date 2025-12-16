@@ -1,0 +1,34 @@
+[
+  {
+    "name": "link-suggestions-settings",
+    "path": "admin.php?page=airygen-settings#settings/linkSuggestions",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "settings"
+      }
+    ],
+    "type": "admin"
+  },
+  {
+    "name": "link-suggestions-editor",
+    "path": "post.php?post={POST_ID}&action=edit",
+    "waitFor": ".editor-post-title",
+    "views": [
+      {
+        "name": "editor",
+        "clicks": [
+          {
+            "selector": "button[aria-controls='airygen-seo-sidebar:airygen-seo-sidebar']",
+            "wait": 2000
+          },
+          {
+            "selector": "[data-airygen-e2e='editor-panel-linkSuggestions'] .components-panel__body-toggle",
+            "wait": 400
+          }
+        ]
+      }
+    ],
+    "type": "editor"
+  }
+]

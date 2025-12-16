@@ -1,0 +1,23 @@
+[
+  {
+    "name": "llms-txt",
+    "path": "admin.php?page=airygen-settings#settings/llmsTxt",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "settings"
+      },
+      {
+        "name": "extensions",
+        "waitAfterClick": 400,
+        "click": "[data-airygen-e2e='tab-extensions']"
+      },
+      {
+        "name": "preview",
+        "waitAfterClick": 400,
+        "click": "[data-airygen-e2e='tab-preview']"
+      }
+    ],
+    "type": "admin"
+  }
+]

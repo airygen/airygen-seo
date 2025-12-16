@@ -1,0 +1,16 @@
+{
+  "language": "tr",
+  "title": "Rust'ta anahtar kelime çıkarımı üzerine örnek makale",
+  "description": "Bu metin, anahtar kelime API'sinin içerikte önemli terimleri nasıl bulduğunu açıklar.",
+  "content": "Bu makale, URL'leri ve e-postaları kaldıran, metni parçalara ayıran ve önemli kelimelerin kaç kez geçtiğini sayan bir anahtar kelime API'sini tanımlar. Odak anahtar kelimeler, başlık, açıklama ve alt başlıklar daha fazla ağırlık alır, böylece ilgili terimler daha belirgin olur. Makale Rust performansı, bellek güvenliği ve geliştirici üretkenliğinden bahsediyorsa, algoritma aynı kavramları kökler üzerinden gruplayarak toplar. Yalnızca özel karakterler içeren tokenlar yok sayılır. Ardından frekansa göre sıralar, minimum eşiği uygular ve en yüksek ağırlıklı terimleri döndürür. Böylece tüm belgeyi manuel olarak taramadan iç bağlantılar, ilgili yazılar veya SEO ipuçları önermek kolaylaşır.",
+  "focus_keywords": ["Rust", "performans", "bellek güvenliği"],
+  "headings": [
+    "Bellek güvenliği neden önemlidir",
+    "Rust ile üretkenliği artırmak"
+  ],
+  "options": {
+    "min_words": 20,
+    "attributes_weight": 3.0,
+    "max_terms": 50
+  }
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "name": "content-blueprint",
+    "path": "admin.php?page=airygen-ai#ai/contentBlueprint",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "ai"
+      }
+    ],
+    "type": "admin"
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "robots-meta-settings",
+    "path": "admin.php?page=airygen-settings#settings/robots",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "settings"
+      }
+    ],
+    "type": "admin"
+  },
+  {
+    "name": "robots-meta-editor",
+    "path": "post.php?post={POST_ID}&action=edit",
+    "waitFor": ".editor-post-title",
+    "views": [
+      {
+        "name": "editor",
+        "clicks": [
+          {
+            "selector": "button[aria-controls='airygen-seo-sidebar:airygen-seo-sidebar']",
+            "wait": 2000
+          },
+          {
+            "selector": "[data-airygen-e2e='editor-panel-robots'] .components-panel__body-toggle",
+            "wait": 400
+          }
+        ]
+      }
+    ],
+    "type": "editor"
+  }
+]

@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  wordpress:
+    container_name: airygen-seo_dev-web
+    build: .
+    working_dir: /var/www/html/wp-content/plugins/airygen-seo
+    ports:
+      - "9000:8000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - .:/var/www/html/wp-content/plugins/airygen-seo
+      - ./.docker/wp/wp-config.php:/var/www/html/wp-config.php
+      - ./wp-content/uploads:/var/www/html/wp-content/uploads
+      - ./wp-content/logs:/var/www/html/wp-content/logs
+      - ./vendor:/var/www/html/wp-content/plugins/airygen-seo/vendor
+      - ./router.php:/var/www/html/router.php
+    depends_on:
+      - db
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wp_user
+      WORDPRESS_DB_PASSWORD: wp_pass
+    command: >
+      sh -c "php -S 0.0.0.0:8000 -t /var/www/html /var/www/html/router.php"
+
+  db:
+    container_name: airygen-seo_dev-db
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wp_user
+      MYSQL_PASSWORD: wp_pass
+      MYSQL_ROOT_PASSWORD: root_pass
+    ports:
+      - "3506:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./.docker/wp/schema/backup.sql:/docker-entrypoint-initdb.d/backup.sql:ro
+
+volumes:
+  db_data:

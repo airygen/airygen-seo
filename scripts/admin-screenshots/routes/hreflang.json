@@ -1,0 +1,13 @@
+[
+  {
+    "name": "hreflang",
+    "path": "admin.php?page=airygen-settings#settings/hreflang",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "settings"
+      }
+    ],
+    "type": "admin"
+  }
+]

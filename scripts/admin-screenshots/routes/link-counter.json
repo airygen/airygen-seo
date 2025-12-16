@@ -1,0 +1,13 @@
+[
+  {
+    "name": "link-counter",
+    "path": "admin.php?page=airygen-settings#settings/linkCounter",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "settings"
+      }
+    ],
+    "type": "admin"
+  }
+]

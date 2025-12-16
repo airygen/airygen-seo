@@ -1,0 +1,13 @@
+[
+  {
+    "name": "serp-ctr-booster",
+    "path": "admin.php?page=airygen-ai#ai/serpCtrBooster",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "ai"
+      }
+    ],
+    "type": "admin"
+  }
+]

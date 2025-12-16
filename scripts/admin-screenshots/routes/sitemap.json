@@ -1,0 +1,13 @@
+[
+  {
+    "name": "sitemap",
+    "path": "admin.php?page=airygen-settings#settings/sitemap",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "settings"
+      }
+    ],
+    "type": "admin"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "language": "fi",
+  "title": "Esimerkkijuttu avainsanojen poiminnasta Rustissa",
+  "description": "Tämä teksti selittää, miten Keyphrase API tunnistaa tärkeät sanat sisällöstä.",
+  "content": "Tässä artikkelissa kuvataan avainsana-API, joka poistaa URL-osoitteet ja sähköpostit, tokenisoi tekstin ja laskee, kuinka usein tärkeät sanat esiintyvät. Fokusavainsanat, otsikko, kuvaus ja väliotsikot saavat lisäpainon, jotta olennaiset termit korostuvat. Jos artikkeli käsittelee Rustin suorituskykyä, muistiturvaa ja kehittäjien tuottavuutta, algoritmi yhdistää samat käsitteet sanajuuren kautta ja laskee ne yhteen. Vain erikoismerkeistä koostuvat tokenit ohitetaan. Sen jälkeen palvelu lajittelee esiintymistiheyden mukaan, käyttää vähimmäiskynnystä ja palauttaa painavimmat termit. Näin voidaan automaattisesti ehdottaa sisäisiä linkkejä, liittyviä artikkeleita tai SEO-vinkkejä ilman koko dokumentin manuaalista läpikäyntiä.",
+  "focus_keywords": ["Rust", "suorituskyky", "muistiturva"],
+  "headings": [
+    "Miksi muistiturva on tärkeää",
+    "Lisää tuottavuutta Rustilla"
+  ],
+  "options": {
+    "min_words": 20,
+    "attributes_weight": 3.0,
+    "max_terms": 50
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "language": "es",
+  "title": "Artículo de ejemplo sobre extracción de palabras clave en Rust",
+  "description": "Este texto explica cómo la API de frases clave identifica términos importantes en un contenido.",
+  "content": "Este artículo describe una API de palabras clave que elimina URL y correos electrónicos, tokeniza el texto y cuenta cuántas veces aparecen las palabras prominentes. Las palabras clave de enfoque, el título, la descripción y los encabezados se ponderan más para resaltar los términos relevantes. Si el artículo habla sobre el rendimiento de Rust, la seguridad de memoria y la productividad del desarrollador, el algoritmo agrupa los mismos temas a través de los lexemas para sumarlos. También ignora tokens que solo contienen caracteres especiales. Luego ordena por frecuencia, aplica un umbral mínimo y devuelve los términos con mayor peso. Así es fácil sugerir enlaces internos, artículos relacionados o consejos de SEO sin revisar manualmente todo el documento.",
+  "focus_keywords": ["Rust", "rendimiento", "seguridad de memoria"],
+  "headings": [
+    "Por qué importa la seguridad de memoria",
+    "Aumentar la productividad con Rust"
+  ],
+  "options": {
+    "min_words": 20,
+    "attributes_weight": 3.0,
+    "max_terms": 50
+  }
+}

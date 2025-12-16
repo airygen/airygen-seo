@@ -1,0 +1,16 @@
+{
+  "language": "nl",
+  "title": "Voorbeeldartikel over het extraheren van sleutelwoorden in Rust",
+  "description": "Deze tekst legt uit hoe de Keyphrase API belangrijke termen in content herkent.",
+  "content": "Dit artikel beschrijft een API voor sleutelwoorden die URL's en e-mails verwijdert, de tekst tokeniseert en telt hoe vaak belangrijke woorden voorkomen. Focus-keywords, titel, beschrijving en tussenkopjes krijgen extra gewicht zodat relevante termen beter opvallen. Als de tekst gaat over Rust-prestaties, geheugengaranties en ontwikkelaarsproductiviteit, groepeert het algoritme dezelfde concepten via woordstammen om ze samen te tellen. Tokens met alleen speciale tekens worden genegeerd. Vervolgens sorteert de service op frequentie, past een minimale drempel toe en geeft de meest zwaarwegende termen terug. Zo kun je interne links, gerelateerde artikelen of SEO-hints automatisch voorstellen zonder het hele document handmatig te scannen.",
+  "focus_keywords": ["Rust", "prestaties", "geheugengaranties"],
+  "headings": [
+    "Waarom geheugengaranties belangrijk zijn",
+    "Productiviteit verhogen met Rust"
+  ],
+  "options": {
+    "min_words": 20,
+    "attributes_weight": 3.0,
+    "max_terms": 50
+  }
+}

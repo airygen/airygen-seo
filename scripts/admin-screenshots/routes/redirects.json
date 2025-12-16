@@ -1,0 +1,13 @@
+[
+  {
+    "name": "redirects",
+    "path": "admin.php?page=airygen-settings#settings/redirects",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "settings"
+      }
+    ],
+    "type": "admin"
+  }
+]

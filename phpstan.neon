@@ -1,0 +1,10 @@
+parameters:
+  level: 0
+  paths:
+    - src
+  excludePaths:
+    - vendor
+    - resources
+  bootstrapFiles:
+    - %rootDir%/../../../vendor/autoload.php
+    - phpstan-stubs.php

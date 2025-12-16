@@ -1,0 +1,23 @@
+[
+  {
+    "name": "related-posts",
+    "path": "admin.php?page=airygen-settings#settings/relatedPosts",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "settings"
+      },
+      {
+        "name": "layout",
+        "waitAfterClick": 400,
+        "click": "[data-airygen-e2e='tab-layout']"
+      },
+      {
+        "name": "preview",
+        "waitAfterClick": 400,
+        "click": "[data-airygen-e2e='tab-preview']"
+      }
+    ],
+    "type": "admin"
+  }
+]

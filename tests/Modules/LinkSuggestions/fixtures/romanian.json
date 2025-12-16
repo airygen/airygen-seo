@@ -1,0 +1,16 @@
+{
+  "language": "ro",
+  "title": "Articol de exemplu despre extragerea cuvintelor cheie în Rust",
+  "description": "Acest text explică modul în care API-ul de cuvinte cheie identifică termeni importanți într-un conținut.",
+  "content": "Acest articol descrie un API de cuvinte cheie care elimină URL-urile și emailurile, tokenizează textul și numără de câte ori apar cuvinte importante. Cuvintele cheie de focus, titlul, descrierea și subtitlurile primesc greutate suplimentară pentru a evidenția termenii relevanți. Dacă articolul vorbește despre performanța Rust, siguranța memoriei și productivitatea dezvoltatorilor, algoritmul grupează aceleași concepte prin rădăcini pentru a le însuma. Tokenii care conțin doar caractere speciale sunt ignorați. Apoi sortează după frecvență, aplică un prag minim și returnează termenii cei mai ponderați. Astfel devine simplu să propui legături interne, articole conexe sau sfaturi SEO fără a parcurge manual întregul document.",
+  "focus_keywords": ["Rust", "performanță", "siguranța memoriei"],
+  "headings": [
+    "De ce este importantă siguranța memoriei",
+    "Creșterea productivității cu Rust"
+  ],
+  "options": {
+    "min_words": 20,
+    "attributes_weight": 3.0,
+    "max_terms": 50
+  }
+}

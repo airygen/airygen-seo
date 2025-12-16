@@ -1,0 +1,13 @@
+[
+  {
+    "name": "topic-expansion",
+    "path": "admin.php?page=airygen-ai#ai/topicExpansion",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "ai"
+      }
+    ],
+    "type": "admin"
+  }
+]

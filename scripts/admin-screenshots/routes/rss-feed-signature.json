@@ -1,0 +1,13 @@
+[
+  {
+    "name": "rss-feed-signature",
+    "path": "admin.php?page=airygen-settings#settings/rssFeedSignature",
+    "waitFor": "#airygen-root",
+    "views": [
+      {
+        "name": "settings"
+      }
+    ],
+    "type": "admin"
+  }
+]
