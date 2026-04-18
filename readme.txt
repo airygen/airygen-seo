@@ -137,8 +137,8 @@ When email notifications are enabled in the Notify module, the plugin connects d
 
 * Gmail: [Google Terms of Service](https://policies.google.com/terms), [Google Privacy Policy](https://policies.google.com/privacy)
 * Office 365 / Outlook: [Microsoft Services Agreement](https://www.microsoft.com/en/servicesagreement), [Microsoft Privacy Statement](https://www.microsoft.com/en-us/privacy/privacystatement)
-* Mailgun: [Mailgun Legal](https://www.mailgun.com/legal/)
-* SendGrid: [Twilio Legal](https://www.twilio.com/legal)
+* Mailgun: [Mailgun Terms of Service](https://www.mailgun.com/legal/terms/)、[Mailgun Privacy Policy](https://www.mailgun.com/legal/privacy-policy/)
+* SendGrid: [Twilio Terms of Service](https://www.twilio.com/en-us/legal/tos)、[Twilio Privacy Policy](https://www.twilio.com/en-us/legal/privacy)
 * Amazon SES: [AWS Service Terms](https://aws.amazon.com/service-terms/), [AWS Privacy Notice](https://aws.amazon.com/privacy/)
 * Zoho Mail: [Zoho Terms of Service](https://www.zoho.com/terms.html), [Zoho Privacy Policy](https://www.zoho.com/privacy.html)
 * Brevo: [Brevo Terms of Use](https://www.brevo.com/legal/termsofuse/), [Brevo Privacy Policy](https://www.brevo.com/legal/privacypolicy/)
