@@ -30,8 +30,6 @@ final class ErrorCodes {
 	public const INVALID_ID                                      = 'invalid_id';
 	public const NOT_FOUND                                       = 'not_found';
 	public const REST_FORBIDDEN                                  = 'rest_forbidden';
-	public const AIRYGEN_DEBUG_DIR                               = 'airygen_debug_dir';
-	public const AIRYGEN_DEBUG_INVALID_DATE                      = 'airygen_debug_invalid_date';
 	public const AIRYGEN_SETTINGS_INVALID_PAYLOAD                = 'airygen_settings_invalid_payload';
 	public const AIRYGEN_TOPIC_CLUSTER_CANDIDATE_ALREADY_RELATED = 'airygen_topic_cluster_candidate_already_related';
 	public const AIRYGEN_TOPIC_CLUSTER_CANDIDATE_CREATE_FAILED   = 'airygen_topic_cluster_candidate_create_failed';

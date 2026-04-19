@@ -34,28 +34,32 @@ final class Hooks {
 
 		add_filter( 'query_vars', array( __CLASS__, 'register_query_vars' ) );
 		add_action( 'template_redirect', array( __CLASS__, 'maybe_render_preview' ), 0 );
-
 		add_filter( 'the_content', array( __CLASS__, 'inject_toc' ), 20 );
-
-		add_action(
-			'wp_enqueue_scripts',
-			static function (): void {
-				if ( ! ModuleSettings::is_enabled( 'toc' ) ) {
-					return;
-				}
-
-				StyleEmitter::output();
-			}
-		);
-
-		add_action(
-			'init',
-			static function (): void {
-				add_shortcode( 'airygen_toc', array( __CLASS__, 'render_shortcode' ) );
-			}
-		);
-
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'maybe_emit_styles' ) );
+		add_action( 'init', array( __CLASS__, 'register_shortcode' ) );
 		add_action( 'init', array( Block::class, 'register' ) );
+	}
+
+	/**
+	 * Emit table-of-contents inline styles when the module is enabled.
+	 *
+	 * @return void
+	 */
+	public static function maybe_emit_styles(): void {
+		if ( ! ModuleSettings::is_enabled( 'toc' ) ) {
+			return;
+		}
+
+		StyleEmitter::output();
+	}
+
+	/**
+	 * Register the [airygen_toc] shortcode.
+	 *
+	 * @return void
+	 */
+	public static function register_shortcode(): void {
+		add_shortcode( 'airygen_toc', array( __CLASS__, 'render_shortcode' ) );
 	}
 
 	/**

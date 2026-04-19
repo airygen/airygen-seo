@@ -89,35 +89,44 @@ final class Launcher {
 	 * @return void
 	 */
 	private static function register_script_translation_path_fixes(): void {
-		add_filter(
-			'load_script_textdomain_relative_path',
-			static function ( $relative, string $src ) {
-				if ( ! is_string( $relative ) || '' === $relative ) {
-					return $relative;
-				}
+		add_filter( 'load_script_textdomain_relative_path', array( __CLASS__, 'normalize_script_translation_path' ), 10, 2 );
+	}
 
-				$src_path = wp_parse_url( $src, PHP_URL_PATH );
-				if ( ! is_string( $src_path ) || '' === $src_path ) {
-					return $relative;
-				}
+	/**
+	 * Remap built bundle URLs back to their relative paths under the plugin.
+	 *
+	 * WordPress may receive an absolute locale-prefixed URL (for example
+	 * /ja/wp-content/plugins/...) and derive a relative path that no longer
+	 * matches the JSON hash source paths this plugin ships with.
+	 *
+	 * @param mixed  $relative Relative path resolved by WordPress.
+	 * @param string $src      Absolute script source URL.
+	 *
+	 * @return mixed
+	 */
+	public static function normalize_script_translation_path( $relative, string $src ) {
+		if ( ! is_string( $relative ) || '' === $relative ) {
+			return $relative;
+		}
 
-				if ( str_ends_with( $src_path, '/wp-content/plugins/airygen-seo/build/admin/airygen-app.js' ) ) {
-					return 'build/admin/airygen-app.js';
-				}
+		$src_path = wp_parse_url( $src, PHP_URL_PATH );
+		if ( ! is_string( $src_path ) || '' === $src_path ) {
+			return $relative;
+		}
 
-				if ( str_ends_with( $src_path, '/wp-content/plugins/airygen-seo/build/block-editor/airygen-editor.js' ) ) {
-					return 'build/block-editor/airygen-editor.js';
-				}
+		if ( str_ends_with( $src_path, '/wp-content/plugins/airygen-seo/build/admin/airygen-app.js' ) ) {
+			return 'build/admin/airygen-app.js';
+		}
 
-				if ( str_ends_with( $src_path, '/wp-content/plugins/airygen-seo/build/classic-editor/airygen-editor.js' ) ) {
-					return 'build/classic-editor/airygen-editor.js';
-				}
+		if ( str_ends_with( $src_path, '/wp-content/plugins/airygen-seo/build/block-editor/airygen-editor.js' ) ) {
+			return 'build/block-editor/airygen-editor.js';
+		}
 
-				return $relative;
-			},
-			10,
-			2
-		);
+		if ( str_ends_with( $src_path, '/wp-content/plugins/airygen-seo/build/classic-editor/airygen-editor.js' ) ) {
+			return 'build/classic-editor/airygen-editor.js';
+		}
+
+		return $relative;
 	}
 
 	/**

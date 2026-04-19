@@ -13,6 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+use Airygen\Support\Utils\Css;
+
 /**
  * Renders related post cards.
  */
@@ -279,9 +281,9 @@ final class Renderer {
 		$grid_border_width_bottom    = isset( $grid_container['border_width_bottom'] ) ? (int) $grid_container['border_width_bottom'] : 0;
 		$grid_border_width_left      = isset( $grid_container['border_width_left'] ) ? (int) $grid_container['border_width_left'] : 0;
 		$grid_border_radius          = isset( $grid_container['border_radius'] ) ? (int) $grid_container['border_radius'] : 0;
-		$grid_border_style           = isset( $grid_container['border_style'] ) ? (string) $grid_container['border_style'] : 'solid';
-		$grid_border_color           = isset( $grid_container['border_color'] ) ? (string) $grid_container['border_color'] : '#e2e8f0';
-		$grid_bg_color               = isset( $grid_container['bg_color'] ) ? (string) $grid_container['bg_color'] : 'transparent';
+		$grid_border_style           = Css::sanitize_border_style( $grid_container['border_style'] ?? 'solid', 'solid' );
+		$grid_border_color           = Css::sanitize_color( $grid_container['border_color'] ?? '#e2e8f0', '#e2e8f0' );
+		$grid_bg_color               = Css::sanitize_color( $grid_container['bg_color'] ?? 'transparent', 'transparent' );
 		$grid_padding_top            = isset( $grid_container['padding_top'] ) ? (int) $grid_container['padding_top'] : 0;
 		$grid_padding_right          = isset( $grid_container['padding_right'] ) ? (int) $grid_container['padding_right'] : 0;
 		$grid_padding_bottom         = isset( $grid_container['padding_bottom'] ) ? (int) $grid_container['padding_bottom'] : 0;
@@ -292,25 +294,25 @@ final class Renderer {
 		$post_border_width_bottom    = isset( $post_container['border_width_bottom'] ) ? (int) $post_container['border_width_bottom'] : 1;
 		$post_border_width_left      = isset( $post_container['border_width_left'] ) ? (int) $post_container['border_width_left'] : 1;
 		$post_border_radius          = isset( $post_container['border_radius'] ) ? (int) $post_container['border_radius'] : 0;
-		$post_border_style           = isset( $post_container['border_style'] ) ? (string) $post_container['border_style'] : 'solid';
-		$post_border_color           = isset( $post_container['border_color'] ) ? (string) $post_container['border_color'] : '#e2e8f0';
-		$post_bg_color               = isset( $post_container['bg_color'] ) ? (string) $post_container['bg_color'] : '#ffffff';
+		$post_border_style           = Css::sanitize_border_style( $post_container['border_style'] ?? 'solid', 'solid' );
+		$post_border_color           = Css::sanitize_color( $post_container['border_color'] ?? '#e2e8f0', '#e2e8f0' );
+		$post_bg_color               = Css::sanitize_color( $post_container['bg_color'] ?? '#ffffff', '#ffffff' );
 		$post_padding_top            = isset( $post_container['padding_top'] ) ? (int) $post_container['padding_top'] : 12;
 		$post_padding_right          = isset( $post_container['padding_right'] ) ? (int) $post_container['padding_right'] : 12;
 		$post_padding_bottom         = isset( $post_container['padding_bottom'] ) ? (int) $post_container['padding_bottom'] : 12;
 		$post_padding_left           = isset( $post_container['padding_left'] ) ? (int) $post_container['padding_left'] : 12;
 		$post_gap                    = isset( $post_container['gap'] ) ? (int) $post_container['gap'] : 10;
 		$title_size                  = isset( $settings['title_font_size'] ) ? (int) $settings['title_font_size'] : 18;
-		$title_color                 = isset( $settings['title_color'] ) ? (string) $settings['title_color'] : '#0f172a';
+		$title_color                 = Css::sanitize_color( $settings['title_color'] ?? '#0f172a', '#0f172a' );
 		$title_bold                  = isset( $settings['title_bold'] ) ? (bool) $settings['title_bold'] : true;
 		$title_italic                = isset( $settings['title_italic'] ) ? (bool) $settings['title_italic'] : false;
 		$excerpt_size                = isset( $settings['excerpt_font_size'] ) ? (int) $settings['excerpt_font_size'] : 14;
-		$excerpt_color               = isset( $settings['excerpt_color'] ) ? (string) $settings['excerpt_color'] : '#334155';
-		$excerpt_fade                = isset( $settings['excerpt_fade_color'] ) ? (string) $settings['excerpt_fade_color'] : '#ffffff';
+		$excerpt_color               = Css::sanitize_color( $settings['excerpt_color'] ?? '#334155', '#334155' );
+		$excerpt_fade                = Css::sanitize_color( $settings['excerpt_fade_color'] ?? '#ffffff', '#ffffff' );
 		$excerpt_mask_height         = isset( $settings['excerpt_mask_height'] ) ? (int) $settings['excerpt_mask_height'] : 40;
 		$excerpt_mask_height         = max( 8, min( 200, $excerpt_mask_height ) );
 		$author_size                 = isset( $settings['author_font_size'] ) ? (int) $settings['author_font_size'] : 13;
-		$author_color                = isset( $settings['author_color'] ) ? (string) $settings['author_color'] : '#475569';
+		$author_color                = Css::sanitize_color( $settings['author_color'] ?? '#475569', '#475569' );
 		$author_bold                 = isset( $settings['author_bold'] ) ? (bool) $settings['author_bold'] : false;
 		$author_italic               = isset( $settings['author_italic'] ) ? (bool) $settings['author_italic'] : false;
 		$image_radius                = isset( $settings['featured_image_radius'] ) ? (int) $settings['featured_image_radius'] : 4;
@@ -319,9 +321,9 @@ final class Renderer {
 		$section_border_width_bottom = isset( $header_container['border_width_bottom'] ) ? (int) $header_container['border_width_bottom'] : 0;
 		$section_border_width_left   = isset( $header_container['border_width_left'] ) ? (int) $header_container['border_width_left'] : 0;
 		$section_border_radius       = isset( $header_container['border_radius'] ) ? (int) $header_container['border_radius'] : 0;
-		$section_border_style        = isset( $header_container['border_style'] ) ? (string) $header_container['border_style'] : 'solid';
-		$section_border_color        = isset( $header_container['border_color'] ) ? (string) $header_container['border_color'] : '#e2e8f0';
-		$section_bg_color            = isset( $header_container['bg_color'] ) ? (string) $header_container['bg_color'] : 'transparent';
+		$section_border_style        = Css::sanitize_border_style( $header_container['border_style'] ?? 'solid', 'solid' );
+		$section_border_color        = Css::sanitize_color( $header_container['border_color'] ?? '#e2e8f0', '#e2e8f0' );
+		$section_bg_color            = Css::sanitize_color( $header_container['bg_color'] ?? 'transparent', 'transparent' );
 		$section_padding_top         = isset( $header_container['padding_top'] ) ? (int) $header_container['padding_top'] : 0;
 		$section_padding_right       = isset( $header_container['padding_right'] ) ? (int) $header_container['padding_right'] : 0;
 		$section_padding_bottom      = isset( $header_container['padding_bottom'] ) ? (int) $header_container['padding_bottom'] : 0;
@@ -331,7 +333,7 @@ final class Renderer {
 		$section_margin_bottom       = isset( $header_container['margin_bottom'] ) ? (int) $header_container['margin_bottom'] : 12;
 		$section_margin_left         = isset( $header_container['margin_left'] ) ? (int) $header_container['margin_left'] : 0;
 		$section_title_style         = isset( $header_title['font_style'] ) && is_array( $header_title['font_style'] ) ? $header_title['font_style'] : array();
-		$section_title_color         = isset( $header_title['color'] ) ? (string) $header_title['color'] : '#0f172a';
+		$section_title_color         = Css::sanitize_color( $header_title['color'] ?? '#0f172a', '#0f172a' );
 		$section_title_size          = isset( $header_title['font_size'] ) ? (int) $header_title['font_size'] : 18;
 		$footer_columns              = isset( $settings['footer_columns'] ) ? (int) $settings['footer_columns'] : 3;
 		$footer_columns              = max( 1, min( 3, $footer_columns ) );
@@ -370,27 +372,27 @@ final class Renderer {
 		$section_margin_bottom       = max( 0, min( 64, $section_margin_bottom ) );
 		$section_margin_left         = max( 0, min( 64, $section_margin_left ) );
 		$section_title_size          = max( 10, min( 64, $section_title_size ) );
-		$css                         = '.airygen-auto-related-posts__grid{gap:' . esc_html( (string) $grid_gap ) . 'px;padding:' . esc_html( (string) $grid_padding_top ) . 'px ' . esc_html( (string) $grid_padding_right ) . 'px ' . esc_html( (string) $grid_padding_bottom ) . 'px ' . esc_html( (string) $grid_padding_left ) . 'px;border-style:' . esc_html( $grid_border_style ) . ';border-color:' . esc_html( $grid_border_color ) . ';border-width:' . esc_html( (string) $grid_border_width_top ) . 'px ' . esc_html( (string) $grid_border_width_right ) . 'px ' . esc_html( (string) $grid_border_width_bottom ) . 'px ' . esc_html( (string) $grid_border_width_left ) . 'px;border-radius:' . esc_html( (string) $grid_border_radius ) . 'px;background:' . esc_html( $grid_bg_color ) . ';box-sizing:border-box;}';
-		$css                        .= '.airygen-auto-related-posts__section-title{margin:' . esc_html( (string) $section_margin_top ) . 'px ' . esc_html( (string) $section_margin_right ) . 'px ' . esc_html( (string) $section_margin_bottom ) . 'px ' . esc_html( (string) $section_margin_left ) . 'px;padding:' . esc_html( (string) $section_padding_top ) . 'px ' . esc_html( (string) $section_padding_right ) . 'px ' . esc_html( (string) $section_padding_bottom ) . 'px ' . esc_html( (string) $section_padding_left ) . 'px;border-width:' . esc_html( (string) $section_border_width_top ) . 'px ' . esc_html( (string) $section_border_width_right ) . 'px ' . esc_html( (string) $section_border_width_bottom ) . 'px ' . esc_html( (string) $section_border_width_left ) . 'px;border-style:' . esc_html( $section_border_style ) . ';border-color:' . esc_html( $section_border_color ) . ';border-radius:' . esc_html( (string) $section_border_radius ) . 'px;background:' . esc_html( $section_bg_color ) . ';color:' . esc_html( $section_title_color ) . ';font-size:' . esc_html( (string) $section_title_size ) . 'px;font-weight:' . ( ! empty( $section_title_style['bold'] ) ? '700' : '400' ) . ';font-style:' . ( ! empty( $section_title_style['italic'] ) ? 'italic' : 'normal' ) . ';text-decoration:' . ( ! empty( $section_title_style['underline'] ) ? 'underline' : 'none' ) . ';}';
-		$css                        .= '.airygen-auto-related-posts__card{padding:' . esc_html( (string) $post_padding_top ) . 'px ' . esc_html( (string) $post_padding_right ) . 'px ' . esc_html( (string) $post_padding_bottom ) . 'px ' . esc_html( (string) $post_padding_left ) . 'px;border-style:' . esc_html( $post_border_style ) . ';border-color:' . esc_html( $post_border_color ) . ';border-width:' . esc_html( (string) $post_border_width_top ) . 'px ' . esc_html( (string) $post_border_width_right ) . 'px ' . esc_html( (string) $post_border_width_bottom ) . 'px ' . esc_html( (string) $post_border_width_left ) . 'px;border-radius:' . esc_html( (string) $post_border_radius ) . 'px;background:' . esc_html( $post_bg_color ) . ';display:flex;flex-direction:column;gap:' . esc_html( (string) $post_gap ) . 'px;box-sizing:border-box;}';
-		$css                        .= '.airygen-auto-related-posts__layout{display:grid;grid-template-columns:minmax(0,1fr) 3fr;gap:' . esc_html( (string) $post_gap ) . 'px;align-items:start;height:100%;}';
-		$css                        .= '.airygen-auto-related-posts__main{display:flex;flex-direction:column;gap:' . esc_html( (string) $post_gap ) . 'px;}';
+		$css                         = ".airygen-auto-related-posts__grid{gap:{$grid_gap}px;padding:{$grid_padding_top}px {$grid_padding_right}px {$grid_padding_bottom}px {$grid_padding_left}px;border-style:{$grid_border_style};border-color:{$grid_border_color};border-width:{$grid_border_width_top}px {$grid_border_width_right}px {$grid_border_width_bottom}px {$grid_border_width_left}px;border-radius:{$grid_border_radius}px;background:{$grid_bg_color};box-sizing:border-box;}";
+		$css                        .= ".airygen-auto-related-posts__section-title{margin:{$section_margin_top}px {$section_margin_right}px {$section_margin_bottom}px {$section_margin_left}px;padding:{$section_padding_top}px {$section_padding_right}px {$section_padding_bottom}px {$section_padding_left}px;border-width:{$section_border_width_top}px {$section_border_width_right}px {$section_border_width_bottom}px {$section_border_width_left}px;border-style:{$section_border_style};border-color:{$section_border_color};border-radius:{$section_border_radius}px;background:{$section_bg_color};color:{$section_title_color};font-size:{$section_title_size}px;font-weight:" . ( ! empty( $section_title_style['bold'] ) ? '700' : '400' ) . ';font-style:' . ( ! empty( $section_title_style['italic'] ) ? 'italic' : 'normal' ) . ';text-decoration:' . ( ! empty( $section_title_style['underline'] ) ? 'underline' : 'none' ) . ';}';
+		$css                        .= ".airygen-auto-related-posts__card{padding:{$post_padding_top}px {$post_padding_right}px {$post_padding_bottom}px {$post_padding_left}px;border-style:{$post_border_style};border-color:{$post_border_color};border-width:{$post_border_width_top}px {$post_border_width_right}px {$post_border_width_bottom}px {$post_border_width_left}px;border-radius:{$post_border_radius}px;background:{$post_bg_color};display:flex;flex-direction:column;gap:{$post_gap}px;box-sizing:border-box;}";
+		$css                        .= ".airygen-auto-related-posts__layout{display:grid;grid-template-columns:minmax(0,1fr) 3fr;gap:{$post_gap}px;align-items:start;height:100%;}";
+		$css                        .= ".airygen-auto-related-posts__main{display:flex;flex-direction:column;gap:{$post_gap}px;}";
 		$css                        .= '.airygen-auto-related-posts__card--sidebar_left .airygen-auto-related-posts__main{height:100%;}';
 		$css                        .= '.airygen-auto-related-posts__card--sidebar_left .airygen-auto-related-posts__footer-grid{margin-top:auto;}';
-		$css                        .= '.airygen-auto-related-posts__region{display:flex;flex-direction:column;gap:' . esc_html( (string) $post_gap ) . 'px;}';
-		$css                        .= '.airygen-auto-related-posts__footer-grid{display:grid;grid-template-columns:repeat(' . esc_html( (string) $footer_columns ) . ',minmax(0,1fr));gap:' . esc_html( (string) $post_gap ) . 'px;align-items:start;}';
+		$css                        .= ".airygen-auto-related-posts__region{display:flex;flex-direction:column;gap:{$post_gap}px;}";
+		$css                        .= ".airygen-auto-related-posts__footer-grid{display:grid;grid-template-columns:repeat({$footer_columns},minmax(0,1fr));gap:{$post_gap}px;align-items:start;}";
 		$css                        .= '.airygen-auto-related-posts__region--footer-left{text-align:left;}';
 		$css                        .= '.airygen-auto-related-posts__region--footer-center{text-align:center;}';
 		$css                        .= '.airygen-auto-related-posts__region--footer-right{text-align:right;}';
-		$css                        .= '.airygen-auto-related-posts__thumb-link{display:block;overflow:hidden;border-radius:' . esc_html( (string) $image_radius ) . 'px;}';
-		$css                        .= '.airygen-auto-related-posts__thumb{display:block;max-width:100%;height:auto;border-radius:' . esc_html( (string) $image_radius ) . 'px;}';
-		$css                        .= '.airygen-auto-related-posts__title{margin:0;font-size:' . esc_html( (string) $title_size ) . 'px;color:' . esc_html( $title_color ) . ';font-weight:' . ( $title_bold ? '700' : '400' ) . ';font-style:' . ( $title_italic ? 'italic' : 'normal' ) . ';}';
+		$css                        .= ".airygen-auto-related-posts__thumb-link{display:block;overflow:hidden;border-radius:{$image_radius}px;}";
+		$css                        .= ".airygen-auto-related-posts__thumb{display:block;max-width:100%;height:auto;border-radius:{$image_radius}px;}";
+		$css                        .= ".airygen-auto-related-posts__title{margin:0;font-size:{$title_size}px;color:{$title_color};font-weight:" . ( $title_bold ? '700' : '400' ) . ';font-style:' . ( $title_italic ? 'italic' : 'normal' ) . ';}';
 		$css                        .= '.airygen-auto-related-posts__title a{color:inherit;text-decoration:none;}';
-		$css                        .= '.airygen-auto-related-posts__excerpt{margin:0;font-size:' . esc_html( (string) $excerpt_size ) . 'px;color:' . esc_html( $excerpt_color ) . ';line-height:1.5;}';
+		$css                        .= ".airygen-auto-related-posts__excerpt{margin:0;font-size:{$excerpt_size}px;color:{$excerpt_color};line-height:1.5;}";
 		$css                        .= '.airygen-auto-related-posts__excerpt--fade{position:relative;max-height:4.5em;overflow:hidden;}';
-		$css                        .= '.airygen-auto-related-posts__excerpt--fade::after{content:"";position:absolute;left:0;right:0;bottom:0;height:' . esc_html( (string) $excerpt_mask_height ) . 'px;background:linear-gradient(to bottom,rgba(255,255,255,0),' . esc_html( $excerpt_fade ) . ');}';
-		$css                        .= '.airygen-auto-related-posts__author{margin:0;font-size:' . esc_html( (string) $author_size ) . 'px;color:' . esc_html( $author_color ) . ';font-weight:' . ( $author_bold ? '700' : '400' ) . ';font-style:' . ( $author_italic ? 'italic' : 'normal' ) . ';}';
-		$css                        .= '.airygen-auto-related-posts__date{margin:0;font-size:' . esc_html( (string) $author_size ) . 'px;color:' . esc_html( $author_color ) . ';font-weight:' . ( $author_bold ? '700' : '400' ) . ';font-style:' . ( $author_italic ? 'italic' : 'normal' ) . ';}';
+		$css                        .= ".airygen-auto-related-posts__excerpt--fade::after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:{$excerpt_mask_height}px;background:linear-gradient(to bottom,rgba(255,255,255,0),{$excerpt_fade});}";
+		$css                        .= ".airygen-auto-related-posts__author{margin:0;font-size:{$author_size}px;color:{$author_color};font-weight:" . ( $author_bold ? '700' : '400' ) . ';font-style:' . ( $author_italic ? 'italic' : 'normal' ) . ';}';
+		$css                        .= ".airygen-auto-related-posts__date{margin:0;font-size:{$author_size}px;color:{$author_color};font-weight:" . ( $author_bold ? '700' : '400' ) . ';font-style:' . ( $author_italic ? 'italic' : 'normal' ) . ';}';
 		$css                        .= '@media(max-width:1024px){.airygen-auto-related-posts__grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}.airygen-auto-related-posts__layout{grid-template-columns:1fr;}}';
 		$css                        .= '@media(max-width:640px){.airygen-auto-related-posts__grid{grid-template-columns:repeat(1,minmax(0,1fr))!important;}}';
 

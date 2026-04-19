@@ -176,8 +176,6 @@ class Menu {
 			'debugRestPath'       => '/airygen/v1/debug',
 			'debugEnablePath'     => '/airygen/v1/debug/enable',
 			'debugDisablePath'    => '/airygen/v1/debug/disable',
-			'debugLogsPath'       => '/airygen/v1/debug/logs',
-			'debugClearPath'      => '/airygen/v1/debug/clear',
 			'debugEditorPath'     => '/airygen/v1/debug/editor-mode',
 			'debugLevelPath'      => '/airygen/v1/debug/level',
 			'notifyTimezones'     => self::build_timezone_options(),

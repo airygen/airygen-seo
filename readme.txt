@@ -103,11 +103,11 @@ When the Local SEO module is enabled and valid coordinates are configured, the p
 
 When the Instant Indexing module is enabled and the site administrator configures an IndexNow key, the plugin sends JSON requests to each enabled IndexNow engine endpoint. The payload contains the site host, the configured key, the submitted URL list, and the optional key file location. Requests can occur during automatic publish or delete events, manual submissions from the Instant Indexing admin screen, and backfill jobs started by the site administrator. Built-in endpoints currently include:
 
-* Microsoft Bing: `https://www.bing.com/indexnow`
-* Yandex: `https://yandex.com/indexnow`
-* Seznam.cz: `https://search.seznam.cz/indexnow`
-* Naver: `https://www.naver.com/indexnow`
-* Yep (Ahrefs): `https://yep.com/indexnow`
+* Microsoft Bing: `https://www.bing.com/indexnow` — [Microsoft Services Agreement](https://www.microsoft.com/en/servicesagreement), [Microsoft Privacy Statement](https://www.microsoft.com/en-us/privacy/privacystatement)
+* Yandex: `https://yandex.com/indexnow` — [Yandex User Agreement](https://yandex.com/legal/rules/), [Yandex Privacy Policy](https://yandex.com/legal/confidential/)
+* Seznam.cz: `https://search.seznam.cz/indexnow` — [Seznam Legal Information](https://o-seznam.cz/pravni-informace/), [Seznam Privacy Policy](https://o-seznam.cz/pravni-informace/ochrana-udaju/)
+* Naver: `https://searchadvisor.naver.com/indexnow` — [Naver Terms of Service](https://policy.naver.com/policy/service_en.html), [Naver Privacy Policy](https://policy.naver.com/policy/privacy_en.html)
+* Yep (Ahrefs): `https://indexnow.yep.com/indexnow` — [Ahrefs Terms of Service](https://ahrefs.com/legal/terms), [Ahrefs Privacy Policy](https://ahrefs.com/legal/privacy-policy)
 * [IndexNow FAQ](https://www.indexnow.org/faq)
 
 = Telegram Bot API =
@@ -137,8 +137,8 @@ When email notifications are enabled in the Notify module, the plugin connects d
 
 * Gmail: [Google Terms of Service](https://policies.google.com/terms), [Google Privacy Policy](https://policies.google.com/privacy)
 * Office 365 / Outlook: [Microsoft Services Agreement](https://www.microsoft.com/en/servicesagreement), [Microsoft Privacy Statement](https://www.microsoft.com/en-us/privacy/privacystatement)
-* Mailgun: [Mailgun Terms of Service](https://www.mailgun.com/legal/terms/)、[Mailgun Privacy Policy](https://www.mailgun.com/legal/privacy-policy/)
-* SendGrid: [Twilio Terms of Service](https://www.twilio.com/en-us/legal/tos)、[Twilio Privacy Policy](https://www.twilio.com/en-us/legal/privacy)
+* Mailgun: [Mailgun Terms of Service](https://www.mailgun.com/legal/terms/), [Mailgun Privacy Policy](https://www.mailgun.com/legal/privacy-policy/)
+* SendGrid: [Twilio Terms of Service](https://www.twilio.com/en-us/legal/tos), [Twilio Privacy Policy](https://www.twilio.com/en-us/legal/privacy)
 * Amazon SES: [AWS Service Terms](https://aws.amazon.com/service-terms/), [AWS Privacy Notice](https://aws.amazon.com/privacy/)
 * Zoho Mail: [Zoho Terms of Service](https://www.zoho.com/terms.html), [Zoho Privacy Policy](https://www.zoho.com/privacy.html)
 * Brevo: [Brevo Terms of Use](https://www.brevo.com/legal/termsofuse/), [Brevo Privacy Policy](https://www.brevo.com/legal/privacypolicy/)

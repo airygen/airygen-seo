@@ -125,7 +125,10 @@ final class Hooks {
 			$schema['sameAs'] = $social;
 		}
 
-		$json = wp_json_encode( $schema );
+		$json = wp_json_encode(
+			$schema,
+			JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT
+		);
 		if ( false === $json ) {
 			return;
 		}

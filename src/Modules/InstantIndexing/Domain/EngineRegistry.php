@@ -38,11 +38,11 @@ final class EngineRegistry {
 		),
 		'naver'  => array(
 			'label'    => 'Naver',
-			'endpoint' => 'https://www.naver.com/indexnow',
+			'endpoint' => 'https://searchadvisor.naver.com/indexnow',
 		),
 		'yep'    => array(
 			'label'    => 'Yep (Ahrefs)',
-			'endpoint' => 'https://yep.com/indexnow',
+			'endpoint' => 'https://indexnow.yep.com/indexnow',
 		),
 	);
 

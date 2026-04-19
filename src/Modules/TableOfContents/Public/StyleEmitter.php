@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 use Airygen\Modules\TableOfContents\Admin\Settings;
+use Airygen\Support\Utils\Css;
 
 /**
  * Emits inline CSS for TOC styling.
@@ -34,8 +35,8 @@ final class StyleEmitter {
 
 		$style               = isset( $settings['style'] ) && is_array( $settings['style'] ) ? $settings['style'] : array();
 		$preset              = isset( $style['preset'] ) ? (string) $style['preset'] : 'minimal';
-		$border_style        = isset( $style['border_style'] ) ? (string) $style['border_style'] : 'solid';
-		$border_color        = isset( $style['border_color'] ) ? (string) $style['border_color'] : '#e2e8f0';
+		$border_style        = Css::sanitize_border_style( $style['border_style'] ?? 'solid', 'solid' );
+		$border_color        = Css::sanitize_color( $style['border_color'] ?? '#e2e8f0', '#e2e8f0' );
 		$border_radius       = isset( $style['border_radius'] ) ? (int) $style['border_radius'] : 0;
 		$body_container      = isset( $style['body_container'] ) && is_array( $style['body_container'] ) ? $style['body_container'] : array();
 		$border_width_top    = isset( $body_container['border_width_top'] ) ? (int) $body_container['border_width_top'] : 1;
@@ -51,13 +52,13 @@ final class StyleEmitter {
 		$margin_bottom       = isset( $body_container['margin_bottom'] ) ? (int) $body_container['margin_bottom'] : 0;
 		$margin_left         = isset( $body_container['margin_left'] ) ? (int) $body_container['margin_left'] : 0;
 		$toc_padding         = isset( $style['toc_padding'] ) ? (int) $style['toc_padding'] : 12;
-		$link_color          = isset( $style['link_color'] ) ? (string) $style['link_color'] : '#2563eb';
+		$link_color          = Css::sanitize_color( $style['link_color'] ?? '#2563eb', '#2563eb' );
 		$link_size           = isset( $style['link_size'] ) ? (int) $style['link_size'] : 14;
 		$font_style          = isset( $style['font_style'] ) && is_array( $style['font_style'] ) ? $style['font_style'] : array();
 		$bold                = ! empty( $font_style['bold'] );
 		$italic              = ! empty( $font_style['italic'] );
 		$underline           = ! empty( $font_style['underline'] );
-		$bg_color            = isset( $style['bg_color'] ) ? (string) $style['bg_color'] : '#ffffff';
+		$bg_color            = Css::sanitize_color( $style['bg_color'] ?? '#ffffff', '#ffffff' );
 		$header_container    = isset( $style['header_container'] ) && is_array( $style['header_container'] ) ? $style['header_container'] : array();
 		$header_title        = isset( $style['header_title'] ) && is_array( $style['header_title'] ) ? $style['header_title'] : array();
 		$header_title_style  = isset( $header_title['font_style'] ) && is_array( $header_title['font_style'] ) ? $header_title['font_style'] : array();
@@ -78,10 +79,10 @@ final class StyleEmitter {
 		$header_border_width_bottom = isset( $header_container['border_width_bottom'] ) ? (int) $header_container['border_width_bottom'] : 0;
 		$header_border_width_left   = isset( $header_container['border_width_left'] ) ? (int) $header_container['border_width_left'] : 0;
 		$header_border_radius       = isset( $header_container['border_radius'] ) ? (int) $header_container['border_radius'] : 0;
-		$header_border_style        = isset( $header_container['border_style'] ) ? (string) $header_container['border_style'] : 'solid';
-		$header_border_color        = isset( $header_container['border_color'] ) ? (string) $header_container['border_color'] : '#e2e8f0';
-		$header_bg                  = isset( $header_container['bg_color'] ) ? (string) $header_container['bg_color'] : 'transparent';
-		$header_title_color         = isset( $header_title['color'] ) ? (string) $header_title['color'] : '#0f172a';
+		$header_border_style        = Css::sanitize_border_style( $header_container['border_style'] ?? 'solid', 'solid' );
+		$header_border_color        = Css::sanitize_color( $header_container['border_color'] ?? '#e2e8f0', '#e2e8f0' );
+		$header_bg                  = Css::sanitize_color( $header_container['bg_color'] ?? 'transparent', 'transparent' );
+		$header_title_color         = Css::sanitize_color( $header_title['color'] ?? '#0f172a', '#0f172a' );
 		$header_title_size          = isset( $header_title['font_size'] ) ? (int) $header_title['font_size'] : 18;
 		$css                       .= '.airygen-toc-header{display:block;margin:' . max( 0, min( 48, $header_margin_top ) ) . 'px ' . max( 0, min( 48, $header_margin_right ) ) . 'px ' . max( 0, min( 48, $header_margin_bottom ) ) . 'px ' . max( 0, min( 48, $header_margin_left ) ) . 'px;padding:' . max( 0, min( 48, $header_padding_top ) ) . 'px ' . max( 0, min( 48, $header_padding_right ) ) . 'px ' . max( 0, min( 48, $header_padding_bottom ) ) . 'px ' . max( 0, min( 48, $header_padding_left ) ) . 'px;border-width:' . max( 0, min( 8, $header_border_width_top ) ) . 'px ' . max( 0, min( 8, $header_border_width_right ) ) . 'px ' . max( 0, min( 8, $header_border_width_bottom ) ) . 'px ' . max( 0, min( 8, $header_border_width_left ) ) . 'px;border-style:' . $header_border_style . ';border-color:' . $header_border_color . ';border-radius:' . max( 0, min( 48, $header_border_radius ) ) . 'px;background:' . $header_bg . ';color:' . $header_title_color . ';font-size:' . max( 10, min( 40, $header_title_size ) ) . 'px;font-weight:' . ( ! empty( $header_title_style['bold'] ) ? '700' : '400' ) . ';font-style:' . ( ! empty( $header_title_style['italic'] ) ? 'italic' : 'normal' ) . ';text-decoration:' . ( ! empty( $header_title_style['underline'] ) ? 'underline' : 'none' ) . ';}';
 		$css                       .= '.airygen-toc__list,.airygen-toc__sublist{margin:0;padding-left:' . $toc_padding . 'px;}';

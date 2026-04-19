@@ -29,15 +29,19 @@ final class Hooks {
 	public static function register(): void {
 		Settings::ensure_exists();
 		require_once __DIR__ . '/../TemplateTags.php';
-		add_action(
-			'init',
-			static function (): void {
-				add_shortcode( 'airygen_topic_cluster', array( __CLASS__, 'render_shortcode' ) );
-			}
-		);
+		add_action( 'init', array( __CLASS__, 'register_shortcode' ) );
 		add_action( 'init', array( __CLASS__, 'register_blocks' ) );
 		add_filter( 'the_content', array( __CLASS__, 'inject_to_content' ), 45 );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'print_styles' ) );
+	}
+
+	/**
+	 * Register the [airygen_topic_cluster] shortcode.
+	 *
+	 * @return void
+	 */
+	public static function register_shortcode(): void {
+		add_shortcode( 'airygen_topic_cluster', array( __CLASS__, 'render_shortcode' ) );
 	}
 
 	/**
@@ -78,7 +82,8 @@ final class Hooks {
 	 * @return string
 	 */
 	public static function render_block( array $attributes = array() ): string {
-		return self::render_shortcode( $attributes );
+		$post_id = isset( $attributes['post_id'] ) ? (int) $attributes['post_id'] : 0;
+		return self::render_for_template( $post_id );
 	}
 
 	/**

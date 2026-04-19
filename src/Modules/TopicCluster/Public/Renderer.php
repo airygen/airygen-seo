@@ -15,6 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 use Airygen\Constants;
 use Airygen\Support\Database\WpDbAdapter;
+use Airygen\Support\Utils\Css;
 
 /**
  * Builds level-aware Topic Cluster markup.
@@ -30,8 +31,8 @@ final class Renderer {
 	 */
 	public static function build_css( array $settings ): string {
 		$style                  = isset( $settings['style'] ) && is_array( $settings['style'] ) ? $settings['style'] : array();
-		$border_style           = isset( $style['border_style'] ) ? (string) $style['border_style'] : 'solid';
-		$border_color           = isset( $style['border_color'] ) ? (string) $style['border_color'] : '#cbd5e1';
+		$border_style           = Css::sanitize_border_style( $style['border_style'] ?? 'solid', 'solid' );
+		$border_color           = Css::sanitize_color( $style['border_color'] ?? '#cbd5e1', '#cbd5e1' );
 		$border_width_top       = isset( $style['border_width_top'] ) ? (int) $style['border_width_top'] : 1;
 		$border_width_right     = isset( $style['border_width_right'] ) ? (int) $style['border_width_right'] : 1;
 		$border_width_bottom    = isset( $style['border_width_bottom'] ) ? (int) $style['border_width_bottom'] : 1;
@@ -45,14 +46,14 @@ final class Renderer {
 		$margin_right           = isset( $style['margin_right'] ) ? (int) $style['margin_right'] : 0;
 		$margin_bottom          = isset( $style['margin_bottom'] ) ? (int) $style['margin_bottom'] : 0;
 		$margin_left            = isset( $style['margin_left'] ) ? (int) $style['margin_left'] : 0;
-		$bg_color               = isset( $style['bg_color'] ) ? (string) $style['bg_color'] : '#f8fafc';
-		$item_text              = isset( $style['item_text_color'] ) ? (string) $style['item_text_color'] : '#0f172a';
+		$bg_color               = Css::sanitize_color( $style['bg_color'] ?? '#f8fafc', '#f8fafc' );
+		$item_text              = Css::sanitize_color( $style['item_text_color'] ?? '#0f172a', '#0f172a' );
 		$item_font_size         = isset( $style['item_font_size'] ) ? (int) $style['item_font_size'] : 16;
 		$item_gap               = isset( $style['item_gap'] ) ? (int) $style['item_gap'] : 10;
 		$item_weight            = ! empty( $style['item_bold'] ) ? '700' : '400';
 		$item_font_style        = ! empty( $style['item_italic'] ) ? 'italic' : 'normal';
 		$item_decoration        = ! empty( $style['item_underline'] ) ? 'underline' : 'none';
-		$item_list_style        = isset( $style['item_list_style'] ) ? (string) $style['item_list_style'] : 'none';
+		$item_list_style        = Css::sanitize_list_style( $style['item_list_style'] ?? 'none', 'none' );
 		$header_container       = isset( $style['header_container'] ) && is_array( $style['header_container'] ) ? $style['header_container'] : array();
 		$header_title           = isset( $style['header_title'] ) && is_array( $style['header_title'] ) ? $style['header_title'] : array();
 		$header_border_top      = isset( $header_container['border_width_top'] ) ? (int) $header_container['border_width_top'] : 0;
@@ -60,9 +61,9 @@ final class Renderer {
 		$header_border_bottom   = isset( $header_container['border_width_bottom'] ) ? (int) $header_container['border_width_bottom'] : 0;
 		$header_border_left     = isset( $header_container['border_width_left'] ) ? (int) $header_container['border_width_left'] : 0;
 		$header_border_radius   = isset( $header_container['border_radius'] ) ? (int) $header_container['border_radius'] : 0;
-		$header_border_style    = isset( $header_container['border_style'] ) ? (string) $header_container['border_style'] : 'solid';
-		$header_border_color    = isset( $header_container['border_color'] ) ? (string) $header_container['border_color'] : '#cbd5e1';
-		$header_bg_color        = isset( $header_container['bg_color'] ) ? (string) $header_container['bg_color'] : 'transparent';
+		$header_border_style    = Css::sanitize_border_style( $header_container['border_style'] ?? 'solid', 'solid' );
+		$header_border_color    = Css::sanitize_color( $header_container['border_color'] ?? '#cbd5e1', '#cbd5e1' );
+		$header_bg_color        = Css::sanitize_color( $header_container['bg_color'] ?? 'transparent', 'transparent' );
 		$header_padding_top     = isset( $header_container['padding_top'] ) ? (int) $header_container['padding_top'] : 0;
 		$header_padding_right   = isset( $header_container['padding_right'] ) ? (int) $header_container['padding_right'] : 0;
 		$header_padding_bottom  = isset( $header_container['padding_bottom'] ) ? (int) $header_container['padding_bottom'] : 0;
@@ -72,7 +73,7 @@ final class Renderer {
 		$header_margin_bottom   = isset( $header_container['margin_bottom'] ) ? (int) $header_container['margin_bottom'] : 12;
 		$header_margin_left     = isset( $header_container['margin_left'] ) ? (int) $header_container['margin_left'] : 0;
 		$header_title_style     = isset( $header_title['font_style'] ) && is_array( $header_title['font_style'] ) ? $header_title['font_style'] : array();
-		$header_title_color     = isset( $header_title['color'] ) ? (string) $header_title['color'] : '#0f172a';
+		$header_title_color     = Css::sanitize_color( $header_title['color'] ?? '#0f172a', '#0f172a' );
 		$header_title_size      = isset( $header_title['font_size'] ) ? (int) $header_title['font_size'] : 18;
 		$header_title_weight    = ! empty( $header_title_style['bold'] ) ? '700' : '400';
 		$header_title_italic    = ! empty( $header_title_style['italic'] ) ? 'italic' : 'normal';

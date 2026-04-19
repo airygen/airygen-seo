@@ -73,7 +73,10 @@ final class Hooks {
 		if ( self::should_emit_local_business_schema() && self::should_emit_inline_local_business_schema() ) {
 			$schema = self::build_schema( $settings, self::should_emit_full_local_business_schema() );
 			if ( ! empty( $schema ) ) {
-				$json = wp_json_encode( $schema );
+				$json = wp_json_encode(
+					$schema,
+					JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT
+				);
 				if ( false !== $json ) {
 					wp_print_inline_script_tag( $json, array( 'type' => 'application/ld+json' ) );
 				}
@@ -82,7 +85,10 @@ final class Hooks {
 
 		$service_schema = self::build_service_schema( $settings );
 		if ( ! empty( $service_schema ) ) {
-			$json = wp_json_encode( $service_schema );
+			$json = wp_json_encode(
+				$service_schema,
+				JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT
+			);
 			if ( false !== $json ) {
 				wp_print_inline_script_tag( $json, array( 'type' => 'application/ld+json' ) );
 			}

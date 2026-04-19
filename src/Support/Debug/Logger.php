@@ -16,7 +16,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 use Airygen\Support\Debug\Settings;
 
 /**
- * Simple helper wrapping error_log with consistent formatting.
+ * Thin wrapper around error_log with consistent formatting.
+ *
+ * Output goes to PHP's configured error log destination. When the site admin
+ * enables WP_DEBUG_LOG, WordPress redirects it to wp-content/debug.log;
+ * otherwise PHP routes it to whichever sink the hosting environment
+ * configured (server error log, syslog, etc.). The plugin itself never
+ * writes log files, keeping the plugin footprint within WordPress.org policy.
  */
 final class Logger {
 
@@ -32,7 +38,7 @@ final class Logger {
 	);
 
 	/**
-	 * Write a log line when WP_DEBUG_LOG is enabled.
+	 * Write an informational log line.
 	 *
 	 * @param string       $channel Channel or component name.
 	 * @param string|array $message Log message or structured context.
@@ -44,10 +50,11 @@ final class Logger {
 	}
 
 	/**
-	 * Write warning level logs.
+	 * Write a warning log line.
 	 *
 	 * @param string       $channel Channel or component name.
 	 * @param string|array $message Log message or structured context.
+	 *
 	 * @return void
 	 */
 	public static function warning( string $channel, $message ): void {
@@ -55,10 +62,11 @@ final class Logger {
 	}
 
 	/**
-	 * Write error level logs.
+	 * Write an error log line.
 	 *
 	 * @param string       $channel Channel or component name.
 	 * @param string|array $message Log message or structured context.
+	 *
 	 * @return void
 	 */
 	public static function error( string $channel, $message ): void {
@@ -71,58 +79,49 @@ final class Logger {
 	 * @param string       $level   Log level (error|warning|info).
 	 * @param string       $channel Channel or component name.
 	 * @param string|array $message Log message or structured context.
+	 *
 	 * @return void
 	 */
 	private static function write( string $level, string $channel, $message ): void {
-		$config = Settings::get_config();
-		if ( empty( $config['enabled'] ) ) {
+		if ( ! self::should_emit( $level ) ) {
 			return;
 		}
-		if ( ! self::should_log( $level, isset( $config['level'] ) ? (string) $config['level'] : 'info' ) ) {
-			return;
-		}
-
-		$log_file = Settings::resolve_log_file();
 
 		$timestamp = function_exists( 'current_time' ) ? (string) current_time( 'mysql' ) : gmdate( 'Y-m-d H:i:s' );
 		$formatted = sprintf(
-			'[%s] [%s] [%s] %s',
+			'[airygen-seo] [%s] [%s] [%s] %s',
 			$timestamp,
 			strtoupper( $level ),
 			$channel,
 			self::format_message( $message )
 		);
 
-		if ( $log_file && defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-			// phpcs:ignore WordPress.WP.AlternativeFunctions.file_put_contents_file_put_contents,WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents,WordPress.PHP.NoSilencedErrors.Discouraged
-			@file_put_contents( $log_file, $formatted . PHP_EOL, FILE_APPEND | LOCK_EX );
-			if ( 'error' !== $level ) {
-				return;
-			}
-		}
-
-		if ( 'error' === $level ) {
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
-			error_log( $formatted );
-			return;
-		}
-
-		if ( defined( 'WP_DEBUG_LOG' ) && WP_DEBUG_LOG && defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
-			error_log( $formatted );
-		}
+		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
+		error_log( $formatted );
 	}
 
 	/**
-	 * Check if current level should be recorded.
+	 * Decide whether a log line should reach error_log.
+	 *
+	 * The admin opts in through Airygen's debug toggle and picks a verbosity
+	 * level; the destination of error_log output itself remains under the
+	 * operator's PHP/WordPress configuration (php.ini, WP_DEBUG_LOG, syslog,
+	 * etc.), so this helper does not inspect WP_DEBUG.
 	 *
 	 * @param string $level Requested level.
-	 * @param string $configured Configured level.
+	 *
 	 * @return bool
 	 */
-	private static function should_log( string $level, string $configured ): bool {
-		$current  = self::LEVELS[ $configured ] ?? self::LEVELS['info'];
-		$incoming = self::LEVELS[ $level ] ?? self::LEVELS['info'];
+	private static function should_emit( string $level ): bool {
+		$config = Settings::get_config();
+		if ( empty( $config['enabled'] ) ) {
+			return false;
+		}
+
+		$configured = isset( $config['level'] ) ? (string) $config['level'] : 'info';
+		$current    = self::LEVELS[ $configured ] ?? self::LEVELS['info'];
+		$incoming   = self::LEVELS[ $level ] ?? self::LEVELS['info'];
+
 		return $incoming <= $current;
 	}
 

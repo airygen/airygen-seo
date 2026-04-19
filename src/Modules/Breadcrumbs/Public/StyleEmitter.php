@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 use Airygen\Modules\Breadcrumbs\Admin\Settings;
+use Airygen\Support\Utils\Css;
 
 /**
  * Emits inline CSS for breadcrumbs based on settings.
@@ -36,13 +37,13 @@ final class StyleEmitter {
 		: array();
 
 		$font_size    = isset( $style['fontSize'] ) ? (int) $style['fontSize'] : 0;
-		$text_color   = isset( $style['textColor'] ) ? (string) $style['textColor'] : '';
-		$link_color   = isset( $style['linkColor'] ) ? (string) $style['linkColor'] : '';
+		$text_color   = Css::sanitize_color( $style['textColor'] ?? '' );
+		$link_color   = Css::sanitize_color( $style['linkColor'] ?? '' );
 		$underline    = ! empty( $style['underlineLinks'] );
 		$border_width = isset( $style['borderWidth'] ) ? (int) $style['borderWidth'] : 0;
-		$border_color = isset( $style['borderColor'] ) ? (string) $style['borderColor'] : '';
+		$border_color = Css::sanitize_color( $style['borderColor'] ?? '' );
 		$padding      = isset( $style['padding'] ) ? (int) $style['padding'] : 0;
-		$bg_color     = isset( $style['bgColor'] ) ? (string) $style['bgColor'] : '';
+		$bg_color     = Css::sanitize_color( $style['bgColor'] ?? '' );
 
 		$rules = array();
 		if ( $font_size > 0 ) {

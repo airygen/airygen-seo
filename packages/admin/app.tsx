@@ -60,7 +60,7 @@ import { SettingsPage } from './pages/settings';
 import createSettingsTabs, { type SettingsTab } from './pages/settings/createTabs';
 import NotifyTab, { type NotifyView } from './pages/settings/tabs/NotifyTab';
 import type { ModuleKey, ModuleMetadata, ModuleSettings, PanelKey, PanelMetadata } from './types/modules';
-import type { DebugState, DebugLogEntry } from './types/debug';
+import type { DebugState } from './types/debug';
 import type { ApiResponse, MetaPayload, NoticeState } from './types/api';
 import {
 	getLoadingAppLabel,
@@ -197,8 +197,6 @@ declare global {
 			debugRestPath?: string;
 			debugEnablePath?: string;
 			debugDisablePath?: string;
-			debugLogsPath?: string;
-			debugClearPath?: string;
 			debugEditorPath?: string;
 			debugLevelPath?: string;
 			extensionApiVersion?: string;
@@ -1232,10 +1230,8 @@ const initialPageFromConfig =
 		? config.initialPage
 		: 'dashboard';
 const debugRestPath = config.debugRestPath ?? '/airygen/v1/debug';
-const debugLogsPath = config.debugLogsPath ?? '/airygen/v1/debug/logs';
 const debugEnablePath = config.debugEnablePath ?? '/airygen/v1/debug/enable';
 const debugDisablePath = config.debugDisablePath ?? '/airygen/v1/debug/disable';
-const debugClearPath = config.debugClearPath ?? '/airygen/v1/debug/clear';
 const debugEditorPath = config.debugEditorPath ?? '/airygen/v1/debug/editor-mode';
 const debugLevelPath = config.debugLevelPath ?? '/airygen/v1/debug/level';
 const MIGRATION_TAB_KEYS = [ 'yoast', 'rankmath', 'aioseo', 'seopress' ] as const;
@@ -5468,15 +5464,7 @@ const App = () => {
 	const [ debugState, setDebugState ] = useState<DebugState | null>( null );
 	const [ isDebugLoading, setIsDebugLoading ] = useState( false );
 	const [ debugError, setDebugError ] = useState<string | null>( null );
-	const [ debugTab, setDebugTab ] = useState<'config' | 'logs'>( 'config' );
 	const [ isDebugEnabling, setIsDebugEnabling ] = useState( false );
-	const [ selectedLogDate, setSelectedLogDate ] = useState<string | null>( null );
-	const logCacheRef = useRef<
-		Record<string, { content: string; exists: boolean }>
-	>( {} );
-	const [ isLogLoading, setIsLogLoading ] = useState( false );
-	const [ logViewerError, setLogViewerError ] = useState<string | null>( null );
-	const [ logViewerContent, setLogViewerContent ] = useState( '' );
 	const defaultSettingsSnapshot = useMemo( () => normalizeSettings( {} ), [] );
 
 	const adminBaseUrl =
@@ -6020,29 +6008,6 @@ const App = () => {
 		);
 	};
 
-	const syncLogSelection = useCallback(
-		( entries: DebugLogEntry[] ) => {
-			let selectionChanged = false;
-			setSelectedLogDate( ( current ) => {
-				if (
-					current &&
-					entries.some( ( entry ) => entry.date === current )
-				) {
-					return current;
-				}
-				selectionChanged = true;
-				return entries.length > 0 ? entries[ 0 ].date : null;
-			} );
-
-			if ( selectionChanged || entries.length === 0 ) {
-				logCacheRef.current = {};
-				setLogViewerContent( '' );
-				setLogViewerError( null );
-			}
-		},
-		[],
-	);
-
 	const fetchDebugState = useCallback( () => {
 		setIsDebugLoading( true );
 		setDebugError( null );
@@ -6050,7 +6015,6 @@ const App = () => {
 		apiFetch<DebugState>( { path: debugRestPath } )
 			.then( ( response ) => {
 				setDebugState( response );
-				syncLogSelection( response.logs );
 			} )
 			.catch( ( error: unknown ) => {
 				const message =
@@ -6060,7 +6024,7 @@ const App = () => {
 			.finally( () => {
 				setIsDebugLoading( false );
 			} );
-	}, [ syncLogSelection ] );
+	}, [] );
 
 	const handleDisableDebug = useCallback( () => {
 		setIsDebugEnabling( true );
@@ -6098,7 +6062,6 @@ const App = () => {
 		} )
 			.then( ( response ) => {
 				setDebugState( response );
-				syncLogSelection( response.logs );
 				setNotice( {
 					status: 'success',
 					message: __( 'Debug mode enabled.', 'airygen-seo' ),
@@ -6113,37 +6076,7 @@ const App = () => {
 			.finally( () => {
 				setIsDebugEnabling( false );
 			} );
-	}, [ syncLogSelection ] );
-
-	const handleClearLogs = useCallback( () => {
-		setIsDebugLoading( true );
-		setDebugError( null );
-
-		apiFetch<DebugState>( {
-			path: debugClearPath,
-			method: 'POST',
-		} )
-			.then( ( response ) => {
-				logCacheRef.current = {};
-				setLogViewerContent( '' );
-				setLogViewerError( null );
-				setDebugState( response );
-				syncLogSelection( response.logs );
-				setNotice( {
-					status: 'success',
-					message: __( 'Logs cleared.', 'airygen-seo' ),
-				} );
-			} )
-			.catch( () => {
-				setNotice( {
-					status: 'error',
-					message: __( 'Failed to clear logs.', 'airygen-seo' ),
-				} );
-			} )
-			.finally( () => {
-				setIsDebugLoading( false );
-			} );
-	}, [ syncLogSelection ] );
+	}, [] );
 
 	const handleClassicEditorToggle = useCallback( ( enabledValue: boolean ) => {
 		setIsDebugEnabling( true );
@@ -6203,48 +6136,6 @@ const App = () => {
 		},
 		[],
 	);
-
-	const loadLogForDate = useCallback(
-		( date: string | null ) => {
-			if ( ! date ) {
-				return;
-			}
-
-			const cached = logCacheRef.current[ date ];
-			if ( cached ) {
-				setLogViewerContent( cached.content );
-				setLogViewerError(
-					cached.exists ? null : __( 'Log file not found.', 'airygen-seo' ),
-				);
-				return;
-			}
-
-			setIsLogLoading( true );
-			setLogViewerError( null );
-
-			apiFetch<{ content: string; exists: boolean }>( {
-				path: `${ debugLogsPath }?date=${ encodeURIComponent( date ) }`,
-				method: 'GET',
-			} )
-				.then( ( response ) => {
-					const cacheEntry = {
-						content: response?.content ?? '',
-						exists: Boolean( response?.exists ),
-					};
-					logCacheRef.current[ date ] = cacheEntry;
-					setLogViewerContent( cacheEntry.content );
-					setLogViewerError(
-						cacheEntry.exists ? null : __( 'Log file not found.', 'airygen-seo' ),
-					);
-				} )
-				.catch( () => {
-					setLogViewerError( __( 'Failed to load log file.', 'airygen-seo' ) );
-				} )
-				.finally( () => {
-					setIsLogLoading( false );
-				} );
-		},
-		[] );
 
 	const fetchSettings = useCallback( () => {
 		setIsLoading( true );
@@ -6350,14 +6241,6 @@ const App = () => {
 
 		fetchDebugState();
 	}, [ activePage, debugState, isDebugLoading, fetchDebugState ] );
-
-	useEffect( () => {
-		if ( activePage !== 'debug' || debugTab !== 'logs' ) {
-			return;
-		}
-
-		loadLogForDate( selectedLogDate );
-	}, [ activePage, debugTab, selectedLogDate, loadLogForDate ] );
 
 	const isDirtySettings = useMemo( () => {
 		if ( ! settings || ! original ) {
@@ -6962,22 +6845,13 @@ const App = () => {
 		pageContent = (
 			<DebugPage
 				debugState={ debugState }
-				debugTab={ debugTab }
-				onSelectTab={ setDebugTab }
 				isDebugLoading={ isDebugLoading }
 				isDebugEnabling={ isDebugEnabling }
 				onEnableDebug={ handleEnableDebug }
 				onDisableDebug={ handleDisableDebug }
 				onRefresh={ fetchDebugState }
-				onClearLogs={ handleClearLogs }
 				onToggleClassicEditor={ handleClassicEditorToggle }
 				onChangeDebugLevel={ handleDebugLevelChange }
-				selectedLogDate={ selectedLogDate }
-				onSelectLogDate={ setSelectedLogDate }
-				onLoadLog={ loadLogForDate }
-				isLogLoading={ isLogLoading }
-				logViewerError={ logViewerError }
-				logViewerContent={ logViewerContent }
 				debugError={ debugError }
 				onDismissError={ () => setDebugError( null ) }
 			/>

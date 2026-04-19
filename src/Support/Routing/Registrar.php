@@ -24,27 +24,38 @@ final class Registrar {
 	private const DEFAULT_NAMESPACE = 'airygen/v1';
 
 	/**
+	 * Route definitions captured at plugin boot, consumed when rest_api_init fires.
+	 *
+	 * @var array<int, RouteDefinition>
+	 */
+	private static array $pending_definitions = array();
+
+	/**
 	 * Boot the registrar and schedule REST route registration.
 	 *
 	 * @return void
 	 */
 	public static function register(): void {
-		$definitions = self::load_definitions();
+		self::$pending_definitions = self::load_definitions();
 
-		add_action(
-			'rest_api_init',
-			static function () use ( $definitions ): void {
-				$routes = apply_filters( Constants::HOOK_ROUTES, $definitions ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.DynamicHooknameFound -- Hook constant is already plugin-prefixed.
+		add_action( 'rest_api_init', array( __CLASS__, 'dispatch_rest_routes' ) );
+	}
 
-				foreach ( $routes as $definition ) {
-					if ( ! $definition instanceof RouteDefinition ) {
-						continue;
-					}
+	/**
+	 * Registers all collected route definitions with WordPress.
+	 *
+	 * @return void
+	 */
+	public static function dispatch_rest_routes(): void {
+		$routes = apply_filters( Constants::HOOK_ROUTES, self::$pending_definitions ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.DynamicHooknameFound -- Hook constant is already plugin-prefixed.
 
-					self::register_definition( $definition );
-				}
+		foreach ( $routes as $definition ) {
+			if ( ! $definition instanceof RouteDefinition ) {
+				continue;
 			}
-		);
+
+			self::register_definition( $definition );
+		}
 	}
 
 	/**

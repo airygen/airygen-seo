@@ -171,10 +171,8 @@ Route::group(
 		$router->get( '/debug', array( DebugRestController::class, 'handle_get' ) );
 		$router->post( '/debug/enable', array( DebugRestController::class, 'handle_enable' ) );
 		$router->post( '/debug/disable', array( DebugRestController::class, 'handle_disable' ) );
-		$router->post( '/debug/clear', array( DebugRestController::class, 'handle_clear' ) );
 		$router->post( '/debug/editor-mode', array( DebugRestController::class, 'handle_editor_mode' ) );
 		$router->post( '/debug/level', array( DebugRestController::class, 'handle_level' ) );
-		$router->get( '/debug/logs', array( DebugRestController::class, 'handle_log_view' ) );
 
 		$router
 			->get( '/site-health', array( SiteHealthController::class, 'handle_get' ) )

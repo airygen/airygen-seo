@@ -30,38 +30,47 @@ final class Hooks {
 		Settings::ensure_exists();
 		require_once __DIR__ . '/../TemplateTags.php';
 
-		add_action(
-			'init',
-			static function (): void {
-				add_shortcode( 'airygen_breadcrumbs', array( __CLASS__, 'render_shortcode' ) );
-			}
-		);
+		add_action( 'init', array( __CLASS__, 'register_shortcode' ) );
 		add_action( 'init', array( __CLASS__, 'register_blocks' ) );
 		add_filter( 'the_content', array( __CLASS__, 'inject_to_content' ), 45 );
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'maybe_emit_styles' ) );
+		add_action( 'wp', array( __CLASS__, 'prime_trail_store' ), 20 );
+	}
 
-		add_action(
-			'wp_enqueue_scripts',
-			static function (): void {
-				if ( ! ModuleSettings::is_enabled( 'breadcrumbs' ) ) {
-					return;
-				}
+	/**
+	 * Register the [airygen_breadcrumbs] shortcode.
+	 *
+	 * @return void
+	 */
+	public static function register_shortcode(): void {
+		add_shortcode( 'airygen_breadcrumbs', array( __CLASS__, 'render_shortcode' ) );
+	}
 
-				StyleEmitter::output();
-			}
-		);
+	/**
+	 * Emit breadcrumb inline styles when the module is enabled.
+	 *
+	 * @return void
+	 */
+	public static function maybe_emit_styles(): void {
+		if ( ! ModuleSettings::is_enabled( 'breadcrumbs' ) ) {
+			return;
+		}
 
-		add_action(
-			'wp',
-			static function (): void {
-				if ( ! ModuleSettings::is_enabled( 'breadcrumbs' ) ) {
-					TrailStore::prime( null );
-					return;
-				}
+		StyleEmitter::output();
+	}
 
-				TrailStore::prime( TrailBuilder::from_current_query() );
-			},
-			20
-		);
+	/**
+	 * Prime the trail store for the current query.
+	 *
+	 * @return void
+	 */
+	public static function prime_trail_store(): void {
+		if ( ! ModuleSettings::is_enabled( 'breadcrumbs' ) ) {
+			TrailStore::prime( null );
+			return;
+		}
+
+		TrailStore::prime( TrailBuilder::from_current_query() );
 	}
 
 	/**
@@ -89,6 +98,27 @@ final class Hooks {
 	 * @return string
 	 */
 	public static function render_shortcode( array $atts ): string {
+		return TrailRenderer::render_current( self::build_overrides( $atts ) );
+	}
+
+	/**
+	 * Render callback for the airygen/breadcrumb block.
+	 *
+	 * @param array<string, mixed> $attributes Block attributes.
+	 * @return string
+	 */
+	public static function render_block( array $attributes = array() ): string {
+		return TrailRenderer::render_current( self::build_overrides( $attributes ) );
+	}
+
+	/**
+	 * Reduce shortcode/block attributes to non-empty override values.
+	 *
+	 * @param array<string, mixed> $raw Raw attributes.
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function build_overrides( array $raw ): array {
 		$args = shortcode_atts(
 			array(
 				'separator'   => null,
@@ -99,27 +129,17 @@ final class Hooks {
 				'prefix'      => null,
 				'link_last'   => null,
 			),
-			$atts
+			$raw
 		);
 
-		$overrides = array_filter(
-			$args,
-			static function ( $value ): bool {
-				return null !== $value && '' !== $value;
+		$overrides = array();
+		foreach ( $args as $key => $value ) {
+			if ( null !== $value && '' !== $value ) {
+				$overrides[ $key ] = $value;
 			}
-		);
+		}
 
-		return TrailRenderer::render_current( $overrides );
-	}
-
-	/**
-	 * Render callback for the airygen/breadcrumb block.
-	 *
-	 * @param array<string, mixed> $attributes Block attributes.
-	 * @return string
-	 */
-	public static function render_block( array $attributes = array() ): string {
-		return self::render_shortcode( $attributes );
+		return $overrides;
 	}
 
 	/**

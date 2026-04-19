@@ -86,7 +86,7 @@ final class TrailRenderer {
 		$prefix      = isset( $args['prefix'] ) ? (string) $args['prefix'] : '';
 		$link_last   = ! empty( $args['link_last'] );
 
-		$html = $wrap_before;
+		$html = wp_kses_post( $wrap_before );
 
 		if ( '' !== $prefix ) {
 			$html .= '<span class="airygen-breadcrumbs__prefix">' . esc_html( $prefix ) . '</span>';
@@ -98,7 +98,7 @@ final class TrailRenderer {
 			$is_last = $index === $last_index;
 			$label   = esc_html( $item['label'] );
 
-			$html .= $before;
+			$html .= wp_kses_post( $before );
 
 			if ( ! empty( $item['url'] ) && ( ! $is_last || $link_last ) ) {
 				$html .= sprintf(
@@ -113,7 +113,7 @@ final class TrailRenderer {
 				);
 			}
 
-			$html .= $after;
+			$html .= wp_kses_post( $after );
 
 			if ( ! $is_last ) {
 				$html .= sprintf(
@@ -123,7 +123,7 @@ final class TrailRenderer {
 			}
 		}
 
-		$html .= $wrap_after;
+		$html .= wp_kses_post( $wrap_after );
 
 		return $html;
 	}

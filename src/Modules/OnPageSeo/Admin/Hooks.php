@@ -656,12 +656,7 @@ final class Hooks {
 
 		$filter_name = sprintf( 'get_user_option_meta-box-order_%s', $post_type );
 
-		add_filter(
-			$filter_name,
-			static function ( $value ) {
-				return self::ensure_metabox_in_normal_context( $value );
-			}
-		);
+		add_filter( $filter_name, array( __CLASS__, 'ensure_metabox_in_normal_context' ) );
 
 		self::$order_filter_registered[ $post_type ] = true;
 	}
@@ -673,7 +668,7 @@ final class Hooks {
 	 *
 	 * @return mixed
 	 */
-	private static function ensure_metabox_in_normal_context( $value ) {
+	public static function ensure_metabox_in_normal_context( $value ) {
 		if ( empty( $value ) ) {
 			return $value;
 		}
