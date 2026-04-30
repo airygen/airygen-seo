@@ -82,6 +82,23 @@ Yes. Airygen SEO includes `llms.txt` and Markdown export features intended for a
 * Local SEO, author SEO, taxonomy SEO, hreflang, RSS feed signature, and WooCommerce SEO extensions.
 * LLMs.txt, Markdown-for-agents, and code snippet tooling for modern publishing workflows.
 
+== Source code ==
+
+The full, human-readable source code for this plugin — including the unminified JavaScript and CSS used to produce the `build/` directory — is available on GitHub:
+
+https://github.com/airygen/airygen-seo
+
+The compiled assets shipped under `build/` (for example `build/admin/airygen-app.js`, `build/classic-editor/airygen-editor.js`, and `build/block-editor/airygen-editor.js`) are produced from the TypeScript / JSX / SCSS sources under `packages/` and `resources/assets/` using `@wordpress/scripts` and PostCSS.
+
+To reproduce the build locally:
+
+1. Install Node.js 20+ and pnpm 9+, plus PHP 8.1+ and Composer 2+.
+2. Clone the repository: `git clone https://github.com/airygen/airygen-seo.git`.
+3. Install dependencies: `pnpm install` and `composer install`.
+4. Build production assets: `pnpm build`.
+
+The same `build/` files included in the distributed plugin will be regenerated under `build/`, allowing reviewers and contributors to inspect, fork, and modify any compiled file shipped with the plugin.
+
 == Changelog ==
 
 = 0.0.0 =
@@ -135,14 +152,16 @@ When Microsoft Teams notifications are enabled in the Notify module, the plugin 
 
 When email notifications are enabled in the Notify module, the plugin connects directly to the SMTP server configured by the site administrator. The transmitted data includes the SMTP host and port, encryption/authentication settings, sender and recipient addresses, the notification subject, the digest message body, and any SMTP credentials required by the configured provider. The admin UI includes built-in presets for Gmail, Office 365 / Outlook, Mailgun, SendGrid, Amazon SES, Zoho Mail, Brevo, and Postmark, and the site administrator can also enter custom SMTP server details.
 
-* Gmail: [Google Terms of Service](https://policies.google.com/terms), [Google Privacy Policy](https://policies.google.com/privacy)
-* Office 365 / Outlook: [Microsoft Services Agreement](https://www.microsoft.com/en/servicesagreement), [Microsoft Privacy Statement](https://www.microsoft.com/en-us/privacy/privacystatement)
-* Mailgun: [Mailgun Terms of Service](https://www.mailgun.com/legal/terms/), [Mailgun Privacy Policy](https://www.mailgun.com/legal/privacy-policy/)
-* SendGrid: [Twilio Terms of Service](https://www.twilio.com/en-us/legal/tos), [Twilio Privacy Policy](https://www.twilio.com/en-us/legal/privacy)
-* Amazon SES: [AWS Service Terms](https://aws.amazon.com/service-terms/), [AWS Privacy Notice](https://aws.amazon.com/privacy/)
-* Zoho Mail: [Zoho Terms of Service](https://www.zoho.com/terms.html), [Zoho Privacy Policy](https://www.zoho.com/privacy.html)
-* Brevo: [Brevo Terms of Use](https://www.brevo.com/legal/termsofuse/), [Brevo Privacy Policy](https://www.brevo.com/legal/privacypolicy/)
-* Postmark: [Postmark Terms of Service](https://postmarkapp.com/terms-of-service), [Postmark Privacy Policy](https://postmarkapp.com/privacy-policy)
+Only the SMTP host actually selected (or manually entered) by the site administrator is contacted; no SMTP host is contacted by default. When a built-in preset is chosen, the plugin connects to the following hosts:
+
+* Gmail: `smtp.gmail.com:587` — [Google Terms of Service](https://policies.google.com/terms), [Google Privacy Policy](https://policies.google.com/privacy)
+* Office 365 / Outlook: `smtp.office365.com:587` — [Microsoft Services Agreement](https://www.microsoft.com/en/servicesagreement), [Microsoft Privacy Statement](https://www.microsoft.com/en-us/privacy/privacystatement)
+* Mailgun: `smtp.mailgun.org:587` — [Mailgun Terms of Service](https://www.mailgun.com/legal/terms/), [Mailgun Privacy Policy](https://www.mailgun.com/legal/privacy-policy/)
+* SendGrid: `smtp.sendgrid.net:587` — [Twilio Terms of Service](https://www.twilio.com/en-us/legal/tos), [Twilio Privacy Policy](https://www.twilio.com/en-us/legal/privacy)
+* Amazon SES: `email-smtp.us-east-1.amazonaws.com:587` — [AWS Service Terms](https://aws.amazon.com/service-terms/), [AWS Privacy Notice](https://aws.amazon.com/privacy/)
+* Zoho Mail: `smtp.zoho.com:587` — [Zoho Terms of Service](https://www.zoho.com/terms.html), [Zoho Privacy Policy](https://www.zoho.com/privacy.html)
+* Brevo: `smtp-relay.brevo.com:587` — [Brevo Terms of Use](https://www.brevo.com/legal/termsofuse/), [Brevo Privacy Policy](https://www.brevo.com/legal/privacypolicy/)
+* Postmark: `smtp.postmarkapp.com:587` — [Postmark Terms of Service](https://postmarkapp.com/terms-of-service), [Postmark Privacy Policy](https://postmarkapp.com/privacy-policy)
 
 == Copyright ==
 

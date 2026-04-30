@@ -36,7 +36,7 @@ $airygen_content     = isset( $data['content'] ) ? $data['content'] : '';
 					</tr>
 					<tr>
 						<td style="padding:20px 24px;">
-							<div style="font-size:16px;line-height:1.7;color:#334155;"><?php echo $airygen_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Content is sanitized before injection. ?></div>
+							<div style="font-size:16px;line-height:1.7;color:#334155;"><?php echo wp_kses_post( $airygen_content ); ?></div>
 						</td>
 					</tr>
 					<tr>

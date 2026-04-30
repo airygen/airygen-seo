@@ -69,7 +69,9 @@ final class Hooks {
 		if ( Routes::is_llms_request() || self::is_path_request( '/llms.txt' ) ) {
 			nocache_headers();
 			header( 'Content-Type: text/plain; charset=UTF-8' );
-			echo self::render_base_content( $settings ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// text/plain response body for llms.txt. Browsers/agents do not
+			// interpret it as HTML; HTML escaping would mangle the spec output.
+			echo self::render_base_content( $settings ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- text/plain response body; see comment above.
 			exit;
 		}
 
@@ -77,7 +79,8 @@ final class Hooks {
 		if ( null !== $matched_extension_id ) {
 			nocache_headers();
 			header( 'Content-Type: text/plain; charset=UTF-8' );
-			echo self::render_extension_content( $settings, $matched_extension_id ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// text/plain response body for llms.txt extension files (same as above).
+			echo self::render_extension_content( $settings, $matched_extension_id ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- text/plain response body; see comment above.
 			exit;
 		}
 	}

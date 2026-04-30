@@ -50,13 +50,14 @@ final class LogRepository {
 			return;
 		}
 
-		$upgrade_path = ABSPATH . 'wp-admin/includes/upgrade.php';
-		if ( ! file_exists( $upgrade_path ) ) {
-			return;
+		if ( ! function_exists( 'dbDelta' ) ) {
+			// @phpstan-ignore-next-line requireOnce.fileNotFound -- Path resolved at runtime via ABSPATH.
+			require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 		}
 
-		// @phpstan-ignore-next-line Path is provided by WordPress runtime.
-		require_once $upgrade_path;
+		if ( ! function_exists( 'dbDelta' ) ) {
+			return;
+		}
 
 		$charset_collate = $this->db->collate();
 		$sql             = "CREATE TABLE $table (

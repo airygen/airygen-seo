@@ -49,6 +49,17 @@ jobs:
             exit 1
           fi
 
+      - name: Strip non-runtime vendor files
+        run: |
+          set -euo pipefail
+          # Plugin distributions on WordPress.org must only contain runtime
+          # PHP source needed by the plugin. Drop everything else shipped by
+          # composer dependencies: CLI binaries, test suites, docs, dev
+          # configs, etc. Keep *.php (runtime code) and LICENSE files.
+          find vendor -type d \( -iname tests -o -iname test -o -iname Tests -o -iname Test \) -prune -exec rm -rf {} +
+          find vendor -type f ! \( -iname '*.php' -o -iname 'LICENSE' -o -iname 'LICENSE.*' -o -iname 'COPYING' -o -iname 'COPYING.*' \) -delete
+          find vendor -type d -empty -delete
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:

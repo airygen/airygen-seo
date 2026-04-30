@@ -50,25 +50,25 @@ final class StyleEmitter {
 			$rules[] = sprintf( 'font-size: %dpx;', $font_size );
 		}
 		if ( '' !== $text_color ) {
-			$rules[] = sprintf( 'color: %s;', $text_color );
+			$rules[] = sprintf( 'color: %s;', esc_attr( $text_color ) );
 		}
 		if ( $border_width > 0 ) {
 			$rules[] = sprintf( 'border-width: %dpx;', $border_width );
 			$rules[] = 'border-style: solid;';
 		}
 		if ( '' !== $border_color ) {
-			$rules[] = sprintf( 'border-color: %s;', $border_color );
+			$rules[] = sprintf( 'border-color: %s;', esc_attr( $border_color ) );
 		}
 		if ( $padding > 0 ) {
 			$rules[] = sprintf( 'padding: %dpx;', $padding );
 		}
 		if ( '' !== $bg_color ) {
-			$rules[] = sprintf( 'background: %s;', $bg_color );
+			$rules[] = sprintf( 'background: %s;', esc_attr( $bg_color ) );
 		}
 
 		$link_rules = array();
 		if ( '' !== $link_color ) {
-			$link_rules[] = sprintf( 'color: %s;', $link_color );
+			$link_rules[] = sprintf( 'color: %s;', esc_attr( $link_color ) );
 		}
 		$link_rules[] = $underline ? 'text-decoration: underline;' : 'text-decoration: none;';
 
@@ -83,7 +83,7 @@ final class StyleEmitter {
 		if ( ! empty( $rules ) ) {
 			$css .= sprintf( '.airygen-breadcrumbs{%s}', implode( '', $rules ) );
 			if ( '' !== $text_color ) {
-				$css .= sprintf( '.airygen-breadcrumbs__separator{color:%s;}', $text_color );
+				$css .= sprintf( '.airygen-breadcrumbs__separator{color:%s;}', esc_attr( $text_color ) );
 			}
 		}
 		if ( ! empty( $link_rules ) ) {

@@ -327,6 +327,9 @@ final class EmailChannel implements ChannelInterface {
 			return;
 		}
 
+		// PHPMailer is bundled with WordPress core under wp-includes/PHPMailer/.
+		// `ABSPATH . WPINC . '/PHPMailer/...'` is the path documented by Core
+		// for plugins that need to load PHPMailer outside the wp_mail() flow.
 		require_once ABSPATH . WPINC . '/PHPMailer/PHPMailer.php';
 		require_once ABSPATH . WPINC . '/PHPMailer/SMTP.php';
 		require_once ABSPATH . WPINC . '/PHPMailer/Exception.php';

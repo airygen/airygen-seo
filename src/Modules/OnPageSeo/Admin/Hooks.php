@@ -232,8 +232,7 @@ final class Hooks {
 			return;
 		}
 
-		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-		$nonce = wp_unslash( $_POST[ $nonce_field ] );
+		$nonce = sanitize_text_field( wp_unslash( $_POST[ $nonce_field ] ) );
 		if ( ! wp_verify_nonce( $nonce, $nonce_action ) ) {
 			return;
 		}
@@ -583,15 +582,13 @@ final class Hooks {
 	 * @return string
 	 */
 	private static function read_post_value( string $key ): string {
-		// phpcs:ignore
-		$value = $_POST[ $key ] ?? null;
-
-		if ( ! $value ) {
+		if ( ! isset( $_POST[ $key ] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Nonce verified by caller in handle_save().
 			return '';
 		}
 
-		$value = wp_unslash( $value );
-		return sanitize_text_field( $value );
+		$value = sanitize_text_field( wp_unslash( (string) $_POST[ $key ] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Nonce verified by caller in handle_save().
+
+		return '' === $value ? '' : $value;
 	}
 
 	/**
@@ -782,6 +779,9 @@ final class Hooks {
 	 * @return string
 	 */
 	private static function relocate_metabox_script(): string {
+		// Static, hardcoded JS payload (nowdoc, no PHP interpolation, no user
+		// input). Passed to wp_add_inline_script() which is the WordPress.org
+		// approved API for shipping inline JS, so no further escaping is needed.
 		$script = <<<'JS'
 ( function () {
 	const BOX_ID = 'airygen_classic_editor_metabox';

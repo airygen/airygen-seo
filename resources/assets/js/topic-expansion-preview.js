@@ -129,7 +129,23 @@
 				var headerBgColor = headerContainer.bg_color || headerContainer.bgColor || 'transparent';
 				var border = borderWidth + 'px ' + borderStyle + ' ' + borderColor;
 				var css = '.airygen-topic-expansion{padding:' + padding + 'px;border:' + border + ';background:' + bgColor + ';border-radius:' + borderRadius + 'px;}';
-				css += '.airygen-topic-expansion__title{display:block;margin:' + headerMarginTop + 'px ' + headerMarginRight + 'px ' + headerMarginBottom + 'px ' + headerMarginLeft + 'px;padding:' + headerPaddingTop + 'px ' + headerPaddingRight + 'px ' + headerPaddingBottom + 'px ' + headerPaddingLeft + 'px;border-width:' + headerBorderWidthTop + 'px ' + headerBorderWidthRight + 'px ' + headerBorderWidthBottom + 'px ' + headerBorderWidthLeft + 'px;border-style:' + headerBorderStyle + ';border-color:' + headerBorderColor + ';border-radius:' + headerBorderRadius + 'px;background:' + headerBgColor + ';color:' + headerColor + ';font-size:' + headerFontSize + 'px;font-weight:' + (headerTitleStyle.bold ? '700' : '400') + ';font-style:' + (headerTitleStyle.italic ? 'italic' : 'normal') + ';text-decoration:' + (headerTitleStyle.underline ? 'underline' : 'none') + ';}';
+				css += [
+					'.airygen-topic-expansion__title{',
+					'display:block;',
+					'margin:' + headerMarginTop + 'px ' + headerMarginRight + 'px ' + headerMarginBottom + 'px ' + headerMarginLeft + 'px;',
+					'padding:' + headerPaddingTop + 'px ' + headerPaddingRight + 'px ' + headerPaddingBottom + 'px ' + headerPaddingLeft + 'px;',
+					'border-width:' + headerBorderWidthTop + 'px ' + headerBorderWidthRight + 'px ' + headerBorderWidthBottom + 'px ' + headerBorderWidthLeft + 'px;',
+					'border-style:' + headerBorderStyle + ';',
+					'border-color:' + headerBorderColor + ';',
+					'border-radius:' + headerBorderRadius + 'px;',
+					'background:' + headerBgColor + ';',
+					'color:' + headerColor + ';',
+					'font-size:' + headerFontSize + 'px;',
+					'font-weight:' + (headerTitleStyle.bold ? '700' : '400') + ';',
+					'font-style:' + (headerTitleStyle.italic ? 'italic' : 'normal') + ';',
+					'text-decoration:' + (headerTitleStyle.underline ? 'underline' : 'none') + ';',
+					'}',
+				].join('');
 				css += '.airygen-topic-expansion__list{display:flex;flex-direction:column;gap:' + itemGap + 'px;margin:0;list-style:' + itemListStyle + ';padding-left:' + (itemListStyle === 'none' ? '0' : '1.25rem') + ';}';
 				css += '.airygen-topic-expansion__list-item{margin:0;}';
 			css += '.airygen-topic-expansion__topic{color:' + itemText + ';font-size:' + itemSize + 'px;font-weight:' + (itemBold ? '700' : '400') + ';font-style:' + (itemItalic ? 'italic' : 'normal') + ';text-decoration:' + (itemUnderline ? 'underline' : 'none') + ';}';

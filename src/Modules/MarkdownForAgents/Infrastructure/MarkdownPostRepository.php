@@ -43,13 +43,14 @@ final class MarkdownPostRepository {
 	 * @return void
 	 */
 	public function ensure_table(): void {
-		$upgrade_path = ABSPATH . 'wp-admin/includes/upgrade.php';
-		if ( ! file_exists( $upgrade_path ) ) {
-			return;
+		if ( ! function_exists( 'dbDelta' ) ) {
+			// @phpstan-ignore-next-line requireOnce.fileNotFound -- Path resolved at runtime via ABSPATH.
+			require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 		}
 
-		// @phpstan-ignore-next-line WordPress runtime include.
-		require_once $upgrade_path;
+		if ( ! function_exists( 'dbDelta' ) ) {
+			return;
+		}
 
 		$table           = $this->table();
 		$charset_collate = $this->db->collate();

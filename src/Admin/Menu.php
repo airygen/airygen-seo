@@ -44,7 +44,7 @@ class Menu {
 	public static function register(): void {
 		add_action( 'admin_menu', array( __CLASS__, 'create_options_page' ) );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_assets' ), PHP_INT_MAX );
-		add_action( 'admin_head', array( __CLASS__, 'suppress_notices' ) );
+		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'suppress_notices' ), PHP_INT_MAX );
 		add_filter( 'plugin_action_links_' . plugin_basename( AIRYGEN_PLUGIN_FILE ), array( __CLASS__, 'add_settings_link' ) );
 	}
 
@@ -240,9 +240,14 @@ class Menu {
 		}
 
 		// Hide third-party notices inside our settings screens.
-		// Output directly because admin_head fires after admin_print_styles,
-		// so wp_add_inline_style() would be too late.
-		echo '<style>#wpbody-content > .notice, #wpbody-content > .updated, #wpbody-content > .error, #wpbody-content > .update-nag{display:none;}</style>' . "\n";
+		$handle = 'airygen-admin-suppress-notices';
+		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- Inline-only style; no external file to version.
+		wp_register_style( $handle, false );
+		wp_enqueue_style( $handle );
+		wp_add_inline_style(
+			$handle,
+			'#wpbody-content > .notice, #wpbody-content > .updated, #wpbody-content > .error, #wpbody-content > .update-nag{display:none;}'
+		);
 	}
 
 	/**
@@ -257,22 +262,15 @@ class Menu {
 	}
 
 	/**
-	 * Detect whether Yoast SEO is active.
+	 * Detect whether a plugin is active site-wide or network-wide.
 	 *
+	 * @param string $plugin_file Plugin file relative to the plugins directory (e.g. 'wordpress-seo/wp-seo.php').
 	 * @return bool
 	 */
-	private static function is_yoast_active(): bool {
-		if ( defined( 'WPSEO_VERSION' ) ) {
-			return true;
-		}
-
-		$plugin_file = 'wordpress-seo/wp-seo.php';
-
+	private static function is_plugin_active_safe( string $plugin_file ): bool {
 		if ( ! function_exists( 'is_plugin_active' ) ) {
-			$plugin_path = trailingslashit( ABSPATH ) . 'wp-admin/includes/plugin.php';
-			if ( is_readable( $plugin_path ) ) {
-				require_once $plugin_path;
-			}
+			// @phpstan-ignore-next-line requireOnce.fileNotFound -- Path resolved at runtime via ABSPATH.
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
 		}
 
 		if ( function_exists( 'is_plugin_active' ) && is_plugin_active( $plugin_file ) ) {
@@ -284,6 +282,15 @@ class Menu {
 		}
 
 		return false;
+	}
+
+	/**
+	 * Detect whether Yoast SEO is active.
+	 *
+	 * @return bool
+	 */
+	private static function is_yoast_active(): bool {
+		return defined( 'WPSEO_VERSION' ) || self::is_plugin_active_safe( 'wordpress-seo/wp-seo.php' );
 	}
 
 	/**
@@ -292,28 +299,7 @@ class Menu {
 	 * @return bool
 	 */
 	private static function is_rank_math_active(): bool {
-		if ( defined( 'RANK_MATH_VERSION' ) ) {
-			return true;
-		}
-
-		$plugin_file = 'rank-math/rank-math.php';
-
-		if ( ! function_exists( 'is_plugin_active' ) ) {
-			$plugin_path = trailingslashit( ABSPATH ) . 'wp-admin/includes/plugin.php';
-			if ( is_readable( $plugin_path ) ) {
-				require_once $plugin_path;
-			}
-		}
-
-		if ( function_exists( 'is_plugin_active' ) && is_plugin_active( $plugin_file ) ) {
-			return true;
-		}
-
-		if ( function_exists( 'is_plugin_active_for_network' ) && is_plugin_active_for_network( $plugin_file ) ) {
-			return true;
-		}
-
-		return false;
+		return defined( 'RANK_MATH_VERSION' ) || self::is_plugin_active_safe( 'rank-math/rank-math.php' );
 	}
 
 	/**
@@ -322,28 +308,7 @@ class Menu {
 	 * @return bool
 	 */
 	private static function is_aioseo_active(): bool {
-		if ( defined( 'AIOSEO_VERSION' ) ) {
-			return true;
-		}
-
-		$plugin_file = 'all-in-one-seo-pack/all_in_one_seo_pack.php';
-
-		if ( ! function_exists( 'is_plugin_active' ) ) {
-			$plugin_path = trailingslashit( ABSPATH ) . 'wp-admin/includes/plugin.php';
-			if ( is_readable( $plugin_path ) ) {
-				require_once $plugin_path;
-			}
-		}
-
-		if ( function_exists( 'is_plugin_active' ) && is_plugin_active( $plugin_file ) ) {
-			return true;
-		}
-
-		if ( function_exists( 'is_plugin_active_for_network' ) && is_plugin_active_for_network( $plugin_file ) ) {
-			return true;
-		}
-
-		return false;
+		return defined( 'AIOSEO_VERSION' ) || self::is_plugin_active_safe( 'all-in-one-seo-pack/all_in_one_seo_pack.php' );
 	}
 
 	/**
@@ -352,28 +317,7 @@ class Menu {
 	 * @return bool
 	 */
 	private static function is_seopress_active(): bool {
-		if ( defined( 'SEOPRESS_VERSION' ) ) {
-			return true;
-		}
-
-		$plugin_file = 'wp-seopress/seopress.php';
-
-		if ( ! function_exists( 'is_plugin_active' ) ) {
-			$plugin_path = trailingslashit( ABSPATH ) . 'wp-admin/includes/plugin.php';
-			if ( is_readable( $plugin_path ) ) {
-				require_once $plugin_path;
-			}
-		}
-
-		if ( function_exists( 'is_plugin_active' ) && is_plugin_active( $plugin_file ) ) {
-			return true;
-		}
-
-		if ( function_exists( 'is_plugin_active_for_network' ) && is_plugin_active_for_network( $plugin_file ) ) {
-			return true;
-		}
-
-		return false;
+		return defined( 'SEOPRESS_VERSION' ) || self::is_plugin_active_safe( 'wp-seopress/seopress.php' );
 	}
 
 	/**

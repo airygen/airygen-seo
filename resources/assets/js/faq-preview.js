@@ -175,7 +175,23 @@
 				var headerBorderColor = headerContainer.border_color || headerContainer.borderColor || '#e2e8f0';
 				var headerBgColor = headerContainer.bg_color || headerContainer.bgColor || 'transparent';
 				var css = '.airygen-faq{padding:' + faqPadding + 'px;border:' + border + ';background:' + bgColor + ';border-radius:8px;--airygen-faq-question-bg:' + questionBg + ';--airygen-faq-answer-bg:' + answerBg + ';--airygen-faq-question-hover:' + hoverBg + ';}';
-				css += '.airygen-faq__section-title{display:block;margin:' + headerMarginTop + 'px ' + headerMarginRight + 'px ' + headerMarginBottom + 'px ' + headerMarginLeft + 'px;padding:' + headerPaddingTop + 'px ' + headerPaddingRight + 'px ' + headerPaddingBottom + 'px ' + headerPaddingLeft + 'px;border-width:' + headerBorderWidthTop + 'px ' + headerBorderWidthRight + 'px ' + headerBorderWidthBottom + 'px ' + headerBorderWidthLeft + 'px;border-style:' + headerBorderStyle + ';border-color:' + headerBorderColor + ';border-radius:' + headerBorderRadius + 'px;background:' + headerBgColor + ';color:' + headerColor + ';font-size:' + headerFontSize + 'px;font-weight:' + (headerTitleStyle.bold ? '700' : '400') + ';font-style:' + (headerTitleStyle.italic ? 'italic' : 'normal') + ';text-decoration:' + (headerTitleStyle.underline ? 'underline' : 'none') + ';}';
+				css += [
+					'.airygen-faq__section-title{',
+					'display:block;',
+					'margin:' + headerMarginTop + 'px ' + headerMarginRight + 'px ' + headerMarginBottom + 'px ' + headerMarginLeft + 'px;',
+					'padding:' + headerPaddingTop + 'px ' + headerPaddingRight + 'px ' + headerPaddingBottom + 'px ' + headerPaddingLeft + 'px;',
+					'border-width:' + headerBorderWidthTop + 'px ' + headerBorderWidthRight + 'px ' + headerBorderWidthBottom + 'px ' + headerBorderWidthLeft + 'px;',
+					'border-style:' + headerBorderStyle + ';',
+					'border-color:' + headerBorderColor + ';',
+					'border-radius:' + headerBorderRadius + 'px;',
+					'background:' + headerBgColor + ';',
+					'color:' + headerColor + ';',
+					'font-size:' + headerFontSize + 'px;',
+					'font-weight:' + (headerTitleStyle.bold ? '700' : '400') + ';',
+					'font-style:' + (headerTitleStyle.italic ? 'italic' : 'normal') + ';',
+					'text-decoration:' + (headerTitleStyle.underline ? 'underline' : 'none') + ';',
+					'}',
+				].join('');
 				css += '.airygen-faq__list-item{margin:0 0 1rem 0;}';
 				css += '.airygen-faq__list-item:last-child{margin:0;}';
 			if (!settings.collapse_enabled) {

@@ -487,13 +487,16 @@ class Activation {
 	 * @return bool
 	 */
 	private function require_upgrade_file(): bool {
-		$upgrade_path = ABSPATH . 'wp-admin/includes/upgrade.php';
-		if ( file_exists( $upgrade_path ) ) {
-			// @phpstan-ignore-next-line Path is provided by WordPress runtime.
-			require_once $upgrade_path;
+		if ( function_exists( 'dbDelta' ) ) {
 			return true;
 		}
 
-		return false;
+		// `wp-admin/includes/upgrade.php` is the canonical location of dbDelta()
+		// in WordPress core; this is the path documented by the Plugin Handbook
+		// for plugins that need dbDelta during activation.
+		// @phpstan-ignore-next-line requireOnce.fileNotFound -- Path resolved at runtime via ABSPATH.
+		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
+
+		return function_exists( 'dbDelta' );
 	}
 }

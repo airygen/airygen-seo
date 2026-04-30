@@ -126,7 +126,11 @@ final class Hooks {
 		nocache_headers();
 		header( 'Vary: Accept' );
 		header( 'Content-Type: text/markdown; charset=UTF-8' );
-		echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- markdown/plain-text response.
+		// Plain-text markdown response. Browsers do not interpret a `text/markdown`
+		// body as HTML, and HTML escaping would corrupt markdown syntax (for
+		// example `>` blockquotes and `<` in fenced code blocks). The content
+		// is sanitized when written to the cache by MarkdownExporter::export().
+		echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- text/markdown response body; see comment above.
 		exit;
 	}
 }

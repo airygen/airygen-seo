@@ -53,8 +53,10 @@ final class Hooks {
 
 		$settings = Settings::get();
 
-		$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? (string) wp_unslash( $_SERVER['REQUEST_URI'] ) : '/'; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-		$request_uri = is_string( $request_uri ) ? $request_uri : '/';
+		$request_uri = isset( $_SERVER['REQUEST_URI'] )
+		? esc_url_raw( wp_unslash( $_SERVER['REQUEST_URI'] ) )
+		: '/';
+		$request_uri = is_string( $request_uri ) && '' !== $request_uri ? $request_uri : '/';
 
 		$path = (string) wp_parse_url( $request_uri, PHP_URL_PATH );
 		if ( '' === $path ) {
