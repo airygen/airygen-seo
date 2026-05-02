@@ -264,21 +264,24 @@ class Menu {
 	/**
 	 * Detect whether a plugin is active site-wide or network-wide.
 	 *
+	 * Reads the WordPress options directly so we don't have to load
+	 * `wp-admin/includes/plugin.php`, which is unnecessary on front-end /
+	 * REST / CLI requests where this runs.
+	 *
 	 * @param string $plugin_file Plugin file relative to the plugins directory (e.g. 'wordpress-seo/wp-seo.php').
 	 * @return bool
 	 */
 	private static function is_plugin_active_safe( string $plugin_file ): bool {
-		if ( ! function_exists( 'is_plugin_active' ) ) {
-			// @phpstan-ignore-next-line requireOnce.fileNotFound -- Path resolved at runtime via ABSPATH.
-			require_once ABSPATH . 'wp-admin/includes/plugin.php';
-		}
-
-		if ( function_exists( 'is_plugin_active' ) && is_plugin_active( $plugin_file ) ) {
+		$active = get_option( 'active_plugins', array() );
+		if ( is_array( $active ) && in_array( $plugin_file, $active, true ) ) {
 			return true;
 		}
 
-		if ( function_exists( 'is_plugin_active_for_network' ) && is_plugin_active_for_network( $plugin_file ) ) {
-			return true;
+		if ( is_multisite() ) {
+			$network = get_site_option( 'active_sitewide_plugins', array() );
+			if ( is_array( $network ) && array_key_exists( $plugin_file, $network ) ) {
+				return true;
+			}
 		}
 
 		return false;

@@ -14,14 +14,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 use Airygen\Modules\Notify\Domain\Channel\ChannelInterface;
-use PHPMailer\PHPMailer\Exception as MailerException;
-use PHPMailer\PHPMailer\PHPMailer;
 
-// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase -- PHPMailer public API uses non-snake-case property names.
 /**
- * Sends notifications by SMTP mailer.
+ * Sends notifications by SMTP mailer using wp_mail() + the phpmailer_init action.
+ *
+ * PHPMailer is loaded by WordPress core when wp_mail() runs, so the plugin does
+ * not have to load PHPMailer itself — that avoids any direct ABSPATH/WPINC
+ * file paths and uses the API documented in the WordPress Plugin Handbook.
  */
 final class EmailChannel implements ChannelInterface {
+
+	/**
+	 * SMTP config for the in-flight wp_mail() call.
+	 *
+	 * @var array<string,mixed>|null
+	 */
+	private ?array $active_config = null;
+
+	/**
+	 * Captured failure message, if wp_mail_failed fires while sending.
+	 *
+	 * @var string
+	 */
+	private string $last_error = '';
 
 	/**
 	 * {@inheritDoc}
@@ -63,40 +78,105 @@ final class EmailChannel implements ChannelInterface {
 		? $settings['channels']['email']['recipients']
 		: array();
 
-		$config = $this->build_smtp_config( $settings );
-
-		try {
-			$mailer = $this->create_mailer( $config );
-			$mailer->setFrom( $config['from_email'], $config['from_name'], false );
-
-			foreach ( $recipients as $recipient ) {
-				if ( ! is_string( $recipient ) || '' === trim( $recipient ) ) {
-					continue;
-				}
-				$mailer->addAddress( trim( $recipient ) );
+		$to = array();
+		foreach ( $recipients as $recipient ) {
+			if ( is_string( $recipient ) && '' !== trim( $recipient ) ) {
+				$to[] = trim( $recipient );
 			}
-
-			$mailer->Subject = $subject;
-			$mailer->Body    = $this->build_html_template( $subject, $message, $config );
-			$mailer->AltBody = $message;
-
-			$sent = $mailer->send();
-			if ( ! $sent ) {
-				return array(
-					'ok'      => false,
-					'message' => 'Failed to send email.',
-				);
-			}
-
-			return array(
-				'ok'      => true,
-				'message' => 'Email sent.',
-			);
-		} catch ( MailerException $exception ) {
+		}
+		if ( empty( $to ) ) {
 			return array(
 				'ok'      => false,
-				'message' => 'Failed to send email. ' . trim( $exception->getMessage() ),
+				'message' => 'No valid recipients configured.',
 			);
+		}
+
+		$this->active_config = $this->build_smtp_config( $settings );
+		$this->last_error    = '';
+
+		$body    = $this->build_html_template( $subject, $message, $this->active_config );
+		$headers = array(
+			'Content-Type: text/html; charset=UTF-8',
+			sprintf(
+				'From: %s <%s>',
+				$this->active_config['from_name'],
+				$this->active_config['from_email']
+			),
+		);
+
+		add_action( 'phpmailer_init', array( $this, 'configure_phpmailer' ) );
+		add_action( 'wp_mail_failed', array( $this, 'capture_failure' ) );
+
+		$sent = wp_mail( $to, $subject, $body, $headers );
+
+		remove_action( 'phpmailer_init', array( $this, 'configure_phpmailer' ) );
+		remove_action( 'wp_mail_failed', array( $this, 'capture_failure' ) );
+
+		$this->active_config = null;
+
+		if ( ! $sent ) {
+			$failure_message = '' !== $this->last_error ? $this->last_error : 'Failed to send email.';
+			return array(
+				'ok'      => false,
+				'message' => $failure_message,
+			);
+		}
+
+		return array(
+			'ok'      => true,
+			'message' => 'Email sent.',
+		);
+	}
+
+	/**
+	 * `phpmailer_init` callback — applies SMTP settings to the core PHPMailer
+	 * instance that wp_mail() created. Because we never instantiate PHPMailer
+	 * ourselves, no `wp-includes/PHPMailer/*.php` require_once is needed.
+	 *
+	 * @param mixed $phpmailer The PHPMailer instance passed by reference.
+	 * @return void
+	 */
+	public function configure_phpmailer( $phpmailer ): void {
+		if ( null === $this->active_config || ! is_object( $phpmailer ) ) {
+			return;
+		}
+
+		$config = $this->active_config;
+
+		// PHPMailer's public API uses non-snake-case property names.
+		// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$phpmailer->isSMTP();
+		$phpmailer->Host     = (string) $config['host'];
+		$phpmailer->Port     = (int) $config['port'];
+		$phpmailer->SMTPAuth = (bool) $config['auth'];
+		$phpmailer->Username = (string) $config['username'];
+		$phpmailer->Password = (string) $config['password'];
+		$phpmailer->Timeout  = (int) $config['timeout'];
+		$phpmailer->CharSet  = 'UTF-8';
+		$phpmailer->isHTML( true );
+
+		$secure = (string) $config['secure'];
+		if ( 'tls' === $secure || 'ssl' === $secure ) {
+			$phpmailer->SMTPSecure = $secure;
+		} else {
+			$phpmailer->SMTPSecure  = '';
+			$phpmailer->SMTPAutoTLS = false;
+		}
+		// phpcs:enable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+	}
+
+	/**
+	 * `wp_mail_failed` callback — capture the SMTP error so we can return it.
+	 *
+	 * @param mixed $error WP_Error instance from wp_mail().
+	 * @return void
+	 */
+	public function capture_failure( $error ): void {
+		if ( $error instanceof \WP_Error ) {
+			$message          = $error->get_error_message();
+			$this->last_error = is_string( $message ) && '' !== trim( $message )
+			? 'Failed to send email. ' . trim( $message )
+			: 'Failed to send email.';
 		}
 	}
 
@@ -155,35 +235,6 @@ final class EmailChannel implements ChannelInterface {
 				? $from_name
 				: 'WordPress',
 		);
-	}
-
-	/**
-	 * Create configured SMTP mailer instance.
-	 *
-	 * @param array<string,mixed> $config SMTP config.
-	 * @return PHPMailer
-	 * @throws MailerException When PHPMailer cannot be initialized.
-	 */
-	private function create_mailer( array $config ): PHPMailer {
-		$this->ensure_phpmailer_loaded();
-
-		$mailer = new PHPMailer( true );
-		$mailer->isSMTP();
-		$mailer->Host     = (string) $config['host'];
-		$mailer->Port     = (int) $config['port'];
-		$mailer->SMTPAuth = (bool) $config['auth'];
-		$mailer->Username = (string) $config['username'];
-		$mailer->Password = (string) $config['password'];
-		$mailer->Timeout  = (int) $config['timeout'];
-		$mailer->CharSet  = 'UTF-8';
-		$mailer->isHTML( true );
-
-		$secure = (string) $config['secure'];
-		if ( 'tls' === $secure || 'ssl' === $secure ) {
-			$mailer->SMTPSecure = $secure;
-		}
-
-		return $mailer;
 	}
 
 	/**
@@ -316,23 +367,4 @@ final class EmailChannel implements ChannelInterface {
 
 		return is_string( $output ) ? $output : '';
 	}
-
-	/**
-	 * Ensure PHPMailer classes are available.
-	 *
-	 * @return void
-	 */
-	private function ensure_phpmailer_loaded(): void {
-		if ( class_exists( PHPMailer::class ) ) {
-			return;
-		}
-
-		// PHPMailer is bundled with WordPress core under wp-includes/PHPMailer/.
-		// `ABSPATH . WPINC . '/PHPMailer/...'` is the path documented by Core
-		// for plugins that need to load PHPMailer outside the wp_mail() flow.
-		require_once ABSPATH . WPINC . '/PHPMailer/PHPMailer.php';
-		require_once ABSPATH . WPINC . '/PHPMailer/SMTP.php';
-		require_once ABSPATH . WPINC . '/PHPMailer/Exception.php';
-	}
 }
-// phpcs:enable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase

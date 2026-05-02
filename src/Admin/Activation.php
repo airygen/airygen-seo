@@ -153,17 +153,13 @@ class Activation {
 	 * @return void
 	 */
 	private function create_link_counter_tables(): void {
-		if ( ! $this->require_upgrade_file() ) {
-			return;
-		}
-
 		$adapter         = new WpDbAdapter();
 		$charset_collate = $adapter->collate();
 		$links_table     = $adapter->table( Constants::TABLE_LINK_COUNTER_DATA );
 		$meta_table      = $adapter->table( Constants::TABLE_LINK_COUNTER_META );
 		$log_table       = $adapter->table( Constants::TABLE_LINK_CHECKER_LOG );
 
-		$links_sql = "CREATE TABLE $links_table (
+		$links_sql = "CREATE TABLE IF NOT EXISTS $links_table (
 			id bigint(20) unsigned NOT NULL auto_increment,
 			url varchar(255) NOT NULL,
 			post_id bigint(20) unsigned NOT NULL,
@@ -176,7 +172,7 @@ class Activation {
 			KEY target_post_id (target_post_id)
 		) $charset_collate;";
 
-		$meta_sql = "CREATE TABLE $meta_table (
+		$meta_sql = "CREATE TABLE IF NOT EXISTS $meta_table (
 			post_id bigint(20) unsigned NOT NULL,
 			internal_link_count int(10) unsigned NULL default 0,
 			external_link_count int(10) unsigned NULL default 0,
@@ -188,7 +184,7 @@ class Activation {
 			KEY status (status)
 		) $charset_collate;";
 
-		$log_sql = "CREATE TABLE $log_table (
+		$log_sql = "CREATE TABLE IF NOT EXISTS $log_table (
 			link_id bigint(20) unsigned NOT NULL,
 			post_id bigint(20) unsigned NOT NULL,
 			url varchar(255) NOT NULL,
@@ -204,9 +200,9 @@ class Activation {
 			KEY checked_at (checked_at)
 		) $charset_collate;";
 
-		dbDelta( $links_sql );
-		dbDelta( $meta_sql );
-		dbDelta( $log_sql );
+		$adapter->query( $links_sql );
+		$adapter->query( $meta_sql );
+		$adapter->query( $log_sql );
 
 		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 		error_log( '[admin] Link counter tables created or updated.' );
@@ -218,15 +214,11 @@ class Activation {
 	 * @return void
 	 */
 	private function create_indexnow_tables(): void {
-		if ( ! $this->require_upgrade_file() ) {
-			return;
-		}
-
 		$adapter         = new WpDbAdapter();
 		$charset_collate = $adapter->collate();
 		$events_table    = $adapter->table( Constants::TABLE_INDEXNOW_EVENTS );
 
-		$events_sql = "CREATE TABLE $events_table (
+		$events_sql = "CREATE TABLE IF NOT EXISTS $events_table (
 			id bigint(20) unsigned NOT NULL auto_increment,
 			host varchar(191) NOT NULL,
 			url text NOT NULL,
@@ -245,7 +237,7 @@ class Activation {
 			KEY available_at (available_at)
 		) $charset_collate;";
 
-		dbDelta( $events_sql );
+		$adapter->query( $events_sql );
 
 		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 		error_log( '[admin] IndexNow tables created or updated.' );
@@ -257,17 +249,13 @@ class Activation {
 	 * @return void
 	 */
 	private function create_link_suggestion_tables(): void {
-		if ( ! $this->require_upgrade_file() ) {
-			return;
-		}
-
 		$adapter         = new WpDbAdapter();
 		$charset_collate = $adapter->collate();
 
 		$terms_table = $adapter->table( Constants::TABLE_LINK_SUGGESTION_TERMS );
 		$df_table    = $adapter->table( Constants::TABLE_LINK_SUGGESTION_DF );
 
-		$terms_sql = "CREATE TABLE $terms_table (
+		$terms_sql = "CREATE TABLE IF NOT EXISTS $terms_table (
 			id bigint(20) unsigned NOT NULL auto_increment,
 			content_id bigint(20) unsigned NOT NULL,
 			content_type varchar(20) NOT NULL,
@@ -280,15 +268,15 @@ class Activation {
 			KEY content (content_id, content_type)
 		) $charset_collate;";
 
-		$df_sql = "CREATE TABLE $df_table (
+		$df_sql = "CREATE TABLE IF NOT EXISTS $df_table (
 			stem varchar(191) NOT NULL,
 			doc_count int(10) unsigned NOT NULL default 0,
 			updated_at datetime NOT NULL,
 			PRIMARY KEY  (stem)
 		) $charset_collate;";
 
-		dbDelta( $terms_sql );
-		dbDelta( $df_sql );
+		$adapter->query( $terms_sql );
+		$adapter->query( $df_sql );
 	}
 
 	/**
@@ -297,17 +285,13 @@ class Activation {
 	 * @return void
 	 */
 	private function create_topic_cluster_tables(): void {
-		if ( ! $this->require_upgrade_file() ) {
-			return;
-		}
-
 		$adapter          = new WpDbAdapter();
 		$charset_collate  = $adapter->collate();
 		$relations_table  = $adapter->table( Constants::TABLE_TOPIC_CLUSTER_RELATIONS );
 		$groups_table     = $adapter->table( Constants::TABLE_TOPIC_CLUSTER_GROUPS );
 		$candidates_table = $adapter->table( Constants::TABLE_TOPIC_CLUSTER_CANDIDATES );
 
-		$relations_sql = "CREATE TABLE $relations_table (
+		$relations_sql = "CREATE TABLE IF NOT EXISTS $relations_table (
 			id bigint(20) unsigned NOT NULL auto_increment,
 			post_id bigint(20) unsigned NOT NULL,
 			level tinyint(1) unsigned NOT NULL COMMENT '1=L1,2=L2,3=L3',
@@ -323,7 +307,7 @@ class Activation {
 			KEY group_id (group_id)
 		) $charset_collate;";
 
-		$groups_sql = "CREATE TABLE $groups_table (
+		$groups_sql = "CREATE TABLE IF NOT EXISTS $groups_table (
 			id bigint(20) unsigned NOT NULL auto_increment,
 			name varchar(191) NOT NULL,
 			description text NULL,
@@ -333,7 +317,7 @@ class Activation {
 			PRIMARY KEY  (id)
 		) $charset_collate;";
 
-		$candidates_sql = "CREATE TABLE $candidates_table (
+		$candidates_sql = "CREATE TABLE IF NOT EXISTS $candidates_table (
 			id bigint(20) unsigned NOT NULL auto_increment,
 			group_id bigint(20) unsigned NOT NULL,
 			post_id bigint(20) unsigned NOT NULL,
@@ -343,9 +327,9 @@ class Activation {
 			KEY post_id (post_id)
 		) $charset_collate;";
 
-		dbDelta( $relations_sql );
-		dbDelta( $groups_sql );
-		dbDelta( $candidates_sql );
+		$adapter->query( $relations_sql );
+		$adapter->query( $groups_sql );
+		$adapter->query( $candidates_sql );
 	}
 
 	/**
@@ -354,17 +338,13 @@ class Activation {
 	 * @return void
 	 */
 	private function create_not_found_manager_tables(): void {
-		if ( ! $this->require_upgrade_file() ) {
-			return;
-		}
-
 		$adapter               = new WpDbAdapter();
 		$charset_collate       = $adapter->collate();
 		$logs_table            = $adapter->table( Constants::TABLE_404_LOGS );
 		$redirects_table       = $adapter->table( Constants::TABLE_404_REDIRECTS );
 		$redirect_events_table = $adapter->table( Constants::TABLE_404_REDIRECT_EVENTS );
 
-		$logs_sql = "CREATE TABLE $logs_table (
+		$logs_sql = "CREATE TABLE IF NOT EXISTS $logs_table (
 			id bigint(20) unsigned NOT NULL auto_increment,
 			url_path varchar(1024) NOT NULL,
 			query_hash varchar(64) NULL default NULL,
@@ -381,7 +361,7 @@ class Activation {
 			KEY status (status)
 		) $charset_collate;";
 
-		$redirects_sql = "CREATE TABLE $redirects_table (
+		$redirects_sql = "CREATE TABLE IF NOT EXISTS $redirects_table (
 			id bigint(20) unsigned NOT NULL auto_increment,
 			source text NOT NULL,
 			source_type varchar(20) NOT NULL default 'exact',
@@ -400,7 +380,7 @@ class Activation {
 			KEY updated_at (updated_at)
 		) $charset_collate;";
 
-		$events_sql = "CREATE TABLE $redirect_events_table (
+		$events_sql = "CREATE TABLE IF NOT EXISTS $redirect_events_table (
 			id bigint(20) unsigned NOT NULL auto_increment,
 			redirect_id bigint(20) unsigned NOT NULL,
 			event_type varchar(50) NOT NULL,
@@ -412,9 +392,9 @@ class Activation {
 			KEY created_at (created_at)
 		) $charset_collate;";
 
-		dbDelta( $logs_sql );
-		dbDelta( $redirects_sql );
-		dbDelta( $events_sql );
+		$adapter->query( $logs_sql );
+		$adapter->query( $redirects_sql );
+		$adapter->query( $events_sql );
 	}
 
 	/**
@@ -423,15 +403,11 @@ class Activation {
 	 * @return void
 	 */
 	private function create_notify_tables(): void {
-		if ( ! $this->require_upgrade_file() ) {
-			return;
-		}
-
 		$adapter         = new WpDbAdapter();
 		$charset_collate = $adapter->collate();
 		$logs_table      = $adapter->table( Constants::TABLE_NOTIFY_LOGS );
 
-		$logs_sql = "CREATE TABLE $logs_table (
+		$logs_sql = "CREATE TABLE IF NOT EXISTS $logs_table (
 			id bigint(20) unsigned NOT NULL auto_increment,
 			run_at datetime NOT NULL,
 			results_json longtext NULL,
@@ -439,7 +415,7 @@ class Activation {
 			KEY run_at (run_at)
 		) $charset_collate;";
 
-		dbDelta( $logs_sql );
+		$adapter->query( $logs_sql );
 	}
 
 	/**
@@ -448,15 +424,11 @@ class Activation {
 	 * @return void
 	 */
 	private function create_markdown_for_agents_tables(): void {
-		if ( ! $this->require_upgrade_file() ) {
-			return;
-		}
-
 		$adapter         = new WpDbAdapter();
 		$charset_collate = $adapter->collate();
 		$table           = $adapter->table( Constants::TABLE_MARKDOWN_POSTS );
 
-		$sql = "CREATE TABLE $table (
+		$sql = "CREATE TABLE IF NOT EXISTS $table (
 			id bigint(20) unsigned NOT NULL auto_increment,
 			post_id bigint(20) unsigned NOT NULL,
 			post_type varchar(32) NOT NULL,
@@ -478,25 +450,6 @@ class Activation {
 			KEY is_deleted (is_deleted)
 		) $charset_collate;";
 
-		dbDelta( $sql );
-	}
-
-	/**
-	 * Require the WordPress upgrade helpers when available.
-	 *
-	 * @return bool
-	 */
-	private function require_upgrade_file(): bool {
-		if ( function_exists( 'dbDelta' ) ) {
-			return true;
-		}
-
-		// `wp-admin/includes/upgrade.php` is the canonical location of dbDelta()
-		// in WordPress core; this is the path documented by the Plugin Handbook
-		// for plugins that need dbDelta during activation.
-		// @phpstan-ignore-next-line requireOnce.fileNotFound -- Path resolved at runtime via ABSPATH.
-		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-
-		return function_exists( 'dbDelta' );
+		$adapter->query( $sql );
 	}
 }

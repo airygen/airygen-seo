@@ -43,18 +43,13 @@ final class MarkdownPostRepository {
 	 * @return void
 	 */
 	public function ensure_table(): void {
-		if ( ! function_exists( 'dbDelta' ) ) {
-			// @phpstan-ignore-next-line requireOnce.fileNotFound -- Path resolved at runtime via ABSPATH.
-			require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-		}
-
-		if ( ! function_exists( 'dbDelta' ) ) {
+		$table = $this->table();
+		if ( $this->db->table_exists( $table ) ) {
 			return;
 		}
 
-		$table           = $this->table();
 		$charset_collate = $this->db->collate();
-		$sql             = "CREATE TABLE $table (
+		$sql             = "CREATE TABLE IF NOT EXISTS $table (
 			id bigint(20) unsigned NOT NULL auto_increment,
 			post_id bigint(20) unsigned NOT NULL,
 			post_type varchar(32) NOT NULL,
@@ -76,7 +71,7 @@ final class MarkdownPostRepository {
 			KEY is_deleted (is_deleted)
 		) $charset_collate;";
 
-		dbDelta( $sql );
+		$this->db->query( $sql );
 	}
 
 	/**

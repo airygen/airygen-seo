@@ -50,17 +50,8 @@ final class LogRepository {
 			return;
 		}
 
-		if ( ! function_exists( 'dbDelta' ) ) {
-			// @phpstan-ignore-next-line requireOnce.fileNotFound -- Path resolved at runtime via ABSPATH.
-			require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-		}
-
-		if ( ! function_exists( 'dbDelta' ) ) {
-			return;
-		}
-
 		$charset_collate = $this->db->collate();
-		$sql             = "CREATE TABLE $table (
+		$sql             = "CREATE TABLE IF NOT EXISTS $table (
 			id bigint(20) unsigned NOT NULL auto_increment,
 			run_at datetime NOT NULL,
 			results_json longtext NULL,
@@ -68,7 +59,7 @@ final class LogRepository {
 			KEY run_at (run_at)
 		) $charset_collate;";
 
-		dbDelta( $sql );
+		$this->db->query( $sql );
 	}
 
 	/**
