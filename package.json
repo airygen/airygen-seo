@@ -6,7 +6,8 @@
     "dev:block-editor": "wp-scripts start block-editor=./packages/block-editor/src/index.tsx --output-path=build/block-editor --output-filename=airygen-editor.js",
     "dev:classic-editor": "wp-scripts start classic-editor=./packages/classic-editor/src/index.tsx --output-path=build/classic-editor --output-filename=airygen-editor.js",
     "dev:admin": "wp-scripts start ./packages/admin/app.tsx --output-path=build/admin --output-filename=airygen-app.js",
-    "build": "wp-scripts build block-editor=./packages/block-editor/src/index.tsx --output-path=build/block-editor --output-filename=airygen-editor.js && wp-scripts build classic-editor=./packages/classic-editor/src/index.tsx --output-path=build/classic-editor --output-filename=airygen-editor.js && wp-scripts build ./packages/admin/app.tsx --output-path=build/admin --output-filename=airygen-app.js",
+    "build": "wp-scripts build block-editor=./packages/block-editor/src/index.tsx --output-path=build/block-editor --output-filename=airygen-editor.js && wp-scripts build classic-editor=./packages/classic-editor/src/index.tsx --output-path=build/classic-editor --output-filename=airygen-editor.js && wp-scripts build ./packages/admin/app.tsx --output-path=build/admin --output-filename=airygen-app.js && pnpm build:banner",
+    "build:banner": "node scripts/build-banner.mjs",
     "typecheck": "tsc --noEmit",
     "record:admin": "node scripts/admin-screenshots/record.mjs",
     "record:admin:headed": "AIRYGEN_CAPTURE_HEADLESS=0 node scripts/admin-screenshots/record.mjs"

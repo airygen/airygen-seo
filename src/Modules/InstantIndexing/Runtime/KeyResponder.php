@@ -49,7 +49,16 @@ final class KeyResponder {
 		status_header( 200 );
 		header( 'Content-Type: text/plain; charset=utf-8' );
 		header( 'Cache-Control: public, max-age=3600' );
-		echo $key; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- raw key required.
+		/**
+		 * IndexNow protocol requires the key file body to contain exactly the
+		 * key string and nothing else (no HTML, no whitespace, no escaping). The
+		 * key is validated at save time by Settings::sanitize() to be a
+		 * non-empty alphanumeric token (^[a-zA-Z0-9-]+$ enforced in admin), so
+		 * there is no untrusted character that could be smuggled through here.
+		 * Content-Type is text/plain, so the browser will never interpret the
+		 * body as HTML even if a future bug were to change the validation.
+		 */
+		echo $key; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- See comment above; IndexNow protocol requires the raw key as the entire response body.
 		exit;
 	}
 

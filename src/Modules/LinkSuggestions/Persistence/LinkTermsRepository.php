@@ -90,17 +90,20 @@ class LinkTermsRepository {
 
 		$now = current_time( 'mysql' );
 
-		// phpcs:disable WordPress.DB.PreparedSQLPlaceholders.IncorrectNumberOfReplacements,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.NoValueFound
-		// Delete removed stems.
+		/**
+		 * phpcs:disable WordPress.DB.PreparedSQLPlaceholders.IncorrectNumberOfReplacements,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.NoValueFound
+		 * Delete removed stems.
+		 */
 		if ( ! empty( $to_remove ) ) {
 			$placeholders = implode( ',', array_fill( 0, count( $to_remove ), '%s' ) );
-			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQLPlaceholders.IncorrectNumberOfReplacements,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- table name sanitized via adapter, placeholders covered.
+			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- Dynamic stem IN-clause placeholder count expanded above; %i identifier placeholder is supported by wpdb::prepare since WP 6.2.
 			$sql = $this->wpdb->prepare(
-				"DELETE FROM {$table_terms} WHERE content_id = %d AND content_type = %s AND stem IN ({$placeholders})", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name and placeholder list are built from sanitized values.
-				array_merge( array( $content_id, $content_type ), $to_remove )
+				"DELETE FROM %i WHERE content_id = %d AND content_type = %s AND stem IN ({$placeholders})",
+				array_merge( array( $table_terms, $content_id, $content_type ), $to_remove )
 			);
 
-			$this->wpdb->query( $sql ); // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.PreparedSQL.NotPrepared -- Query string comes from wpdb::prepare().
+			$this->wpdb->query( $sql ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Term repository mutation; cache is rebuilt by the caller.
+			// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber
 		}
 
 		// Insert/replace current stems.
@@ -148,14 +151,16 @@ class LinkTermsRepository {
 		$table_df    = $this->adapter->table( Constants::TABLE_LINK_SUGGESTION_DF );
 		$now         = current_time( 'mysql' );
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- table name sanitized via adapter.
 		$sql = $this->wpdb->prepare(
-			"DELETE FROM {$table_terms} WHERE content_id = %d AND content_type = %s", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name is sanitized via adapter.
+			'DELETE FROM %i WHERE content_id = %d AND content_type = %s',
+			$table_terms,
 			$content_id,
 			$content_type
 		);
 
-		$this->wpdb->query( $sql ); // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.PreparedSQL.NotPrepared -- Query string comes from wpdb::prepare().
+		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- $sql comes from wpdb::prepare() above; term repository mutation, cache is rebuilt by the caller.
+		$this->wpdb->query( $sql );
+		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
 
 		foreach ( array_keys( $current ) as $stem ) {
 			$this->increment_df( $table_df, (string) $stem, -1, $now );
@@ -173,14 +178,16 @@ class LinkTermsRepository {
 	public function get_terms_for_content( int $content_id, string $content_type ): array {
 		$table = $this->adapter->table( Constants::TABLE_LINK_SUGGESTION_TERMS );
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- table name sanitized via adapter.
 		$sql = $this->wpdb->prepare(
-			"SELECT stem, tf FROM {$table} WHERE content_id = %d AND content_type = %s", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name is sanitized via adapter.
+			'SELECT stem, tf FROM %i WHERE content_id = %d AND content_type = %s',
+			$table,
 			$content_id,
 			$content_type
 		);
 
-		$rows = $this->wpdb->get_results( $sql, ARRAY_A ); // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.PreparedSQL.NotPrepared -- Query string comes from wpdb::prepare().
+		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- $sql comes from wpdb::prepare() above; Tf-idf term lookup, result is request-scoped.
+		$rows = $this->wpdb->get_results( $sql, ARRAY_A );
+		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
 
 		$result = array();
 		foreach ( (array) $rows as $row ) {
@@ -206,15 +213,14 @@ class LinkTermsRepository {
 		$table = $this->adapter->table( Constants::TABLE_LINK_SUGGESTION_DF );
 
 		$placeholders = implode( ',', array_fill( 0, count( $stems ), '%s' ) );
-		// phpcs:disable
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.PlaceholderCountMatches -- table name and placeholders handled above.
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic stem IN-clause placeholder count expanded above; %i identifier placeholder is supported by wpdb::prepare since WP 6.2.
 		$sql = $this->wpdb->prepare(
-			"SELECT stem, doc_count FROM {$table} WHERE stem IN ({$placeholders})", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name and placeholder list are built from sanitized values.
-			$stems
+			"SELECT stem, doc_count FROM %i WHERE stem IN ({$placeholders})",
+			array_merge( array( $table ), $stems )
 		);
-		// phpcs:enable
 
-		$rows = $this->wpdb->get_results( $sql, ARRAY_A ); // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.PreparedSQL.NotPrepared -- Query string comes from wpdb::prepare().
+		$rows = $this->wpdb->get_results( $sql, ARRAY_A ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Aggregate doc-count lookup; result is request-scoped.
+		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder
 
 		$result = array();
 		foreach ( (array) $rows as $row ) {
@@ -249,7 +255,7 @@ class LinkTermsRepository {
 		$stem_placeholders      = implode( ',', array_fill( 0, count( $stems ), '%s' ) );
 		$post_type_placeholders = implode( ',', array_fill( 0, count( $post_types ), '%s' ) );
 		$status_sql             = '';
-		$params                 = array_merge( $stems, $post_types );
+		$params                 = array_merge( array( $terms_table, $posts_table ), $stems, $post_types );
 
 		if ( ! empty( $allowed_statuses ) ) {
 			$status_placeholders = implode( ',', array_fill( 0, count( $allowed_statuses ), '%s' ) );
@@ -259,20 +265,20 @@ class LinkTermsRepository {
 
 		$params[] = $limit;
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic stem/post-type/status IN-clause placeholder counts expanded above; %i identifier placeholder is supported by wpdb::prepare since WP 6.2.
 		$sql = $this->wpdb->prepare(
 			"SELECT DISTINCT t.content_id
-			FROM {$terms_table} AS t
-			INNER JOIN {$posts_table} AS p ON p.ID = t.content_id
+			FROM %i AS t
+			INNER JOIN %i AS p ON p.ID = t.content_id
 			WHERE t.stem IN ({$stem_placeholders})
 			AND t.content_type IN ({$post_type_placeholders})
 			{$status_sql}
-			LIMIT %d", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table names and placeholder fragments are built from trusted values.
+			LIMIT %d",
 			$params
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared
 
-		$ids = $this->wpdb->get_col( $sql ); // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.PreparedSQL.NotPrepared -- Query string comes from wpdb::prepare().
+		$ids = $this->wpdb->get_col( $sql ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Candidate ID join across plugin term table + wp_posts; request-scoped.
+		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder
 
 		return array_map(
 			static function ( $id ): int {
@@ -290,8 +296,15 @@ class LinkTermsRepository {
 	public function total_documents(): int {
 		$table = $this->adapter->table( Constants::TABLE_LINK_SUGGESTION_TERMS );
 
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- table name is pre-sanitized via adapter.
-		$count = $this->wpdb->get_var( "SELECT COUNT(DISTINCT CONCAT(content_type, ':', content_id)) FROM {$table}" ); // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name is sanitized via adapter.
+		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Argument comes from wpdb::prepare() with %i identifier (WP 6.2+); aggregate count over plugin term index, bypasses cache to reflect freshly indexed content.
+		$count = $this->wpdb->get_var(
+			$this->wpdb->prepare(
+				'SELECT COUNT(DISTINCT CONCAT(content_type, %s, content_id)) FROM %i',
+				':',
+				$table
+			)
+		);
+		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
 
 		return (int) $count;
 	}
@@ -309,7 +322,7 @@ class LinkTermsRepository {
 		$posts_table = $this->wpdb->posts;
 
 		$status_sql = '';
-		$params     = array( $post_type );
+		$params     = array( $terms_table, $posts_table, $post_type );
 
 		if ( ! empty( $allowed_statuses ) ) {
 			$placeholders = implode( ',', array_fill( 0, count( $allowed_statuses ), '%s' ) );
@@ -317,18 +330,19 @@ class LinkTermsRepository {
 			$params       = array_merge( $params, $allowed_statuses );
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic status IN-clause placeholder count expanded above; %i identifier placeholder is supported by wpdb::prepare since WP 6.2.
 		$sql = $this->wpdb->prepare(
 			"SELECT COUNT(DISTINCT t.content_id)
-			FROM {$terms_table} AS t
-			INNER JOIN {$posts_table} AS p ON p.ID = t.content_id
+			FROM %i AS t
+			INNER JOIN %i AS p ON p.ID = t.content_id
 			WHERE t.content_type = %s
-			{$status_sql}", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table names and placeholder fragments are built from trusted values.
+			{$status_sql}",
 			$params
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared
 
-		return (int) $this->wpdb->get_var( $sql ); // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.PreparedSQL.NotPrepared -- Query string comes from wpdb::prepare().
+		$result = (int) $this->wpdb->get_var( $sql ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Aggregate join over plugin term table + wp_posts.
+		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder
+		return $result;
 	}
 
 	/**
@@ -363,15 +377,16 @@ class LinkTermsRepository {
 	 * @return void
 	 */
 	private function increment_df( string $table_df, string $stem, int $delta, string $now ): void {
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared
-		$existing = $this->wpdb->get_row( // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter -- Query string comes from wpdb::prepare().
+		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Argument comes from wpdb::prepare() with %i identifier (WP 6.2+); read-modify-write on plugin DF table, cache bypassed for consistency.
+		$existing = $this->wpdb->get_row(
 			$this->wpdb->prepare(
-				"SELECT doc_count FROM {$table_df} WHERE stem = %s", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table name is sanitized via adapter.
+				'SELECT doc_count FROM %i WHERE stem = %s',
+				$table_df,
 				$stem
 			),
 			ARRAY_A
 		);
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared
+		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
 
 		$current = $existing ? absint( $existing['doc_count'] ) : 0;
 		$new     = max( 0, $current + $delta );

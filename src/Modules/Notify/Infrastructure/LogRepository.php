@@ -147,8 +147,10 @@ final class LogRepository {
 	public function count_logs(): int {
 		$this->ensure_table();
 
-		$sql   = sprintf( 'SELECT COUNT(*) FROM %s WHERE id > %%d', $this->table() );
-		$total = $this->db->get_var( $sql, array( 0 ) );
+		$total = $this->db->get_var(
+			'SELECT COUNT(*) FROM %i WHERE id > %d',
+			array( $this->table(), 0 )
+		);
 
 		return (int) $total;
 	}
@@ -164,8 +166,10 @@ final class LogRepository {
 
 		$days   = max( 1, $days );
 		$cutoff = gmdate( 'Y-m-d H:i:s', time() - ( $days * DAY_IN_SECONDS ) );
-		$sql    = sprintf( 'DELETE FROM %s WHERE run_at < %%s', $this->table() );
-		$result = $this->db->query( $sql, array( $cutoff ) );
+		$result = $this->db->query(
+			'DELETE FROM %i WHERE run_at < %s',
+			array( $this->table(), $cutoff )
+		);
 
 		return is_int( $result ) ? $result : 0;
 	}

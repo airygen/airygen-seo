@@ -63,8 +63,10 @@ final class LinkDataRepository {
 		$filtered      = array_values( array_intersect( array_map( 'strval', $link_types ), $allowed_types ) );
 		$filter_types  = count( $filtered ) === 1 ? $filtered : array();
 
-		// Keep the staleness OR conditions grouped so optional type filtering
-		// applies to every candidate branch.
+		/**
+		 * Keep the staleness OR conditions grouped so optional type filtering
+		 * applies to every candidate branch.
+		 */
 		$where        = 'WHERE (status_check = 0 OR last_status_checked_at IS NULL OR last_status_checked_at <= %s)';
 		$params       = array( $threshold );
 		$types_clause = '';

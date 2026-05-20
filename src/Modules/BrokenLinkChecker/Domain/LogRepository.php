@@ -63,12 +63,11 @@ final class LogRepository {
 		list( $status_sql, $status_params ) = $this->build_status_filter_clause( $statuses );
 
 		$sql = sprintf(
-			'SELECT link_id, post_id, url, status_code, status_label, error_message, data_source, checked_at, created_at FROM %s %s ORDER BY checked_at DESC, link_id DESC LIMIT %%d OFFSET %%d',
-			$this->table(),
+			'SELECT link_id, post_id, url, status_code, status_label, error_message, data_source, checked_at, created_at FROM %%i %s ORDER BY checked_at DESC, link_id DESC LIMIT %%d OFFSET %%d',
 			$status_sql
 		);
 
-		$params  = array_merge( $status_params, array( $per_page, $offset ) );
+		$params  = array_merge( array( $this->table() ), $status_params, array( $per_page, $offset ) );
 		$results = $this->db->get_results( $sql, $params );
 		if ( empty( $results ) ) {
 			return array();
@@ -103,11 +102,11 @@ final class LogRepository {
 		list( $status_sql, $status_params ) = $this->build_status_filter_clause( $statuses );
 
 		if ( '' === $status_sql ) {
-			$sql    = sprintf( 'SELECT COUNT(*) FROM %s WHERE 1 = %%d', $this->table() );
-			$params = array( 1 );
+			$sql    = 'SELECT COUNT(*) FROM %i WHERE 1 = %d';
+			$params = array( $this->table(), 1 );
 		} else {
-			$sql    = sprintf( 'SELECT COUNT(*) FROM %s %s', $this->table(), $status_sql );
-			$params = $status_params;
+			$sql    = sprintf( 'SELECT COUNT(*) FROM %%i %s', $status_sql );
+			$params = array_merge( array( $this->table() ), $status_params );
 		}
 
 		$total = $this->db->get_var( $sql, $params );

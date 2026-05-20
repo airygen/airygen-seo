@@ -296,78 +296,107 @@ final class Hooks {
 			return;
 		}
 
-		echo '<div class="airygen-local-nap-wrap">'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		echo '<div class="airygen-local-nap" itemscope itemtype="https://schema.org/LocalBusiness">'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		echo '<address class="airygen-local-nap__address">'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		/**
+		 * Build the NAP markup into a single string, then escape once via wp_kses()
+		 * with an explicit allowlist of tags + attributes used in this block. This
+		 * is "escape late": all variable interpolation runs through esc_html()/
+		 * esc_attr() at concatenation time, and the final wp_kses() pass enforces
+		 * the structural HTML allowlist (Schema.org microdata attributes plus the
+		 * minimum set of layout tags).
+		 */
+		$html  = '<div class="airygen-local-nap-wrap">';
+		$html .= '<div class="airygen-local-nap" itemscope itemtype="https://schema.org/LocalBusiness">';
+		$html .= '<address class="airygen-local-nap__address">';
+
 		$rendered_lines = 0;
 		foreach ( $line_order as $block_id ) {
 			$line_class = 'airygen-local-nap__line';
 			if ( ! empty( $style['first_item_bold'] ) && 0 === $rendered_lines ) {
 				$line_class .= ' airygen-local-nap__line--first';
 			}
-			if ( 'business_name' === $block_id ) {
-				if ( '' === $name ) {
-					continue;
-				}
-				echo '<div class="' . esc_attr( $line_class ) . '" itemprop="name">' . esc_html( $name ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+			if ( 'business_name' === $block_id && '' !== $name ) {
+				$html .= '<div class="' . esc_attr( $line_class ) . '" itemprop="name">' . esc_html( $name ) . '</div>';
 				++$rendered_lines;
 				continue;
 			}
 
-			if ( 'legal_name' === $block_id ) {
-				if ( '' === $legal_name ) {
-					continue;
-				}
-				echo '<div class="' . esc_attr( $line_class ) . '" itemprop="legalName">' . esc_html( $legal_name ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			if ( 'legal_name' === $block_id && '' !== $legal_name ) {
+				$html .= '<div class="' . esc_attr( $line_class ) . '" itemprop="legalName">' . esc_html( $legal_name ) . '</div>';
 				++$rendered_lines;
 				continue;
 			}
 
-			if ( 'phone' === $block_id ) {
-				if ( '' === $phone ) {
-					continue;
-				}
-				echo '<div class="' . esc_attr( $line_class ) . '"><span>' . esc_html__( 'TEL:', 'airygen-seo' ) . '</span><span itemprop="telephone">' . esc_html( $phone ) . '</span></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			if ( 'phone' === $block_id && '' !== $phone ) {
+				$html .= '<div class="' . esc_attr( $line_class ) . '"><span>' . esc_html__( 'TEL:', 'airygen-seo' ) . '</span><span itemprop="telephone">' . esc_html( $phone ) . '</span></div>';
 				++$rendered_lines;
 				continue;
 			}
 
-			if ( 'address' === $block_id ) {
-				if ( ! $has_address ) {
-					continue;
-				}
+			if ( 'address' === $block_id && $has_address ) {
 				$street_line = trim( $street . ' ' . $city );
 				$locality    = '' !== $region ? $region : $city;
-				echo '<div class="' . esc_attr( $line_class ) . '" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				$html       .= '<div class="' . esc_attr( $line_class ) . '" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">';
 				if ( '' !== $street_line ) {
-					echo '<span itemprop="streetAddress">' . esc_html( $street_line ) . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					$html .= '<span itemprop="streetAddress">' . esc_html( $street_line ) . '</span>';
 				}
 				if ( '' !== $locality ) {
-					echo '<span itemprop="addressLocality">' . esc_html( $locality ) . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					$html .= '<span itemprop="addressLocality">' . esc_html( $locality ) . '</span>';
 				}
 				if ( '' !== $postal_code ) {
-					echo '<span itemprop="postalCode">' . esc_html( $postal_code ) . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					$html .= '<span itemprop="postalCode">' . esc_html( $postal_code ) . '</span>';
 				}
 				if ( '' !== $country ) {
-					echo '<meta itemprop="addressCountry" content="' . esc_attr( strtoupper( $country ) ) . '" />'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					$html .= '<meta itemprop="addressCountry" content="' . esc_attr( strtoupper( $country ) ) . '" />';
 				}
-				echo '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				$html .= '</div>';
 				++$rendered_lines;
 				continue;
 			}
 
-			if ( 'tax_id' === $block_id ) {
-				if ( '' === $vat_id || empty( $settings['show_vat_in_footer'] ) ) {
-					continue;
-				}
-				echo '<div class="' . esc_attr( $line_class ) . '"><span>' . esc_html__( 'Tax ID:', 'airygen-seo' ) . ' ' . esc_html( $vat_id ) . '</span><meta itemprop="taxID" content="' . esc_attr( $vat_id ) . '" /></div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			if ( 'tax_id' === $block_id && '' !== $vat_id && ! empty( $settings['show_vat_in_footer'] ) ) {
+				$html .= '<div class="' . esc_attr( $line_class ) . '"><span>' . esc_html__( 'Tax ID:', 'airygen-seo' ) . ' ' . esc_html( $vat_id ) . '</span><meta itemprop="taxID" content="' . esc_attr( $vat_id ) . '" /></div>';
 				++$rendered_lines;
 				continue;
 			}
 		}
-		echo '</address>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		echo '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		echo '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+		$html .= '</address></div></div>';
+
+		echo wp_kses( $html, self::nap_allowed_html() );
+	}
+
+	/**
+	 * Allowed HTML tags and attributes for the footer NAP block.
+	 *
+	 * Whitelists the exact structural elements emitted by emit_footer_nap()
+	 * plus the Schema.org microdata attributes required for the LocalBusiness
+	 * / PostalAddress vocabulary. Defined as a static method so reviewers can
+	 * see the security boundary in one place without scanning the rendering
+	 * loop.
+	 *
+	 * @return array<string, array<string, bool>>
+	 */
+	private static function nap_allowed_html(): array {
+		$microdata = array(
+			'class'     => true,
+			'itemscope' => true,
+			'itemtype'  => true,
+			'itemprop'  => true,
+		);
+
+		return array(
+			'div'     => $microdata,
+			'address' => array( 'class' => true ),
+			'span'    => array(
+				'class'    => true,
+				'itemprop' => true,
+			),
+			'meta'    => array(
+				'itemprop' => true,
+				'content'  => true,
+			),
+		);
 	}
 
 	/**
@@ -424,7 +453,11 @@ final class Hooks {
 
 		wp_register_style( 'airygen-local-nap-css', false ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- No external file.
 		wp_enqueue_style( 'airygen-local-nap-css' );
-		wp_add_inline_style( 'airygen-local-nap-css', $css );
+		/**
+		 * Strip any stray markup so the inline <style> block cannot be
+		 * terminated early by a `</style>` substring smuggled through settings.
+		 */
+		wp_add_inline_style( 'airygen-local-nap-css', wp_strip_all_tags( $css ) );
 	}
 
 	/**

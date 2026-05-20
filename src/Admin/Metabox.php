@@ -70,16 +70,13 @@ class Metabox {
 	 * @param int $post_id Current post ID.
 	 */
 	public function save_meta_box( int $post_id ) {
-		if (
-			! isset( $_POST['airygen_metabox_nonce'] ) ||
-			! current_user_can( 'edit_post', $post_id )
-		) {
+		if ( ! current_user_can( 'edit_post', $post_id ) ) {
 			return;
 		}
 
-		$nonce = sanitize_text_field( wp_unslash( $_POST['airygen_metabox_nonce'] ) );
-
-		if ( ! wp_verify_nonce( $nonce, 'airygen_create_nonce' ) ) {
+		if ( ! isset( $_POST['airygen_metabox_nonce'] )
+			|| ! wp_verify_nonce( wp_unslash( $_POST['airygen_metabox_nonce'] ), 'airygen_create_nonce' ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- wp_verify_nonce performs the hash comparison directly on the raw token.
+		) {
 			return;
 		}
 

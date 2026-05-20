@@ -53,6 +53,6 @@ if ( ! function_exists( 'airygen_the_toc' ) ) {
 	 * @return void
 	 */
 	function airygen_the_toc(): void {
-		echo airygen_get_toc(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo wp_kses_post( airygen_get_toc() );
 	}
 }

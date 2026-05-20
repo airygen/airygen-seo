@@ -216,10 +216,10 @@ final class PostListColumns {
 		}
 
 		$placeholders = implode( ',', array_fill( 0, count( $post_ids ), '%d' ) );
-		$params       = array_merge( $post_ids, array( 'client_error', 'server_error', 'error' ) );
+		$params       = array_merge( array( $log_table ), $post_ids, array( 'client_error', 'server_error', 'error' ) );
 		$rows         = $adapter->get_results(
 			"SELECT post_id, COUNT(*) AS broken_count
-			 FROM {$log_table}
+			 FROM %i
 			 WHERE post_id IN ({$placeholders})
 			 AND (
 			 	status_code = 0

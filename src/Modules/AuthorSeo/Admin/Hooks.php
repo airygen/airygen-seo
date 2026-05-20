@@ -100,8 +100,9 @@ final class Hooks {
 			return;
 		}
 
-		$nonce = isset( $_POST[ self::NONCE_FIELD ] ) ? sanitize_text_field( wp_unslash( (string) $_POST[ self::NONCE_FIELD ] ) ) : '';
-		if ( '' === $nonce || ! wp_verify_nonce( $nonce, self::NONCE_ACTION ) ) {
+		if ( ! isset( $_POST[ self::NONCE_FIELD ] )
+			|| ! wp_verify_nonce( wp_unslash( $_POST[ self::NONCE_FIELD ] ), self::NONCE_ACTION ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- wp_verify_nonce performs the hash comparison directly on the raw token.
+		) {
 			return;
 		}
 

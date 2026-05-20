@@ -35,6 +35,6 @@ if ( ! function_exists( 'airygen_the_topic_cluster' ) ) {
 	 * @return void
 	 */
 	function airygen_the_topic_cluster( int $post_id = 0 ): void {
-		echo airygen_get_topic_cluster( $post_id ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo wp_kses_post( airygen_get_topic_cluster( $post_id ) );
 	}
 }

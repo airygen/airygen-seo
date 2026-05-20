@@ -30,7 +30,14 @@ final class TemplateRenderer {
 	 * @return void
 	 */
 	public static function render( string $relative_path, array $data = array(), ?callable $sanitizer = null ): void {
-		echo self::get( $relative_path, $data, $sanitizer ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		/**
+		 * self::get() runs the template output through wp_kses() with the
+		 * explicit allowlist returned by self::allowed_tags() before returning,
+		 * so the value echoed here is already escaped at the boundary. The
+		 * phpcs:ignore exists because the linter can't follow the escape
+		 * across the helper call.
+		 */
+		echo self::get( $relative_path, $data, $sanitizer ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- See comment above; self::get() applies wp_kses() with an explicit allowlist before returning.
 	}
 
 	/**

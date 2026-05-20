@@ -688,9 +688,10 @@ final class AioseoRestController {
 		}
 
 		$cursor = (int) get_option( self::REDIRECT_CURSOR_OPTION, 0 );
-		$rows   = $wpdb->get_results( // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- AIOSEO migration source table read.
+		$rows   = $wpdb->get_results( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- AIOSEO migration source table read; not worth caching since each row is consumed exactly once.
 			$wpdb->prepare(
-				"SELECT * FROM {$table} WHERE id > %d ORDER BY id ASC LIMIT %d", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- External source table name is validated before use.
+				'SELECT * FROM %i WHERE id > %d ORDER BY id ASC LIMIT %d',
+				$table,
 				$cursor,
 				self::BATCH_SIZE
 			),
@@ -844,9 +845,10 @@ final class AioseoRestController {
 			return 0;
 		}
 
-		$total = $wpdb->get_var( // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- External source table name is validated before use.
+		$total = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- AIOSEO migration source table read; one-shot aggregate before each batch.
 			$wpdb->prepare(
-				"SELECT COUNT(*) FROM {$table} WHERE 1 = %d", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- External source table name is validated before use.
+				'SELECT COUNT(*) FROM %i WHERE 1 = %d',
+				$table,
 				1
 			)
 		);
@@ -872,9 +874,10 @@ final class AioseoRestController {
 			return 0;
 		}
 
-		$count = $wpdb->get_var( // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- AIOSEO migration source table read.
+		$count = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- AIOSEO migration source table read; cursor progress aggregate.
 			$wpdb->prepare(
-				"SELECT COUNT(*) FROM {$table} WHERE id <= %d", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- External source table name is validated before use.
+				'SELECT COUNT(*) FROM %i WHERE id <= %d',
+				$table,
 				$cursor
 			)
 		);
@@ -903,7 +906,9 @@ final class AioseoRestController {
 		}
 
 		$wpdb->suppress_errors( true );
-		$wpdb->get_var( "SELECT 1 FROM {$table} LIMIT 1" ); // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table readability probe.
+		$wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Table readability probe; errors are inspected via $wpdb->last_error.
+			$wpdb->prepare( 'SELECT 1 FROM %i LIMIT 1', $table )
+		);
 		$error = $wpdb->last_error;
 		$wpdb->suppress_errors( false );
 
@@ -1008,7 +1013,9 @@ final class AioseoRestController {
 		);
 		if ( empty( $found ) ) {
 			$wpdb->suppress_errors( true );
-			$wpdb->get_var( "SELECT 1 FROM {$table} LIMIT 1" ); // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table readability probe.
+			$wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Table readability probe; errors are inspected via $wpdb->last_error.
+				$wpdb->prepare( 'SELECT 1 FROM %i LIMIT 1', $table )
+			);
 			$error = $wpdb->last_error;
 			$wpdb->suppress_errors( false );
 			if ( '' !== $error ) {
@@ -1016,9 +1023,10 @@ final class AioseoRestController {
 			}
 		}
 
-		$row = $wpdb->get_row( // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Migration source table read.
+		$row = $wpdb->get_row( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- AIOSEO per-post lookup; bypasses cache because it reads a foreign plugin table.
 			$wpdb->prepare(
-				"SELECT * FROM {$table} WHERE post_id = %d LIMIT 1", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- External source table name is validated before use.
+				'SELECT * FROM %i WHERE post_id = %d LIMIT 1',
+				$table,
 				$post_id
 			),
 			ARRAY_A

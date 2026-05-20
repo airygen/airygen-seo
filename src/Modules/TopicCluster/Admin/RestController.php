@@ -50,11 +50,11 @@ class RestController {
 		}
 
 		$rows = $adapter->get_results(
-			"SELECT post_id, level, parent_post_id, group_id, root_id
-			 FROM {$table}
+			'SELECT post_id, level, parent_post_id, group_id, root_id
+			 FROM %i
 			 WHERE level IN (%d, %d)
-			 ORDER BY group_id ASC, level ASC, post_id ASC",
-			array( 1, 2 ),
+			 ORDER BY group_id ASC, level ASC, post_id ASC',
+			array( $table, 1, 2 ),
 			\ARRAY_A
 		);
 
@@ -83,11 +83,11 @@ class RestController {
 		$post_id = (int) $request->get_param( 'post' );
 		if ( $post_id > 0 ) {
 			$current_row = $adapter->get_results(
-				"SELECT post_id, level, parent_post_id, group_id, root_id
-				 FROM {$table}
+				'SELECT post_id, level, parent_post_id, group_id, root_id
+				 FROM %i
 				 WHERE post_id = %d
-				 LIMIT 1",
-				array( $post_id ),
+				 LIMIT 1',
+				array( $table, $post_id ),
 				\ARRAY_A
 			);
 
@@ -143,10 +143,10 @@ class RestController {
 		}
 
 		$total_groups = (int) $adapter->get_var(
-			"SELECT COUNT(*)
-			 FROM {$table}
-			 WHERE id >= %d",
-			array( 0 )
+			'SELECT COUNT(*)
+			 FROM %i
+			 WHERE id >= %d',
+			array( $table, 0 )
 		);
 
 		$total_pages = $total_groups > 0 ? (int) ceil( $total_groups / $per_page ) : 1;
@@ -156,11 +156,11 @@ class RestController {
 
 		$offset = ( $page - 1 ) * $per_page;
 		$rows   = $adapter->get_results(
-			"SELECT id, name, description, updated_at
-			 FROM {$table}
+			'SELECT id, name, description, updated_at
+			 FROM %i
 			 ORDER BY updated_at DESC, id DESC
-			 LIMIT %d OFFSET %d",
-			array( $per_page, $offset ),
+			 LIMIT %d OFFSET %d',
+			array( $table, $per_page, $offset ),
 			\ARRAY_A
 		);
 
@@ -183,10 +183,10 @@ class RestController {
 					SUM(CASE WHEN level = 1 THEN 1 ELSE 0 END) AS l1_count,
 					SUM(CASE WHEN level = 2 THEN 1 ELSE 0 END) AS l2_count,
 					SUM(CASE WHEN level = 3 THEN 1 ELSE 0 END) AS l3_count
-				 FROM {$relations_table}
+				 FROM %i
 				 WHERE group_id IN ({$placeholders})
 				 GROUP BY group_id",
-				$group_ids,
+				array_merge( array( $relations_table ), $group_ids ),
 				\ARRAY_A
 			);
 
@@ -209,10 +209,10 @@ class RestController {
 			$placeholders   = implode( ',', array_fill( 0, count( $group_ids ), '%d' ) );
 			$candidate_rows = $adapter->get_results(
 				"SELECT group_id, COUNT(*) AS total
-				 FROM {$candidates_table}
+				 FROM %i
 				 WHERE group_id IN ({$placeholders})
 				 GROUP BY group_id",
-				$group_ids,
+				array_merge( array( $candidates_table ), $group_ids ),
 				\ARRAY_A
 			);
 
@@ -371,8 +371,8 @@ class RestController {
 		}
 
 		$exists = (int) $adapter->get_var(
-			"SELECT COUNT(*) FROM {$table} WHERE id = %d",
-			array( $group_id )
+			'SELECT COUNT(*) FROM %i WHERE id = %d',
+			array( $table, $group_id )
 		);
 
 		if ( $exists <= 0 ) {
@@ -385,12 +385,13 @@ class RestController {
 
 		$now    = current_time( 'mysql' );
 		$result = $adapter->query(
-			"UPDATE {$table}
+			'UPDATE %i
 			 SET name = %s,
 				 description = %s,
 				 updated_at = %s
-			 WHERE id = %d",
+			 WHERE id = %d',
 			array(
+				$table,
 				$name,
 				$description,
 				$now,
@@ -444,8 +445,8 @@ class RestController {
 		}
 
 		$exists = (int) $adapter->get_var(
-			"SELECT COUNT(*) FROM {$table} WHERE id = %d",
-			array( $group_id )
+			'SELECT COUNT(*) FROM %i WHERE id = %d',
+			array( $table, $group_id )
 		);
 		if ( $exists <= 0 ) {
 			return new WP_Error(
@@ -476,11 +477,12 @@ class RestController {
 		$now     = current_time( 'mysql' );
 		$encoded = wp_json_encode( $map );
 		$updated = $adapter->query(
-			"UPDATE {$table}
+			'UPDATE %i
 			 SET map_json = %s,
 				 updated_at = %s
-			 WHERE id = %d",
+			 WHERE id = %d',
 			array(
+				$table,
 				false !== $encoded ? $encoded : '{}',
 				$now,
 				$group_id,
@@ -534,8 +536,8 @@ class RestController {
 		}
 
 		$exists = (int) $adapter->get_var(
-			"SELECT COUNT(*) FROM {$groups_table} WHERE id = %d",
-			array( $group_id )
+			'SELECT COUNT(*) FROM %i WHERE id = %d',
+			array( $groups_table, $group_id )
 		);
 		if ( $exists <= 0 ) {
 			return new WP_Error(
@@ -729,11 +731,12 @@ class RestController {
 
 		$encoded_map = wp_json_encode( $map_payload );
 		$adapter->query(
-			"UPDATE {$groups_table}
+			'UPDATE %i
 			 SET map_json = %s,
 				 updated_at = %s
-			 WHERE id = %d",
+			 WHERE id = %d',
 			array(
+				$groups_table,
 				false !== $encoded_map ? $encoded_map : '{}',
 				$now,
 				$group_id,
@@ -786,8 +789,8 @@ class RestController {
 		}
 
 		$exists = (int) $adapter->get_var(
-			"SELECT COUNT(*) FROM {$table} WHERE id = %d",
-			array( $group_id )
+			'SELECT COUNT(*) FROM %i WHERE id = %d',
+			array( $table, $group_id )
 		);
 
 		if ( $exists <= 0 ) {
@@ -800,8 +803,8 @@ class RestController {
 
 		if ( $adapter->table_exists( $relations ) ) {
 			$related_count = (int) $adapter->get_var(
-				"SELECT COUNT(*) FROM {$relations} WHERE group_id = %d",
-				array( $group_id )
+				'SELECT COUNT(*) FROM %i WHERE group_id = %d',
+				array( $relations, $group_id )
 			);
 			if ( $related_count > 0 ) {
 				return new WP_Error(
@@ -871,8 +874,8 @@ class RestController {
 		}
 
 		$exists = (int) $adapter->get_var(
-			"SELECT COUNT(*) FROM {$groups_table} WHERE id = %d",
-			array( $group_id )
+			'SELECT COUNT(*) FROM %i WHERE id = %d',
+			array( $groups_table, $group_id )
 		);
 		if ( $exists <= 0 ) {
 			return new WP_Error(
@@ -883,11 +886,11 @@ class RestController {
 		}
 
 		$rows       = $adapter->get_results(
-			"SELECT id, post_id
-			 FROM {$candidates_table}
+			'SELECT id, post_id
+			 FROM %i
 			 WHERE group_id = %d
-			 ORDER BY id DESC",
-			array( $group_id ),
+			 ORDER BY id DESC',
+			array( $candidates_table, $group_id ),
 			\ARRAY_A
 		);
 		$candidates = array();
@@ -946,8 +949,8 @@ class RestController {
 		}
 
 		$exists = (int) $adapter->get_var(
-			"SELECT COUNT(*) FROM {$groups_table} WHERE id = %d",
-			array( $group_id )
+			'SELECT COUNT(*) FROM %i WHERE id = %d',
+			array( $groups_table, $group_id )
 		);
 		if ( $exists <= 0 ) {
 			return new WP_Error(
@@ -968,8 +971,8 @@ class RestController {
 		$exclude = array();
 		if ( $adapter->table_exists( $relations_table ) ) {
 			$relation_rows = $adapter->get_results(
-				"SELECT post_id FROM {$relations_table} WHERE post_id > %d",
-				array( 0 ),
+				'SELECT post_id FROM %i WHERE post_id > %d',
+				array( $relations_table, 0 ),
 				\ARRAY_A
 			);
 			foreach ( $relation_rows as $row ) {
@@ -982,8 +985,8 @@ class RestController {
 
 		if ( $adapter->table_exists( $candidates_table ) ) {
 			$candidate_rows = $adapter->get_results(
-				"SELECT post_id FROM {$candidates_table} WHERE group_id = %d",
-				array( $group_id ),
+				'SELECT post_id FROM %i WHERE group_id = %d',
+				array( $candidates_table, $group_id ),
 				\ARRAY_A
 			);
 			foreach ( $candidate_rows as $row ) {
@@ -1058,8 +1061,8 @@ class RestController {
 		}
 
 		$group_exists = (int) $adapter->get_var(
-			"SELECT COUNT(*) FROM {$groups_table} WHERE id = %d",
-			array( $group_id )
+			'SELECT COUNT(*) FROM %i WHERE id = %d',
+			array( $groups_table, $group_id )
 		);
 		if ( $group_exists <= 0 ) {
 			return new WP_Error(
@@ -1080,8 +1083,8 @@ class RestController {
 
 		if ( $adapter->table_exists( $relations_table ) ) {
 			$related = (int) $adapter->get_var(
-				"SELECT COUNT(*) FROM {$relations_table} WHERE post_id = %d",
-				array( $post_id )
+				'SELECT COUNT(*) FROM %i WHERE post_id = %d',
+				array( $relations_table, $post_id )
 			);
 			if ( $related > 0 ) {
 				return new WP_Error(
@@ -1093,8 +1096,8 @@ class RestController {
 		}
 
 		$exists = (int) $adapter->get_var(
-			"SELECT COUNT(*) FROM {$candidates_table} WHERE group_id = %d AND post_id = %d",
-			array( $group_id, $post_id )
+			'SELECT COUNT(*) FROM %i WHERE group_id = %d AND post_id = %d',
+			array( $candidates_table, $group_id, $post_id )
 		);
 		if ( $exists > 0 ) {
 			return new WP_Error(
@@ -1253,27 +1256,27 @@ class RestController {
 
 		if ( $l1_id ) {
 			$l2_count = (int) $adapter->get_var(
-				"SELECT COUNT(*) FROM {$table} WHERE parent_post_id = %d AND level = %d",
-				array( $l1_id, 2 )
+				'SELECT COUNT(*) FROM %i WHERE parent_post_id = %d AND level = %d',
+				array( $table, $l1_id, 2 )
 			);
 			$l3_count = (int) $adapter->get_var(
-				"SELECT COUNT(*) FROM {$table} WHERE root_id = %d AND level = %d",
-				array( $l1_id, 3 )
+				'SELECT COUNT(*) FROM %i WHERE root_id = %d AND level = %d',
+				array( $table, $l1_id, 3 )
 			);
 		}
 
 		if ( $l2_id ) {
 			$l3_for_l2 = (int) $adapter->get_var(
-				"SELECT COUNT(*) FROM {$table} WHERE parent_post_id = %d AND level = %d",
-				array( $l2_id, 3 )
+				'SELECT COUNT(*) FROM %i WHERE parent_post_id = %d AND level = %d',
+				array( $table, $l2_id, 3 )
 			);
 		}
 
 		$group_name = '';
 		if ( $group_id > 0 && $adapter->table_exists( $groups ) ) {
 			$found_name = $adapter->get_var(
-				"SELECT name FROM {$groups} WHERE id = %d LIMIT 1",
-				array( $group_id )
+				'SELECT name FROM %i WHERE id = %d LIMIT 1',
+				array( $groups, $group_id )
 			);
 			if ( is_string( $found_name ) ) {
 				$group_name = $found_name;
@@ -1338,21 +1341,21 @@ class RestController {
 
 		if ( $group_id > 0 ) {
 			$rows = $adapter->get_results(
-				"SELECT post_id, level, parent_post_id, prev_post_id, next_post_id, group_id, root_id
-				 FROM {$table}
+				'SELECT post_id, level, parent_post_id, prev_post_id, next_post_id, group_id, root_id
+				 FROM %i
 				 WHERE level IN (%d, %d, %d)
 				   AND group_id = %d
-				 ORDER BY group_id ASC, level ASC, post_id ASC",
-				array( 1, 2, 3, $group_id ),
+				 ORDER BY group_id ASC, level ASC, post_id ASC',
+				array( $table, 1, 2, 3, $group_id ),
 				\ARRAY_A
 			);
 		} else {
 			$rows = $adapter->get_results(
-				"SELECT post_id, level, parent_post_id, prev_post_id, next_post_id, group_id, root_id
-				 FROM {$table}
+				'SELECT post_id, level, parent_post_id, prev_post_id, next_post_id, group_id, root_id
+				 FROM %i
 				 WHERE level IN (%d, %d, %d)
-				 ORDER BY group_id ASC, level ASC, post_id ASC",
-				array( 1, 2, 3 ),
+				 ORDER BY group_id ASC, level ASC, post_id ASC',
+				array( $table, 1, 2, 3 ),
 				\ARRAY_A
 			);
 		}
@@ -1389,20 +1392,20 @@ class RestController {
 		if ( $adapter->table_exists( $candidates_table ) ) {
 			if ( $group_id > 0 ) {
 				$candidate_rows = $adapter->get_results(
-					"SELECT id, group_id, post_id
-					 FROM {$candidates_table}
+					'SELECT id, group_id, post_id
+					 FROM %i
 					 WHERE group_id = %d
-					 ORDER BY id DESC",
-					array( $group_id ),
+					 ORDER BY id DESC',
+					array( $candidates_table, $group_id ),
 					\ARRAY_A
 				);
 			} else {
 				$candidate_rows = $adapter->get_results(
-					"SELECT id, group_id, post_id
-					 FROM {$candidates_table}
+					'SELECT id, group_id, post_id
+					 FROM %i
 					 WHERE group_id > %d
-					 ORDER BY group_id ASC, id DESC",
-					array( 0 ),
+					 ORDER BY group_id ASC, id DESC',
+					array( $candidates_table, 0 ),
 					\ARRAY_A
 				);
 			}
@@ -1431,11 +1434,11 @@ class RestController {
 		$map = array();
 		if ( $group_id > 0 && $adapter->table_exists( $groups_table ) ) {
 			$map_json = $adapter->get_var(
-				"SELECT map_json
-				 FROM {$groups_table}
+				'SELECT map_json
+				 FROM %i
 				 WHERE id = %d
-				 LIMIT 1",
-				array( $group_id )
+				 LIMIT 1',
+				array( $groups_table, $group_id )
 			);
 			if ( is_string( $map_json ) && '' !== $map_json ) {
 				$decoded = json_decode( $map_json, true );
@@ -1570,13 +1573,14 @@ class RestController {
 
 		$now = current_time( 'mysql' );
 		$adapter->query(
-			"UPDATE {$table}
+			'UPDATE %i
 			 SET parent_post_id = %d,
 				 group_id = %d,
 				 root_id = %d,
 				 updated_at = %s
-			 WHERE post_id = %d",
+			 WHERE post_id = %d',
 			array(
+				$table,
 				$parent_id,
 				$cluster_group_id,
 				$cluster_root_id,
@@ -1587,12 +1591,13 @@ class RestController {
 
 		if ( 'L2' === $level ) {
 			$adapter->query(
-				"UPDATE {$table}
+				'UPDATE %i
 				 SET group_id = %d,
 					 root_id = %d,
 					 updated_at = %s
-				 WHERE parent_post_id = %d AND level = %d",
+				 WHERE parent_post_id = %d AND level = %d',
 				array(
+					$table,
 					$cluster_group_id,
 					$cluster_root_id,
 					$now,
@@ -1651,12 +1656,12 @@ class RestController {
 
 			$now = current_time( 'mysql' );
 			$adapter->query(
-				"UPDATE {$table} SET next_post_id = NULL, updated_at = %s WHERE post_id = %d AND next_post_id = %d",
-				array( $now, $left_post_id, $right_post_id )
+				'UPDATE %i SET next_post_id = NULL, updated_at = %s WHERE post_id = %d AND next_post_id = %d',
+				array( $table, $now, $left_post_id, $right_post_id )
 			);
 			$adapter->query(
-				"UPDATE {$table} SET prev_post_id = NULL, updated_at = %s WHERE post_id = %d AND prev_post_id = %d",
-				array( $now, $right_post_id, $left_post_id )
+				'UPDATE %i SET prev_post_id = NULL, updated_at = %s WHERE post_id = %d AND prev_post_id = %d',
+				array( $table, $now, $right_post_id, $left_post_id )
 			);
 
 			return new WP_REST_Response(
@@ -1707,20 +1712,20 @@ class RestController {
 
 			$now = current_time( 'mysql' );
 			$adapter->query(
-				"UPDATE {$table} SET prev_post_id = NULL, updated_at = %s WHERE prev_post_id = %d",
-				array( $now, $child_post_id )
+				'UPDATE %i SET prev_post_id = NULL, updated_at = %s WHERE prev_post_id = %d',
+				array( $table, $now, $child_post_id )
 			);
 			$adapter->query(
-				"UPDATE {$table} SET next_post_id = NULL, updated_at = %s WHERE next_post_id = %d",
-				array( $now, $child_post_id )
+				'UPDATE %i SET next_post_id = NULL, updated_at = %s WHERE next_post_id = %d',
+				array( $table, $now, $child_post_id )
 			);
 
 			if ( $group_id > 0 ) {
 				$candidates_table = $adapter->table( Constants::TABLE_TOPIC_CLUSTER_CANDIDATES );
 				if ( $adapter->table_exists( $candidates_table ) ) {
 					$exists = (int) $adapter->get_var(
-						"SELECT COUNT(*) FROM {$candidates_table} WHERE group_id = %d AND post_id = %d",
-						array( $group_id, $child_post_id )
+						'SELECT COUNT(*) FROM %i WHERE group_id = %d AND post_id = %d',
+						array( $candidates_table, $group_id, $child_post_id )
 					);
 					if ( $exists <= 0 ) {
 						$adapter->insert(
@@ -1837,25 +1842,25 @@ class RestController {
 
 		if ( $left_old_next > 0 && $left_old_next !== $right_post_id ) {
 			$adapter->query(
-				"UPDATE {$table} SET prev_post_id = NULL, updated_at = %s WHERE post_id = %d",
-				array( $now, $left_old_next )
+				'UPDATE %i SET prev_post_id = NULL, updated_at = %s WHERE post_id = %d',
+				array( $table, $now, $left_old_next )
 			);
 		}
 
 		if ( $right_old_prev > 0 && $right_old_prev !== $left_post_id ) {
 			$adapter->query(
-				"UPDATE {$table} SET next_post_id = NULL, updated_at = %s WHERE post_id = %d",
-				array( $now, $right_old_prev )
+				'UPDATE %i SET next_post_id = NULL, updated_at = %s WHERE post_id = %d',
+				array( $table, $now, $right_old_prev )
 			);
 		}
 
 		$adapter->query(
-			"UPDATE {$table} SET next_post_id = %d, updated_at = %s WHERE post_id = %d",
-			array( $right_post_id, $now, $left_post_id )
+			'UPDATE %i SET next_post_id = %d, updated_at = %s WHERE post_id = %d',
+			array( $table, $right_post_id, $now, $left_post_id )
 		);
 		$adapter->query(
-			"UPDATE {$table} SET prev_post_id = %d, updated_at = %s WHERE post_id = %d",
-			array( $left_post_id, $now, $right_post_id )
+			'UPDATE %i SET prev_post_id = %d, updated_at = %s WHERE post_id = %d',
+			array( $table, $left_post_id, $now, $right_post_id )
 		);
 
 		return new WP_REST_Response(
@@ -1930,8 +1935,8 @@ class RestController {
 			if ( $group_id > 0 ) {
 				$cluster_group_id = $group_id;
 				$existing_l1      = (int) $adapter->get_var(
-					"SELECT COUNT(*) FROM {$table} WHERE group_id = %d AND level = %d AND post_id != %d",
-					array( $cluster_group_id, 1, $post_id )
+					'SELECT COUNT(*) FROM %i WHERE group_id = %d AND level = %d AND post_id != %d',
+					array( $table, $cluster_group_id, 1, $post_id )
 				);
 				if ( $existing_l1 > 0 ) {
 					return new WP_Error(
@@ -2006,8 +2011,8 @@ class RestController {
 
 		if ( $current_entry && isset( $current_entry['level'] ) && self::level_code_to_label( (int) $current_entry['level'] ) !== $level ) {
 			$child_count = $adapter->get_var(
-				"SELECT COUNT(*) FROM {$table} WHERE parent_post_id = %d",
-				array( $post_id )
+				'SELECT COUNT(*) FROM %i WHERE parent_post_id = %d',
+				array( $table, $post_id )
 			);
 			if ( $child_count ) {
 				return new WP_Error(
@@ -2025,14 +2030,15 @@ class RestController {
 		$saved = false;
 		if ( $existing_id ) {
 			$saved = false !== $adapter->query(
-				"UPDATE {$table}
+				'UPDATE %i
 				 SET level = %d,
 					 parent_post_id = %d,
 					 group_id = %d,
 					 root_id = %d,
 					 updated_at = %s
-				 WHERE post_id = %d",
+				 WHERE post_id = %d',
 				array(
+					$table,
 					self::level_label_to_code( $level ),
 					$parent_post_db_id,
 					$cluster_group_id,
@@ -2103,11 +2109,11 @@ class RestController {
 	 */
 	private static function fetch_entry( WpDbAdapter $adapter, string $table, int $post_id ): ?array {
 		$rows = $adapter->get_results(
-			"SELECT post_id, level, parent_post_id, prev_post_id, next_post_id, group_id, root_id
-			 FROM {$table}
+			'SELECT post_id, level, parent_post_id, prev_post_id, next_post_id, group_id, root_id
+			 FROM %i
 			 WHERE post_id = %d
-			 LIMIT 1",
-			array( $post_id ),
+			 LIMIT 1',
+			array( $table, $post_id ),
 			\ARRAY_A
 		);
 

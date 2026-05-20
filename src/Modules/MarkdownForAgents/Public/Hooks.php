@@ -88,6 +88,13 @@ final class Hooks {
 	/**
 	 * Render markdown for current singular.
 	 *
+	 * The markdown endpoint is for agents/crawlers consuming public content,
+	 * so visibility is intentionally restricted to published, non-password-
+	 * protected posts. This matches the policy already applied by the sitemap
+	 * and llms.txt endpoints in this plugin and prevents the endpoint from
+	 * being used as a side-channel to read drafts, private posts, future-
+	 * scheduled posts, or password-protected posts.
+	 *
 	 * @param array<string,mixed> $settings Module settings.
 	 *
 	 * @return void
@@ -98,11 +105,20 @@ final class Hooks {
 			return;
 		}
 
+		$post = get_post( $post_id );
+		if ( ! ( $post instanceof \WP_Post ) ) {
+			return;
+		}
+
+		if ( 'publish' !== $post->post_status || post_password_required( $post ) ) {
+			self::send_not_found();
+			return;
+		}
+
 		$allowed_types = isset( $settings['post_types'] ) && is_array( $settings['post_types'] )
 		? array_values( array_filter( array_map( 'strval', $settings['post_types'] ) ) )
 		: array();
-		$post_type     = get_post_type( $post_id );
-		if ( ! is_string( $post_type ) || ! in_array( $post_type, $allowed_types, true ) ) {
+		if ( ! in_array( $post->post_type, $allowed_types, true ) ) {
 			return;
 		}
 
@@ -126,11 +142,30 @@ final class Hooks {
 		nocache_headers();
 		header( 'Vary: Accept' );
 		header( 'Content-Type: text/markdown; charset=UTF-8' );
-		// Plain-text markdown response. Browsers do not interpret a `text/markdown`
-		// body as HTML, and HTML escaping would corrupt markdown syntax (for
-		// example `>` blockquotes and `<` in fenced code blocks). The content
-		// is sanitized when written to the cache by MarkdownExporter::export().
+		/**
+		 * Plain-text markdown response. Browsers do not interpret a `text/markdown`
+		 * body as HTML, and HTML escaping would corrupt markdown syntax (for
+		 * example `>` blockquotes and `<` in fenced code blocks). The content
+		 * is sanitized when written to the cache by MarkdownExporter::export().
+		 */
 		echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- text/markdown response body; see comment above.
+		exit;
+	}
+
+	/**
+	 * Emit a 404 response and stop further output.
+	 *
+	 * Used when the markdown endpoint is invoked against a non-exposable post
+	 * so the response shape matches what an anonymous visitor would receive
+	 * from core for the same URL.
+	 *
+	 * @return void
+	 */
+	private static function send_not_found(): void {
+		nocache_headers();
+		status_header( 404 );
+		header( 'Content-Type: text/plain; charset=UTF-8' );
+		echo "Not Found\n";
 		exit;
 	}
 }

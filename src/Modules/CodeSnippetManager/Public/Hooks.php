@@ -94,8 +94,18 @@ final class Hooks {
 			}
 
 			if ( preg_match( '#<\s*script\b#i', $code ) ) {
-				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Sanitized at save time by Settings::sanitize_snippet().
-				echo $code . "\n";
+				/**
+				 * The Code Snippet Manager intentionally allows site administrators
+				 * to inject custom <script> tags (including ones with src=) into the
+				 * page. Snippets are validated by Settings::sanitize_snippet() at save
+				 * time: the wrapper must be exactly <script ...>...</script> and the
+				 * inner body must not contain any other HTML tag. Escaping the body
+				 * here would defeat the feature's purpose — administrators expect
+				 * their script tag to be emitted verbatim. Saving the snippets option
+				 * is gated by the manage_options capability via the standard
+				 * Settings API permission flow.
+				 */
+				echo $code . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- See block comment above; admin-supplied <script> snippet, validated at save time.
 			} else {
 				wp_print_inline_script_tag( $code );
 			}

@@ -33,7 +33,7 @@ if ( ! function_exists( 'airygen_the_breadcrumbs' ) ) {
 	 * @return void
 	 */
 	function airygen_the_breadcrumbs( array $args = array() ): void {
-		echo airygen_get_breadcrumbs( $args ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo wp_kses_post( airygen_get_breadcrumbs( $args ) );
 	}
 }
 

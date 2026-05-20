@@ -152,10 +152,10 @@ final class PostListColumns {
 		$placeholders = implode( ',', array_fill( 0, count( $post_ids ), '%d' ) );
 		$rows         = $adapter->get_results(
 			"SELECT r.post_id, r.level, g.name AS group_name
-			 FROM {$relations_table} r
-			 LEFT JOIN {$groups_table} g ON g.id = r.group_id
+			 FROM %i r
+			 LEFT JOIN %i g ON g.id = r.group_id
 			 WHERE r.post_id IN ({$placeholders})",
-			$post_ids,
+			array_merge( array( $relations_table, $groups_table ), $post_ids ),
 			\ARRAY_A
 		);
 

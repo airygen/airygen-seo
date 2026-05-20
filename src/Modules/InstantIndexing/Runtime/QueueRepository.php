@@ -279,12 +279,12 @@ final class QueueRepository {
 			EventStatus::COMPLETED  => 0,
 		);
 
-		$sql = sprintf(
-			'SELECT status, COUNT(*) AS total FROM %s GROUP BY status',
-			$table
+		$results = $wpdb->get_results( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Plugin-owned table, query result is small (one row per status) and not worth caching.
+			$wpdb->prepare(
+				'SELECT status, COUNT(*) AS total FROM %i GROUP BY status',
+				$table
+			)
 		);
-
-		$results = $wpdb->get_results( $sql ); // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared -- Table name comes from the plugin's sanitized table helper.
 
 		if ( is_array( $results ) ) {
 			foreach ( $results as $row ) {
@@ -315,14 +315,14 @@ final class QueueRepository {
 		$limit = max( 1, $limit );
 		$table = $this->table();
 
-		$sql = sprintf(
-			'SELECT id, url, status, source, last_error, last_response, updated_at FROM %s ORDER BY updated_at DESC LIMIT %%d',
-			$table
+		$rows = $wpdb->get_results( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Plugin-owned table, audit/log surface query not worth caching.
+			$wpdb->prepare(
+				'SELECT id, url, status, source, last_error, last_response, updated_at FROM %i ORDER BY updated_at DESC LIMIT %d',
+				$table,
+				$limit
+			),
+			ARRAY_A
 		);
-
-		$query = $wpdb->prepare( $sql, $limit ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared -- Dynamic table name is sanitized before interpolation.
-
-		$rows = $wpdb->get_results( $query, ARRAY_A ); // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.PreparedSQL.NotPrepared -- Query string comes from wpdb::prepare().
 
 		return is_array( $rows ) ? $rows : array();
 	}
@@ -400,10 +400,15 @@ final class QueueRepository {
 			return;
 		}
 
-		$in_clause = implode( ',', $ids );
-		$sql       = sprintf( 'UPDATE %s SET %s WHERE id IN (%s)', $table, implode( ', ', $set_parts ), $in_clause );
+		$ids             = array_map( 'intval', $ids );
+		$id_placeholders = implode( ',', array_fill( 0, count( $ids ), '%d' ) );
+		$sql             = sprintf(
+			'UPDATE %%i SET %s WHERE id IN (%s)',
+			implode( ', ', $set_parts ),
+			$id_placeholders
+		);
 
-		$this->db->query( $sql, $values );
+		$this->db->query( $sql, array_merge( array( $table ), $values, $ids ) );
 	}
 
 	/**

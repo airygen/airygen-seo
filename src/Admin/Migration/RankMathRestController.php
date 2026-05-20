@@ -497,9 +497,10 @@ final class RankMathRestController {
 
 		$cursor = (int) get_option( self::REDIRECT_CURSOR_OPTION, 0 );
 
-		$rows = $wpdb->get_results( // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Rank Math migration source table read.
+		$rows = $wpdb->get_results( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Rank Math migration source table read; not worth caching since each row is consumed exactly once.
 			$wpdb->prepare(
-				"SELECT id, sources, url_to, header_code, status FROM {$table} WHERE id > %d ORDER BY id ASC LIMIT %d", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- External source table name is validated before use.
+				'SELECT id, sources, url_to, header_code, status FROM %i WHERE id > %d ORDER BY id ASC LIMIT %d',
+				$table,
 				$cursor,
 				self::BATCH_SIZE
 			),
@@ -662,9 +663,10 @@ final class RankMathRestController {
 			return 0;
 		}
 
-		$total = $wpdb->get_var( // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Rank Math migration source table read.
+		$total = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Rank Math migration source table read; one-shot aggregate before each batch.
 			$wpdb->prepare(
-				"SELECT COUNT(*) FROM {$table} WHERE status = %s", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- External source table name is validated before use.
+				'SELECT COUNT(*) FROM %i WHERE status = %s',
+				$table,
 				'active'
 			)
 		);
@@ -690,9 +692,10 @@ final class RankMathRestController {
 			return 0;
 		}
 
-		$count = $wpdb->get_var( // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Rank Math migration source table read.
+		$count = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Rank Math migration source table read; cursor progress aggregate.
 			$wpdb->prepare(
-				"SELECT COUNT(*) FROM {$table} WHERE status = %s AND id <= %d", // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- External source table name is validated before use.
+				'SELECT COUNT(*) FROM %i WHERE status = %s AND id <= %d',
+				$table,
 				'active',
 				$cursor
 			)
@@ -721,7 +724,9 @@ final class RankMathRestController {
 		}
 
 		$wpdb->suppress_errors( true );
-		$wpdb->get_var( "SELECT 1 FROM {$table} LIMIT 1" ); // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching,WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Table readability probe.
+		$wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Table readability probe; errors are inspected via $wpdb->last_error.
+			$wpdb->prepare( 'SELECT 1 FROM %i LIMIT 1', $table )
+		);
 		$error = $wpdb->last_error;
 		$wpdb->suppress_errors( false );
 

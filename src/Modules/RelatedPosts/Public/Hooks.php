@@ -134,9 +134,11 @@ final class Hooks {
 	private static function render_for_post( int $post_id ): string {
 		static $is_rendering = false;
 
-		// Guard against recursive rendering. Renderer::render() may call get_the_excerpt(),
-		// and wp_trim_excerpt() can apply the_content internally, which re-enters
-		// this module's output path and can cause an infinite loop/OOM without this check.
+		/**
+		 * Guard against recursive rendering. Renderer::render() may call get_the_excerpt(),
+		 * and wp_trim_excerpt() can apply the_content internally, which re-enters
+		 * this module's output path and can cause an infinite loop/OOM without this check.
+		 */
 		if ( $is_rendering ) {
 			return '';
 		}

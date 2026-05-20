@@ -59,12 +59,14 @@ final class ContentProcessor {
 	 * @return void
 	 */
 	public function process( int $post_id, string $content ): void {
-		// Do not run full `the_content` filters in async jobs.
-		// Some front-end filter chains (e.g. WooCommerce Blocks) depend on
-		// runtime-only functions that are unavailable in WP-Cron contexts.
-		// Strategy: process raw saved content in both real-time save hooks and
-		// backlog jobs for maximum stability. Backlog is for gap-filling, while
-		// save_post provides near real-time updates for edited posts.
+		/**
+		 * Do not run full `the_content` filters in async jobs.
+		 * Some front-end filter chains (e.g. WooCommerce Blocks) depend on
+		 * runtime-only functions that are unavailable in WP-Cron contexts.
+		 * Strategy: process raw saved content in both real-time save hooks and
+		 * backlog jobs for maximum stability. Backlog is for gap-filling, while
+		 * save_post provides near real-time updates for edited posts.
+		 */
 		$content = str_replace( ']]>', ']]&gt;', $content );
 
 		$links  = $this->extract_links( $content );

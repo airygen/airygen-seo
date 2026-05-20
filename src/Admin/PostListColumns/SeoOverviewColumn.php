@@ -300,10 +300,10 @@ final class SeoOverviewColumn {
 		}
 
 		$placeholders = implode( ',', array_fill( 0, count( $post_ids ), '%d' ) );
-		$params       = array_merge( $post_ids, array( 'client_error', 'server_error', 'error' ) );
+		$params       = array_merge( array( $log_table ), $post_ids, array( 'client_error', 'server_error', 'error' ) );
 		$rows         = $adapter->get_results(
 			"SELECT post_id, COUNT(*) AS broken_count
-			 FROM {$log_table}
+			 FROM %i
 			 WHERE post_id IN ({$placeholders})
 			 AND (
 			 	status_code = 0
@@ -343,10 +343,10 @@ final class SeoOverviewColumn {
 		$placeholders = implode( ',', array_fill( 0, count( $post_ids ), '%d' ) );
 		$rows         = $adapter->get_results(
 			"SELECT r.post_id, r.level, g.name AS group_name
-			 FROM {$relations_table} r
-			 LEFT JOIN {$groups_table} g ON g.id = r.group_id
+			 FROM %i r
+			 LEFT JOIN %i g ON g.id = r.group_id
 			 WHERE r.post_id IN ({$placeholders})",
-			$post_ids,
+			array_merge( array( $relations_table, $groups_table ), $post_ids ),
 			\ARRAY_A
 		);
 

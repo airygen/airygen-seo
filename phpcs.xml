@@ -17,10 +17,6 @@
 		<exclude name="Squiz.Commenting.FileComment" />
 		<exclude name="Generic.Commenting.DocComment" />
 		<exclude name="Squiz.Commenting.VariableComment.Missing" />
-		<exclude name="WordPress.DB.PreparedSQL.InterpolatedNotPrepared" />
-		<exclude name="WordPress.DB.PreparedSQL.NotPrepared" />
-		<exclude name="WordPress.DB.PreparedSQLPlaceholders.*" />
-		<exclude name="WordPress.Security.EscapeOutput.OutputNotEscaped" />
 		<exclude name="WordPress.NamingConventions.ValidVariableName.PropertyNotSnakeCase" />
 		<exclude name="WordPress.NamingConventions.ValidVariableName.NotSnakeCase" />
 	</rule>

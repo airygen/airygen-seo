@@ -69,8 +69,10 @@ final class Hooks {
 		if ( Routes::is_llms_request() || self::is_path_request( '/llms.txt' ) ) {
 			nocache_headers();
 			header( 'Content-Type: text/plain; charset=UTF-8' );
-			// text/plain response body for llms.txt. Browsers/agents do not
-			// interpret it as HTML; HTML escaping would mangle the spec output.
+			/**
+			 * text/plain response body for llms.txt. Browsers/agents do not
+			 * interpret it as HTML; HTML escaping would mangle the spec output.
+			 */
 			echo self::render_base_content( $settings ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- text/plain response body; see comment above.
 			exit;
 		}
@@ -581,11 +583,11 @@ final class Hooks {
 		}
 
 		$rows = $adapter->get_results(
-			"SELECT r.group_id, r.post_id, r.level, r.parent_post_id
-			 FROM {$relations_table} r
+			'SELECT r.group_id, r.post_id, r.level, r.parent_post_id
+			 FROM %i r
 			 WHERE r.group_id > %d
-			 ORDER BY r.group_id ASC, r.level ASC, r.parent_post_id ASC, r.post_id ASC",
-			array( 0 ),
+			 ORDER BY r.group_id ASC, r.level ASC, r.parent_post_id ASC, r.post_id ASC',
+			array( $relations_table, 0 ),
 			\ARRAY_A
 		);
 

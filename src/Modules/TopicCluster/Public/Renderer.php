@@ -331,11 +331,11 @@ final class Renderer {
 	 */
 	private static function fetch_entry( WpDbAdapter $adapter, string $table, int $post_id ): ?array {
 		$rows = $adapter->get_results(
-			"SELECT post_id, level, parent_post_id, root_id
-			 FROM {$table}
+			'SELECT post_id, level, parent_post_id, root_id
+			 FROM %i
 			 WHERE post_id = %d
-			 LIMIT 1",
-			array( $post_id ),
+			 LIMIT 1',
+			array( $table, $post_id ),
 			\ARRAY_A
 		);
 
@@ -363,10 +363,10 @@ final class Renderer {
 	 */
 	private static function fetch_posts_by_parent( WpDbAdapter $adapter, string $table, int $parent_post_id, int $level ): array {
 		$rows = $adapter->get_results(
-			"SELECT post_id
-			 FROM {$table}
-			 WHERE parent_post_id = %d AND level = %d",
-			array( $parent_post_id, $level ),
+			'SELECT post_id
+			 FROM %i
+			 WHERE parent_post_id = %d AND level = %d',
+			array( $table, $parent_post_id, $level ),
 			\ARRAY_A
 		);
 

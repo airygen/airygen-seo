@@ -99,8 +99,8 @@ final class Storage {
 		}
 
 		$results = $this->db->get_results(
-			sprintf( 'SELECT url, target_post_id, type FROM %s WHERE post_id = %%d', $this->links_table() ),
-			array( $post_id )
+			'SELECT url, target_post_id, type FROM %i WHERE post_id = %d',
+			array( $this->links_table(), $post_id )
 		);
 
 		if ( empty( $results ) ) {
@@ -237,16 +237,17 @@ final class Storage {
 	 * @return bool
 	 */
 	public function has_pending_posts(): bool {
-		$sql = sprintf( 'SELECT post_id FROM %s WHERE status = %%s LIMIT 1', $this->meta_table() );
+		$sql    = 'SELECT post_id FROM %i WHERE status = %s LIMIT 1';
+		$params = array( $this->meta_table(), 'pending' );
 
-		$has_pending = $this->db->get_var( $sql, array( 'pending' ) );
+		$has_pending = $this->db->get_var( $sql, $params );
 		if ( $has_pending ) {
 			return true;
 		}
 
 		$this->seed_pending_posts( 5 );
 
-		return (bool) $this->db->get_var( $sql, array( 'pending' ) );
+		return (bool) $this->db->get_var( $sql, $params );
 	}
 
 	/**
@@ -406,8 +407,10 @@ final class Storage {
 			return 0;
 		}
 
-		$sql   = sprintf( 'SELECT COUNT(*) FROM %s WHERE status = %%s', $this->meta_table() );
-		$count = $this->db->get_var( $sql, array( $status ) );
+		$count = $this->db->get_var(
+			'SELECT COUNT(*) FROM %i WHERE status = %s',
+			array( $this->meta_table(), $status )
+		);
 
 		return $count ? (int) $count : 0;
 	}

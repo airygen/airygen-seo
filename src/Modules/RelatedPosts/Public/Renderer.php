@@ -187,7 +187,16 @@ final class Renderer {
 			$size  = isset( $settings['featured_image_size'] ) ? (string) $settings['featured_image_size'] : 'medium';
 			$image = get_the_post_thumbnail( $post_id, $size, array( 'class' => 'airygen-auto-related-posts__thumb' ) );
 			if ( '' !== $image ) {
-				echo '<a class="airygen-auto-related-posts__thumb-link" href="' . esc_url( $link ) . '">' . $image . '</a>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				/**
+				 * $image is the <img> tag returned by core's get_the_post_thumbnail(),
+				 * which already escapes the src/srcset/alt/etc. attributes through
+				 * wp_get_attachment_image(). $link is escaped with esc_url() at the
+				 * concatenation site. Wrapping with wp_kses_post() would strip
+				 * nothing for valid input but adds an extra parser pass on every
+				 * related-post render; the per-part escapes already cover the
+				 * security boundary.
+				 */
+				echo '<a class="airygen-auto-related-posts__thumb-link" href="' . esc_url( $link ) . '">' . $image . '</a>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- See comment above; $image is core-escaped <img>, $link is esc_url().
 			}
 			return;
 		}

@@ -44,8 +44,9 @@ final class Settings {
 			return self::default_rules();
 		}
 
-		$rows = $GLOBALS['wpdb']->get_results( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
-			"SELECT id, source, source_type, target, http_code, enabled, reason FROM {$table} ORDER BY updated_at DESC, id DESC",
+		$rows = $db->get_results(
+			'SELECT id, source, source_type, target, http_code, enabled, reason FROM %i ORDER BY updated_at DESC, id DESC',
+			array( $table ),
 			\ARRAY_A
 		);
 
@@ -253,8 +254,9 @@ final class Settings {
 		$now   = current_time( 'mysql' );
 		$user  = (int) get_current_user_id();
 
-		$existing_rows = $GLOBALS['wpdb']->get_results( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
-			"SELECT id FROM {$table}",
+		$existing_rows = $db->get_results(
+			'SELECT id FROM %i WHERE 1 = %d',
+			array( $table, 1 ),
 			\ARRAY_A
 		);
 		$existing_ids  = array();
@@ -282,8 +284,9 @@ final class Settings {
 
 			if ( $id > 0 && in_array( $id, $existing_ids, true ) ) {
 				$db->query(
-					"UPDATE {$table} SET source = %s, source_type = %s, target = %s, http_code = %d, enabled = %d, reason = %s, updated_by = %d, updated_at = %s WHERE id = %d",
+					'UPDATE %i SET source = %s, source_type = %s, target = %s, http_code = %d, enabled = %d, reason = %s, updated_by = %d, updated_at = %s WHERE id = %d',
 					array(
+						$table,
 						$data['source'],
 						$data['source_type'],
 						$data['target'],
@@ -337,12 +340,15 @@ final class Settings {
 		}
 
 		if ( empty( $keep_ids ) ) {
-			$db->query( "DELETE FROM {$table}" );
+			$db->query( 'DELETE FROM %i WHERE 1 = %d', array( $table, 1 ) );
 			return;
 		}
 
-		$keep_ids = array_values( array_unique( array_map( 'intval', $keep_ids ) ) );
-		$ids_sql  = implode( ',', $keep_ids );
-		$db->query( "DELETE FROM {$table} WHERE id NOT IN ({$ids_sql})" );
+		$keep_ids        = array_values( array_unique( array_map( 'intval', $keep_ids ) ) );
+		$id_placeholders = implode( ',', array_fill( 0, count( $keep_ids ), '%d' ) );
+		$db->query(
+			"DELETE FROM %i WHERE id NOT IN ({$id_placeholders})",
+			array_merge( array( $table ), $keep_ids )
+		);
 	}
 }

@@ -209,31 +209,25 @@ final class Hooks {
 	 * @return void
 	 */
 	public static function persist_classic_fields( int $post_id, WP_Post $post ): void {
-		if ( self::should_bail_on_save( $post_id, $post ) ) {
+		if ( wp_is_post_autosave( $post_id ) || wp_is_post_revision( $post_id ) || 'auto-draft' === $post->post_status ) {
 			return;
 		}
 
-		$nonce_field  = null;
-		$nonce_action = null;
+		if ( ! current_user_can( 'edit_post', $post_id ) ) {
+			return;
+		}
 
 		if ( isset( $_POST['airygen_dashboard_nonce'] ) ) {
-			$nonce_field  = 'airygen_dashboard_nonce';
+			$nonce_token  = wp_unslash( $_POST['airygen_dashboard_nonce'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- wp_verify_nonce performs the hash comparison directly on the raw token.
 			$nonce_action = 'airygen_dashboard_save';
 		} elseif ( isset( $_POST['airygen_onpage_nonce'] ) ) {
-			$nonce_field  = 'airygen_onpage_nonce';
+			$nonce_token  = wp_unslash( $_POST['airygen_onpage_nonce'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- wp_verify_nonce performs the hash comparison directly on the raw token.
 			$nonce_action = 'airygen_onpage_save';
-		}
-
-		if ( ! $nonce_field || ! $nonce_action ) {
+		} else {
 			return;
 		}
 
-		if ( ! isset( $_POST[ $nonce_field ] ) ) {
-			return;
-		}
-
-		$nonce = sanitize_text_field( wp_unslash( $_POST[ $nonce_field ] ) );
-		if ( ! wp_verify_nonce( $nonce, $nonce_action ) ) {
+		if ( ! wp_verify_nonce( $nonce_token, $nonce_action ) ) {
 			return;
 		}
 
@@ -292,22 +286,6 @@ final class Hooks {
 		$post_types = array_diff( $post_types, array( 'attachment', 'revision', 'nav_menu_item' ) );
 
 		return array_values( $post_types );
-	}
-
-	/**
-	 * Determine whether to bypass save handlers for the current request.
-	 *
-	 * @param int     $post_id Current post ID.
-	 * @param WP_Post $post    Current post object.
-	 *
-	 * @return bool
-	 */
-	private static function should_bail_on_save( int $post_id, WP_Post $post ): bool {
-		if ( wp_is_post_autosave( $post_id ) || wp_is_post_revision( $post_id ) ) {
-			return true;
-		}
-
-		return ! current_user_can( 'edit_post', $post_id ) || 'auto-draft' === $post->post_status;
 	}
 
 	/**
@@ -779,9 +757,11 @@ final class Hooks {
 	 * @return string
 	 */
 	private static function relocate_metabox_script(): string {
-		// Static, hardcoded JS payload (nowdoc, no PHP interpolation, no user
-		// input). Passed to wp_add_inline_script() which is the WordPress.org
-		// approved API for shipping inline JS, so no further escaping is needed.
+		/**
+		 * Static, hardcoded JS payload (nowdoc, no PHP interpolation, no user
+		 * input). Passed to wp_add_inline_script() which is the WordPress.org
+		 * approved API for shipping inline JS, so no further escaping is needed.
+		 */
 		$script = <<<'JS'
 ( function () {
 	const BOX_ID = 'airygen_classic_editor_metabox';

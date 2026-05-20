@@ -143,8 +143,10 @@ final class EmailChannel implements ChannelInterface {
 
 		$config = $this->active_config;
 
-		// PHPMailer's public API uses non-snake-case property names.
-		// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		/**
+		 * PHPMailer's public API uses non-snake-case property names.
+		 * phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		 */
 		$phpmailer->isSMTP();
 		$phpmailer->Host     = (string) $config['host'];
 		$phpmailer->Port     = (int) $config['port'];
