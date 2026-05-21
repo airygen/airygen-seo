@@ -283,14 +283,17 @@ final class MigrationRouteTest extends RestRouteTestCase {
 		$table = $wpdb->prefix . 'rank_math_redirections';
 		// phpcs:disable WordPress.DB.DirectDatabaseQuery.SchemaChange -- Test fixture setup.
 		$wpdb->query( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Test fixture setup.
-			"CREATE TABLE IF NOT EXISTS {$table} (
-				id bigint(20) unsigned NOT NULL auto_increment,
-				sources longtext NOT NULL,
-				url_to text NOT NULL,
-				header_code smallint(4) unsigned NOT NULL,
-				status varchar(25) NOT NULL default 'active',
-				PRIMARY KEY  (id)
-			)"
+			$wpdb->prepare(
+				'CREATE TABLE IF NOT EXISTS %i (
+					id bigint(20) unsigned NOT NULL auto_increment,
+					sources longtext NOT NULL,
+					url_to text NOT NULL,
+					header_code smallint(4) unsigned NOT NULL,
+					status varchar(25) NOT NULL default \'active\',
+					PRIMARY KEY  (id)
+				)',
+				$table
+			)
 		);
 		// phpcs:enable WordPress.DB.DirectDatabaseQuery.SchemaChange
 
@@ -477,18 +480,21 @@ final class MigrationRouteTest extends RestRouteTestCase {
 		$table = $wpdb->prefix . 'aioseo_redirects';
 		// phpcs:disable WordPress.DB.DirectDatabaseQuery.SchemaChange -- Test fixture setup.
 		$wpdb->query( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Test fixture setup.
-			"DROP TABLE IF EXISTS {$table}"
+			$wpdb->prepare( 'DROP TABLE IF EXISTS %i', $table )
 		);
 		$wpdb->query( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Test fixture setup.
-			"CREATE TABLE IF NOT EXISTS {$table} (
-				id bigint(20) unsigned NOT NULL auto_increment,
-				source_url text NOT NULL,
-				target_url text NOT NULL,
-				http_code smallint(4) unsigned NOT NULL,
-				status varchar(25) NOT NULL default 'active',
-				regex tinyint(1) NOT NULL default 0,
-				PRIMARY KEY  (id)
-			)"
+			$wpdb->prepare(
+				'CREATE TABLE IF NOT EXISTS %i (
+					id bigint(20) unsigned NOT NULL auto_increment,
+					source_url text NOT NULL,
+					target_url text NOT NULL,
+					http_code smallint(4) unsigned NOT NULL,
+					status varchar(25) NOT NULL default \'active\',
+					regex tinyint(1) NOT NULL default 0,
+					PRIMARY KEY  (id)
+				)',
+				$table
+			)
 		);
 		// phpcs:enable WordPress.DB.DirectDatabaseQuery.SchemaChange
 

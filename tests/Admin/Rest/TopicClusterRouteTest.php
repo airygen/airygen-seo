@@ -547,16 +547,16 @@ final class TopicClusterRouteTest extends RestRouteTestCase {
 		$relations_table  = $adapter->table( Constants::TABLE_TOPIC_CLUSTER_RELATIONS );
 		$candidates_table = $adapter->table( Constants::TABLE_TOPIC_CLUSTER_CANDIDATES );
 		$adapter->query(
-			"UPDATE {$relations_table} SET group_id = %d WHERE post_id = %d",
-			array( $group_id, $post_id )
+			'UPDATE %i SET group_id = %d WHERE post_id = %d',
+			array( $relations_table, $group_id, $post_id )
 		);
 
 		$blocked = $this->rest_delete( '/airygen/v1/topic-cluster/groups/' . $group_id );
 		$this->assertSame( 400, $blocked->get_status() );
 
 		$adapter->query(
-			"DELETE FROM {$relations_table} WHERE group_id = %d",
-			array( $group_id )
+			'DELETE FROM %i WHERE group_id = %d',
+			array( $relations_table, $group_id )
 		);
 		$adapter->insert(
 			$candidates_table,
@@ -572,8 +572,8 @@ final class TopicClusterRouteTest extends RestRouteTestCase {
 		$this->assertSame( 200, $deleted->get_status() );
 		$this->assertTrue( (bool) ( $deleted->get_data()['deleted'] ?? false ) );
 		$candidate_count = (int) $adapter->get_var(
-			"SELECT COUNT(*) FROM {$candidates_table} WHERE group_id = %d",
-			array( $group_id )
+			'SELECT COUNT(*) FROM %i WHERE group_id = %d',
+			array( $candidates_table, $group_id )
 		);
 		$this->assertSame( 0, $candidate_count );
 	}
@@ -691,14 +691,14 @@ final class TopicClusterRouteTest extends RestRouteTestCase {
 		$this->assertSame( 200, $save->get_status() );
 
 		$saved_group_id = (int) $adapter->get_var(
-			"SELECT group_id FROM {$relations_table} WHERE post_id = %d",
-			array( $post_id )
+			'SELECT group_id FROM %i WHERE post_id = %d',
+			array( $relations_table, $post_id )
 		);
 		$this->assertSame( $group_id, $saved_group_id );
 
 		$candidate_count = (int) $adapter->get_var(
-			"SELECT COUNT(*) FROM {$candidates_table} WHERE post_id = %d",
-			array( $post_id )
+			'SELECT COUNT(*) FROM %i WHERE post_id = %d',
+			array( $candidates_table, $post_id )
 		);
 		$this->assertSame( 0, $candidate_count );
 	}
