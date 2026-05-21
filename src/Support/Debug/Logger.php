@@ -18,11 +18,9 @@ use Airygen\Support\Debug\Settings;
 /**
  * Thin wrapper around error_log with consistent formatting.
  *
- * Output goes to PHP's configured error log destination. When the site admin
- * enables WP_DEBUG_LOG, WordPress redirects it to wp-content/debug.log;
- * otherwise PHP routes it to whichever sink the hosting environment
- * configured (server error log, syslog, etc.). The plugin itself never
- * writes log files, keeping the plugin footprint within WordPress.org policy.
+ * Output goes to PHP's configured error log destination. When WP_DEBUG_LOG is
+ * enabled, WordPress redirects it to wp-content/debug.log; otherwise PHP
+ * routes it to the hosting environment's sink (server error log, syslog, etc.).
  */
 final class Logger {
 

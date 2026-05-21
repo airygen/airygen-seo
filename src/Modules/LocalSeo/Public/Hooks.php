@@ -296,14 +296,6 @@ final class Hooks {
 			return;
 		}
 
-		/**
-		 * Build the NAP markup into a single string, then escape once via wp_kses()
-		 * with an explicit allowlist of tags + attributes used in this block. This
-		 * is "escape late": all variable interpolation runs through esc_html()/
-		 * esc_attr() at concatenation time, and the final wp_kses() pass enforces
-		 * the structural HTML allowlist (Schema.org microdata attributes plus the
-		 * minimum set of layout tags).
-		 */
 		$html  = '<div class="airygen-local-nap-wrap">';
 		$html .= '<div class="airygen-local-nap" itemscope itemtype="https://schema.org/LocalBusiness">';
 		$html .= '<address class="airygen-local-nap__address">';
@@ -369,11 +361,8 @@ final class Hooks {
 	/**
 	 * Allowed HTML tags and attributes for the footer NAP block.
 	 *
-	 * Whitelists the exact structural elements emitted by emit_footer_nap()
-	 * plus the Schema.org microdata attributes required for the LocalBusiness
-	 * / PostalAddress vocabulary. Defined as a static method so reviewers can
-	 * see the security boundary in one place without scanning the rendering
-	 * loop.
+	 * Limited to the structural elements emitted by emit_footer_nap() plus the
+	 * Schema.org microdata attributes used by LocalBusiness / PostalAddress.
 	 *
 	 * @return array<string, array<string, bool>>
 	 */
@@ -453,10 +442,7 @@ final class Hooks {
 
 		wp_register_style( 'airygen-local-nap-css', false ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- No external file.
 		wp_enqueue_style( 'airygen-local-nap-css' );
-		/**
-		 * Strip any stray markup so the inline <style> block cannot be
-		 * terminated early by a `</style>` substring smuggled through settings.
-		 */
+		// Strip tags so a smuggled `</style>` cannot break out of the inline block.
 		wp_add_inline_style( 'airygen-local-nap-css', wp_strip_all_tags( $css ) );
 	}
 

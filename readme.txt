@@ -2,7 +2,7 @@
 Contributors: airygen, terrylin
 Tags: seo, schema, sitemap, redirects, woocommerce
 Requires at least: 6.3
-Tested up to: 6.9
+Tested up to: 7.0
 Stable tag: 0.0.0
 Requires PHP: 8.1
 License: GPLv3 or later
@@ -88,7 +88,7 @@ The full, human-readable source code for this plugin — including the unminifie
 
 https://github.com/airygen/airygen-seo
 
-Every compiled file shipped under `build/` carries an unminified header comment that points back to its source entry point, source directories, and the repository URL above. The mapping below documents that relationship in full so reviewers and contributors can locate the human-readable source for any compiled asset.
+Every compiled file shipped under `build/` carries an unminified header comment that points back to its source entry point, source directories, and the repository URL above. The mapping below documents that relationship in full so anyone can locate the human-readable source for any compiled asset.
 
 = How the build/ directory is produced =
 
@@ -136,7 +136,7 @@ The following directories contain hand-written JavaScript and CSS that are shipp
 3. Install dependencies: `pnpm install` and `composer install`.
 4. Build production assets: `pnpm build`.
 
-After step 4 the same files shipped under `build/` in the distributed plugin will be regenerated locally. Each regenerated file will carry the same `/*! ... */` header described above, so reviewers can verify that every compiled file is traceable back to a public source path.
+After step 4 the same files shipped under `build/` in the distributed plugin will be regenerated locally. Each regenerated file will carry the same `/*! ... */` header described above, making every compiled file traceable back to a public source path.
 
 == Changelog ==
 

@@ -688,7 +688,7 @@ final class AioseoRestController {
 		}
 
 		$cursor = (int) get_option( self::REDIRECT_CURSOR_OPTION, 0 );
-		$rows   = $wpdb->get_results( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- AIOSEO migration source table read; not worth caching since each row is consumed exactly once.
+		$rows   = $wpdb->get_results( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Foreign plugin source table; single-pass migration read.
 			$wpdb->prepare(
 				'SELECT * FROM %i WHERE id > %d ORDER BY id ASC LIMIT %d',
 				$table,
@@ -845,7 +845,7 @@ final class AioseoRestController {
 			return 0;
 		}
 
-		$total = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- AIOSEO migration source table read; one-shot aggregate before each batch.
+		$total = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Foreign plugin source table; pre-batch aggregate.
 			$wpdb->prepare(
 				'SELECT COUNT(*) FROM %i WHERE 1 = %d',
 				$table,
@@ -874,7 +874,7 @@ final class AioseoRestController {
 			return 0;
 		}
 
-		$count = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- AIOSEO migration source table read; cursor progress aggregate.
+		$count = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Foreign plugin source table; cursor progress count.
 			$wpdb->prepare(
 				'SELECT COUNT(*) FROM %i WHERE id <= %d',
 				$table,
@@ -906,7 +906,7 @@ final class AioseoRestController {
 		}
 
 		$wpdb->suppress_errors( true );
-		$wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Table readability probe; errors are inspected via $wpdb->last_error.
+		$wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Table existence probe via $wpdb->last_error.
 			$wpdb->prepare( 'SELECT 1 FROM %i LIMIT 1', $table )
 		);
 		$error = $wpdb->last_error;
@@ -1013,7 +1013,7 @@ final class AioseoRestController {
 		);
 		if ( empty( $found ) ) {
 			$wpdb->suppress_errors( true );
-			$wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Table readability probe; errors are inspected via $wpdb->last_error.
+			$wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Table existence probe via $wpdb->last_error.
 				$wpdb->prepare( 'SELECT 1 FROM %i LIMIT 1', $table )
 			);
 			$error = $wpdb->last_error;
@@ -1023,7 +1023,7 @@ final class AioseoRestController {
 			}
 		}
 
-		$row = $wpdb->get_row( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- AIOSEO per-post lookup; bypasses cache because it reads a foreign plugin table.
+		$row = $wpdb->get_row( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Foreign plugin source table; per-post lookup.
 			$wpdb->prepare(
 				'SELECT * FROM %i WHERE post_id = %d LIMIT 1',
 				$table,

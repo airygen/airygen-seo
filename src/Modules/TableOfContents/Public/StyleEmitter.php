@@ -113,10 +113,7 @@ final class StyleEmitter {
 
 		wp_register_style( 'airygen-toc-styles', false ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- No external file.
 		wp_enqueue_style( 'airygen-toc-styles' );
-		/**
-		 * Strip any stray markup so the inline <style> block cannot be
-		 * terminated early by a `</style>` substring smuggled through settings.
-		 */
+		// Strip tags so a smuggled `</style>` cannot break out of the inline block.
 		wp_add_inline_style( 'airygen-toc-styles', wp_strip_all_tags( $css ) );
 	}
 

@@ -237,12 +237,8 @@ final class Controller {
 
 		nocache_headers();
 		header( 'Content-Type: application/vnd.google-earth.kml+xml; charset=utf-8' );
-		/**
-		 * KML response body. All interpolated values were already escaped with
-		 * esc_xml() above; HTML-escaping the whole document would corrupt the
-		 * XML markup and break consumers expecting application/vnd.google-earth.kml+xml.
-		 */
-		echo $kml; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- KML/XML response body; see comment above.
+		// Values already escaped above via esc_xml(); KML must not be HTML-escaped.
+		echo $kml; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- KML response body.
 		exit;
 	}
 
@@ -514,12 +510,8 @@ final class Controller {
 		nocache_headers();
 		header( 'Content-Type: application/xml; charset=utf-8' );
 
-		/**
-		 * XML response body (Content-Type: application/xml). The XML payload is
-		 * generated internally by the sitemap builder with all dynamic values
-		 * already escaped via esc_xml()/esc_url_raw(); HTML-escaping the whole
-		 * document here would corrupt the XML markup that crawlers consume.
-		 */
+		// $xml is built internally with esc_xml()/esc_url_raw() on dynamic parts;
+		// HTML-escaping the whole document here would break crawlers.
 		if ( '' !== $stylesheet ) {
 			if ( str_starts_with( $xml, '<?xml' ) ) {
 				$declaration_end = strpos( $xml, '?>' );
@@ -527,24 +519,21 @@ final class Controller {
 					$declaration = substr( $xml, 0, $declaration_end + 2 );
 					$rest        = substr( $xml, $declaration_end + 2 );
 
-					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XML response body; see comment above.
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XML response body.
 					echo rtrim( $declaration ) . "\n";
-					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XML stylesheet processing instruction; href escaped via esc_url_raw().
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- href passed through esc_url_raw().
 					echo sprintf( '<?xml-stylesheet type="text/xsl" href="%s" ?>', esc_url_raw( $stylesheet ) ) . "\n";
-					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XML response body; see comment above.
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XML response body.
 					echo ltrim( $rest );
 					exit;
 				}
 			}
 
-			/**
-			 * Fallback: emit stylesheet before XML.
-			 * phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XML stylesheet processing instruction; href escaped via esc_url_raw().
-			 */
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- href passed through esc_url_raw().
 			echo sprintf( '<?xml-stylesheet type="text/xsl" href="%s" ?>', esc_url_raw( $stylesheet ) ) . "\n";
 		}
 
-		echo $xml; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XML response body; see comment above.
+		echo $xml; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XML response body.
 		exit;
 	}
 
@@ -576,12 +565,8 @@ final class Controller {
 
 		nocache_headers();
 		header( 'Content-Type: text/xsl; charset=utf-8' );
-		/**
-		 * XSL stylesheet bundled inside the plugin (resources/sitemaps/*.xsl).
-		 * Content is fully static, not derived from user input, and HTML escaping
-		 * would corrupt the XSL syntax that browsers need to render the sitemap.
-		 */
-		echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static plugin-bundled XSL file; see comment above.
+		// Static XSL file bundled under resources/sitemaps/; no user input.
+		echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static XSL file.
 		exit;
 	}
 

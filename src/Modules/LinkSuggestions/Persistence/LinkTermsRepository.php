@@ -96,7 +96,7 @@ class LinkTermsRepository {
 		 */
 		if ( ! empty( $to_remove ) ) {
 			$placeholders = implode( ',', array_fill( 0, count( $to_remove ), '%s' ) );
-			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- Dynamic stem IN-clause placeholder count expanded above; %i identifier placeholder is supported by wpdb::prepare since WP 6.2.
+			// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- Dynamic IN-clause placeholder count expanded above.
 			$sql = $this->wpdb->prepare(
 				"DELETE FROM %i WHERE content_id = %d AND content_type = %s AND stem IN ({$placeholders})",
 				array_merge( array( $table_terms, $content_id, $content_type ), $to_remove )
@@ -158,7 +158,7 @@ class LinkTermsRepository {
 			$content_type
 		);
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- $sql comes from wpdb::prepare() above; term repository mutation, cache is rebuilt by the caller.
+		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- $sql is wpdb::prepare() output; cache is rebuilt by the caller.
 		$this->wpdb->query( $sql );
 		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
 
@@ -185,7 +185,7 @@ class LinkTermsRepository {
 			$content_type
 		);
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- $sql comes from wpdb::prepare() above; Tf-idf term lookup, result is request-scoped.
+		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- $sql is wpdb::prepare() output; result is request-scoped.
 		$rows = $this->wpdb->get_results( $sql, ARRAY_A );
 		// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
 
@@ -213,7 +213,7 @@ class LinkTermsRepository {
 		$table = $this->adapter->table( Constants::TABLE_LINK_SUGGESTION_DF );
 
 		$placeholders = implode( ',', array_fill( 0, count( $stems ), '%s' ) );
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic stem IN-clause placeholder count expanded above; %i identifier placeholder is supported by wpdb::prepare since WP 6.2.
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic IN-clause placeholder count expanded above.
 		$sql = $this->wpdb->prepare(
 			"SELECT stem, doc_count FROM %i WHERE stem IN ({$placeholders})",
 			array_merge( array( $table ), $stems )
@@ -265,7 +265,7 @@ class LinkTermsRepository {
 
 		$params[] = $limit;
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic stem/post-type/status IN-clause placeholder counts expanded above; %i identifier placeholder is supported by wpdb::prepare since WP 6.2.
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic IN-clause placeholder counts expanded above.
 		$sql = $this->wpdb->prepare(
 			"SELECT DISTINCT t.content_id
 			FROM %i AS t
@@ -296,7 +296,7 @@ class LinkTermsRepository {
 	public function total_documents(): int {
 		$table = $this->adapter->table( Constants::TABLE_LINK_SUGGESTION_TERMS );
 
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Argument comes from wpdb::prepare() with %i identifier (WP 6.2+); aggregate count over plugin term index, bypasses cache to reflect freshly indexed content.
+		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Argument is wpdb::prepare() output; cache bypassed for freshness.
 		$count = $this->wpdb->get_var(
 			$this->wpdb->prepare(
 				'SELECT COUNT(DISTINCT CONCAT(content_type, %s, content_id)) FROM %i',
@@ -330,7 +330,7 @@ class LinkTermsRepository {
 			$params       = array_merge( $params, $allowed_statuses );
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic status IN-clause placeholder count expanded above; %i identifier placeholder is supported by wpdb::prepare since WP 6.2.
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic IN-clause placeholder count expanded above.
 		$sql = $this->wpdb->prepare(
 			"SELECT COUNT(DISTINCT t.content_id)
 			FROM %i AS t
@@ -377,7 +377,7 @@ class LinkTermsRepository {
 	 * @return void
 	 */
 	private function increment_df( string $table_df, string $stem, int $delta, string $now ): void {
-		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Argument comes from wpdb::prepare() with %i identifier (WP 6.2+); read-modify-write on plugin DF table, cache bypassed for consistency.
+		// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Argument is wpdb::prepare() output; read-modify-write, cache bypassed.
 		$existing = $this->wpdb->get_row(
 			$this->wpdb->prepare(
 				'SELECT doc_count FROM %i WHERE stem = %s',

@@ -757,11 +757,6 @@ final class Hooks {
 	 * @return string
 	 */
 	private static function relocate_metabox_script(): string {
-		/**
-		 * Static, hardcoded JS payload (nowdoc, no PHP interpolation, no user
-		 * input). Passed to wp_add_inline_script() which is the WordPress.org
-		 * approved API for shipping inline JS, so no further escaping is needed.
-		 */
 		$script = <<<'JS'
 ( function () {
 	const BOX_ID = 'airygen_classic_editor_metabox';

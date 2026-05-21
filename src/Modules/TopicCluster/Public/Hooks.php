@@ -167,11 +167,7 @@ final class Hooks {
 
 		wp_register_style( 'airygen-topic-cluster-styles', false ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- No external file.
 		wp_enqueue_style( 'airygen-topic-cluster-styles' );
-		/**
-		 * Strip any stray markup the renderer might have produced so the
-		 * inline <style> block cannot be terminated early by a `</style>`
-		 * substring smuggled through settings.
-		 */
+		// Strip tags so a smuggled `</style>` cannot break out of the inline block.
 		wp_add_inline_style( 'airygen-topic-cluster-styles', wp_strip_all_tags( $css ) );
 	}
 

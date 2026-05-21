@@ -88,12 +88,8 @@ final class Hooks {
 	/**
 	 * Render markdown for current singular.
 	 *
-	 * The markdown endpoint is for agents/crawlers consuming public content,
-	 * so visibility is intentionally restricted to published, non-password-
-	 * protected posts. This matches the policy already applied by the sitemap
-	 * and llms.txt endpoints in this plugin and prevents the endpoint from
-	 * being used as a side-channel to read drafts, private posts, future-
-	 * scheduled posts, or password-protected posts.
+	 * Restricted to published, non-password-protected posts so the endpoint
+	 * cannot expose drafts, private, future, or password-protected content.
 	 *
 	 * @param array<string,mixed> $settings Module settings.
 	 *
@@ -142,22 +138,14 @@ final class Hooks {
 		nocache_headers();
 		header( 'Vary: Accept' );
 		header( 'Content-Type: text/markdown; charset=UTF-8' );
-		/**
-		 * Plain-text markdown response. Browsers do not interpret a `text/markdown`
-		 * body as HTML, and HTML escaping would corrupt markdown syntax (for
-		 * example `>` blockquotes and `<` in fenced code blocks). The content
-		 * is sanitized when written to the cache by MarkdownExporter::export().
-		 */
-		echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- text/markdown response body; see comment above.
+		// Content is sanitized at write time by MarkdownExporter::export().
+		// HTML escaping would corrupt markdown syntax (`>`, `<` in code fences).
+		echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- text/markdown response body.
 		exit;
 	}
 
 	/**
-	 * Emit a 404 response and stop further output.
-	 *
-	 * Used when the markdown endpoint is invoked against a non-exposable post
-	 * so the response shape matches what an anonymous visitor would receive
-	 * from core for the same URL.
+	 * Emit a 404 plain-text response and stop further output.
 	 *
 	 * @return void
 	 */

@@ -9,13 +9,10 @@
  *   - the public source repository URL,
  *   - the build command used to regenerate the file.
  *
- * This script runs after `wp-scripts build` (see the "build" entry in
- * package.json). It is required by the WordPress.org Plugins Team review
- * guideline "Code must be mostly human-readable": every compiled file must
- * be traceable back to its public source.
+ * Runs after `wp-scripts build` (see the "build" entry in package.json).
  *
- * Re-running the script is idempotent: an existing banner with the same
- * "Airygen SEO" marker is replaced rather than stacked.
+ * Idempotent: an existing banner with the same "Airygen SEO" marker is
+ * replaced rather than stacked.
  */
 
 import { readFile, writeFile } from 'node:fs/promises';
@@ -33,14 +30,9 @@ const BUILD_COMMAND = 'pnpm build';
 
 /**
  * Build a GitHub URL pointing at the same path inside the public source tree.
+ * Directories use `/tree/{branch}/...`; files use `/blob/{branch}/...`.
  *
- * Directories (paths ending with `/`) use `/tree/{branch}/...`; files use
- * `/blob/{branch}/...`. Reviewers can click each path to inspect the
- * unminified source that produced the compiled file.
- *
- * @param {string} sourcePath Relative path inside the repository (e.g.
- *                            `packages/admin/components/` or
- *                            `packages/block-editor/config.ts`).
+ * @param {string} sourcePath Relative path inside the repository.
  * @return {string} Full GitHub URL.
  */
 function githubUrlFor( sourcePath ) {
@@ -125,9 +117,7 @@ function buildBanner( relativePath, info ) {
 	const isCss = relativePath.toLowerCase().endsWith( '.css' );
 	const entryLine = isCss && info.styleEntry ? info.styleEntry : info.entry;
 
-	// One source directory per line, paired with its public GitHub URL on the
-	// following line. Reviewers can scan local paths quickly and click through
-	// to the unminified source without manually constructing URLs.
+	// One source directory per line, paired with its GitHub URL underneath.
 	const sourceLines = info.sourceDirs.flatMap( ( dir ) => [
 		` *   - ${ dir }`,
 		` *     ${ githubUrlFor( dir ) }`,

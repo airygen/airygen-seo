@@ -497,7 +497,7 @@ final class RankMathRestController {
 
 		$cursor = (int) get_option( self::REDIRECT_CURSOR_OPTION, 0 );
 
-		$rows = $wpdb->get_results( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Rank Math migration source table read; not worth caching since each row is consumed exactly once.
+		$rows = $wpdb->get_results( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Foreign plugin source table; single-pass migration read.
 			$wpdb->prepare(
 				'SELECT id, sources, url_to, header_code, status FROM %i WHERE id > %d ORDER BY id ASC LIMIT %d',
 				$table,
@@ -663,7 +663,7 @@ final class RankMathRestController {
 			return 0;
 		}
 
-		$total = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Rank Math migration source table read; one-shot aggregate before each batch.
+		$total = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Foreign plugin source table; pre-batch aggregate.
 			$wpdb->prepare(
 				'SELECT COUNT(*) FROM %i WHERE status = %s',
 				$table,
@@ -692,7 +692,7 @@ final class RankMathRestController {
 			return 0;
 		}
 
-		$count = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Rank Math migration source table read; cursor progress aggregate.
+		$count = $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Foreign plugin source table; cursor progress count.
 			$wpdb->prepare(
 				'SELECT COUNT(*) FROM %i WHERE status = %s AND id <= %d',
 				$table,
@@ -724,7 +724,7 @@ final class RankMathRestController {
 		}
 
 		$wpdb->suppress_errors( true );
-		$wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Table readability probe; errors are inspected via $wpdb->last_error.
+		$wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Table existence probe via $wpdb->last_error.
 			$wpdb->prepare( 'SELECT 1 FROM %i LIMIT 1', $table )
 		);
 		$error = $wpdb->last_error;

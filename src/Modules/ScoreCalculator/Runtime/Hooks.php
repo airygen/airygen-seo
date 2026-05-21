@@ -339,13 +339,13 @@ final class Hooks {
 		$placeholders = implode( ',', array_fill( 0, count( self::SCOPED_POST_STATUSES ), '%s' ) );
 		$sql          = "SELECT COUNT(ID) FROM %i WHERE post_type = %s AND post_status IN ({$placeholders})";
 		$params       = array_merge( array( $wpdb->posts, $post_type ), self::SCOPED_POST_STATUSES );
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic status IN-clause placeholder count expanded above; %i identifier placeholder is supported by wpdb::prepare since WP 6.2.
+		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic IN-clause placeholder count expanded above.
 		$query = $wpdb->prepare( $sql, ...$params );
 		if ( ! is_string( $query ) ) {
 			return 0;
 		}
 
-		$count = $wpdb->get_var( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- $query comes from wpdb::prepare() above; internal maintenance count over wp_posts, cached via wp_cache_set below.
+		$count = $wpdb->get_var( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- $query is wpdb::prepare() output; cached via wp_cache_set below.
 		$value = is_numeric( $count ) ? max( 0, (int) $count ) : 0;
 		wp_cache_set( $cache_key, $value, self::CACHE_GROUP, MINUTE_IN_SECONDS );
 
@@ -376,13 +376,13 @@ final class Hooks {
 		$placeholders = implode( ',', array_fill( 0, count( self::SCOPED_POST_STATUSES ), '%s' ) );
 		$sql          = "SELECT ID FROM %i WHERE post_type = %s AND post_status IN ({$placeholders}) AND ID > %d ORDER BY ID ASC LIMIT 1";
 		$params       = array_merge( array( $wpdb->posts, $post_type ), self::SCOPED_POST_STATUSES, array( $last_id ) );
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic status IN-clause placeholder count expanded above; %i identifier placeholder is supported by wpdb::prepare since WP 6.2.
+		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic IN-clause placeholder count expanded above.
 		$query = $wpdb->prepare( $sql, ...$params );
 		if ( ! is_string( $query ) ) {
 			return 0;
 		}
 
-		$post_id = $wpdb->get_var( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- $query comes from wpdb::prepare() above; internal maintenance cursor over wp_posts, cached via wp_cache_set below.
+		$post_id = $wpdb->get_var( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- $query is wpdb::prepare() output; cached via wp_cache_set below.
 		$value   = is_numeric( $post_id ) ? (int) $post_id : 0;
 		wp_cache_set( $cache_key, $value, self::CACHE_GROUP, MINUTE_IN_SECONDS );
 
