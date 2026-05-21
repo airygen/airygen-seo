@@ -124,7 +124,7 @@ final class Hooks {
 					'title' => (string) get_the_title( $post_id ),
 					'score' => $score,
 				);
-			} catch ( Throwable $throwable ) {
+			} catch ( Throwable ) {
 				$item['processed'] = $done + 1;
 				$item['failed']    = isset( $item['failed'] ) ? ( (int) $item['failed'] + 1 ) : 1;
 				$item['lastId']    = $post_id;
@@ -337,15 +337,15 @@ final class Hooks {
 		}
 
 		$placeholders = implode( ',', array_fill( 0, count( self::SCOPED_POST_STATUSES ), '%s' ) );
-		$sql          = "SELECT COUNT(ID) FROM %i WHERE post_type = %s AND post_status IN ({$placeholders})";
 		$params       = array_merge( array( $wpdb->posts, $post_type ), self::SCOPED_POST_STATUSES );
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic IN-clause placeholder count expanded above.
-		$query = $wpdb->prepare( $sql, ...$params );
-		if ( ! is_string( $query ) ) {
-			return 0;
-		}
-
-		$count = $wpdb->get_var( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- $query is wpdb::prepare() output; cached via wp_cache_set below.
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Dynamic IN-clause placeholder count expanded above; cached via wp_cache_set below.
+		$count = $wpdb->get_var(
+			$wpdb->prepare(
+				"SELECT COUNT(ID) FROM %i WHERE post_type = %s AND post_status IN ({$placeholders})",
+				...$params
+			)
+		);
+		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
 		$value = is_numeric( $count ) ? max( 0, (int) $count ) : 0;
 		wp_cache_set( $cache_key, $value, self::CACHE_GROUP, MINUTE_IN_SECONDS );
 
@@ -374,16 +374,16 @@ final class Hooks {
 		}
 
 		$placeholders = implode( ',', array_fill( 0, count( self::SCOPED_POST_STATUSES ), '%s' ) );
-		$sql          = "SELECT ID FROM %i WHERE post_type = %s AND post_status IN ({$placeholders}) AND ID > %d ORDER BY ID ASC LIMIT 1";
 		$params       = array_merge( array( $wpdb->posts, $post_type ), self::SCOPED_POST_STATUSES, array( $last_id ) );
-		// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic IN-clause placeholder count expanded above.
-		$query = $wpdb->prepare( $sql, ...$params );
-		if ( ! is_string( $query ) ) {
-			return 0;
-		}
-
-		$post_id = $wpdb->get_var( $query ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- $query is wpdb::prepare() output; cached via wp_cache_set below.
-		$value   = is_numeric( $post_id ) ? (int) $post_id : 0;
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Dynamic IN-clause placeholder count expanded above; cached via wp_cache_set below.
+		$post_id = $wpdb->get_var(
+			$wpdb->prepare(
+				"SELECT ID FROM %i WHERE post_type = %s AND post_status IN ({$placeholders}) AND ID > %d ORDER BY ID ASC LIMIT 1",
+				...$params
+			)
+		);
+		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
+		$value = is_numeric( $post_id ) ? (int) $post_id : 0;
 		wp_cache_set( $cache_key, $value, self::CACHE_GROUP, MINUTE_IN_SECONDS );
 
 		return $value;

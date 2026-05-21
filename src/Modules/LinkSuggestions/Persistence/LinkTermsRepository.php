@@ -265,20 +265,20 @@ class LinkTermsRepository {
 
 		$params[] = $limit;
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic IN-clause placeholder counts expanded above.
-		$sql = $this->wpdb->prepare(
-			"SELECT DISTINCT t.content_id
-			FROM %i AS t
-			INNER JOIN %i AS p ON p.ID = t.content_id
-			WHERE t.stem IN ({$stem_placeholders})
-			AND t.content_type IN ({$post_type_placeholders})
-			{$status_sql}
-			LIMIT %d",
-			$params
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Dynamic IN-clause placeholder counts expanded above; result is request-scoped.
+		$ids = $this->wpdb->get_col(
+			$this->wpdb->prepare(
+				"SELECT DISTINCT t.content_id
+				FROM %i AS t
+				INNER JOIN %i AS p ON p.ID = t.content_id
+				WHERE t.stem IN ({$stem_placeholders})
+				AND t.content_type IN ({$post_type_placeholders})
+				{$status_sql}
+				LIMIT %d",
+				$params
+			)
 		);
-
-		$ids = $this->wpdb->get_col( $sql ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Candidate ID join across plugin term table + wp_posts; request-scoped.
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder
+		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
 
 		return array_map(
 			static function ( $id ): int {
@@ -330,18 +330,18 @@ class LinkTermsRepository {
 			$params       = array_merge( $params, $allowed_statuses );
 		}
 
-		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder -- Dynamic IN-clause placeholder count expanded above.
-		$sql = $this->wpdb->prepare(
-			"SELECT COUNT(DISTINCT t.content_id)
-			FROM %i AS t
-			INNER JOIN %i AS p ON p.ID = t.content_id
-			WHERE t.content_type = %s
-			{$status_sql}",
-			$params
+		// phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Dynamic IN-clause placeholder count expanded above; aggregate join, request-scoped.
+		$result = (int) $this->wpdb->get_var(
+			$this->wpdb->prepare(
+				"SELECT COUNT(DISTINCT t.content_id)
+				FROM %i AS t
+				INNER JOIN %i AS p ON p.ID = t.content_id
+				WHERE t.content_type = %s
+				{$status_sql}",
+				$params
+			)
 		);
-
-		$result = (int) $this->wpdb->get_var( $sql ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching -- Aggregate join over plugin term table + wp_posts.
-		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder
+		// phpcs:enable WordPress.DB.PreparedSQL.InterpolatedNotPrepared,WordPress.DB.PreparedSQL.NotPrepared,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber,WordPress.DB.PreparedSQLPlaceholders.UnsupportedIdentifierPlaceholder,WordPress.DB.DirectDatabaseQuery.DirectQuery,WordPress.DB.DirectDatabaseQuery.NoCaching
 		return $result;
 	}
 
