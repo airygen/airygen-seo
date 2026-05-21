@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-console -- Build-time CLI script; console output is the intended user feedback channel. */
 /**
  * Prepend a /*! ... *\/ header banner to every JavaScript and CSS file under
  * the build/ directory. The header documents:
@@ -27,7 +28,26 @@ const repoRoot = path.resolve( __dirname, '..' );
 const buildDir = path.join( repoRoot, 'build' );
 
 const REPO_URL = 'https://github.com/airygen/airygen-seo';
+const REPO_BRANCH = 'main';
 const BUILD_COMMAND = 'pnpm build';
+
+/**
+ * Build a GitHub URL pointing at the same path inside the public source tree.
+ *
+ * Directories (paths ending with `/`) use `/tree/{branch}/...`; files use
+ * `/blob/{branch}/...`. Reviewers can click each path to inspect the
+ * unminified source that produced the compiled file.
+ *
+ * @param {string} sourcePath Relative path inside the repository (e.g.
+ *                            `packages/admin/components/` or
+ *                            `packages/block-editor/config.ts`).
+ * @return {string} Full GitHub URL.
+ */
+function githubUrlFor( sourcePath ) {
+	const isDir = sourcePath.endsWith( '/' );
+	const kind = isDir ? 'tree' : 'blob';
+	return `${ REPO_URL }/${ kind }/${ REPO_BRANCH }/${ sourcePath }`;
+}
 
 /**
  * Map from compiled file (relative to build/) to its source description.
@@ -105,17 +125,26 @@ function buildBanner( relativePath, info ) {
 	const isCss = relativePath.toLowerCase().endsWith( '.css' );
 	const entryLine = isCss && info.styleEntry ? info.styleEntry : info.entry;
 
+	// One source directory per line, paired with its public GitHub URL on the
+	// following line. Reviewers can scan local paths quickly and click through
+	// to the unminified source without manually constructing URLs.
+	const sourceLines = info.sourceDirs.flatMap( ( dir ) => [
+		` *   - ${ dir }`,
+		` *     ${ githubUrlFor( dir ) }`,
+	] );
+
 	return [
 		`${ BANNER_START_MARKER } compiled asset`,
 		` * File:               build/${ relativePath }`,
 		` * Source entry:       ${ entryLine }`,
-		` * Source directories: ${ info.sourceDirs.join( ', ' ) }`,
+		' * Source directories:',
+		...sourceLines,
 		` * Repository:         ${ REPO_URL }`,
 		` * Build command:      ${ BUILD_COMMAND }`,
 		' *',
 		' * The unminified TypeScript / JSX / SCSS sources that produced this file',
-		' * live in the directories listed above. See readme.txt "Source code" for',
-		' * the full source-to-build mapping and local build instructions.',
+		' * live at the GitHub paths listed above. See readme.txt "Source code"',
+		' * for the full source-to-build mapping and local build instructions.',
 		` ${ BANNER_END_MARKER }`,
 		'',
 	].join( '\n' );
