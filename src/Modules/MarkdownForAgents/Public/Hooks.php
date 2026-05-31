@@ -138,7 +138,10 @@ final class Hooks {
 		nocache_headers();
 		header( 'Vary: Accept' );
 		header( 'Content-Type: text/markdown; charset=UTF-8' );
-		echo esc_html( $content );
+		// Protocol response body: the Content-Type is text/markdown, so the bytes are
+		// served as-is and never parsed as HTML. esc_html() would corrupt the markdown
+		// (encoding &, <, >, quotes), so the raw stored content is emitted directly.
+		echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- text/markdown response body, not HTML context.
 		exit;
 	}
 
