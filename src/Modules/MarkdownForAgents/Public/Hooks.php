@@ -138,9 +138,7 @@ final class Hooks {
 		nocache_headers();
 		header( 'Vary: Accept' );
 		header( 'Content-Type: text/markdown; charset=UTF-8' );
-		// Content is sanitized at write time by MarkdownExporter::export().
-		// HTML escaping would corrupt markdown syntax (`>`, `<` in code fences).
-		echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- text/markdown response body.
+		echo esc_html( $content );
 		exit;
 	}
 

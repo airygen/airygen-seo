@@ -50,7 +50,9 @@ final class HooksTest extends BaseTestCase {
 		Hooks::emit_head();
 		$output = (string) ob_get_clean();
 
-		$this->assertStringContainsString( '<script async src="https://example.com/analytics.js"></script>', $output ); // phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
+		$this->assertStringContainsString( '<script', $output );
+		$this->assertStringContainsString( 'https://example.com/analytics.js', $output );
+		$this->assertStringContainsString( 'async', $output );
 	}
 
 	public function test_emit_head_wraps_raw_js_in_script_tag(): void {
@@ -102,8 +104,9 @@ final class HooksTest extends BaseTestCase {
 		Hooks::emit_head();
 		$output = (string) ob_get_clean();
 
-		$this->assertStringContainsString( '<script>console.log("first");</script>', $output );
-		$this->assertStringContainsString( '<script>console.log("second");</script>', $output );
+		$this->assertStringContainsString( '<script', $output );
+		$this->assertStringContainsString( 'console.log("first");', $output );
+		$this->assertStringContainsString( 'console.log("second");', $output );
 	}
 
 	public function test_emit_body_open_outputs_body_snippet(): void {
@@ -125,7 +128,8 @@ final class HooksTest extends BaseTestCase {
 		Hooks::emit_body_open();
 		$output = (string) ob_get_clean();
 
-		$this->assertStringContainsString( '<script>console.log("body");</script>', $output );
+		$this->assertStringContainsString( '<script', $output );
+		$this->assertStringContainsString( 'console.log("body");', $output );
 	}
 
 	public function test_emit_footer_outputs_footer_snippet(): void {
@@ -147,7 +151,8 @@ final class HooksTest extends BaseTestCase {
 		Hooks::emit_footer();
 		$output = (string) ob_get_clean();
 
-		$this->assertStringContainsString( '<script>console.log("footer");</script>', $output );
+		$this->assertStringContainsString( '<script', $output );
+		$this->assertStringContainsString( 'console.log("footer");', $output );
 	}
 
 	public function test_disabled_snippet_is_not_output(): void {

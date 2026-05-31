@@ -218,10 +218,10 @@ final class Hooks {
 		}
 
 		if ( isset( $_POST['airygen_dashboard_nonce'] ) ) {
-			$nonce_token  = wp_unslash( $_POST['airygen_dashboard_nonce'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- wp_verify_nonce performs the hash comparison directly on the raw token.
+			$nonce_token  = sanitize_text_field( wp_unslash( $_POST['airygen_dashboard_nonce'] ) );
 			$nonce_action = 'airygen_dashboard_save';
 		} elseif ( isset( $_POST['airygen_onpage_nonce'] ) ) {
-			$nonce_token  = wp_unslash( $_POST['airygen_onpage_nonce'] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- wp_verify_nonce performs the hash comparison directly on the raw token.
+			$nonce_token  = sanitize_text_field( wp_unslash( $_POST['airygen_onpage_nonce'] ) );
 			$nonce_action = 'airygen_onpage_save';
 		} else {
 			return;

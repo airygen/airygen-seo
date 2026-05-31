@@ -126,7 +126,6 @@ The following directories contain hand-written JavaScript and CSS that are shipp
 
 * `resources/assets/js/` — `faq-preview.js`, `inline-script-host.js`, `metabox.js`, `toc-preview.js`, `topic-expansion-preview.js`.
 * `resources/assets/css/style.css` — public-facing stylesheet.
-* `resources/sitemaps/*.xsl` — sitemap stylesheets.
 * `resources/views/**` — PHP view templates.
 
 = Reproducing the build locally =

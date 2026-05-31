@@ -556,17 +556,32 @@ final class Controller {
 	 * @return void
 	 */
 	private static function render_stylesheet( string $target ): void {
-		$content = self::stylesheet_content( $target );
+		$xsl = '';
 
-		if ( '' === $content ) {
+		if ( 'index' === $target ) {
+			$xsl = self::build_stylesheet(
+				'Sitemap Index',
+				'The following sitemaps contain links to your content.',
+				'sitemap:sitemapindex/sitemap:sitemap'
+			);
+		} elseif ( 'content' === $target ) {
+			$xsl = self::build_stylesheet(
+				'Sitemap',
+				'This sitemap contains URLs to your content.',
+				'sitemap:urlset/sitemap:url'
+			);
+		}
+
+		if ( '' === $xsl ) {
 			status_header( 404 );
 			exit;
 		}
 
 		nocache_headers();
 		header( 'Content-Type: text/xsl; charset=utf-8' );
-		// Static XSL file bundled under resources/sitemaps/; no user input.
-		echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static XSL file.
+		// Values are escaped while building the XSL document. Escaping the full
+		// stylesheet here would corrupt XML/XSL syntax.
+		echo $xsl; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- XSL response body.
 		exit;
 	}
 
@@ -601,37 +616,100 @@ final class Controller {
 	}
 
 	/**
-	 * Load stylesheet contents from plugin resources.
+	 * Build a sitemap XSL document.
 	 *
-	 * @param string $target Target stylesheet key.
+	 * @param string $title       Document title.
+	 * @param string $description Intro text.
+	 * @param string $selector    XSL source selector.
 	 * @return string
 	 */
-	private static function stylesheet_content( string $target ): string {
-		switch ( $target ) {
-			case 'index':
-				$file = 'wp-sitemap-index.xsl';
-				break;
-			case 'content':
-				$file = 'wp-sitemap.xsl';
-				break;
-			default:
-				return '';
-		}
-
-		$plugin_dir = trailingslashit( dirname( __DIR__, 3 ) );
-		if ( defined( 'AIRYGEN_PLUGIN_DIR' ) ) {
-			$plugin_dir = trailingslashit( AIRYGEN_PLUGIN_DIR );
-		}
-
-		$path = $plugin_dir . 'resources/sitemaps/' . $file;
-
-		if ( ! file_exists( $path ) ) {
-			return '';
-		}
-
-		$contents = file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
-
-		return is_string( $contents ) ? $contents : '';
+	private static function build_stylesheet( string $title, string $description, string $selector ): string {
+		return sprintf(
+			<<<'XSL'
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:sitemap="http://www.sitemaps.org/schemas/sitemap/0.9"
+	exclude-result-prefixes="sitemap">
+	<xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes" />
+	<xsl:template match="/">
+		<html xmlns="http://www.w3.org/1999/xhtml">
+			<head>
+				<title>%s</title>
+				<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+				<style type="text/css">
+					body {
+						font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+						color: #444;
+					}
+					a {
+						color: #0669f7;
+					}
+					table {
+						border: none;
+						border-collapse: collapse;
+						width: 100%;
+					}
+					th {
+						text-align: left;
+						padding: 15px;
+						border-bottom: 2px solid #d0d0d0;
+						font-size: 1rem;
+					}
+					td {
+						padding: 15px;
+						border-bottom: 1px solid #d0d0d0;
+						font-size: 0.95rem;
+					}
+					tr:hover td {
+						background: #f5f5f5;
+					}
+					@media (max-width: 768px) {
+						td, th {
+							display: block;
+						}
+						th {
+							border-bottom: none;
+							padding-bottom: 5px;
+						}
+					}
+				</style>
+			</head>
+			<body>
+				<h1>%s</h1>
+				<p>%s</p>
+				<table>
+					<thead>
+						<tr>
+							<th>URL</th>
+							<th>Last Modified</th>
+						</tr>
+					</thead>
+					<tbody>
+						<xsl:for-each select="%s">
+							<tr>
+								<td>
+									<a href="{sitemap:loc}">
+										<xsl:value-of select="sitemap:loc"/>
+									</a>
+								</td>
+								<td>
+									<xsl:value-of select="sitemap:lastmod"/>
+								</td>
+							</tr>
+						</xsl:for-each>
+					</tbody>
+				</table>
+			</body>
+		</html>
+	</xsl:template>
+</xsl:stylesheet>
+XSL,
+			esc_xml( $title ),
+			esc_xml( $title ),
+			esc_xml( $description ),
+			esc_attr( $selector )
+		);
 	}
 
 	/**

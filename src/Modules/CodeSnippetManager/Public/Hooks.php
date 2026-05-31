@@ -65,8 +65,8 @@ final class Hooks {
 	/**
 	 * Output each enabled snippet for a given placement individually.
 	 *
-	 * Snippets containing {@html <script>} tags are output as-is. Raw inline
-	 * JavaScript without wrapping tags is wrapped via wp_print_inline_script_tag().
+	 * Snippets containing {@html <script>} tags are normalized to WordPress
+	 * script enqueue/inline helpers instead of echoing the saved tag directly.
 	 *
 	 * @param string $placement Target placement (head, body, footer).
 	 *
@@ -78,7 +78,7 @@ final class Hooks {
 		? $settings['snippets']
 		: array();
 
-		foreach ( $snippets as $snippet ) {
+		foreach ( $snippets as $index => $snippet ) {
 			if ( ! is_array( $snippet ) || empty( $snippet['enabled'] ) ) {
 				continue;
 			}
@@ -94,13 +94,137 @@ final class Hooks {
 			}
 
 			if ( preg_match( '#<\s*script\b#i', $code ) ) {
-				// Snippet wrapper is constrained at save time by
-				// Settings::sanitize_snippet() to exactly <script ...>...</script>
-				// with no other tags. Settings save is gated by manage_options.
-				echo $code . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Admin-supplied <script> snippet validated at save time; see comment above.
+				self::emit_script_tag_snippet( $code, $placement, (int) $index );
 			} else {
-				wp_print_inline_script_tag( $code );
+				self::emit_inline_snippet( $code, $placement, (int) $index );
 			}
 		}
+	}
+
+	/**
+	 * Emit a snippet saved as a complete script tag.
+	 *
+	 * @param string $code      Saved snippet code.
+	 * @param string $placement Target placement.
+	 * @param int    $index     Snippet index for a stable handle.
+	 *
+	 * @return void
+	 */
+	private static function emit_script_tag_snippet( string $code, string $placement, int $index ): void {
+		if ( ! preg_match( '#^\s*<script\b(?P<attrs>[^>]*)>(?P<body>.*?)</script>\s*$#is', $code, $matches ) ) {
+			return;
+		}
+
+		$attributes = self::parse_script_attributes( (string) $matches['attrs'] );
+		$body       = trim( (string) $matches['body'] );
+
+		if ( isset( $attributes['src'] ) ) {
+			self::emit_external_snippet( (string) $attributes['src'], $attributes, $placement, $index );
+			return;
+		}
+
+		self::emit_inline_snippet( $body, $placement, $index );
+	}
+
+	/**
+	 * Emit an external script through WordPress' script loader.
+	 *
+	 * @param string               $src        Script URL.
+	 * @param array<string,string> $attributes Parsed script attributes.
+	 * @param string               $placement  Target placement.
+	 * @param int                  $index      Snippet index for a stable handle.
+	 *
+	 * @return void
+	 */
+	private static function emit_external_snippet( string $src, array $attributes, string $placement, int $index ): void {
+		$src = esc_url_raw( $src );
+		if ( '' === $src ) {
+			return;
+		}
+
+		$strategy = null;
+		if ( array_key_exists( 'async', $attributes ) ) {
+			$strategy = 'async';
+		} elseif ( array_key_exists( 'defer', $attributes ) ) {
+			$strategy = 'defer';
+		}
+
+		$args = array(
+			'in_footer' => 'footer' === $placement,
+		);
+		if ( is_string( $strategy ) ) {
+			$args['strategy'] = $strategy;
+		}
+
+		$handle = self::handle( $placement, $index );
+		wp_register_script( $handle, $src, array(), null, $args ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- Admin-managed third-party snippet URL.
+		wp_enqueue_script( $handle );
+		wp_print_scripts( array( $handle ) );
+	}
+
+	/**
+	 * Emit an inline script through WordPress' script loader.
+	 *
+	 * @param string $code      JavaScript source.
+	 * @param string $placement Target placement.
+	 * @param int    $index     Snippet index for a stable handle.
+	 *
+	 * @return void
+	 */
+	private static function emit_inline_snippet( string $code, string $placement, int $index ): void {
+		$code = trim( $code );
+		if ( '' === $code ) {
+			return;
+		}
+
+		$handle = self::handle( $placement, $index );
+		wp_register_script( $handle, false, array(), null, false ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- Inline snippet has no external asset version.
+		wp_enqueue_script( $handle );
+		wp_add_inline_script( $handle, $code );
+		wp_print_scripts( array( $handle ) );
+	}
+
+	/**
+	 * Parse relevant script tag attributes.
+	 *
+	 * @param string $raw Raw attribute string.
+	 *
+	 * @return array<string,string>
+	 */
+	private static function parse_script_attributes( string $raw ): array {
+		$attributes = array();
+		if ( '' === trim( $raw ) ) {
+			return $attributes;
+		}
+
+		if ( preg_match_all( '#([A-Za-z][A-Za-z0-9:_-]*)(?:\s*=\s*("[^"]*"|\'[^\']*\'|[^\s"\'>]+))?#', $raw, $matches, PREG_SET_ORDER ) ) {
+			foreach ( $matches as $match ) {
+				$name = strtolower( sanitize_key( (string) $match[1] ) );
+				if ( '' === $name ) {
+					continue;
+				}
+
+				$value = '';
+				if ( isset( $match[2] ) ) {
+					$value = trim( (string) $match[2], "\"'" );
+				}
+
+				$attributes[ $name ] = sanitize_text_field( $value );
+			}
+		}
+
+		return $attributes;
+	}
+
+	/**
+	 * Build a script handle for one snippet.
+	 *
+	 * @param string $placement Target placement.
+	 * @param int    $index     Snippet index.
+	 *
+	 * @return string
+	 */
+	private static function handle( string $placement, int $index ): string {
+		return 'airygen-code-snippet-' . sanitize_key( $placement ) . '-' . (string) $index;
 	}
 }

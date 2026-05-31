@@ -75,7 +75,7 @@ class Metabox {
 		}
 
 		if ( ! isset( $_POST['airygen_metabox_nonce'] )
-			|| ! wp_verify_nonce( wp_unslash( $_POST['airygen_metabox_nonce'] ), 'airygen_create_nonce' ) // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- wp_verify_nonce performs the hash comparison directly on the raw token.
+			|| ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['airygen_metabox_nonce'] ) ), 'airygen_create_nonce' )
 		) {
 			return;
 		}
