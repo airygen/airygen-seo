@@ -119,7 +119,7 @@ final class Hooks {
 		$body       = trim( (string) $matches['body'] );
 
 		if ( isset( $attributes['src'] ) ) {
-			self::emit_external_snippet( (string) $attributes['src'], $attributes, $placement, $index );
+			self::emit_external_snippet( (string) $attributes['src'], $attributes, $placement, $index, $code );
 			return;
 		}
 
@@ -133,10 +133,11 @@ final class Hooks {
 	 * @param array<string,string> $attributes Parsed script attributes.
 	 * @param string               $placement  Target placement.
 	 * @param int                  $index      Snippet index for a stable handle.
+	 * @param string               $code       Original saved snippet code.
 	 *
 	 * @return void
 	 */
-	private static function emit_external_snippet( string $src, array $attributes, string $placement, int $index ): void {
+	private static function emit_external_snippet( string $src, array $attributes, string $placement, int $index, string $code ): void {
 		$src = esc_url_raw( $src );
 		if ( '' === $src ) {
 			return;
@@ -156,7 +157,7 @@ final class Hooks {
 			$args['strategy'] = $strategy;
 		}
 
-		$handle = self::handle( $placement, $index );
+		$handle = self::handle( $placement, $index, $code );
 		wp_register_script( $handle, $src, array(), null, $args ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- Admin-managed third-party snippet URL.
 		wp_enqueue_script( $handle );
 		wp_print_scripts( array( $handle ) );
@@ -177,7 +178,7 @@ final class Hooks {
 			return;
 		}
 
-		$handle = self::handle( $placement, $index );
+		$handle = self::handle( $placement, $index, $code );
 		wp_register_script( $handle, false, array(), null, false ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- Inline snippet has no external asset version.
 		wp_enqueue_script( $handle );
 		wp_add_inline_script( $handle, $code );
@@ -221,10 +222,16 @@ final class Hooks {
 	 *
 	 * @param string $placement Target placement.
 	 * @param int    $index     Snippet index.
+	 * @param string $code      Snippet code.
 	 *
 	 * @return string
 	 */
-	private static function handle( string $placement, int $index ): string {
-		return 'airygen-code-snippet-' . sanitize_key( $placement ) . '-' . (string) $index;
+	private static function handle( string $placement, int $index, string $code ): string {
+		return sprintf(
+			'airygen-code-snippet-%s-%d-%s',
+			sanitize_key( $placement ),
+			$index,
+			substr( hash( 'sha256', $code ), 0, 12 )
+		);
 	}
 }
