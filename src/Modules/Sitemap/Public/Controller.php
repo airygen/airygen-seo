@@ -637,43 +637,6 @@ final class Controller {
 			<head>
 				<title>%s</title>
 				<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-				<style type="text/css">
-					body {
-						font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-						color: #444;
-					}
-					a {
-						color: #0669f7;
-					}
-					table {
-						border: none;
-						border-collapse: collapse;
-						width: 100%;
-					}
-					th {
-						text-align: left;
-						padding: 15px;
-						border-bottom: 2px solid #d0d0d0;
-						font-size: 1rem;
-					}
-					td {
-						padding: 15px;
-						border-bottom: 1px solid #d0d0d0;
-						font-size: 0.95rem;
-					}
-					tr:hover td {
-						background: #f5f5f5;
-					}
-					@media (max-width: 768px) {
-						td, th {
-							display: block;
-						}
-						th {
-							border-bottom: none;
-							padding-bottom: 5px;
-						}
-					}
-				</style>
 			</head>
 			<body>
 				<h1>%s</h1>

@@ -181,7 +181,12 @@ final class Hooks {
 		$handle = self::handle( $placement, $index, $code );
 		wp_register_script( $handle, false, array(), null, false ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion -- Inline snippet has no external asset version.
 		wp_enqueue_script( $handle );
-		wp_add_inline_script( $handle, $code );
+		// Intentionally unescaped: this is an administrator-authored custom code snippet that
+		// must execute verbatim, so escaping would break it. The trust boundary is enforced
+		// at save time, where storing snippet code requires the `unfiltered_html` capability
+		// (see Airygen\Admin\RestController::handle_update, line 148); the value here can only have been
+		// written by a user with that capability.
+		wp_add_inline_script( $handle, $code ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Admin-authored snippet gated by `unfiltered_html` on save.
 		wp_print_scripts( array( $handle ) );
 	}
 

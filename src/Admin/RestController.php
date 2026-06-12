@@ -141,7 +141,11 @@ final class RestController {
 			SitemapSettings::update( $settings['sitemap'] );
 		}
 
-		if ( isset( $settings['codeSnippetManager'] ) && is_array( $settings['codeSnippetManager'] ) ) {
+		// Code snippets emit arbitrary, unescaped JS/HTML on the front end, so saving them
+		// requires the `unfiltered_html` capability (which excludes non-super-admins on
+		// multisite) on top of the route-level `manage_options` check. Without it the
+		// stored snippets are left untouched rather than overwritten.
+		if ( isset( $settings['codeSnippetManager'] ) && is_array( $settings['codeSnippetManager'] ) && current_user_can( 'unfiltered_html' ) ) {
 			CodeSnippetManagerSettings::update( $settings['codeSnippetManager'] );
 		}
 
