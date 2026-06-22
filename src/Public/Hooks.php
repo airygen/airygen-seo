@@ -77,22 +77,22 @@ final class Hooks {
 	 * @var array<string, string>
 	 */
 	private const FEATURE_MODULE_MAP = array(
-		RobotsHooks::class             => 'robots',
-		SitemapHooks::class            => 'sitemap',
-		SiteVerificationHooks::class   => 'siteVerification',
-		RssFeedSignatureHooks::class   => 'rssFeedSignature',
-		ImageSeoHooks::class           => 'imageSeo',
-		BreadcrumbsHooks::class        => 'breadcrumbs',
-		TocHooks::class                => 'toc',
-		AuthorSeoHooks::class          => 'authorSeo',
-		TaxonomySeoHooks::class        => 'taxonomySeo',
-		WooCommerceSeoHooks::class     => 'wooCommerceSeo',
-		LocalSeoHooks::class           => 'localSeo',
-		TopicClusterHooks::class       => 'topicCluster',
-		RelatedPostsHooks::class       => 'relatedPosts',
-		NotFoundManagerHooks::class    => 'notFoundManager',
-		MarkdownForAgentsHooks::class  => 'markdownForAgents',
-		LlmsTxtHooks::class            => 'llmsTxt',
+		RobotsHooks::class            => 'robots',
+		SitemapHooks::class           => 'sitemap',
+		SiteVerificationHooks::class  => 'siteVerification',
+		RssFeedSignatureHooks::class  => 'rssFeedSignature',
+		ImageSeoHooks::class          => 'imageSeo',
+		BreadcrumbsHooks::class       => 'breadcrumbs',
+		TocHooks::class               => 'toc',
+		AuthorSeoHooks::class         => 'authorSeo',
+		TaxonomySeoHooks::class       => 'taxonomySeo',
+		WooCommerceSeoHooks::class    => 'wooCommerceSeo',
+		LocalSeoHooks::class          => 'localSeo',
+		TopicClusterHooks::class      => 'topicCluster',
+		RelatedPostsHooks::class      => 'relatedPosts',
+		NotFoundManagerHooks::class   => 'notFoundManager',
+		MarkdownForAgentsHooks::class => 'markdownForAgents',
+		LlmsTxtHooks::class           => 'llmsTxt',
 	);
 
 	/**
