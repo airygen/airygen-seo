@@ -127,30 +127,6 @@ export const RobotsIcon = ( { className, ...props }: IconProps ) => (
 	</svg>
 );
 
-export const CodeSnippetsIcon = ( { className, ...props }: IconProps ) => (
-	<svg
-		width="7"
-		height="7"
-		viewBox="0 0 7 7"
-		fill="none"
-		xmlns="http://www.w3.org/2000/svg"
-		className={ className }
-		{ ...props }
-	>
-		<g clipPath="url(#code-snippets-icon-clip)">
-			<path
-				d="M1.82993 0.947266L0.55542 2.22177L1.82993 3.49906L2.22144 3.10477L1.33845 2.22177L2.22144 1.33878L1.82993 0.947266ZM3.44597 0.947266L3.05446 1.33878L3.93745 2.22177L3.05446 3.10477L3.44597 3.49906L4.72048 2.22177L3.44597 0.947266ZM5.99499 3.21861L3.74863 5.46497L2.72958 4.44314L2.33807 4.83465L3.74863 6.248L6.3865 3.61013L5.99499 3.21861Z"
-				fill="currentColor"
-			/>
-		</g>
-		<defs>
-			<clipPath id="code-snippets-icon-clip">
-				<rect width="6.6641" height="6.6641" fill="white" />
-			</clipPath>
-		</defs>
-	</svg>
-);
-
 export const MarkdownForAgentsIcon = ( { className, ...props }: IconProps ) => (
 	<svg
 		width="7"

@@ -24,7 +24,6 @@ import {
 	LinkCounterIcon,
 	RedirectsIcon,
 	RobotsIcon,
-	CodeSnippetsIcon,
 	MarkdownForAgentsIcon,
 	LlmsTxtIcon,
 	SiteVerificationIcon,
@@ -106,7 +105,6 @@ import type {
 	RawRobotsSettings,
 	RawHreflangSettings,
 	RawSitemapSettings,
-	RawCodeSnippetManagerSettings,
 	RawRssFeedSignatureSettings,
 	RawSiteVerificationSettings,
 	RawRedirectSettings,
@@ -147,7 +145,6 @@ export type {
 	HreflangEntry,
 	HreflangSettings,
 	SitemapSettings,
-	CodeSnippetManagerSettings,
 	SiteVerificationSettings,
 	RssFeedSignatureSettings,
 	RedirectRule,
@@ -1255,7 +1252,6 @@ const SETTINGS_HASH_TABS = [
 	'imageSeo',
 	'hreflang',
 	'sitemap',
-	'codeSnippetManager',
 	'notFoundManager',
 	'siteVerification',
 	'rssFeedSignature',
@@ -1545,15 +1541,6 @@ const MODULE_METADATA: ModuleMetadata[] = [
 		},
 	},
 	{
-		key: 'codeSnippetManager',
-		title: __( 'Code Snippets', 'airygen-seo' ),
-		description: __( 'Manage custom inline JavaScript snippets for your site.', 'airygen-seo' ),
-		icon: CodeSnippetsIcon,
-		traits: {
-			markup: true,
-		},
-	},
-	{
 		key: 'siteVerification',
 		title: __( 'Site Verification', 'airygen-seo' ),
 		description: __( 'Add site verification tokens for search engines and webmaster platforms.', 'airygen-seo' ),
@@ -1797,7 +1784,6 @@ const MODULE_KEYS: ModuleKey[] = [
 	'imageSeo',
 	'hreflang',
 	'sitemap',
-	'codeSnippetManager',
 	'siteVerification',
 	'rssFeedSignature',
 	'instantIndexing',
@@ -1896,7 +1882,6 @@ const MODULE_DEFAULTS: ModuleSettings = {
 	imageSeo: true,
 	hreflang: true,
 	sitemap: true,
-	codeSnippetManager: true,
 	siteVerification: true,
 	rssFeedSignature: true,
 	instantIndexing: true,
@@ -1927,7 +1912,6 @@ const SETTINGS_RESET_SECTION_BY_TAB: Partial<Record<ModuleKey, keyof SettingsSta
 	imageSeo: 'imageSeo',
 	hreflang: 'hreflang',
 	sitemap: 'sitemap',
-	codeSnippetManager: 'codeSnippetManager',
 	siteVerification: 'siteVerification',
 	rssFeedSignature: 'rssFeedSignature',
 	instantIndexing: 'instantIndexing',
@@ -2601,7 +2585,6 @@ const normalizeSettings = ( payload: Record<string, unknown> ): SettingsState =>
 	} );
 
 	const sitemapPayload = ( raw.sitemap ?? {} ) as RawSitemapSettings;
-	const codeSnippetManagerPayload = ( raw.codeSnippetManager ?? {} ) as RawCodeSnippetManagerSettings;
 	const rawSiteVerification = ( raw.siteVerification ?? {} ) as RawSiteVerificationSettings;
 	const rssFeedSignaturePayload = ( raw.rssFeedSignature ?? {} ) as RawRssFeedSignatureSettings;
 
@@ -4188,42 +4171,6 @@ const normalizeSettings = ( payload: Record<string, unknown> ): SettingsState =>
 				)
 				: 500,
 		},
-		codeSnippetManager: {
-			snippets: Array.isArray( codeSnippetManagerPayload?.snippets )
-				? codeSnippetManagerPayload.snippets
-					.map( ( snippet, index ) => {
-						const rawSnippet =
-							snippet && typeof snippet === 'object'
-								? ( snippet as Record<string, unknown> )
-								: {};
-						const placement = rawSnippet.placement;
-						const normalizedPlacement:
-							| 'head'
-							| 'body'
-							| 'footer'
-							| 'inactive' =
-							placement === 'head' ||
-							placement === 'body' ||
-							placement === 'footer' ||
-							placement === 'inactive'
-								? placement
-								: 'inactive';
-
-						return {
-							id:
-								typeof rawSnippet.id === 'string' && rawSnippet.id.trim() !== ''
-									? rawSnippet.id
-									: `snippet-${ index + 1 }`,
-							enabled: typeof rawSnippet.enabled === 'boolean' ? rawSnippet.enabled : true,
-							description:
-								typeof rawSnippet.description === 'string' ? rawSnippet.description : '',
-							code: typeof rawSnippet.code === 'string' ? rawSnippet.code : '',
-							placement: normalizedPlacement,
-						};
-					} )
-					.filter( ( snippet ) => snippet.code.trim() !== '' )
-				: [],
-		},
 		siteVerification: {
 			google:
 				typeof rawSiteVerification?.google === 'string'
@@ -4415,17 +4362,6 @@ const serializeSettings = ( settings: SettingsState ) => {
 			enabled_taxonomies: settings.sitemap.enabled_taxonomies,
 			exclude_empty_taxonomies: settings.sitemap.exclude_empty_taxonomies,
 			items_per_page: settings.sitemap.items_per_page,
-		},
-		codeSnippetManager: {
-			snippets: settings.codeSnippetManager.snippets
-				.map( ( snippet ) => ( {
-					id: snippet.id,
-					enabled: Boolean( snippet.enabled ),
-					description: snippet.description,
-					code: snippet.code,
-					placement: snippet.placement,
-				} ) )
-				.filter( ( snippet ) => snippet.code.trim() !== '' ),
 		},
 		siteVerification: {
 			google: settings.siteVerification.google.trim(),

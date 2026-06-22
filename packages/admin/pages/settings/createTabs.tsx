@@ -15,7 +15,6 @@ import {
 	ImageSeoTabPanel,
 	HreflangTabPanel,
 	SitemapTabPanel,
-	CodeSnippetManagerTabPanel,
 	SiteVerificationTabPanel,
 	RssFeedSignatureTabPanel,
 	InstantIndexingTabPanel,
@@ -47,7 +46,6 @@ import {
 	BreadcrumbsIcon,
 	TocIcon,
 	RobotsIcon,
-	CodeSnippetsIcon,
 	MarkdownForAgentsIcon,
 	LlmsTxtIcon,
 	SiteVerificationIcon,
@@ -277,17 +275,6 @@ const createSettingsTabs = ( {
 					sitemapPreviewUrl={ sitemapPreviewUrl }
 					onCopyPreviewLink={ onCopySitemapLink }
 					onChange={ ( value ) => updateSection( 'sitemap', value ) }
-				/>
-			),
-		},
-		{
-			name: 'codeSnippetManager',
-			title: __( 'Code Snippets', 'airygen-seo' ),
-			icon: CodeSnippetsIcon,
-			render: () => (
-				<CodeSnippetManagerTabPanel
-					settings={ settings.codeSnippetManager }
-					onChange={ ( value ) => updateSection( 'codeSnippetManager', value ) }
 				/>
 			),
 		},

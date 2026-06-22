@@ -21,7 +21,6 @@ use Airygen\Modules\OnPageSeo\Admin\Settings as OnPageSettings;
 use Airygen\Modules\RssFeedSignature\Admin\Settings as RssFeedSignatureSettings;
 use Airygen\Modules\SocialCards\Admin\Settings as SocialSettings;
 use Airygen\Modules\TaxonomySeo\Admin\Settings as TaxonomySeoSettings;
-use Airygen\Modules\CodeSnippetManager\Admin\Settings as CodeSnippetManagerSettings;
 use Airygen\Modules\SiteVerification\Admin\Settings as SiteVerificationSettings;
 use Airygen\Modules\WooCommerceSeo\Admin\Settings as WooCommerceSeoSettings;
 use WP_REST_Response;
@@ -53,7 +52,6 @@ class SettingsRouteTest extends RestRouteTestCase {
 		$this->assertArrayHasKey( 'taxonomySeo', $data['settings'] );
 		$this->assertArrayHasKey( 'wooCommerceSeo', $data['settings'] );
 		$this->assertArrayHasKey( 'localSeo', $data['settings'] );
-		$this->assertArrayHasKey( 'codeSnippetManager', $data['settings'] );
 		$this->assertArrayHasKey( 'siteVerification', $data['settings'] );
 		$this->assertArrayHasKey( 'rssFeedSignature', $data['settings'] );
 	}
@@ -72,54 +70,6 @@ class SettingsRouteTest extends RestRouteTestCase {
 		$keys = array_keys( $data );
 		sort( $keys );
 		$this->assertSame( array( 'meta', 'settings', 'wizardDismissed' ), $keys );
-	}
-
-	/**
-	 * Updating Code Snippets settings via REST should persist payload.
-	 *
-	 * @return void
-	 */
-	public function test_update_settings_persists_tracking_manager(): void {
-		$this->acting_as_admin();
-
-		$payload = array(
-			'settings' => array(
-				'codeSnippetManager' => array(
-					'snippets' => array(
-						array(
-							'id'          => 'head-1',
-							'enabled'     => true,
-							'description' => 'Head',
-							'code'        => '<script>console.log("head")</script>',
-							'placement'   => 'head',
-						),
-						array(
-							'id'          => 'body-1',
-							'enabled'     => false,
-							'description' => 'Body',
-							'code'        => '<script>console.log("body")</script>',
-							'placement'   => 'body',
-						),
-						array(
-							'id'          => 'footer-1',
-							'enabled'     => true,
-							'description' => 'Footer',
-							'code'        => '<script>console.log("footer")</script>',
-							'placement'   => 'footer',
-						),
-					),
-				),
-			),
-		);
-
-		$response = $this->rest_post( '/airygen/v1/settings', $payload );
-		$this->assertInstanceOf( WP_REST_Response::class, $response );
-
-		$config = CodeSnippetManagerSettings::get();
-		$this->assertCount( 3, $config['snippets'] );
-		$this->assertSame( '<script>console.log("head")</script>', $config['snippets'][0]['code'] );
-		$this->assertFalse( (bool) $config['snippets'][1]['enabled'] );
-		$this->assertSame( '<script>console.log("footer")</script>', $config['snippets'][2]['code'] );
 	}
 
 	/**

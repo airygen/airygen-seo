@@ -11,7 +11,6 @@ export type ModuleKey =
 	| 'imageSeo'
 	| 'hreflang'
 	| 'sitemap'
-	| 'codeSnippetManager'
 	| 'siteVerification'
 	| 'rssFeedSignature'
 	| 'siteHealth'

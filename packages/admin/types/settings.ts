@@ -88,20 +88,6 @@ export type RssFeedSignatureSettings = {
 	after_content: string;
 };
 
-export type CodeSnippetPlacement = 'head' | 'body' | 'footer' | 'inactive';
-
-export type CodeSnippet = {
-	id: string;
-	enabled: boolean;
-	description: string;
-	code: string;
-	placement: CodeSnippetPlacement;
-};
-
-export type CodeSnippetManagerSettings = {
-	snippets: CodeSnippet[];
-};
-
 export type SiteVerificationSettings = {
 	google: string;
 	bing: string;
@@ -845,7 +831,6 @@ export type SettingsState = {
 	imageSeo: ImageSeoSettings;
 	hreflang: HreflangSettings;
 	sitemap: SitemapSettings;
-	codeSnippetManager: CodeSnippetManagerSettings;
 	siteVerification: SiteVerificationSettings;
 	rssFeedSignature: RssFeedSignatureSettings;
 	redirects: RedirectsSettings;

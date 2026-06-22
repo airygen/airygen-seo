@@ -21,7 +21,6 @@ use Airygen\Constants;
 use Airygen\Modules\AuthorSeo\Admin\Settings as AuthorSeoSettings;
 use Airygen\Modules\Breadcrumbs\Admin\Settings as BreadcrumbsSettings;
 use Airygen\Modules\BrokenLinkChecker\Admin\Settings as BrokenLinkSettings;
-use Airygen\Modules\CodeSnippetManager\Admin\Settings as CodeSnippetManagerSettings;
 use Airygen\Modules\Hreflang\Admin\Settings as HreflangSettings;
 use Airygen\Modules\ImageSeo\Admin\Settings as ImageSeoSettings;
 use Airygen\Modules\InstantIndexing\Admin\Settings as InstantIndexingSettings;
@@ -134,7 +133,6 @@ final class TransferRestController {
 			'imageSeo'           => ImageSeoSettings::get(),
 			'hreflang'           => $hreflang,
 			'sitemap'            => SitemapSettings::get(),
-			'codeSnippetManager' => CodeSnippetManagerSettings::get(),
 			'siteVerification'   => SiteVerificationSettings::get(),
 			'rssFeedSignature'   => RssFeedSignatureSettings::get(),
 			'redirects'          => RedirectsSettings::get_rules(),
@@ -197,9 +195,6 @@ final class TransferRestController {
 		}
 		if ( isset( $settings['sitemap'] ) && is_array( $settings['sitemap'] ) ) {
 			SitemapSettings::update( $settings['sitemap'] );
-		}
-		if ( isset( $settings['codeSnippetManager'] ) && is_array( $settings['codeSnippetManager'] ) ) {
-			CodeSnippetManagerSettings::update( $settings['codeSnippetManager'] );
 		}
 		if ( isset( $settings['siteVerification'] ) && is_array( $settings['siteVerification'] ) ) {
 			SiteVerificationSettings::update( $settings['siteVerification'] );

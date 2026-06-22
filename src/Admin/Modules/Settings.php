@@ -46,7 +46,6 @@ final class Settings {
 		'imageSeo',
 		'hreflang',
 		'sitemap',
-		'codeSnippetManager',
 		'siteVerification',
 		'rssFeedSignature',
 		'linkCounter',

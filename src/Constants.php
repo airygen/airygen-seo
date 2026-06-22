@@ -92,7 +92,6 @@ class Constants {
 	const OPTION_SITEMAP                       = 'airygen_sitemap';
 	const OPTION_INDEXNOW_RESPONSES            = 'airygen_indexnow_responses';
 	const OPTION_INDEXNOW_QUOTA                = 'airygen_indexnow_quota';
-	const OPTION_CODE_SNIPPET_MANAGER          = 'airygen_code_snippet_manager';
 	const OPTION_SCORE_CALCULATOR              = 'airygen_score_calculator';
 	const OPTION_SCORE_RECALCULATE_STATE       = 'airygen_score_recalculate_state';
 	const OPTION_SCORE_RECALCULATE_LAST_PREFIX = 'airygen_score_recalculate_last_';

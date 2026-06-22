@@ -23,7 +23,6 @@ use Airygen\Modules\AuthorSeo\Admin\Settings as AuthorSeoSettings;
 use Airygen\Modules\Breadcrumbs\Admin\Settings as BreadcrumbsSettings;
 use Airygen\Modules\BrokenLinkChecker\Admin\Settings as BrokenLinkSettings;
 use Airygen\Modules\BrokenLinkChecker\Admin\StatusReporter as BrokenLinkStatusReporter;
-use Airygen\Modules\CodeSnippetManager\Admin\Settings as CodeSnippetManagerSettings;
 use Airygen\Modules\Hreflang\Admin\Settings as HreflangSettings;
 use Airygen\Modules\ImageSeo\Admin\Settings as ImageSeoSettings;
 use Airygen\Modules\InstantIndexing\Admin\Settings as InstantIndexingSettings;
@@ -139,14 +138,6 @@ final class RestController {
 
 		if ( isset( $settings['sitemap'] ) && is_array( $settings['sitemap'] ) ) {
 			SitemapSettings::update( $settings['sitemap'] );
-		}
-
-		// Code snippets emit arbitrary, unescaped JS/HTML on the front end, so saving them
-		// requires the `unfiltered_html` capability (which excludes non-super-admins on
-		// multisite) on top of the route-level `manage_options` check. Without it the
-		// stored snippets are left untouched rather than overwritten.
-		if ( isset( $settings['codeSnippetManager'] ) && is_array( $settings['codeSnippetManager'] ) && current_user_can( 'unfiltered_html' ) ) {
-			CodeSnippetManagerSettings::update( $settings['codeSnippetManager'] );
 		}
 
 		if ( isset( $settings['siteVerification'] ) && is_array( $settings['siteVerification'] ) ) {
@@ -272,7 +263,6 @@ final class RestController {
 		ImageSeoSettings::ensure_exists();
 		HreflangSettings::ensure_exists();
 		SitemapSettings::ensure_exists();
-		CodeSnippetManagerSettings::ensure_exists();
 		SiteVerificationSettings::ensure_exists();
 		RssFeedSignatureSettings::ensure_exists();
 		RedirectsSettings::ensure_exists();
@@ -308,7 +298,6 @@ final class RestController {
 		$image_seo           = ImageSeoSettings::get();
 		$hreflang            = HreflangSettings::get();
 		$sitemap             = SitemapSettings::get();
-		$code_snippets       = CodeSnippetManagerSettings::get();
 		$webmaster           = SiteVerificationSettings::get();
 		$rss_feed_signature  = RssFeedSignatureSettings::get();
 		$redirect            = RedirectsSettings::get_rules();
@@ -337,7 +326,6 @@ final class RestController {
 			'imageSeo'              => $image_seo,
 			'hreflang'              => $hreflang,
 			'sitemap'               => $sitemap,
-			'codeSnippetManager'    => $code_snippets,
 			'siteVerification'      => $webmaster,
 			'rssFeedSignature'      => $rss_feed_signature,
 			'redirects'             => $redirect,

@@ -12,7 +12,6 @@ export { default as TocTabPanel } from './panels/TocTabPanel';
 export { default as ImageSeoTabPanel } from './panels/ImageSeoTabPanel';
 export { default as HreflangTabPanel } from './panels/HreflangTabPanel';
 export { default as SitemapTabPanel } from './panels/SitemapTabPanel';
-export { default as CodeSnippetManagerTabPanel } from './panels/CodeSnippetManagerTabPanel';
 export { default as SiteVerificationTabPanel } from './panels/SiteVerificationTabPanel';
 export { default as RssFeedSignatureTabPanel } from './panels/RssFeedSignatureTabPanel';
 export { default as InstantIndexingTabPanel } from './panels/InstantIndexingTabPanel';

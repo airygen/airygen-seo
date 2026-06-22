@@ -176,18 +176,6 @@ export type RawSiteVerificationSettings = {
 	pinterest?: unknown;
 };
 
-export type RawCodeSnippet = {
-	id?: unknown;
-	enabled?: unknown;
-	description?: unknown;
-	code?: unknown;
-	placement?: unknown;
-};
-
-export type RawCodeSnippetManagerSettings = {
-	snippets?: RawCodeSnippet[];
-};
-
 export type RawRedirectRule = Record<string, unknown>;
 
 export type RawRedirectSettings = {
@@ -574,7 +562,6 @@ export type RawSettingsPayload = {
 	robots?: RawRobotsSettings;
 	hreflang?: RawHreflangSettings;
 	sitemap?: RawSitemapSettings;
-	codeSnippetManager?: RawCodeSnippetManagerSettings;
 	siteVerification?: RawSiteVerificationSettings;
 	rssFeedSignature?: RawRssFeedSignatureSettings;
 	redirects?: RawRedirectSettings;

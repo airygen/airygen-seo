@@ -16,7 +16,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 use Airygen\Admin\Modules\Settings as ModuleSettings;
 use Airygen\Modules\AuthorSeo\Public\Hooks as AuthorSeoHooks;
 use Airygen\Modules\Breadcrumbs\Public\Hooks as BreadcrumbsHooks;
-use Airygen\Modules\CodeSnippetManager\Public\Hooks as CodeSnippetManagerHooks;
 use Airygen\Modules\Hreflang\Public\Hooks as HreflangHooks;
 use Airygen\Modules\ImageSeo\Public\Hooks as ImageSeoHooks;
 use Airygen\Modules\LlmsTxt\Public\Hooks as LlmsTxtHooks;
@@ -60,7 +59,6 @@ final class Hooks {
 		TaxonomySeoHooks::class,
 		HreflangHooks::class,
 		SitemapHooks::class,
-		CodeSnippetManagerHooks::class,
 		SiteVerificationHooks::class,
 		RssFeedSignatureHooks::class,
 		RedirectsHooks::class,
@@ -81,7 +79,6 @@ final class Hooks {
 	private const FEATURE_MODULE_MAP = array(
 		RobotsHooks::class             => 'robots',
 		SitemapHooks::class            => 'sitemap',
-		CodeSnippetManagerHooks::class => 'codeSnippetManager',
 		SiteVerificationHooks::class   => 'siteVerification',
 		RssFeedSignatureHooks::class   => 'rssFeedSignature',
 		ImageSeoHooks::class           => 'imageSeo',

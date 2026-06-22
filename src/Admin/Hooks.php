@@ -17,7 +17,6 @@ use Airygen\Admin\Menu;
 use Airygen\Admin\PostListColumns\Hooks as SeoOverviewColumnHooks;
 use Airygen\Modules\AuthorSeo\Admin\Hooks as AuthorSeoAdminHooks;
 use Airygen\Modules\Breadcrumbs\Admin\Hooks as BreadcrumbsHooks;
-use Airygen\Modules\CodeSnippetManager\Admin\Hooks as CodeSnippetManagerHooks;
 use Airygen\Modules\Hreflang\Admin\Hooks as HreflangHooks;
 use Airygen\Modules\ImageSeo\Admin\Hooks as ImageSeoHooks;
 use Airygen\Modules\InstantIndexing\Admin\Hooks as InstantIndexingHooks;
@@ -65,7 +64,6 @@ final class Hooks {
 		LinkSuggestionsAdminHooks::class,
 		HreflangHooks::class,
 		SitemapHooks::class,
-		CodeSnippetManagerHooks::class,
 		SiteVerificationHooks::class,
 		RedirectsHooks::class,
 		RssFeedSignatureHooks::class,
