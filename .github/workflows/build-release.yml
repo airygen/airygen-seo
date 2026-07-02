@@ -92,28 +92,6 @@ jobs:
           find languages -type f -name '*.po' -delete
           rm -rf languages/untranslated
 
-      - name: Detect WordPress.org deployment eligibility
-        id: wordpress_org
-        env:
-          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-        run: |
-          set -euo pipefail
-          raw_tag="${{ github.event.release.tag_name }}"
-          if [[ ! "${raw_tag}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-            echo "Tag ${raw_tag} is not a stable WordPress.org version; skipping SVN deploy."
-            echo "deploy=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          if [[ -z "${SVN_USERNAME}" || -z "${SVN_PASSWORD}" ]]; then
-            echo "SVN credentials are not configured; skipping WordPress.org deploy."
-            echo "deploy=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          echo "deploy=true" >> "$GITHUB_OUTPUT"
-
       - name: Assemble release directory
         run: |
           set -euo pipefail
@@ -143,13 +121,3 @@ jobs:
           files: ${{ steps.pack.outputs.zip_path }}
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-
-      - name: Deploy stable release to WordPress.org SVN
-        if: steps.validate.outputs.publish == 'true' && steps.wordpress_org.outputs.deploy == 'true'
-        uses: 10up/action-wordpress-plugin-deploy@stable
-        env:
-          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
-          SLUG: ${{ env.PLUGIN_SLUG }}
-          VERSION: ${{ steps.validate.outputs.tag }}
-          BUILD_DIR: .release-build
