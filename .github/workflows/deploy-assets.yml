@@ -1,0 +1,46 @@
+name: Deploy assets to WordPress.org
+
+# Syncs the marketing assets in .wordpress-org/ (plugin icon, banner, and
+# screenshots) to the WordPress.org plugin directory's SVN /assets area. These
+# are NOT part of the plugin zip; they render on the wordpress.org plugin page.
+# Runs on pushes to the assets branch that touch .wordpress-org/, or manually.
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - assets
+    paths:
+      - '.wordpress-org/**'
+
+permissions:
+  contents: read
+
+jobs:
+  assets:
+    runs-on: ubuntu-latest
+    # SVN_USERNAME / SVN_PASSWORD live in this GitHub Environment.
+    environment: WordPress.org
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify SVN credentials are configured
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        run: |
+          set -euo pipefail
+          if [[ -z "${SVN_USERNAME}" || -z "${SVN_PASSWORD}" ]]; then
+            echo "::error::SVN_USERNAME / SVN_PASSWORD secrets are not configured."
+            exit 1
+          fi
+
+      - name: Sync icon, banner, and screenshots to WordPress.org
+        uses: 10up/action-wordpress-plugin-asset-update@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: airygen-seo
+          ASSETS_DIR: .wordpress-org
