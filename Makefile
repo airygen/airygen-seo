@@ -1,5 +1,5 @@
 .PHONY: up build down restart reset shell shell.db \
-    phpcs phpstan phpcbf tests lint lint.types \
+    phpcs phpstan phpcbf tests coverage lint lint.types \
     wp.install wp.activate-plugin wp.install-woocommerce wp.init-dev-site dev \
     wp.install-core-languages wp.install-languages \
     i18n.check i18n.build i18n.new i18n.po2json i18n.po2json.untranslated i18n.lint i18n.json2po \
@@ -115,6 +115,21 @@ tests:
 		cd /var/www/html/wp-content/plugins/airygen-seo && \
 		php -d xdebug.mode=off vendor/bin/phpunit --testdox \
 	'
+
+# Run the suite with PCOV and emit an HTML coverage report you can open in a
+# browser plus a text summary in the terminal. Report scope is src/ (phpunit.xml).
+# Open the report from the repo root: .coverage-html/index.html
+coverage:
+	docker compose exec wordpress sh -c '\
+		cd /var/www/html/wp-content/plugins/airygen-seo && \
+		php -d pcov.enabled=1 vendor/bin/phpunit \
+			--coverage-html .coverage-html \
+			--coverage-text \
+	'
+	@echo ""
+	@echo "HTML coverage report:"
+	@echo "  Browser (needs 'make up'): http://localhost:9000/wp-content/plugins/airygen-seo/.coverage-html/index.html"
+	@echo "  Local file:                file://$(CURDIR)/.coverage-html/index.html"
 
 lint:
 	pnpm exec eslint "packages/**/*.ts" "packages/**/*.tsx"

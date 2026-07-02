@@ -11,6 +11,12 @@ RUN apt-get update && apt-get install -y \
     curl \
     && docker-php-ext-install pdo pdo_mysql mysqli zip gd
 
+# PCOV: fast code-coverage driver for PHPUnit (kept off by default; the
+# `make coverage` target enables it per-run via -d pcov.enabled=1).
+RUN pecl install pcov \
+    && docker-php-ext-enable pcov \
+    && echo "pcov.enabled=0" > "$PHP_INI_DIR/conf.d/pcov.ini"
+
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
     && sed -i 's/;date.timezone =.*/date.timezone = Asia\/Taipei/g' $PHP_INI_DIR/php.ini \
     && sed -i 's/upload_max_filesize =.*/upload_max_filesize = 20M/g' $PHP_INI_DIR/php.ini \

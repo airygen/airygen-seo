@@ -29,3 +29,8 @@ __pycache__/
 
 # i18n working files (agent translation pipeline)
 languages/untranslated/
+
+# PHPUnit coverage output
+.coverage-html/
+coverage.txt
+.phpunit.cache/
