@@ -34,6 +34,7 @@ This file contains repository-specific guidance for coding agents working in Air
 - If a translatable string needs HTML such as `<code>` or links, build the final string with `sprintf()` placeholders instead of embedding markup directly inside the translation string.
 - Before adding a new string, check whether an existing shared format string can be reused with placeholders for module names, tokens, or snippet types.
 - Treat a module name as a proper noun only when the sentence clearly refers to the module itself. Generic UI terms such as "breadcrumb link" or "breadcrumb separator" should stay generic.
+- Translations are produced by the agent pipeline in `.claude/skills/i18n-translate/SKILL.md` (run `/i18n-translate` in Claude Code). The underlying steps: `make i18n.check` (rebuild POT, sync PO) → `make i18n.po2json.untranslated` (export missing entries) → agent translation of `languages/untranslated/*.json` → `make i18n.lint` (validate placeholders) → `make i18n.json2po` → `make i18n.build` (.mo + hashed .json artifacts). New locales: add to `SUPPORTED_LOCALES` in `scripts/create_po_locales.sh`, then `make i18n.new`.
 
 ## Editor and admin UI rules
 

@@ -86,8 +86,6 @@ This starts Docker containers, installs WordPress, activates the plugin, and lau
 | `make phpstan` | PHP static analysis |
 | `make lint` | ESLint |
 | `make lint.types` | TypeScript type checking |
-| `make i18n.check` | Rebuild POT and sync PO files |
-| `make i18n.build` | Generate MO and JSON translation artifacts |
 
 ### Tech stack
 

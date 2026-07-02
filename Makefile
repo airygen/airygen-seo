@@ -2,7 +2,7 @@
     phpcs phpstan phpcbf tests lint lint.types \
     wp.install wp.activate-plugin wp.install-woocommerce wp.init-dev-site dev \
     wp.install-core-languages wp.install-languages \
-    i18n.check i18n.build i18n.new i18n.po2json i18n.json2po \
+    i18n.check i18n.build i18n.new i18n.po2json i18n.po2json.untranslated i18n.lint i18n.json2po \
 	postdata.normalize screencast
 
 SUPPORTED_CORE_LANGS := zh_TW zh_CN de_DE fr_FR es_ES pt_PT pt_BR it_IT ja ko_KR ru_RU ar vi id_ID ur hi_IN bn_BD
@@ -182,6 +182,15 @@ i18n.new:
 # Export msgid/msgstr pairs from languages/airygen-seo-*.po to languages/untranslated/*.json.
 i18n.po2json:
 	python3 scripts/po_to_json.py
+
+# Export ONLY entries with empty msgstr, for the agent translation pipeline
+# (see .claude/skills/i18n-translate/SKILL.md — run /i18n-translate in Claude Code).
+i18n.po2json.untranslated:
+	python3 scripts/po_to_json.py --untranslated-only
+
+# Lint translated JSON in languages/untranslated: empty msgstr, placeholder/HTML mismatches.
+i18n.lint:
+	python3 scripts/check_translations.py
 
 # Write msgstr values from languages/untranslated/*.json back to languages/airygen-seo-*.po.
 i18n.json2po:

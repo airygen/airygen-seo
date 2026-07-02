@@ -32,7 +32,7 @@ def extract_lang_code(po_path: Path) -> str:
     return name.replace(PO_PREFIX, "", 1)
 
 
-def export_po(po_path: Path) -> Path:
+def export_po(po_path: Path, untranslated_only: bool = False) -> Path:
     if not po_path.exists():
         raise FileNotFoundError(f"PO file not found: {po_path}")
 
@@ -45,9 +45,12 @@ def export_po(po_path: Path) -> Path:
             continue
         if entry.msgid_plural:
             # Keep this JSON in strict msgid->msgstr shape.
-            payload[entry.msgid] = entry.msgstr_plural.get("0", "")
+            value = entry.msgstr_plural.get("0", "")
         else:
-            payload[entry.msgid] = entry.msgstr
+            value = entry.msgstr
+        if untranslated_only and value != "":
+            continue
+        payload[entry.msgid] = value
 
     lang = extract_lang_code(po_path)
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -67,6 +70,11 @@ def main() -> int:
         "--lang",
         help="Language code (e.g. ko_KR). Omit to export all languages.",
     )
+    parser.add_argument(
+        "--untranslated-only",
+        action="store_true",
+        help="Export only entries whose msgstr is still empty.",
+    )
     args = parser.parse_args()
 
     files = resolve_po_files(args.lang)
@@ -75,8 +83,9 @@ def main() -> int:
         return 1
 
     for po_file in files:
-        out = export_po(po_file)
-        print(f"Exported: {po_file} -> {out}")
+        out = export_po(po_file, untranslated_only=args.untranslated_only)
+        count = len(json.loads(out.read_text(encoding="utf-8")))
+        print(f"Exported: {po_file} -> {out} ({count} entries)")
 
     return 0
 

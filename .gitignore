@@ -19,3 +19,13 @@ languages/*.json
 languages/*.mo
 !languages/untranslated/
 !languages/untranslated/*.json
+.docker/wp/schema/backup.sql
+# Claude Code local settings
+.claude/settings.local.json
+
+# Local DB dumps
+.docker/wp/schema/backup.sql
+__pycache__/
+
+# i18n working files (agent translation pipeline)
+languages/untranslated/
