@@ -14,25 +14,9 @@ msgstr ""
 "X-Domain: airygen-seo\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
-#. Plugin Name of the plugin
-msgid "Airygen"
-msgstr "Airygen"
-
-#. Plugin URI of the plugin
-msgid "https://www.airygen.com/product/wordpress-seo-plugin/"
-msgstr "https://www.airygen.com/product/wordpress-seo-plugin/"
-
-#. Description of the plugin
-msgid "The best SEO plugin for WordPress to optimize your website for search engines and improve your rankings."
-msgstr "最佳的 WordPress SEO 外掛，可最佳化您的網站以供搜尋引擎並改善您的排名。"
-
 #. Author of the plugin
 msgid "Airygen Team"
 msgstr "Airygen 團隊"
-
-#. Author URI of the plugin
-msgid "https://github.com/airygen"
-msgstr "https://github.com/airygen"
 
 msgid "SEO title length"
 msgstr "SEO 標題長度"
@@ -148,47 +132,6 @@ msgstr "描述"
 msgid "Sent by %1$s via %2$s."
 msgstr "由 %1$s 透過 %2$s 傳送。"
 
-msgid "Subscription Status"
-msgstr "訂閱狀態"
-
-msgid "Manage your subscription details and version updates."
-msgstr "管理您的訂閱詳情和版本更新。"
-
-msgid "Subscription ID"
-msgstr "訂閱 ID"
-
-msgid "26 characters"
-msgstr "26 個字元"
-
-msgid "Your subscription details."
-msgstr "您的訂閱詳情。"
-
-msgid "Site Key"
-msgstr "網站金鑰"
-
-msgid "Paste the Site Key used for Link Suggestions."
-msgstr "貼上用於連結建議的網站金鑰。"
-
-msgid "This key authenticates to the Airygen API. Keep it safe and do not share."
-msgstr "此金鑰用於向 Airygen API 進行身份驗證。請妥善保管，不要分享。"
-
-msgid "Save Subscription"
-msgstr "儲存訂閱"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use"
-msgstr "使用"
-
-msgid "Generate and browse AI suggestions for this taxonomy page title and description."
-msgstr "產生並瀏覽此分類法頁面標題和描述的 AI 建議。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "SERP CTR Booster"
-msgstr "SERP CTR 提升器"
-
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
@@ -196,82 +139,23 @@ msgid "Close"
 msgstr "關閉"
 
 #: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generate"
-msgstr "產生"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Browse"
-msgstr "瀏覽"
-
-msgid "Taxonomy terms do not include body content, so Airygen analyzes the latest five related post titles to generate suggestions."
-msgstr "分類法項目不包含內文內容，因此 Airygen 分析最新的五個相關文章標題以產生建議。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Language"
-msgstr "語言"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the output language for suggestions."
-msgstr "選擇建議的輸出語言。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Focus keyphrase"
 msgstr "焦點關鍵字"
 
-msgid "Used when Include keyword is enabled."
-msgstr "在啟用包含關鍵字時使用。"
-
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Include keyword"
-msgstr "包含關鍵字"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Yes"
 msgstr "是"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "No"
 msgstr "否"
 
-msgid "Include the focus keyphrase when generating title and description."
-msgstr "產生標題和描述時包含焦點關鍵字。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generating…"
-msgstr "產生中⋯"
-
-msgid "Analyzing your taxonomy context…"
-msgstr "正在分析您的分類法脈絡⋯"
-
-msgid "This can take up to ~15 seconds depending on content. Please keep this window open."
-msgstr "這可能需要約 15 秒，取決於內容。請保持此視窗開啟。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Apply selected"
-msgstr "套用所選項目"
-
-msgid "Please provide a valid log date."
-msgstr "請提供有效的紀錄日期。"
-
+#. Plugin Name of the plugin
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 msgid "Airygen SEO"
 msgstr "Airygen SEO"
 
-#: build/admin/airygen-app.js
 msgid "Dashboard"
 msgstr "儀表板"
 
@@ -283,22 +167,12 @@ msgstr "設定"
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
-msgid "AI Assist"
-msgstr "AI 輔助"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Topic Cluster"
 msgstr "主題叢集"
 
 #: build/admin/airygen-app.js
 msgid "Alerts"
 msgstr "警示"
-
-#: build/admin/airygen-app.js
-msgid "Subscription"
-msgstr "訂閱"
 
 #: build/admin/airygen-app.js
 msgid "Migration"
@@ -372,48 +246,8 @@ msgstr "課程"
 msgid "Course instance"
 msgstr "課程實例"
 
-msgid "API key format is invalid."
-msgstr "API 金鑰格式無效。"
-
-msgid "API key is required."
-msgstr "需要 API 金鑰。"
-
-msgid "Live validation is temporarily unavailable. Showing last successful verification snapshot."
-msgstr "即時驗證暫時無法使用，顯示最後一次成功驗證的快照。"
-
-msgid "Unable to contact the subscription API."
-msgstr "無法聯繫訂閱 API。"
-
-msgid "Invalid record id."
-msgstr "無效的記錄 ID。"
-
-#: build/admin/airygen-app.js
-msgid "Unable to delete record."
-msgstr "無法刪除記錄。"
-
-msgid "Invalid post id."
-msgstr "無效的文章 ID。"
-
 msgid "Post not found."
 msgstr "找不到文章。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Please set a focus keyword for this post before generating."
-msgstr "請在產生前為此文章設定焦點關鍵字。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Please provide source content before generating."
-msgstr "請在產生前提供來源內容。"
-
-msgid "Unable to generate article."
-msgstr "無法產生文章。"
-
-msgid "Invalid gateway response."
-msgstr "無效的閘道回應。"
-
-msgid "Unable to store Article Builder record."
-msgstr "無法儲存文章建立器記錄。"
 
 msgid "Airygen Author SEO"
 msgstr "Airygen Author SEO"
@@ -432,33 +266,6 @@ msgstr "頁面 %s"
 #: build/admin/airygen-app.js
 msgid "Author"
 msgstr "作者"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Please enter a topic before generating."
-msgstr "請在產生前輸入主題。"
-
-msgid "Unable to generate blueprint."
-msgstr "無法產生藍圖。"
-
-msgid "Unable to store Content Blueprint record."
-msgstr "無法儲存內容藍圖記錄。"
-
-msgid "Please add content before generating FAQ items."
-msgstr "請在產生常見問題項目前新增內容。"
-
-msgid "Unable to generate FAQ items."
-msgstr "無法產生常見問題項目。"
-
-msgid "Unable to store FAQ record."
-msgstr "無法儲存常見問題記錄。"
-
-msgid "Unable to update FAQ display status."
-msgstr "無法更新常見問題顯示狀態。"
-
-#: build/admin/airygen-app.js
-msgid "Answers to What You're Probably Thinking"
-msgstr "你可能也想知道的答案"
 
 msgid "Invalid action."
 msgstr "無效的動作。"
@@ -858,21 +665,6 @@ msgstr "最小連結數量"
 msgid "Minimum external link count required for pass."
 msgstr "通過所需的最小外部連結數量。"
 
-msgid "Term not found."
-msgstr "找不到分類項目。"
-
-msgid "A valid post or term is required."
-msgstr "需要有效的文章或分類項目。"
-
-msgid "Please set a focus keyword before generating."
-msgstr "請在產生前設定焦點關鍵字。"
-
-msgid "Unable to generate suggestions."
-msgstr "無法產生建議。"
-
-msgid "Unable to store CTR booster record."
-msgstr "無法儲存 CTR 提升器記錄。"
-
 msgid "Airygen SEO: Core sitemap availability"
 msgstr "Airygen SEO：核心網站地圖可用性"
 
@@ -1106,69 +898,16 @@ msgstr "診斷"
 msgid "Table of contents"
 msgstr "目錄"
 
-#: build/classic-editor/airygen-editor.js
-msgid "Unable to load records."
-msgstr "無法載入記錄。"
-
-msgid "Generating suggestions..."
-msgstr "產生建議中..."
-
-msgid "Generation failed."
-msgstr "產生失敗。"
-
-msgid "Generated successfully. Review and apply from Browse."
-msgstr "產生成功。從瀏覽中檢視並套用。"
-
-msgid "Select fields and click Apply selected."
-msgstr "選擇欄位並點選「套用選取項目」。"
-
-msgid "No records yet."
-msgstr "尚無記錄。"
-
-msgid "Applied suggestion. Save term to persist changes."
-msgstr "已套用建議。請儲存分類項目以保留變更。"
-
-msgid "Untitled suggestion"
-msgstr "無標題建議"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Keyword"
-msgstr "關鍵字"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Meta title"
 msgstr "中繼標題"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Meta description"
 msgstr "中繼描述"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Excerpt"
 msgstr "摘錄"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generating suggestions…"
-msgstr "產生建議中⋯"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Refining output…"
-msgstr "精煉輸出中⋯"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Almost ready…"
-msgstr "快完成了⋯"
 
 msgid "Custom SEO title for this taxonomy page. Leave blank to use the default value from settings."
 msgstr "此分類法頁面的自訂 SEO 標題。留空則使用設定中的預設值。"
@@ -1371,22 +1110,6 @@ msgstr "主題叢集"
 msgid "Continue with the main article"
 msgstr "繼續主文章內容"
 
-msgid "Please add content before generating topics."
-msgstr "請在產生主題前新增內容。"
-
-msgid "Unable to generate topics."
-msgstr "無法產生主題。"
-
-msgid "Unable to store topic record."
-msgstr "無法儲存主題記錄。"
-
-msgid "Unable to update topic display status."
-msgstr "無法更新主題顯示狀態。"
-
-#: build/admin/airygen-app.js
-msgid "You Might Also Want to Know…"
-msgstr "您可能還想了解……"
-
 msgid "You are not allowed to preview WooCommerce schema."
 msgstr "您無權預覽 WooCommerce 結構描述。"
 
@@ -1395,29 +1118,6 @@ msgstr "WooCommerce 不可用。"
 
 msgid "Open the Airygen SEO dashboard"
 msgstr "開啟 Airygen SEO 儀表板"
-
-#. translators: %s: directory path
-#, php-format
-msgid "Unable to create debug directory at %s."
-msgstr "無法在 %s 建立除錯目錄。"
-
-msgid "Subscription has expired."
-msgstr "訂閱已過期。"
-
-msgid "The system is busy. Please try again later."
-msgstr "系統忙碌中。請稍後再試。"
-
-msgid "Balance is insufficient. Please top up or wait for the next refresh cycle."
-msgstr "餘額不足。請儲值或等待下一個刷新週期。"
-
-msgid "Update package is authenticated and ready to download."
-msgstr "更新套件已通過驗證，可以下載。"
-
-msgid "A valid subscription key is required to download and install updates."
-msgstr "下載並安裝更新需要有效的訂閱金鑰。"
-
-msgid "Enter your key in Airygen Settings > Subscription."
-msgstr "請在 Airygen 設定 > 訂閱中輸入您的金鑰。"
 
 #: build/admin/airygen-app.js
 msgid "Close modal"
@@ -1501,14 +1201,6 @@ msgstr "重新載入"
 #: build/admin/airygen-app.js
 msgid "More modules"
 msgstr "更多模組"
-
-#: build/admin/airygen-app.js
-msgid "Starter module"
-msgstr "入門模組"
-
-#: build/admin/airygen-app.js
-msgid "Expert module"
-msgstr "專家模組"
 
 #: build/admin/airygen-app.js
 msgid "Background Process"
@@ -1625,14 +1317,6 @@ msgstr "正在載入 %s……"
 msgid "No migration tools available yet."
 msgstr "尚無可用的遷移工具。"
 
-#. translators: %s is the record type label, such as CTR booster or FAQ.
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "No %s records yet."
-msgstr "尚無 %s 記錄。"
-
 #: build/admin/airygen-app.js
 msgid "No logs yet."
 msgstr "尚無紀錄。"
@@ -1663,17 +1347,9 @@ msgid "No %1$s yet. Add one to configure %2$s."
 msgstr "尚無 %1$s。請新增一個以設定 %2$s。"
 
 #: build/admin/airygen-app.js
-msgid "Directory not found"
-msgstr "找不到目錄"
-
-#: build/admin/airygen-app.js
 #: build/classic-editor/airygen-editor.js
 msgid "Loading…"
 msgstr "載入中⋯"
-
-#: build/admin/airygen-app.js
-msgid "Debug Status"
-msgstr "除錯狀態"
 
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
@@ -1686,24 +1362,12 @@ msgid "Enable Debug Mode"
 msgstr "啟用除錯模式"
 
 #: build/admin/airygen-app.js
-msgid "Enable debug logging to file."
-msgstr "啟用除錯紀錄到檔案。"
-
-#: build/admin/airygen-app.js
 msgid "Force Classic Editor"
 msgstr "強制傳統編輯器"
 
 #: build/admin/airygen-app.js
-msgid "Disable the block editor and load Classic Editor for testing."
-msgstr "停用區塊編輯器並載入傳統編輯器以供測試。"
-
-#: build/admin/airygen-app.js
 msgid "Debug level"
 msgstr "除錯等級"
-
-#: build/admin/airygen-app.js
-msgid "Choose how much debug information is recorded."
-msgstr "選擇要記錄多少 debug 資訊。"
 
 #: build/admin/airygen-app.js
 msgid "Error"
@@ -1723,76 +1387,12 @@ msgid "Refresh"
 msgstr "重新整理"
 
 #: build/admin/airygen-app.js
-msgid "Log Directory"
-msgstr "紀錄目錄"
-
-#: build/admin/airygen-app.js
-msgid "Location where logs are stored."
-msgstr "紀錄儲存的位置。"
-
-#: build/admin/airygen-app.js
-msgid "No directory configured"
-msgstr "未設定目錄"
-
-#: build/admin/airygen-app.js
-msgid "Slug"
-msgstr "代稱"
-
-#: build/admin/airygen-app.js
-msgid "N/A"
-msgstr "不適用"
-
-#: build/admin/airygen-app.js
-msgid "Debug mode must be enabled to view logs."
-msgstr "必須啟用除錯模式才能檢視紀錄。"
-
-#: build/admin/airygen-app.js
-msgid "log content"
-msgstr "記錄內容"
-
-#: build/admin/airygen-app.js
-msgid "Select a log file to view content."
-msgstr "選擇紀錄檔以檢視內容。"
-
-#: build/admin/airygen-app.js
-msgid "Log Files"
-msgstr "紀錄檔"
-
-#: build/admin/airygen-app.js
-msgid "Select a log file to view."
-msgstr "選擇要檢視的紀錄檔。"
-
-#: build/admin/airygen-app.js
-msgid "No logs found"
-msgstr "找不到紀錄"
-
-#: build/admin/airygen-app.js
-msgid "Load Log"
-msgstr "載入紀錄"
-
-#: build/admin/airygen-app.js
-msgid "Refresh Logs"
-msgstr "重新整理紀錄"
-
-#: build/admin/airygen-app.js
-msgid "Clear Logs"
-msgstr "清除紀錄"
-
-#: build/admin/airygen-app.js
 msgid "Configuration"
 msgstr "設定"
 
 #: build/admin/airygen-app.js
 msgid "Logs"
 msgstr "紀錄"
-
-#: build/admin/airygen-app.js
-msgid "Debug Information"
-msgstr "除錯資訊"
-
-#: build/admin/airygen-app.js
-msgid "View debug information and logs."
-msgstr "檢視除錯資訊和紀錄。"
 
 #: build/admin/airygen-app.js
 msgid "Bring SEO data from other plugins into Airygen SEO. Start with the tools you already use and migrate only what you need."
@@ -1993,124 +1593,8 @@ msgid "Import post-level redirects from SEOPress and add them to Airygen Redirec
 msgstr "從 SEOPress 匯入文章層級的重新導向並加入 Airygen Redirects。"
 
 #: build/admin/airygen-app.js
-msgid "Unable to load subscription status."
-msgstr "無法載入訂閱狀態。"
-
-#: build/admin/airygen-app.js
-msgid "API key verified."
-msgstr "API 金鑰已驗證。"
-
-#: build/admin/airygen-app.js
-msgid "Unable to verify API key."
-msgstr "無法驗證 API 金鑰。"
-
-#: build/admin/airygen-app.js
-msgid "API key expired. Please renew your subscription."
-msgstr "API 金鑰已過期。請續訂您的訂閱。"
-
-#: build/admin/airygen-app.js
-msgid "API key was revoked. Please generate a new key."
-msgstr "API 金鑰已撤銷。請產生新的金鑰。"
-
-#: build/admin/airygen-app.js
-msgid "API key does not match this site domain."
-msgstr "API 金鑰與此網站網域不符。"
-
-#: build/admin/airygen-app.js
-msgid "API key is invalid."
-msgstr "API 金鑰無效。"
-
-#: build/admin/airygen-app.js
-msgid "Subscription is active."
-msgstr "訂閱已啟用。"
-
-#: build/admin/airygen-app.js
-msgid "Verify your key to view the period end."
-msgstr "驗證您的金鑰以檢視期間結束日期。"
-
-#: build/admin/airygen-app.js
-msgid "Verified"
-msgstr "已驗證"
-
-#: build/admin/airygen-app.js
-msgid "Revoked"
-msgstr "已撤銷"
-
-#: build/admin/airygen-app.js
-msgid "Expired"
-msgstr "已過期"
-
-#: build/admin/airygen-app.js
-msgid "Mismatch"
-msgstr "不符"
-
-#: build/admin/airygen-app.js
-msgid "Invalid"
-msgstr "無效"
-
-#: build/admin/airygen-app.js
-msgid "Missing"
-msgstr "缺少"
-
-#: build/admin/airygen-app.js
-msgid "Refreshing credits, please retry shortly."
-msgstr "重新整理點數中，請稍後重試。"
-
-#: build/admin/airygen-app.js
-msgid "Unable to load credits right now."
-msgstr "目前無法載入點數。"
-
-#: build/admin/airygen-app.js
-msgid "Verify your key to load credits."
-msgstr "驗證您的金鑰以載入點數。"
-
-#: build/admin/airygen-app.js
-msgid "Subscription period"
-msgstr "訂閱期間"
-
-#: build/admin/airygen-app.js
-msgid "Subscription credits"
-msgstr "訂閱點數"
-
-#: build/admin/airygen-app.js
-msgid "Credit pack"
-msgstr "點數包"
-
-#: build/admin/airygen-app.js
-msgid "Connect your API key to unlock Airygen modules that require cloud services."
-msgstr "連接您的 API 金鑰，以解鎖需要雲端服務的 Airygen 模組。"
-
-#: build/admin/airygen-app.js
 msgid "API key"
 msgstr "API 金鑰"
-
-#: build/admin/airygen-app.js
-msgid "Verify your API key to unlock cloud features."
-msgstr "驗證您的 API 金鑰以解鎖雲端功能。"
-
-#: build/admin/airygen-app.js
-msgid "Your key is active and linked to this site."
-msgstr "您的金鑰已啟用並連結到此網站。"
-
-#: build/admin/airygen-app.js
-msgid "Enter a new key"
-msgstr "輸入新金鑰"
-
-#: build/admin/airygen-app.js
-msgid "Enter your API key"
-msgstr "輸入您的 API 金鑰"
-
-#: build/admin/airygen-app.js
-msgid "Enter and verify your key to enable cloud features."
-msgstr "輸入並驗證您的金鑰以啟用雲端功能。"
-
-#: build/admin/airygen-app.js
-msgid "Verifying…"
-msgstr "驗證中⋯"
-
-#: build/admin/airygen-app.js
-msgid "Verify & Save"
-msgstr "驗證並儲存"
 
 #: build/admin/airygen-app.js
 msgid "Status"
@@ -2121,64 +1605,10 @@ msgid "Debug"
 msgstr "除錯"
 
 #: build/admin/airygen-app.js
-msgid "Continue subscription"
-msgstr "繼續訂閱"
-
-#: build/admin/airygen-app.js
-msgid "AI-driven modules."
-msgstr "AI 驅動的模組。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content Blueprint"
-msgstr "內容藍圖"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Article Builder"
-msgstr "文章產生器"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Deep FAQ"
-msgstr "深度常見問題"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic Expansion"
-msgstr "主題擴展"
-
-#: build/admin/airygen-app.js
-msgid "Create compelling titles and meta descriptions to increase SERP click-through rate."
-msgstr "建立更吸引人的標題與中繼描述，以提升 SERP 點擊率。"
-
-#: build/admin/airygen-app.js
-msgid "Generate structured outlines with section summaries to plan your focus keyphrase."
-msgstr "產生包含段落摘要的結構化大綱來規劃您的焦點關鍵字。"
-
-#: build/admin/airygen-app.js
-msgid "Provide draft ideas to speed up writing."
-msgstr "提供草稿概念以加快寫作速度。"
-
-#: build/admin/airygen-app.js
-msgid "Improve LLM recommendation visibility and time on page."
-msgstr "改善 LLM 推薦可見度和頁面停留時間。"
-
-#: build/admin/airygen-app.js
-msgid "Reduce bounce rate and pogo-sticking to preserve SEO signals."
-msgstr "降低跳出率和跳躍式點擊以保留 SEO 訊號。"
-
-#: build/admin/airygen-app.js
 msgid "Records"
 msgstr "記錄"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Loading records…"
 msgstr "載入記錄中⋯"
 
@@ -2199,15 +1629,6 @@ msgid "Next"
 msgstr "下一個"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load CTR booster records."
-msgstr "無法載入 CTR 提升器記錄。"
-
-#: build/admin/airygen-app.js
-msgid "Created at"
-msgstr "建立於"
-
-#: build/admin/airygen-app.js
 msgid "Actions"
 msgstr "動作"
 
@@ -2216,200 +1637,8 @@ msgid "Record deleted."
 msgstr "記錄已刪除。"
 
 #: build/admin/airygen-app.js
-msgid "Deleting…"
-msgstr "刪除中⋯"
-
-#: build/admin/airygen-app.js
 msgid "Delete"
 msgstr "刪除"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for SERP CTR Booster."
-msgstr "設定 SERP CTR Booster 的預設偏好。"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated titles and descriptions."
-msgstr "選擇 AI 生成標題與描述的輸出語言。"
-
-#: build/admin/airygen-app.js
-msgid "Always include the focus keyword in AI suggestions."
-msgstr "始終在 AI 建議中納入焦點關鍵字。"
-
-#: build/admin/airygen-app.js
-msgid "Generated CTR booster suggestions. Records can be removed but not edited."
-msgstr "已產生 CTR 提升器建議。記錄可以移除但無法編輯。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "CTR booster"
-msgstr "CTR 提升器"
-
-#: build/admin/airygen-app.js
-msgid "More info"
-msgstr "更多資訊"
-
-#: build/admin/airygen-app.js
-msgid "AI Prompt Templates"
-msgstr "AI 提示詞範本"
-
-#: build/admin/airygen-app.js
-msgid "Choose scenario, content type, and tone templates for AI generation."
-msgstr "為 AI 生成選擇情境、內容類型與語氣範本。"
-
-#: build/admin/airygen-app.js
-msgid "Scenarios"
-msgstr "情境"
-
-#: build/admin/airygen-app.js
-msgid "Auto-sets content type + tone"
-msgstr "自動設定內容類型與語氣"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content type"
-msgstr "內容類型"
-
-#: build/admin/airygen-app.js
-msgid "Adjust manually if needed"
-msgstr "如有需要請手動調整"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Tone"
-msgstr "語氣"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load Content Blueprint records."
-msgstr "無法載入內容藍圖記錄。"
-
-#: build/admin/airygen-app.js
-msgid "Target words"
-msgstr "目標字數"
-
-#: build/admin/airygen-app.js
-msgid "Generated words"
-msgstr "產生的字數"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for Content Blueprint."
-msgstr "設定 Content Blueprint 的預設偏好。"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated blueprints."
-msgstr "選擇 AI 生成藍圖的輸出語言。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Depth"
-msgstr "深度"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "H2 only"
-msgstr "僅 H2"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "H2 + H3"
-msgstr "H2 + H3"
-
-#: build/admin/airygen-app.js
-msgid "Choose how deep the outline should go."
-msgstr "選擇大綱的深度。"
-
-#: build/admin/airygen-app.js
-msgid "Length"
-msgstr "長度"
-
-#: build/admin/airygen-app.js
-msgid "More items consume more credits and take longer to generate."
-msgstr "更多項目會消耗更多點數並需要更長時間產生。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Basic (400 words)"
-msgstr "基本（400 字）"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Standard (1000 words)"
-msgstr "標準（1000 字）"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Deep (1600 words)"
-msgstr "深度（1600 字）"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Pillar (2200 words)"
-msgstr "支柱（2200 字）"
-
-#: build/admin/airygen-app.js
-msgid "Match output length to your SEO goal."
-msgstr "將輸出長度與您的 SEO 目標相匹配。"
-
-#: build/admin/airygen-app.js
-msgid "Include the focus keyword in generated outlines."
-msgstr "在產生的大綱中包含焦點關鍵字。"
-
-#: build/admin/airygen-app.js
-msgid "Set keyword inclusion targets for each content length."
-msgstr "為每個內容長度設定關鍵字包含目標。"
-
-#: build/admin/airygen-app.js
-msgid "H1 keywords"
-msgstr "H1 關鍵字"
-
-#: build/admin/airygen-app.js
-msgid "H2 keywords"
-msgstr "H2 關鍵字"
-
-#: build/admin/airygen-app.js
-msgid "H3 keywords"
-msgstr "H3 關鍵字"
-
-#: build/admin/airygen-app.js
-msgid "Generated content blueprints. Records can be removed but not edited."
-msgstr "已產生內容藍圖。記錄可以移除但無法編輯。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load Article Builder records."
-msgstr "無法載入文章建立器記錄。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic"
-msgstr "主題"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for Article Builder."
-msgstr "設定 Article Builder 的預設偏好。"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated articles."
-msgstr "選擇 AI 生成文章的輸出語言。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Article length target"
-msgstr "文章長度目標"
-
-#: build/admin/airygen-app.js
-msgid "Match draft length to your publishing goal."
-msgstr "將草稿長度與您的發佈目標相匹配。"
-
-#: build/admin/airygen-app.js
-msgid "Generated article drafts. Records can be removed but not edited."
-msgstr "已產生文章草稿。記錄可以移除但無法編輯。"
 
 #: build/admin/airygen-app.js
 msgid "Set transparent color"
@@ -2538,16 +1767,6 @@ msgid "Font size"
 msgstr "字型大小"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "FAQ"
-msgstr "FAQ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load FAQ records."
-msgstr "無法載入常見問題記錄。"
-
-#: build/admin/airygen-app.js
 msgid "Snow Slate"
 msgstr "雪白石板"
 
@@ -2558,10 +1777,6 @@ msgstr "中性白色 + 淺灰色，配以清晰的石板色文字。"
 #: build/admin/airygen-app.js
 msgid "Honey Paper"
 msgstr "蜂蜜紙"
-
-#: build/admin/airygen-app.js
-msgid "Soft parchment yellow for warm, readable FAQs."
-msgstr "柔和羊皮紙黃色，適合溫暖且易讀的常見問題。"
 
 #: build/admin/airygen-app.js
 msgid "Sky Breeze"
@@ -2600,10 +1815,6 @@ msgid "Post"
 msgstr "文章"
 
 #: build/admin/airygen-app.js
-msgid "Question"
-msgstr "問題"
-
-#: build/admin/airygen-app.js
 msgid "Layout"
 msgstr "版面配置"
 
@@ -2612,10 +1823,6 @@ msgstr "版面配置"
 #: build/classic-editor/airygen-editor.js
 msgid "Preview"
 msgstr "預覽"
-
-#: build/admin/airygen-app.js
-msgid "Configure manual output and automatic FAQ injection."
-msgstr "設定手動輸出與自動 FAQ 注入。"
 
 #: build/admin/airygen-app.js
 msgid "Allow template function, shortcode, and block output."
@@ -2633,10 +1840,6 @@ msgid "Block"
 msgstr "區塊"
 
 #: build/admin/airygen-app.js
-msgid "Automatically inject FAQ output into matched post types."
-msgstr "自動將 FAQ 輸出插入符合的文章類型。"
-
-#: build/admin/airygen-app.js
 msgid "Insert position"
 msgstr "插入位置"
 
@@ -2649,251 +1852,28 @@ msgid "After content"
 msgstr "內容後"
 
 #: build/admin/airygen-app.js
-msgid "Choose where FAQ output is injected in post content."
-msgstr "選擇 FAQ 輸出在文章內容中的插入位置。"
-
-#: build/admin/airygen-app.js
-msgid "Frequently Asked Questions"
-msgstr "常見問題"
-
-#: build/admin/airygen-app.js
-msgid "AI Generation"
-msgstr "AI 生成"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for FAQ generation."
-msgstr "設定 FAQ 生成的預設偏好。"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated FAQs."
-msgstr "選擇 AI 生成 FAQ 的輸出語言。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Answer length"
-msgstr "答案長度"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Short"
-msgstr "簡短"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Medium"
-msgstr "中等"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Long"
-msgstr "長"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Choose how long each answer should be."
-msgstr "選擇每個答案的長度。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Question count"
-msgstr "問題數量"
-
-#: build/admin/airygen-app.js
-msgid "How many FAQ items to generate per request."
-msgstr "每個請求要產生多少常見問題項目。"
-
-#: build/admin/airygen-app.js
 msgid "Scope"
 msgstr "範圍"
-
-#: build/admin/airygen-app.js
-msgid "Choose which post types can receive automatic FAQ injection."
-msgstr "選擇哪些文章類型可接收自動 FAQ 插入。"
 
 #: build/admin/airygen-app.js
 msgid "Templates"
 msgstr "範本"
 
 #: build/admin/airygen-app.js
-msgid "Choose a preset style for FAQ output."
-msgstr "為 FAQ 輸出選擇預設樣式。"
-
-#: build/admin/airygen-app.js
 msgid "Style"
 msgstr "樣式"
-
-#: build/admin/airygen-app.js
-msgid "Adjust spacing and borders for list and collapse layouts."
-msgstr "調整清單與收合版面的間距與邊框。"
 
 #: build/admin/airygen-app.js
 msgid "List"
 msgstr "清單"
 
 #: build/admin/airygen-app.js
-msgid "Collapse"
-msgstr "收合"
-
-#: build/admin/airygen-app.js
-msgid "Show FAQ border"
-msgstr "顯示常見問題邊框"
-
-#: build/admin/airygen-app.js
-msgid "Draw a border around the FAQ container."
-msgstr "在常見問題容器周圍繪製邊框。"
-
-#: build/admin/airygen-app.js
-msgid "Select the line style for the FAQ container border."
-msgstr "選擇常見問題容器邊框的線條樣式。"
-
-#: build/admin/airygen-app.js
-msgid "Set the border color for the list container."
-msgstr "設定清單容器的邊框顏色。"
-
-#: build/admin/airygen-app.js
-msgid "Adjust the thickness of the FAQ border."
-msgstr "調整 FAQ 邊框粗細。"
-
-#: build/admin/airygen-app.js
-msgid "FAQ padding"
-msgstr "FAQ 內距"
-
-#: build/admin/airygen-app.js
-msgid "Padding inside the FAQ list container."
-msgstr "常見問題清單容器內部的內距。"
-
-#: build/admin/airygen-app.js
-msgid "Background color of the FAQ list container."
-msgstr "FAQ 清單容器的背景顏色。"
-
-#: build/admin/airygen-app.js
-msgid "Question font color"
-msgstr "問題字型顏色"
-
-#: build/admin/airygen-app.js
-msgid "Text color for each FAQ question."
-msgstr "每個常見問題問題的文字顏色。"
-
-#: build/admin/airygen-app.js
-msgid "Question font size"
-msgstr "問題字型大小"
-
-#: build/admin/airygen-app.js
-msgid "Font size used for each question line."
-msgstr "每個問題列使用的字型大小。"
-
-#: build/admin/airygen-app.js
-msgid "Answer font color"
-msgstr "答案字型顏色"
-
-#: build/admin/airygen-app.js
-msgid "Text color for each answer line."
-msgstr "每個答案列的文字顏色。"
-
-#: build/admin/airygen-app.js
-msgid "Answer font size"
-msgstr "答案字型大小"
-
-#: build/admin/airygen-app.js
-msgid "Font size for the answer text."
-msgstr "答案文字的字型大小。"
-
-#: build/admin/airygen-app.js
-msgid "Collapse button"
-msgstr "收合按鈕"
-
-#: build/admin/airygen-app.js
-msgid "Collapse answers"
-msgstr "收合答案"
-
-#: build/admin/airygen-app.js
-msgid "Background for the plus/minus button."
-msgstr "加／減按鈕的背景。"
-
-#: build/admin/airygen-app.js
-msgid "Icon color"
-msgstr "圖示顏色"
-
-#: build/admin/airygen-app.js
-msgid "Color for the plus/minus icon."
-msgstr "加／減圖示的顏色。"
-
-#: build/admin/airygen-app.js
-msgid "Border color for the toggle button."
-msgstr "切換按鈕的邊框顏色。"
-
-#: build/admin/airygen-app.js
-msgid "Thickness of the toggle button border."
-msgstr "切換按鈕邊框的粗細。"
-
-#: build/admin/airygen-app.js
-msgid "Background color for each question row."
-msgstr "每個問題列的背景顏色。"
-
-#: build/admin/airygen-app.js
 msgid "Font color"
 msgstr "字型顏色"
 
 #: build/admin/airygen-app.js
-msgid "Text color for the question title."
-msgstr "問題標題的文字顏色。"
-
-#: build/admin/airygen-app.js
-msgid "Border color around each question row."
-msgstr "每個問題列周圍的邊框顏色。"
-
-#: build/admin/airygen-app.js
-msgid "Line style for the question border."
-msgstr "問題邊框的線條樣式。"
-
-#: build/admin/airygen-app.js
-msgid "Font size for the question text."
-msgstr "問題文字的字型大小。"
-
-#: build/admin/airygen-app.js
-msgid "Padding inside each question row."
-msgstr "每個問題列內部的內距。"
-
-#: build/admin/airygen-app.js
 msgid "Gap"
 msgstr "間距"
-
-#: build/admin/airygen-app.js
-msgid "Spacing between each question row."
-msgstr "每個問題列之間的間距。"
-
-#: build/admin/airygen-app.js
-msgid "Keep open"
-msgstr "保持開啟"
-
-#: build/admin/airygen-app.js
-msgid "Allow multiple answers to stay open."
-msgstr "允許同時展開多個答案。"
-
-#: build/admin/airygen-app.js
-msgid "Answer"
-msgstr "答案"
-
-#: build/admin/airygen-app.js
-msgid "Background for the expanded answer area."
-msgstr "展開後答案區域的背景。"
-
-#: build/admin/airygen-app.js
-msgid "Text color for the answer content."
-msgstr "答案內容的文字顏色。"
-
-#: build/admin/airygen-app.js
-msgid "Padding inside the answer panel."
-msgstr "答案面板內部的內距。"
-
-#: build/admin/airygen-app.js
-msgid "Preview may differ from the live site because theme styles are applied there."
-msgstr "預覽可能與正式網站不同，因為正式網站會套用佈景主題樣式。"
 
 #: build/admin/airygen-app.js
 msgid "Laptop"
@@ -2906,18 +1886,6 @@ msgstr "平板電腦"
 #: build/admin/airygen-app.js
 msgid "Cellphone"
 msgstr "手機"
-
-#: build/admin/airygen-app.js
-msgid "FAQ preview"
-msgstr "常見問題預覽"
-
-#: build/admin/airygen-app.js
-msgid "Preview is not available."
-msgstr "預覽不可用。"
-
-#: build/admin/airygen-app.js
-msgid "Generated FAQ records. Records can be removed but not edited."
-msgstr "已產生常見問題記錄。記錄可以移除但無法編輯。"
 
 #: build/admin/airygen-app.js
 msgid "Section body container"
@@ -2972,354 +1940,18 @@ msgid "Indent"
 msgstr "縮排"
 
 #: build/admin/airygen-app.js
-msgid "topic expansion"
-msgstr "主題擴展"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load topic records."
-msgstr "無法載入主題記錄。"
-
-#: build/admin/airygen-app.js
-msgid "Display"
-msgstr "顯示"
-
-#: build/admin/airygen-app.js
-msgid "Shown"
-msgstr "已顯示"
-
-#: build/admin/airygen-app.js
-msgid "Hidden"
-msgstr "隱藏"
-
-#: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "View"
 msgstr "檢視"
 
 #: build/admin/airygen-app.js
-msgid "Soft parchment yellow for warm, readable topics."
-msgstr "柔和羊皮紙黃色，適合溫暖且易讀的主題。"
-
-#: build/admin/airygen-app.js
-msgid "Configure manual output and automatic topic expansion injection."
-msgstr "設定手動輸出與主題延伸自動注入。"
-
-#: build/admin/airygen-app.js
-msgid "Automatically inject topic expansion output into content."
-msgstr "自動將主題延伸輸出插入內容。"
-
-#: build/admin/airygen-app.js
-msgid "Choose where topic expansion output is injected in post content."
-msgstr "選擇主題延伸輸出在文章內容中的插入位置。"
-
-#: build/admin/airygen-app.js
-msgid "Set how AI generates related topics."
-msgstr "設定 AI 產生相關主題的方式。"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for related topics."
-msgstr "選擇相關主題的輸出語言。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic length"
-msgstr "主題長度"
-
-#: build/admin/airygen-app.js
-msgid "Choose the length for each topic suggestion."
-msgstr "選擇每個主題建議的長度。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic count"
-msgstr "主題數量"
-
-#: build/admin/airygen-app.js
-msgid "How many related topics to generate per request."
-msgstr "每個請求要產生多少相關主題。"
-
-#: build/admin/airygen-app.js
-msgid "Pick a preset theme for topic output."
-msgstr "為主題輸出選取預設主題。"
-
-#: build/admin/airygen-app.js
-msgid "Adjust how the related topics list appears on the page."
-msgstr "調整相關主題清單在頁面上的呈現方式。"
-
-#: build/admin/airygen-app.js
-msgid "Set whether topic text is bold, italic, or underlined."
-msgstr "設定主題文字是否為粗體、斜體或底線。"
-
-#: build/admin/airygen-app.js
-msgid "Color for each topic link."
-msgstr "每個主題連結的顏色。"
-
-#: build/admin/airygen-app.js
-msgid "Font size used for each topic link."
-msgstr "每個主題連結使用的字型大小。"
-
-#: build/admin/airygen-app.js
 msgid "Choose whether each line uses bullets, numbers, or plain text."
 msgstr "選擇每一行使用項目符號、編號或純文字。"
 
 #: build/admin/airygen-app.js
-msgid "Set vertical spacing between each topic item."
-msgstr "設定每個主題項目之間的垂直間距。"
-
-#: build/admin/airygen-app.js
-msgid "Topic Expansion preview"
-msgstr "主題擴展預覽"
-
-#: build/admin/airygen-app.js
 msgid "Preview is unavailable."
 msgstr "預覽不可用。"
-
-#: build/admin/airygen-app.js
-msgid "SEO safety"
-msgstr "SEO 安全性"
-
-#: build/admin/airygen-app.js
-msgid "Allowing indexation can briefly lift long-tail traffic, but search engines may later remove those pages and harm site-wide SEO authority. Reduce duplication and focus on real user value."
-msgstr "允許索引可能會短暫提升長尾流量，但搜尋引擎之後可能移除這些頁面，並損害整體網站的 SEO 權重。請降低重複內容並聚焦真正的使用者價值。"
-
-#: build/admin/airygen-app.js
-msgid "Prevent search engines from indexing highly repetitive, low-quality content."
-msgstr "防止搜尋引擎索引高度重複的低品質內容。"
-
-#: build/admin/airygen-app.js
-msgid "Disable indexing"
-msgstr "停用索引"
-
-#: build/admin/airygen-app.js
-msgid "Add nofollow to virtual links"
-msgstr "為虛擬連結新增 nofollow"
-
-#: build/admin/airygen-app.js
-msgid "Add rel=\"nofollow\" to reduce crawl budget spent on generated links."
-msgstr "新增 rel=\"nofollow\" 以減少產生連結消耗的檢索預算。"
-
-#: build/admin/airygen-app.js
-msgid "Generated topic suggestions. Records can be removed but not edited."
-msgstr "已產生主題建議。記錄可以移除但無法編輯。"
-
-#: build/admin/airygen-app.js
-msgid "Auto detect"
-msgstr "自動偵測"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "English (United States)"
-msgstr "英文（美國）"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "English"
-msgstr "英文"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Chinese (Traditional)"
-msgstr "繁體中文"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Chinese (Simplified)"
-msgstr "簡體中文"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Japanese"
-msgstr "日文"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Korean"
-msgstr "韓文"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Technology"
-msgstr "科技"
-
-#: build/admin/airygen-app.js
-msgid "Product, engineering, AI, and system-focused technical content."
-msgstr "以產品、工程、AI 與系統為主的技術內容。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Business"
-msgstr "商家"
-
-#: build/admin/airygen-app.js
-msgid "Growth, operations, strategy, and outcome-oriented business content."
-msgstr "以成長、營運、策略與成果為導向的商業內容。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Finance"
-msgstr "金融"
-
-#: build/admin/airygen-app.js
-msgid "Numbers-first finance and investment analysis with risk context."
-msgstr "以數字為先、附風險背景的財務與投資分析。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Health"
-msgstr "健康"
-
-#: build/admin/airygen-app.js
-msgid "Evidence-based health content with cautious and compliant language."
-msgstr "以謹慎且合規語言撰寫的實證健康內容。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Lifestyle"
-msgstr "生活風格"
-
-#: build/admin/airygen-app.js
-msgid "Practical lifestyle advice with real-world trade-offs."
-msgstr "具實際生活取捨的實用生活建議。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Education"
-msgstr "教育"
-
-#: build/admin/airygen-app.js
-msgid "Learning-focused content with clear outcomes and methods."
-msgstr "以明確成果與方法為導向的學習型內容。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Professional"
-msgstr "專業"
-
-#: build/admin/airygen-app.js
-msgid "Domain-expert content for consulting and regulated industries."
-msgstr "適用於顧問與受監管產業的領域專家內容。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "General"
-msgstr "一般"
-
-#: build/admin/airygen-app.js
-msgid "Balanced, broadly readable content for mixed audiences."
-msgstr "適合混合受眾、整體易讀的均衡內容。"
-
-#: build/admin/airygen-app.js
-msgid "Formal, precise, and decision-ready writing style."
-msgstr "正式、精確且適合決策的寫作風格。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Conversational"
-msgstr "對話式"
-
-#: build/admin/airygen-app.js
-msgid "Natural and friendly style for broad readability."
-msgstr "自然親切、適合廣泛讀者的風格。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Technical"
-msgstr "技術性"
-
-#: build/admin/airygen-app.js
-msgid "Spec-like style with implementation detail and precision."
-msgstr "類似規格說明、具實作細節與精確度的風格。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Storytelling"
-msgstr "說故事"
-
-#: build/admin/airygen-app.js
-msgid "Narrative-led style with clear takeaways and context."
-msgstr "以敘事為主、具清晰重點與背景的風格。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Instructional"
-msgstr "教學式"
-
-#: build/admin/airygen-app.js
-msgid "Action-first, step-by-step guidance style."
-msgstr "以動作為先、逐步引導的說明風格。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Minimalist"
-msgstr "極簡主義"
-
-#: build/admin/airygen-app.js
-msgid "Compact, direct writing style with minimal filler."
-msgstr "精簡直接、盡量減少贅字的寫作風格。"
-
-#: build/admin/airygen-app.js
-msgid "Quick answers for long‑tail keywords and fast indexing."
-msgstr "長尾關鍵字的快速答案和快速索引。"
-
-#: build/admin/airygen-app.js
-msgid "Balanced depth for most SEO topics."
-msgstr "適合多數 SEO 主題的均衡深度。"
-
-#: build/admin/airygen-app.js
-msgid "More detail for competitive keywords and comparisons."
-msgstr "為競爭性關鍵字和比較提供更多詳情。"
-
-#: build/admin/airygen-app.js
-msgid "The main article in a topic cluster that everything links to."
-msgstr "主題叢集中所有內容都連結到的主要文章。"
-
-#: build/admin/airygen-app.js
-msgid "Business report"
-msgstr "商家報告"
-
-#: build/admin/airygen-app.js
-msgid "Data-driven structure for decision-making and business review."
-msgstr "以資料為基礎的結構，適用於決策制定與業務審查。"
-
-#: build/admin/airygen-app.js
-msgid "Tech blog"
-msgstr "技術部落格"
-
-#: build/admin/airygen-app.js
-msgid "Technical but easy-to-read format for broader audiences."
-msgstr "技術性但易於閱讀、適合廣泛受眾的格式。"
-
-#: build/admin/airygen-app.js
-msgid "Tutorial"
-msgstr "教學"
-
-#: build/admin/airygen-app.js
-msgid "Step-by-step teaching format focused on actionable learning."
-msgstr "以可操作學習為主的逐步教學格式。"
-
-#: build/admin/airygen-app.js
-msgid "Marketing content"
-msgstr "行銷內容"
-
-#: build/admin/airygen-app.js
-msgid "Story-led format focused on engagement and conversion."
-msgstr "以故事為主、著重互動與轉換的格式。"
-
-#: build/admin/airygen-app.js
-msgid "Technical document"
-msgstr "技術文件"
-
-#: build/admin/airygen-app.js
-msgid "Precise engineering-style format for implementation details."
-msgstr "適用於實作細節的精確工程風格格式。"
-
-#: build/admin/airygen-app.js
-msgid "AI-assisted writing and strategic planning for SEO content."
-msgstr "用於 SEO 內容的 AI 輔助寫作與策略規劃。"
 
 #: build/admin/airygen-app.js
 msgid "Configure"
@@ -3616,7 +2248,6 @@ msgid "Name"
 msgstr "名稱"
 
 #: build/admin/airygen-app.js
-#: build/classic-editor/airygen-editor.js
 msgid "Pillar"
 msgstr "支柱"
 
@@ -5950,88 +4581,16 @@ msgid "Open in a new tab to verify the generated sitemap index."
 msgstr "在新分頁開啟以驗證產生的網站地圖索引。"
 
 #: build/admin/airygen-app.js
-msgid "Head"
-msgstr "Head 區段"
-
-#: build/admin/airygen-app.js
-msgid "Snippets in this area are injected into the <head> section."
-msgstr "此區域的程式碼片段會注入 <head> 區段。"
-
-#: build/admin/airygen-app.js
 msgid "Body"
 msgstr "本文"
-
-#: build/admin/airygen-app.js
-msgid "Snippets in this area are injected right after <body>."
-msgstr "此區域的程式碼片段會注入於 <body> 之後。"
 
 #: build/admin/airygen-app.js
 msgid "Footer"
 msgstr "頁尾"
 
 #: build/admin/airygen-app.js
-msgid "Snippets in this area are injected before </body>."
-msgstr "此區域的程式碼片段會注入於 </body> 之前。"
-
-#: build/admin/airygen-app.js
-msgid "Disabled snippets staging area"
-msgstr "已停用的程式碼片段暫存區"
-
-#: build/admin/airygen-app.js
-msgid "Keep snippets here when you do not want them rendered."
-msgstr "當您不希望程式碼片段被渲染時，請將其保存在此處。"
-
-#: build/admin/airygen-app.js
 msgid "No description"
 msgstr "無描述"
-
-#: build/admin/airygen-app.js
-msgid "Code Snippets"
-msgstr "程式碼片段"
-
-#: build/admin/airygen-app.js
-msgid "Configure GA4, GTM, and custom tracking snippets for your site."
-msgstr "為網站設定 GA4、GTM 與自訂追蹤片段。"
-
-#: build/admin/airygen-app.js
-msgid "Paste tracking IDs. Airygen SEO prints GA4/GTM tags automatically when IDs are set."
-msgstr "貼上追蹤 ID。設定 ID 後，Airygen SEO 會自動輸出 GA4/GTM 標籤。"
-
-#: build/admin/airygen-app.js
-msgid "Google Analytics 4"
-msgstr "Google Analytics 4"
-
-#: build/admin/airygen-app.js
-msgid "Enable GA4 tracking"
-msgstr "啟用 GA4 追蹤"
-
-#: build/admin/airygen-app.js
-msgid "Measurement ID"
-msgstr "評估 ID"
-
-#. translators: %s is an HTML code tag for the GA4 ID prefix (G-).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste your Google Analytics 4 ID from Google Analytics Admin. It usually starts with %s."
-msgstr "從 Google Analytics 管理介面貼上您的 Google Analytics 4 ID，通常以 %s 開頭。"
-
-#: build/admin/airygen-app.js
-msgid "Google Tag Manager"
-msgstr "Google Tag Manager"
-
-#: build/admin/airygen-app.js
-msgid "Enable GTM tracking"
-msgstr "啟用 GTM 追蹤"
-
-#: build/admin/airygen-app.js
-msgid "Container ID"
-msgstr "容器 ID"
-
-#. translators: %s is an HTML code tag for the GTM container prefix (GTM-).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste your Google Tag Manager container ID. It usually starts with %s."
-msgstr "貼上您的 Google Tag Manager 容器 ID，通常以 %s 開頭。"
 
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
@@ -6040,42 +4599,8 @@ msgid "Custom"
 msgstr "自訂"
 
 #: build/admin/airygen-app.js
-msgid "Create reusable snippets and drag them between output locations."
-msgstr "建立可重複使用的摘要，並在不同輸出位置之間拖曳。"
-
-#: build/admin/airygen-app.js
-msgid "Add Snippet"
-msgstr "新增摘要"
-
-#: build/admin/airygen-app.js
-msgid "Add snippet"
-msgstr "新增摘要"
-
-#: build/admin/airygen-app.js
 msgid "Save changes"
 msgstr "儲存變更"
-
-#: build/admin/airygen-app.js
-msgid "Internal reference only. This is not output on the frontend."
-msgstr "僅供內部參考，不會在前端輸出。"
-
-#: build/admin/airygen-app.js
-msgid "Code"
-msgstr "程式碼"
-
-#. translators: %s is an HTML code tag for script tags (<script>).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste code only. Do not include %s tags."
-msgstr "僅貼上程式碼，請勿包含 %s 標籤。"
-
-#: build/admin/airygen-app.js
-msgid "Injection position"
-msgstr "注入位置"
-
-#: build/admin/airygen-app.js
-msgid "Inactive"
-msgstr "未啟用"
 
 #: build/admin/airygen-app.js
 msgid "Site Verification"
@@ -8908,10 +7433,6 @@ msgid "Manage the sitemap index and exposed post types. When enabled, Airygen SE
 msgstr "管理網站地圖索引與公開的文章類型。啟用後，Airygen SEO 將取代 WordPress 預設的網站地圖。"
 
 #: build/admin/airygen-app.js
-msgid "Manage GA4, GTM, and custom tracking snippets in one place."
-msgstr "在同一處管理 GA4、GTM 與自訂追蹤程式碼片段。"
-
-#: build/admin/airygen-app.js
 msgid "Add site verification tokens for search engines and webmaster platforms."
 msgstr "新增搜尋引擎與網站管理平台的網站驗證權杖。"
 
@@ -8950,10 +7471,6 @@ msgstr "提供編輯器內 SEO 評分面板和 REST 端點。"
 #: build/admin/airygen-app.js
 msgid "Monitor outbound URLs for errors once link counting completes."
 msgstr "連結計數完成後監控出站網址的錯誤。"
-
-#: build/admin/airygen-app.js
-msgid "AI-powered helpers for titles, descriptions, and content improvements."
-msgstr "用於標題、描述與內容優化的 AI 輔助工具。"
 
 #: build/admin/airygen-app.js
 msgid "Create and prioritize redirect rules for your site."
@@ -9029,10 +7546,6 @@ msgid "Assign pillar and cluster relationships while editing."
 msgstr "可在編輯時設定支柱內容與叢集關係。"
 
 #: build/admin/airygen-app.js
-msgid "AI suggestions and CTR improvements while you edit."
-msgstr "在編輯時提供 AI 建議與 CTR 改善。"
-
-#: build/admin/airygen-app.js
 msgid "Failed to load debug info."
 msgstr "載入除錯資訊失敗。"
 
@@ -9053,14 +7566,6 @@ msgid "Failed to enable debug mode."
 msgstr "啟用除錯模式失敗。"
 
 #: build/admin/airygen-app.js
-msgid "Logs cleared."
-msgstr "紀錄已清除。"
-
-#: build/admin/airygen-app.js
-msgid "Failed to clear logs."
-msgstr "清除紀錄失敗。"
-
-#: build/admin/airygen-app.js
 msgid "Classic editor mode enabled for testing."
 msgstr "已啟用傳統編輯器模式以供測試。"
 
@@ -9079,14 +7584,6 @@ msgstr "除錯等級已更新。"
 #: build/admin/airygen-app.js
 msgid "Failed to update debug level."
 msgstr "更新除錯等級失敗。"
-
-#: build/admin/airygen-app.js
-msgid "Log file not found."
-msgstr "找不到紀錄檔。"
-
-#: build/admin/airygen-app.js
-msgid "Failed to load log file."
-msgstr "載入紀錄檔失敗。"
 
 #: build/admin/airygen-app.js
 msgid "Failed to load settings."
@@ -9129,32 +7626,12 @@ msgid "notify module"
 msgstr "通知模組"
 
 #: build/admin/airygen-app.js
-msgid "This paid module cannot be enabled with the current subscription status."
-msgstr "目前的訂閱狀態下無法啟用此付費模組。"
-
-#: build/admin/airygen-app.js
 msgid "Related Posts requires enabling Link Suggestions first."
 msgstr "相關文章需要先啟用連結建議功能。"
 
 #: build/admin/airygen-app.js
 msgid "Airygen SEO Settings"
 msgstr "Airygen SEO 設定"
-
-#: build/admin/airygen-app.js
-msgid "Subscription inactive"
-msgstr "訂閱未啟用"
-
-#: build/admin/airygen-app.js
-msgid "Continue to disable"
-msgstr "繼續停用"
-
-#: build/admin/airygen-app.js
-msgid "Subscription is inactive. Enabled paid modules remain available, but new paid modules cannot be enabled until renewal."
-msgstr "訂閱未啟用，已啟用的付費模組仍可使用，但在續訂前無法啟用新的付費模組。"
-
-#: build/admin/airygen-app.js
-msgid "View plans"
-msgstr "查看方案"
 
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
@@ -9315,7 +7792,6 @@ msgstr "設定焦點關鍵字以檢查密度。"
 msgid "Focus keyphrase density is 0%. Add it naturally to the content."
 msgstr "焦點關鍵字密度為 0%。將其自然地新增到內容中。"
 
-#. translators: percentage range for focus keyphrase density.
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "Adjust focus keyphrase density to 0.5%–2%."
@@ -9359,7 +7835,6 @@ msgid "To avoid keyword stuffing, each long-tail keyphrase should be supported b
 msgstr "為避免關鍵字堆砌，每個長尾關鍵字應由至少 150 字的說明內容支援；不要在沒有有意義的文字的情況下單獨重複關鍵字。"
 
 #: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Got it"
 msgstr "知道了"
 
@@ -9678,407 +8153,14 @@ msgstr "尚無建議。儲存文章以便我們索引其關鍵字。"
 msgid "Insert"
 msgstr "插入"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your content…"
-msgstr "正在分析您的內容⋯"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Subscription is inactive. AI generation is unavailable until renewal."
-msgstr "訂閱未啟用，續訂前無法使用 AI 生成。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Detected content languages:"
-msgstr "偵測到的內容語言："
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Primary language:"
-msgstr "主要語言："
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Selected output language:"
-msgstr "已選取的輸出語言："
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Continue?"
-msgstr "要繼續嗎？"
-
-#: build/block-editor/airygen-editor.js
-msgid "SERP CTR Booster generated. Review and apply when ready."
-msgstr "SERP CTR 提升器已產生。準備好時檢視並套用。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate CTR booster suggestions."
-msgstr "無法產生 CTR 提升器建議。"
-
-#: build/block-editor/airygen-editor.js
-msgid "FAQ generated. Review and apply when ready."
-msgstr "常見問題已產生。準備好時檢視並套用。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate FAQ suggestions."
-msgstr "無法產生常見問題建議。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Topic Expansion generated. Review and apply when ready."
-msgstr "主題擴展已產生。準備好時檢視並套用。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Topic Expansion suggestions."
-msgstr "無法產生主題擴展建議。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Content Blueprint generated. Review and apply when ready."
-msgstr "內容藍圖已產生。準備好後請檢視並套用。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Content Blueprint."
-msgstr "無法產生內容藍圖。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Article Builder generated. Review and apply when ready."
-msgstr "文章產生器已完成產生。準備好後請檢視並套用。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Article Builder output."
-msgstr "無法產生文章建立器輸出。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Outline unavailable."
-msgstr "大綱不可用。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to update FAQ display settings."
-msgstr "無法更新常見問題顯示設定。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to update topic display settings."
-msgstr "無法更新主題顯示設定。"
-
-#: build/block-editor/airygen-editor.js
-msgid "AI Assist is disabled. Enable it in Airygen → Modules."
-msgstr "AI 輔助已停用。請在 Airygen → 模組中啟用。"
-
-#: build/block-editor/airygen-editor.js
-msgid "AI Assist API is not configured."
-msgstr "AI 輔助 API 尚未設定。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate higher-CTR titles and descriptions with AI suggestions."
-msgstr "使用 AI 建議產生更高點擊率的標題和描述。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate structured outlines and section summaries for faster planning."
-msgstr "產生結構化大綱和段落摘要以加快規劃速度。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate full-length articles from your topic and focus keyphrase."
-msgstr "從您的主題和焦點關鍵字產生完整長度的文章。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate FAQ entries that expand on common user questions."
-msgstr "產生擴展常見使用者問題的常見問題項目。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate related topics to expand your content plan."
-msgstr "產生相關主題以擴展您的內容計畫。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unavailable in your current plan."
-msgstr "在您目前的方案中無法使用。"
-
-#: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "Display mode"
 msgstr "顯示模式"
 
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
-msgid "Use settings"
-msgstr "使用設定"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Manual"
 msgstr "手動"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose how FAQ output should be inserted for this post."
-msgstr "選擇此文章的 FAQ 輸出插入方式。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose how Topic Expansion output should be inserted for this post."
-msgstr "選擇此文章的 Topic Expansion 輸出插入方式。"
-
-#: build/block-editor/airygen-editor.js
-msgid "No AI modules are enabled for this post."
-msgstr "此文章未啟用任何 AI 模組。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates a meta title, meta description, and excerpt based on your current content. Apply suggestions and save the post to make changes live."
-msgstr "根據您目前的內容產生中繼標題、中繼描述和摘錄。套用建議並儲存文章以使變更生效。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Uses the focus keyphrase set for this post."
-msgstr "使用為此文章設定的焦點關鍵字。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the language for AI-generated suggestions."
-msgstr "選擇 AI 生成建議的語言。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Require the focus keyphrase to appear in suggestions."
-msgstr "要求焦點關鍵字出現在建議中。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Applied. Save the post to make the changes live."
-msgstr "已套用。請儲存文章以使變更生效。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one suggestion to apply."
-msgstr "至少選擇一個建議以套用。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Describe the article you want to plan."
-msgstr "描述您想要規劃的文章。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Defaults to the focus keyphrase."
-msgstr "預設為焦點關鍵字。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Set a focus keyphrase in the SEO panel."
-msgstr "在 SEO 面板中設定焦點關鍵字。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose the output language for the outline."
-msgstr "選擇大綱的輸出語言。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Select a structure that matches your topic."
-msgstr "選擇符合您主題的結構。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose a voice for section summaries."
-msgstr "為段落摘要選擇語氣。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Control how many heading levels the outline includes."
-msgstr "控制大綱要包含多少標題層級。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Include the focus keyword in outline headings."
-msgstr "在大綱標題中包含焦點關鍵字。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Outline length target"
-msgstr "大綱長度目標"
-
-#: build/block-editor/airygen-editor.js
-msgid "Longer blueprints take more time. Please keep this window open."
-msgstr "較長的藍圖需要更多時間。請保持此視窗開啟。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Keep outline"
-msgstr "保留大綱"
-
-#: build/block-editor/airygen-editor.js
-msgid "Keep your current headings and expand the article from them."
-msgstr "保留您目前的標題並從中擴展文章。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content Blueprint is for planning new articles. Applying will replace the post content."
-msgstr "內容藍圖用於規劃新文章。套用後會取代文章內容。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "It does not generate a full draft; it proposes section headings to guide your writing."
-msgstr "它不會產生完整草稿；它提出段落標題來引導您的寫作。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use this blueprint"
-msgstr "使用此藍圖"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select a blueprint to apply."
-msgstr "選擇要套用的藍圖。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to apply blueprint content."
-msgstr "無法套用藍圖內容。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your topic…"
-msgstr "正在分析您的主題⋯"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Building outline structure…"
-msgstr "正在建立大綱結構⋯"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Refining sections…"
-msgstr "精煉段落中⋯"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content source"
-msgstr "內容來源"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Extract from editor content"
-msgstr "從編輯器內容擷取"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose where the AI should read source content from."
-msgstr "選擇 AI 應從哪裡讀取來源內容。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Custom content"
-msgstr "自訂內容"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Paste the source content for the AI draft."
-msgstr "貼上 AI 草稿的來源內容。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Markdown formatting works best."
-msgstr "Markdown 格式效果最佳。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the language for the generated article."
-msgstr "選擇生成文章的語言。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the structure that best matches your topic."
-msgstr "選擇最符合您主題的結構。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the voice and style for the draft."
-msgstr "選擇草稿的語氣和風格。"
-
-#: build/block-editor/airygen-editor.js
-msgid "AI targets can vary by about ten percent from the selected length."
-msgstr "AI 目標長度可能與所選長度相差約 10%。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Longer articles take more time. Please keep this window open."
-msgstr "較長的文章需要更多時間。請保持此視窗開啟。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use this article"
-msgstr "使用此文章"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to apply Article Builder output."
-msgstr "無法套用文章建立器輸出。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select an article to apply."
-msgstr "選擇要套用的文章。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting can take up to ~90 seconds depending on length. Please keep this window open."
-msgstr "草擬可能需要約 90 秒，取決於長度。請保持此視窗開啟。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting full sections…"
-msgstr "草擬完整段落中⋯"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the output language for FAQs."
-msgstr "選擇 FAQ 的輸出語言。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the content structure for FAQ responses."
-msgstr "選擇常見問題回應的內容結構。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the writing tone for answers."
-msgstr "選擇答案的寫作語氣。"
-
-#: build/block-editor/airygen-editor.js
-msgid "How many questions to generate per request."
-msgstr "每個請求要產生多少問題。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates FAQ entries based on your current post content. Apply suggestions and save the post to publish updates."
-msgstr "根據您目前的文章內容產生常見問題項目。套用建議並儲存文章以發佈更新。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Untitled FAQ"
-msgstr "無標題常見問題"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one FAQ item to apply."
-msgstr "至少選擇一個常見問題項目以套用。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting Q&A pairs…"
-msgstr "草擬問答配對中⋯"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the output language for topics."
-msgstr "選擇主題的輸出語言。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the structure for topic suggestions."
-msgstr "選擇主題建議的結構。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the writing tone for topics."
-msgstr "選擇主題的寫作語氣。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose how long each topic description should be."
-msgstr "選擇每個主題描述的長度。"
-
-#: build/block-editor/airygen-editor.js
-msgid "How many topics to generate per request."
-msgstr "每個請求要產生多少主題。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates related topic ideas based on your current content. Apply suggestions and save the post to publish updates."
-msgstr "根據您目前的內容產生相關主題概念。套用建議並儲存文章以發佈更新。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Untitled topic"
-msgstr "無標題主題"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one topic to apply."
-msgstr "至少選擇一個主題以套用。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Expanding related topics…"
-msgstr "展開相關主題中⋯"
 
 #: build/block-editor/airygen-editor.js
 msgid "TOC display mode"
@@ -10228,18 +8310,6 @@ msgid "Renders the table of contents on the frontend."
 msgstr "在前端呈現目錄。"
 
 #: build/block-editor/airygen-editor.js
-msgid "Airygen FAQ"
-msgstr "Airygen FAQ"
-
-#: build/block-editor/airygen-editor.js
-msgid "Insert AI-generated FAQ output."
-msgstr "插入 AI 產生的常見問題輸出。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Renders AI FAQ entries on the frontend."
-msgstr "在前端呈現 AI 常見問題項目。"
-
-#: build/block-editor/airygen-editor.js
 msgid "Airygen Breadcrumbs"
 msgstr "Airygen Breadcrumbs"
 
@@ -10252,34 +8322,8 @@ msgid "Renders breadcrumbs on the frontend."
 msgstr "在前端呈現導航列。"
 
 #: build/block-editor/airygen-editor.js
-msgid "Airygen Topic Expansion"
-msgstr "Airygen Topic Expansion"
-
-#: build/block-editor/airygen-editor.js
-msgid "Insert AI-generated related topics output."
-msgstr "插入 AI 產生的相關主題輸出。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Renders related topic ideas on the frontend."
-msgstr "在前端呈現相關主題概念。"
-
-#: build/block-editor/airygen-editor.js
 msgid "Rebots Meta"
 msgstr "Robots 中繼標籤"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Applied. Save Changes to persist updates."
-msgstr "已套用。請儲存變更以保留更新。"
-
-#. translators: %s is the thing to generate first, such as an outline or a draft.
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "No records yet. Generate %s to get started."
-msgstr "尚無記錄。請產生 %s 以開始。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing content…"
-msgstr "正在分析內容⋯"
 
 #: build/classic-editor/airygen-editor.js
 msgid "Total rules"
@@ -10377,174 +8421,10 @@ msgstr "繼承預設值（%s）"
 msgid "Summary"
 msgstr "摘要"
 
-#: build/classic-editor/airygen-editor.js
-msgid "Generate higher-CTR titles and meta descriptions."
-msgstr "產生更高點擊率的標題和中繼描述。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generate structured outlines with section summaries."
-msgstr "產生包含段落摘要的結構化大綱。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Draft full articles with AI guidance and structured prompts."
-msgstr "使用 AI 引導和結構化提示草擬完整文章。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Append frequently asked questions to the end of the article."
-msgstr "將常見問題附加到文章末尾。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Append related topic ideas after the FAQ section."
-msgstr "在 FAQ 區塊後附加相關主題點子。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Uses the saved focus keyphrase."
-msgstr "使用已儲存的焦點關鍵字。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Include the focus keyphrase in the output."
-msgstr "在輸出中包含焦點關鍵字。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Used to guide the outline."
-msgstr "用於引導大綱。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for the outline."
-msgstr "選擇大綱的語氣。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Heading depth for the outline."
-msgstr "大綱的標題深度。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Basic"
-msgstr "基本"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Deep"
-msgstr "深度"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how long the outline should be."
-msgstr "控制大綱應有多長。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Include the focus keyphrase in headings."
-msgstr "在標題中包含焦點關鍵字。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Keep the existing outline when generating."
-msgstr "產生時保留現有大綱。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "an outline"
-msgstr "大綱"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Choose where to extract source content."
-msgstr "選擇來源內容的擷取位置。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the output language."
-msgstr "選擇輸出語言。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the writing style type."
-msgstr "選擇寫作風格類型。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for the draft."
-msgstr "選擇草稿的語氣。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the target article length."
-msgstr "選擇目標文章長度。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Keep the existing headings when generating."
-msgstr "產生時保留現有標題。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "a draft"
-msgstr "草稿"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select output language."
-msgstr "選擇輸出語言。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for answers."
-msgstr "選擇答案的語氣。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how detailed each answer should be."
-msgstr "控制每個答案的詳細程度。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Number of questions to generate."
-msgstr "要產生的問題數量。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "questions"
-msgstr "問題"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for topics."
-msgstr "選擇主題的語氣。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how detailed each topic is."
-msgstr "控制每個主題的詳細程度。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Number of topics to generate."
-msgstr "要產生的主題數量。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "topics"
-msgstr "主題"
-
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "(No title)"
 msgstr "（無標題）"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your source…"
-msgstr "正在分析您的來源內容⋯"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting article sections…"
-msgstr "草擬文章段落中⋯"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Refining language and tone…"
-msgstr "精煉語言和語氣中⋯"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generating FAQs can take a moment. Please keep this window open."
-msgstr "產生常見問題可能需要一點時間。請保持此視窗開啟。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting questions…"
-msgstr "草擬問題中⋯"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Writing answers…"
-msgstr "撰寫答案中⋯"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generating topics can take a moment. Please keep this window open."
-msgstr "產生主題可能需要一點時間。請保持此視窗開啟。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting topic ideas…"
-msgstr "草擬主題概念中⋯"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Refining list…"
-msgstr "精煉清單中⋯"
 
 #: build/classic-editor/airygen-editor.js
 msgid "Focus keyphrase density is in range (0.5%–2%)."
@@ -10563,22 +8443,6 @@ msgid "Focus keyphrase is not set."
 msgstr "焦點關鍵字未設定。"
 
 #: build/classic-editor/airygen-editor.js
-msgid "This AI module is unavailable in your current plan."
-msgstr "此 AI 模組在您目前的方案中無法使用。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Unable to complete the request."
-msgstr "無法完成請求。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select a suggestion to apply."
-msgstr "選擇要套用的建議。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select a record to apply."
-msgstr "選擇要套用的記錄。"
-
-#: build/classic-editor/airygen-editor.js
 msgid "Save changes to apply your updates."
 msgstr "儲存變更以套用您的更新。"
 
@@ -10589,39 +8453,6 @@ msgstr "已儲存。"
 #: build/classic-editor/airygen-editor.js
 msgid "Failed to save changes."
 msgstr "儲存變更失敗。"
-
-#. translators: %s is the estimated number of seconds.
-#: build/block-editor/airygen-editor.js
-#, php-format, js-format
-msgid "This can take up to ~%s seconds depending on the amount of content. Please keep this window open."
-msgstr "依內容量而定，這最多可能需要約 %s 秒。請保持此視窗開啟。"
-
-msgid "Credit balance record not found"
-msgstr "找不到點數餘額紀錄"
-
-#. translators: %s is the generated item type in plural form, e.g. "blueprints", "articles", or "drafts".
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "Longer %s take more time. Please keep this window open."
-msgstr "較長的 %s 需要更多時間。請保持此視窗開啟。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "length"
-msgstr "長度"
-
-#. translators: 1: estimated duration label, e.g. "~15 seconds". 2: what affects the duration, e.g. "length" or "count".
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "This can take up to %1$s depending on %2$s. Please keep this window open."
-msgstr "這最多可能需要 %1$s，視 %2$s 而定。請保持此視窗開啟。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "blueprints"
-msgstr "藍圖"
-
-#: build/classic-editor/airygen-editor.js
-msgid "drafts"
-msgstr "草稿"
 
 msgid "Sitewide SEO (scaled)"
 msgstr "全站 SEO（縮放）"
@@ -10675,9 +8506,6 @@ msgstr "作業逾時（秒）"
 #: build/admin/airygen-app.js
 msgid "Check basic sitewide SEO health and configuration."
 msgstr "檢查全站基礎 SEO 狀態與設定。"
-
-msgid "Mirror WordPress Sitewide SEO diagnostics with Airygen-specific checks (SSL, Safe Browsing, focus keywords)."
-msgstr "同步 WordPress 全站 SEO 診斷，並加入 Airygen 專屬檢查（SSL、Safe Browsing、焦點關鍵字）。"
 
 msgid "Mind map items contain invalid post data."
 msgstr "心智圖項目包含無效的文章資料。"
@@ -11001,14 +8829,6 @@ msgid "Uses the IndexNow protocol to push new and updated URLs to Bing and other
 msgstr "使用 IndexNow 協定，在內容發布或更改的瞬間將新的和更新的 URL 推送到 Bing 及其他支援的搜尋引擎——無需等待爬蟲。對新聞網站和時效性內容尤其有價值。"
 
 #: build/admin/airygen-app.js
-msgid "Would you like AI to help you write article outlines, FAQ sets, or plan your full content strategy?"
-msgstr "您是否希望 AI 協助您撰寫文章大綱、FAQ 集，或規劃完整的內容策略？"
-
-#: build/admin/airygen-app.js
-msgid "A smart AI toolkit that generates article outlines, Content Blueprints, full Article drafts, and Deep FAQ sets from a keyword — making content creation faster and easier."
-msgstr "智慧型 AI 工具組，可從關鍵字生成文章大綱、內容藍圖、完整文章草稿與深度 FAQ 集——讓內容創作更快更輕鬆。"
-
-#: build/admin/airygen-app.js
 msgid "Would you like AI tools like ChatGPT and Perplexity to more easily discover and cite your site?"
 msgstr "您是否希望 ChatGPT、Perplexity 等 AI 工具更容易發現並引用您的網站？"
 
@@ -11023,26 +8843,6 @@ msgstr "自動生成 llms.txt 檔案——相當於 AI 的網站地圖——讓 
 #: build/admin/airygen-app.js
 msgid "Automatically converts your posts into AI-friendly Markdown so AI agents can read and understand your content without struggling to parse HTML."
 msgstr "自動將您的文章轉換為 AI 友善的 Markdown 格式，讓 AI 代理無需費力解析 HTML 即可讀取並理解您的內容。"
-
-#: build/admin/airygen-app.js
-msgid "Includes Deep FAQ, which automatically generates structured Q&A from your post content. AI search engines favor content that directly answers questions, boosting your visibility in AI-powered search results."
-msgstr "包含深度 FAQ 功能，可從您的文章內容自動生成結構化問答。AI 搜尋引擎偏好能直接回答問題的內容，從而提升您在 AI 驅動搜尋結果中的曝光度。"
-
-#: build/admin/airygen-app.js
-msgid "Free"
-msgstr "免費"
-
-#: build/admin/airygen-app.js
-msgid "Requires a plan upgrade"
-msgstr "需要升級方案"
-
-#: build/admin/airygen-app.js
-msgid "Requires"
-msgstr "需要"
-
-#: build/admin/airygen-app.js
-msgid "plan to activate"
-msgstr "方案以啟用"
 
 #: build/admin/airygen-app.js
 msgid "Got it, don't show again"
@@ -11069,32 +8869,8 @@ msgid "Welcome to Airygen SEO!"
 msgstr "歡迎使用 Airygen SEO！"
 
 #: build/admin/airygen-app.js
-msgid "Answer 10 quick questions and we'll recommend the right SEO modules for your site — then enable them all with one click."
-msgstr "回答 10 個簡短問題，我們將為您的網站推薦合適的 SEO 模組——然後一鍵全部啟用。"
-
-#: build/admin/airygen-app.js
 msgid "Don't worry — every question is just Yes or No. No technical knowledge needed. It takes about 2 minutes. 😊"
 msgstr "別擔心——每個問題只需回答「是」或「否」。不需要技術知識，大約只需 2 分鐘。😊"
-
-#: build/admin/airygen-app.js
-msgid "🎉 All done! Here's what we recommend based on your answers:"
-msgstr "🎉 全部完成！以下是我們根據您的回答推薦的內容："
-
-#: build/admin/airygen-app.js
-msgid "Will be enabled (included in your plan)"
-msgstr "將被啟用（包含在您的方案中）"
-
-#: build/admin/airygen-app.js
-msgid "Requires an upgrade to enable"
-msgstr "需要升級才能啟用"
-
-#: build/admin/airygen-app.js
-msgid "Upgrade to"
-msgstr "升級至"
-
-#: build/admin/airygen-app.js
-msgid "No modules selected. Click Finish to close the wizard."
-msgstr "未選擇任何模組。點擊「完成」關閉精靈。"
 
 #: build/admin/airygen-app.js
 msgid "Setup Wizard"
@@ -11152,12 +8928,33 @@ msgstr "區塊間距（px）"
 msgid "Content top margin (px)"
 msgstr "內容頂部間距（px）"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "The focus keyphrase is the main keyword or phrase this post is optimized for. AI modules use it to guide content generation — keeping the output relevant and keyword-focused."
-msgstr "焦點關鍵字是本文章優化的主要關鍵字或短語。AI 模組使用它來引導內容生成——確保輸出內容相關且以關鍵字為中心。"
+#. Plugin URI of the plugin
+msgid "https://www.airygen.com/en/airygen-seo/introduction"
+msgstr "https://www.airygen.com/en/airygen-seo/introduction"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Focus keyphrase help"
-msgstr "焦點關鍵字說明"
+#. Description of the plugin
+msgid "Airygen SEO is a modular SEO toolkit for WordPress sites that need more than title and meta fields. It combines on-page SEO controls, structured data, technical SEO, internal link workflows, and automation tools in one plugin while keeping the editing experience inside WordPress."
+msgstr "Airygen SEO 是專為需要更多進階功能（而非僅有標題與中繼欄位）的 WordPress 網站打造的模組化 SEO 工具組。它將頁面 SEO 控制、結構化資料、技術性 SEO、內部連結工作流程及自動化工具整合於單一外掛，並讓編輯體驗完整保留在 WordPress 之中。"
+
+#. Author URI of the plugin
+msgid "https://www.airygen.com/"
+msgstr "https://www.airygen.com/"
+
+msgid "Transfer export settings filter must return an array."
+msgstr "轉移匯出設定篩選器必須回傳陣列。"
+
+#: build/admin/airygen-app.js
+msgid "Answer a few quick questions and we'll recommend the right SEO modules for your site — core modules are already enabled by default."
+msgstr "回答幾個簡單的問題，我們就會為你的網站推薦合適的 SEO 模組——核心模組已預設啟用。"
+
+#: build/admin/airygen-app.js
+msgid "All done! Core modules (On-Page SEO, Breadcrumbs, Sitemap, Image SEO, Robots, Site Verification, Link Counter, Link Suggestions, Score Calculator) are already enabled by default."
+msgstr "全部完成！核心模組（On-Page SEO、麵包屑、Sitemap、Image SEO、Robots、Site Verification、Link Counter、Link Suggestions、Score Calculator）已預設啟用。"
+
+#: build/admin/airygen-app.js
+msgid "Additional modules to enable based on your answers"
+msgstr "根據你的回答建議啟用的額外模組"
+
+#: build/admin/airygen-app.js
+msgid "No additional modules recommended. You can enable more from the dashboard anytime."
+msgstr "沒有建議啟用的額外模組。你隨時可以在儀表板中啟用更多模組。"

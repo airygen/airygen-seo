@@ -14,25 +14,9 @@ msgstr ""
 "X-Domain: airygen-seo\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
-#. Plugin Name of the plugin
-msgid "Airygen"
-msgstr "Airygen"
-
-#. Plugin URI of the plugin
-msgid "https://www.airygen.com/product/wordpress-seo-plugin/"
-msgstr "https://www.airygen.com/product/wordpress-seo-plugin/"
-
-#. Description of the plugin
-msgid "The best SEO plugin for WordPress to optimize your website for search engines and improve your rankings."
-msgstr "ウェブサイトを検索エンジン用に最適化し、ランキングを向上させるための最高のWordPress SEOプラグイン。"
-
 #. Author of the plugin
 msgid "Airygen Team"
 msgstr "Airygenチーム"
-
-#. Author URI of the plugin
-msgid "https://github.com/airygen"
-msgstr "https://github.com/airygen"
 
 msgid "SEO title length"
 msgstr "SEOタイトルの長さ"
@@ -148,47 +132,6 @@ msgstr "ディスクリプション"
 msgid "Sent by %1$s via %2$s."
 msgstr "%2$s 経由で %1$s が送信しました。"
 
-msgid "Subscription Status"
-msgstr "サブスクリプションステータス"
-
-msgid "Manage your subscription details and version updates."
-msgstr "サブスクリプションの詳細とバージョン更新を管理します。"
-
-msgid "Subscription ID"
-msgstr "サブスクリプションID"
-
-msgid "26 characters"
-msgstr "26文字"
-
-msgid "Your subscription details."
-msgstr "サブスクリプションの詳細。"
-
-msgid "Site Key"
-msgstr "サイトキー"
-
-msgid "Paste the Site Key used for Link Suggestions."
-msgstr "リンク提案に使用されるサイトキーを貼り付けてください。"
-
-msgid "This key authenticates to the Airygen API. Keep it safe and do not share."
-msgstr "このキーはAirygen APIへの認証に使用されます。安全に保管し、共有しないでください。"
-
-msgid "Save Subscription"
-msgstr "サブスクリプションを保存"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use"
-msgstr "使用"
-
-msgid "Generate and browse AI suggestions for this taxonomy page title and description."
-msgstr "このタクソノミーページのタイトルとディスクリプションのAI提案を生成して参照します。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "SERP CTR Booster"
-msgstr "SERP CTRブースター"
-
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
@@ -196,82 +139,23 @@ msgid "Close"
 msgstr "閉じる"
 
 #: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generate"
-msgstr "生成"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Browse"
-msgstr "参照"
-
-msgid "Taxonomy terms do not include body content, so Airygen analyzes the latest five related post titles to generate suggestions."
-msgstr "タクソノミータームには本文コンテンツが含まれていないため、Airygenは提案を生成するために最新の5つの関連投稿タイトルを分析します。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Language"
-msgstr "言語"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the output language for suggestions."
-msgstr "提案の出力言語を選択してください。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Focus keyphrase"
 msgstr "フォーカスキーフレーズ"
 
-msgid "Used when Include keyword is enabled."
-msgstr "キーワードを含めるが有効な場合に使用されます。"
-
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Include keyword"
-msgstr "キーワードを含める"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Yes"
 msgstr "はい"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "No"
 msgstr "いいえ"
 
-msgid "Include the focus keyphrase when generating title and description."
-msgstr "タイトルとディスクリプションを生成するときにフォーカスキーフレーズを含めます。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generating…"
-msgstr "生成中..."
-
-msgid "Analyzing your taxonomy context…"
-msgstr "タクソノミーコンテキストを分析中..."
-
-msgid "This can take up to ~15 seconds depending on content. Please keep this window open."
-msgstr "コンテンツによっては最大約15秒かかる場合があります。このウィンドウを開いたままにしてください。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Apply selected"
-msgstr "選択を適用"
-
-msgid "Please provide a valid log date."
-msgstr "有効なログ日付を指定してください。"
-
+#. Plugin Name of the plugin
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 msgid "Airygen SEO"
 msgstr "Airygen SEO"
 
-#: build/admin/airygen-app.js
 msgid "Dashboard"
 msgstr "ダッシュボード"
 
@@ -283,22 +167,12 @@ msgstr "設定"
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
-msgid "AI Assist"
-msgstr "AIアシスト"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Topic Cluster"
 msgstr "トピッククラスター"
 
 #: build/admin/airygen-app.js
 msgid "Alerts"
 msgstr "アラート"
-
-#: build/admin/airygen-app.js
-msgid "Subscription"
-msgstr "サブスクリプション"
 
 #: build/admin/airygen-app.js
 msgid "Migration"
@@ -372,48 +246,8 @@ msgstr "コース"
 msgid "Course instance"
 msgstr "コースインスタンス"
 
-msgid "API key format is invalid."
-msgstr "APIキーの形式が無効です。"
-
-msgid "API key is required."
-msgstr "APIキーが必要です。"
-
-msgid "Live validation is temporarily unavailable. Showing last successful verification snapshot."
-msgstr "ライブ検証は一時的に利用できません。最後に成功した検証スナップショットを表示しています。"
-
-msgid "Unable to contact the subscription API."
-msgstr "サブスクリプションAPIに接続できません。"
-
-msgid "Invalid record id."
-msgstr "無効なレコードID。"
-
-#: build/admin/airygen-app.js
-msgid "Unable to delete record."
-msgstr "レコードを削除できません。"
-
-msgid "Invalid post id."
-msgstr "無効な投稿ID。"
-
 msgid "Post not found."
 msgstr "投稿が見つかりません。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Please set a focus keyword for this post before generating."
-msgstr "生成する前にこの投稿のフォーカスキーワードを設定してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Please provide source content before generating."
-msgstr "生成する前にソースコンテンツを提供してください。"
-
-msgid "Unable to generate article."
-msgstr "記事を生成できません。"
-
-msgid "Invalid gateway response."
-msgstr "無効なゲートウェイレスポンス。"
-
-msgid "Unable to store Article Builder record."
-msgstr "記事ビルダーレコードを保存できません。"
 
 msgid "Airygen Author SEO"
 msgstr "Airygen Author SEO"
@@ -432,33 +266,6 @@ msgstr "ページ%s"
 #: build/admin/airygen-app.js
 msgid "Author"
 msgstr "著者"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Please enter a topic before generating."
-msgstr "生成する前にトピックを入力してください。"
-
-msgid "Unable to generate blueprint."
-msgstr "ブループリントを生成できません。"
-
-msgid "Unable to store Content Blueprint record."
-msgstr "コンテンツブループリントレコードを保存できません。"
-
-msgid "Please add content before generating FAQ items."
-msgstr "FAQ項目を生成する前にコンテンツを追加してください。"
-
-msgid "Unable to generate FAQ items."
-msgstr "FAQ項目を生成できません。"
-
-msgid "Unable to store FAQ record."
-msgstr "FAQレコードを保存できません。"
-
-msgid "Unable to update FAQ display status."
-msgstr "FAQ表示ステータスを更新できません。"
-
-#: build/admin/airygen-app.js
-msgid "Answers to What You're Probably Thinking"
-msgstr "よくある疑問にお答えします"
 
 msgid "Invalid action."
 msgstr "無効なアクション。"
@@ -858,21 +665,6 @@ msgstr "最小リンク数"
 msgid "Minimum external link count required for pass."
 msgstr "合格に必要な外部リンク数の最小値。"
 
-msgid "Term not found."
-msgstr "タームが見つかりません。"
-
-msgid "A valid post or term is required."
-msgstr "有効な投稿またはタームが必要です。"
-
-msgid "Please set a focus keyword before generating."
-msgstr "生成する前にフォーカスキーワードを設定してください。"
-
-msgid "Unable to generate suggestions."
-msgstr "提案を生成できません。"
-
-msgid "Unable to store CTR booster record."
-msgstr "CTRブースターレコードを保存できません。"
-
 msgid "Airygen SEO: Core sitemap availability"
 msgstr "Airygen SEO: コアサイトマップの可用性"
 
@@ -1106,69 +898,16 @@ msgstr "診断"
 msgid "Table of contents"
 msgstr "目次"
 
-#: build/classic-editor/airygen-editor.js
-msgid "Unable to load records."
-msgstr "レコードを読み込めません。"
-
-msgid "Generating suggestions..."
-msgstr "提案を生成中..."
-
-msgid "Generation failed."
-msgstr "生成に失敗しました。"
-
-msgid "Generated successfully. Review and apply from Browse."
-msgstr "正常に生成されました。参照からレビューして適用してください。"
-
-msgid "Select fields and click Apply selected."
-msgstr "フィールドを選択して「選択を適用」をクリックしてください。"
-
-msgid "No records yet."
-msgstr "レコードはまだありません。"
-
-msgid "Applied suggestion. Save term to persist changes."
-msgstr "提案を適用しました。変更を保持するにはタームを保存してください。"
-
-msgid "Untitled suggestion"
-msgstr "無題の提案"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Keyword"
-msgstr "キーワード"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Meta title"
 msgstr "メタタイトル"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Meta description"
 msgstr "メタディスクリプション"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Excerpt"
 msgstr "抜粋"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generating suggestions…"
-msgstr "提案を生成中..."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Refining output…"
-msgstr "出力を洗練中..."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Almost ready…"
-msgstr "もうすぐ完了..."
 
 msgid "Custom SEO title for this taxonomy page. Leave blank to use the default value from settings."
 msgstr "このタクソノミーページのカスタムSEOタイトル。設定のデフォルト値を使用する場合は空白のままにします。"
@@ -1371,22 +1110,6 @@ msgstr "トピッククラスター"
 msgid "Continue with the main article"
 msgstr "メイン記事へ続く"
 
-msgid "Please add content before generating topics."
-msgstr "トピックを生成する前にコンテンツを追加してください。"
-
-msgid "Unable to generate topics."
-msgstr "トピックを生成できません。"
-
-msgid "Unable to store topic record."
-msgstr "トピックレコードを保存できません。"
-
-msgid "Unable to update topic display status."
-msgstr "トピック表示ステータスを更新できません。"
-
-#: build/admin/airygen-app.js
-msgid "You Might Also Want to Know…"
-msgstr "こちらも気になるかもしれません…"
-
 msgid "You are not allowed to preview WooCommerce schema."
 msgstr "WooCommerceスキーマをプレビューする権限がありません。"
 
@@ -1395,29 +1118,6 @@ msgstr "WooCommerceは利用できません。"
 
 msgid "Open the Airygen SEO dashboard"
 msgstr "Airygen SEOダッシュボードを開く"
-
-#. translators: %s: directory path
-#, php-format
-msgid "Unable to create debug directory at %s."
-msgstr "%sにデバッグディレクトリを作成できません。"
-
-msgid "Subscription has expired."
-msgstr "サブスクリプションの有効期限が切れました。"
-
-msgid "The system is busy. Please try again later."
-msgstr "システムがビジー状態です。後でもう一度お試しください。"
-
-msgid "Balance is insufficient. Please top up or wait for the next refresh cycle."
-msgstr "残高が不足しています。チャージするか、次の更新サイクルをお待ちください。"
-
-msgid "Update package is authenticated and ready to download."
-msgstr "アップデートパッケージが認証され、ダウンロードの準備ができています。"
-
-msgid "A valid subscription key is required to download and install updates."
-msgstr "アップデートをダウンロードしてインストールするには、有効なサブスクリプションキーが必要です。"
-
-msgid "Enter your key in Airygen Settings > Subscription."
-msgstr "Airygen 設定 > サブスクリプションでキーを入力してください。"
 
 #: build/admin/airygen-app.js
 msgid "Close modal"
@@ -1501,14 +1201,6 @@ msgstr "再読み込み"
 #: build/admin/airygen-app.js
 msgid "More modules"
 msgstr "その他のモジュール"
-
-#: build/admin/airygen-app.js
-msgid "Starter module"
-msgstr "スターターモジュール"
-
-#: build/admin/airygen-app.js
-msgid "Expert module"
-msgstr "エキスパートモジュール"
 
 #: build/admin/airygen-app.js
 msgid "Background Process"
@@ -1625,14 +1317,6 @@ msgstr "%s を読み込み中…"
 msgid "No migration tools available yet."
 msgstr "利用可能な移行ツールはまだありません。"
 
-#. translators: %s is the record type label, such as CTR booster or FAQ.
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "No %s records yet."
-msgstr "まだ %s のレコードがありません。"
-
 #: build/admin/airygen-app.js
 msgid "No logs yet."
 msgstr "ログはまだありません。"
@@ -1663,17 +1347,9 @@ msgid "No %1$s yet. Add one to configure %2$s."
 msgstr "まだ %1$s がありません。%2$s を設定するには 1 つ追加してください。"
 
 #: build/admin/airygen-app.js
-msgid "Directory not found"
-msgstr "ディレクトリが見つかりません"
-
-#: build/admin/airygen-app.js
 #: build/classic-editor/airygen-editor.js
 msgid "Loading…"
 msgstr "読み込み中..."
-
-#: build/admin/airygen-app.js
-msgid "Debug Status"
-msgstr "デバッグステータス"
 
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
@@ -1686,24 +1362,12 @@ msgid "Enable Debug Mode"
 msgstr "デバッグモードを有効化"
 
 #: build/admin/airygen-app.js
-msgid "Enable debug logging to file."
-msgstr "ファイルへのデバッグログを有効にします。"
-
-#: build/admin/airygen-app.js
 msgid "Force Classic Editor"
 msgstr "クラシックエディターを強制"
 
 #: build/admin/airygen-app.js
-msgid "Disable the block editor and load Classic Editor for testing."
-msgstr "ブロックエディターを無効にして、テスト用にクラシックエディターを読み込みます。"
-
-#: build/admin/airygen-app.js
 msgid "Debug level"
 msgstr "デバッグレベル"
-
-#: build/admin/airygen-app.js
-msgid "Choose how much debug information is recorded."
-msgstr "デバッグ情報の記録量を選択します。"
 
 #: build/admin/airygen-app.js
 msgid "Error"
@@ -1723,76 +1387,12 @@ msgid "Refresh"
 msgstr "更新"
 
 #: build/admin/airygen-app.js
-msgid "Log Directory"
-msgstr "ログディレクトリ"
-
-#: build/admin/airygen-app.js
-msgid "Location where logs are stored."
-msgstr "ログが保存される場所。"
-
-#: build/admin/airygen-app.js
-msgid "No directory configured"
-msgstr "ディレクトリが設定されていません"
-
-#: build/admin/airygen-app.js
-msgid "Slug"
-msgstr "スラッグ"
-
-#: build/admin/airygen-app.js
-msgid "N/A"
-msgstr "該当なし"
-
-#: build/admin/airygen-app.js
-msgid "Debug mode must be enabled to view logs."
-msgstr "ログを表示するにはデバッグモードを有効にする必要があります。"
-
-#: build/admin/airygen-app.js
-msgid "log content"
-msgstr "ログコンテンツ"
-
-#: build/admin/airygen-app.js
-msgid "Select a log file to view content."
-msgstr "コンテンツを表示するログファイルを選択してください。"
-
-#: build/admin/airygen-app.js
-msgid "Log Files"
-msgstr "ログファイル"
-
-#: build/admin/airygen-app.js
-msgid "Select a log file to view."
-msgstr "表示するログファイルを選択してください。"
-
-#: build/admin/airygen-app.js
-msgid "No logs found"
-msgstr "ログが見つかりません"
-
-#: build/admin/airygen-app.js
-msgid "Load Log"
-msgstr "ログを読み込む"
-
-#: build/admin/airygen-app.js
-msgid "Refresh Logs"
-msgstr "ログを更新"
-
-#: build/admin/airygen-app.js
-msgid "Clear Logs"
-msgstr "ログをクリア"
-
-#: build/admin/airygen-app.js
 msgid "Configuration"
 msgstr "設定"
 
 #: build/admin/airygen-app.js
 msgid "Logs"
 msgstr "ログ"
-
-#: build/admin/airygen-app.js
-msgid "Debug Information"
-msgstr "デバッグ情報"
-
-#: build/admin/airygen-app.js
-msgid "View debug information and logs."
-msgstr "デバッグ情報とログを表示します。"
 
 #: build/admin/airygen-app.js
 msgid "Bring SEO data from other plugins into Airygen SEO. Start with the tools you already use and migrate only what you need."
@@ -1993,124 +1593,8 @@ msgid "Import post-level redirects from SEOPress and add them to Airygen Redirec
 msgstr "SEOPress から投稿レベルのリダイレクトをインポートして Airygen リダイレクトに追加します。"
 
 #: build/admin/airygen-app.js
-msgid "Unable to load subscription status."
-msgstr "サブスクリプションステータスを読み込めません。"
-
-#: build/admin/airygen-app.js
-msgid "API key verified."
-msgstr "APIキーが検証されました。"
-
-#: build/admin/airygen-app.js
-msgid "Unable to verify API key."
-msgstr "APIキーを検証できません。"
-
-#: build/admin/airygen-app.js
-msgid "API key expired. Please renew your subscription."
-msgstr "APIキーの有効期限が切れました。サブスクリプションを更新してください。"
-
-#: build/admin/airygen-app.js
-msgid "API key was revoked. Please generate a new key."
-msgstr "APIキーが無効化されました。新しいキーを生成してください。"
-
-#: build/admin/airygen-app.js
-msgid "API key does not match this site domain."
-msgstr "APIキーがこのサイトドメインと一致しません。"
-
-#: build/admin/airygen-app.js
-msgid "API key is invalid."
-msgstr "APIキーが無効です。"
-
-#: build/admin/airygen-app.js
-msgid "Subscription is active."
-msgstr "サブスクリプションがアクティブです。"
-
-#: build/admin/airygen-app.js
-msgid "Verify your key to view the period end."
-msgstr "期間終了を表示するにはキーを検証してください。"
-
-#: build/admin/airygen-app.js
-msgid "Verified"
-msgstr "検証済み"
-
-#: build/admin/airygen-app.js
-msgid "Revoked"
-msgstr "無効化"
-
-#: build/admin/airygen-app.js
-msgid "Expired"
-msgstr "期限切れ"
-
-#: build/admin/airygen-app.js
-msgid "Mismatch"
-msgstr "不一致"
-
-#: build/admin/airygen-app.js
-msgid "Invalid"
-msgstr "無効"
-
-#: build/admin/airygen-app.js
-msgid "Missing"
-msgstr "欠落"
-
-#: build/admin/airygen-app.js
-msgid "Refreshing credits, please retry shortly."
-msgstr "クレジットを更新中です。しばらくしてから再試行してください。"
-
-#: build/admin/airygen-app.js
-msgid "Unable to load credits right now."
-msgstr "現在クレジットを読み込めません。"
-
-#: build/admin/airygen-app.js
-msgid "Verify your key to load credits."
-msgstr "クレジットを読み込むにはキーを検証してください。"
-
-#: build/admin/airygen-app.js
-msgid "Subscription period"
-msgstr "サブスクリプション期間"
-
-#: build/admin/airygen-app.js
-msgid "Subscription credits"
-msgstr "サブスクリプションクレジット"
-
-#: build/admin/airygen-app.js
-msgid "Credit pack"
-msgstr "クレジットパック"
-
-#: build/admin/airygen-app.js
-msgid "Connect your API key to unlock Airygen modules that require cloud services."
-msgstr "クラウドサービスが必要なAirygenモジュールのロックを解除するために、APIキーを接続します。"
-
-#: build/admin/airygen-app.js
 msgid "API key"
 msgstr "APIキー"
-
-#: build/admin/airygen-app.js
-msgid "Verify your API key to unlock cloud features."
-msgstr "クラウド機能をアンロックするにはAPIキーを検証してください。"
-
-#: build/admin/airygen-app.js
-msgid "Your key is active and linked to this site."
-msgstr "キーはアクティブで、このサイトにリンクされています。"
-
-#: build/admin/airygen-app.js
-msgid "Enter a new key"
-msgstr "新しいキーを入力"
-
-#: build/admin/airygen-app.js
-msgid "Enter your API key"
-msgstr "APIキーを入力"
-
-#: build/admin/airygen-app.js
-msgid "Enter and verify your key to enable cloud features."
-msgstr "クラウド機能を有効にするためにキーを入力して検証してください。"
-
-#: build/admin/airygen-app.js
-msgid "Verifying…"
-msgstr "検証中..."
-
-#: build/admin/airygen-app.js
-msgid "Verify & Save"
-msgstr "検証して保存"
 
 #: build/admin/airygen-app.js
 msgid "Status"
@@ -2121,64 +1605,10 @@ msgid "Debug"
 msgstr "デバッグ"
 
 #: build/admin/airygen-app.js
-msgid "Continue subscription"
-msgstr "サブスクリプションを継続"
-
-#: build/admin/airygen-app.js
-msgid "AI-driven modules."
-msgstr "AI搭載モジュール。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content Blueprint"
-msgstr "コンテンツブループリント"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Article Builder"
-msgstr "記事ビルダー"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Deep FAQ"
-msgstr "詳細FAQ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic Expansion"
-msgstr "トピック拡張"
-
-#: build/admin/airygen-app.js
-msgid "Create compelling titles and meta descriptions to increase SERP click-through rate."
-msgstr "SERP クリック率を向上させるために魅力的なタイトルとメタディスクリプションを作成します。"
-
-#: build/admin/airygen-app.js
-msgid "Generate structured outlines with section summaries to plan your focus keyphrase."
-msgstr "フォーカスキーフレーズを計画するために、セクション要約付きの構造化されたアウトラインを生成します。"
-
-#: build/admin/airygen-app.js
-msgid "Provide draft ideas to speed up writing."
-msgstr "執筆を高速化するための下書きアイデアを提供します。"
-
-#: build/admin/airygen-app.js
-msgid "Improve LLM recommendation visibility and time on page."
-msgstr "LLM推奨の可視性とページ滞在時間を向上させます。"
-
-#: build/admin/airygen-app.js
-msgid "Reduce bounce rate and pogo-sticking to preserve SEO signals."
-msgstr "SEOシグナルを維持するために直帰率とポゴスティッキングを減少させます。"
-
-#: build/admin/airygen-app.js
 msgid "Records"
 msgstr "レコード"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Loading records…"
 msgstr "レコードを読み込み中..."
 
@@ -2199,15 +1629,6 @@ msgid "Next"
 msgstr "次へ"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load CTR booster records."
-msgstr "CTRブースターレコードを読み込めません。"
-
-#: build/admin/airygen-app.js
-msgid "Created at"
-msgstr "作成日時"
-
-#: build/admin/airygen-app.js
 msgid "Actions"
 msgstr "アクション"
 
@@ -2216,200 +1637,8 @@ msgid "Record deleted."
 msgstr "レコードが削除されました。"
 
 #: build/admin/airygen-app.js
-msgid "Deleting…"
-msgstr "削除中..."
-
-#: build/admin/airygen-app.js
 msgid "Delete"
 msgstr "削除"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for SERP CTR Booster."
-msgstr "SERP CTRブースターのデフォルト設定を構成します。"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated titles and descriptions."
-msgstr "AI生成タイトルとディスクリプションの出力言語を選択します。"
-
-#: build/admin/airygen-app.js
-msgid "Always include the focus keyword in AI suggestions."
-msgstr "AI提案に常にフォーカスキーワードを含めます。"
-
-#: build/admin/airygen-app.js
-msgid "Generated CTR booster suggestions. Records can be removed but not edited."
-msgstr "CTRブースター提案が生成されました。レコードは削除できますが、編集できません。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "CTR booster"
-msgstr "CTR ブースター"
-
-#: build/admin/airygen-app.js
-msgid "More info"
-msgstr "詳細情報"
-
-#: build/admin/airygen-app.js
-msgid "AI Prompt Templates"
-msgstr "AI プロンプトテンプレート"
-
-#: build/admin/airygen-app.js
-msgid "Choose scenario, content type, and tone templates for AI generation."
-msgstr "AI 生成用のシナリオ、コンテンツタイプ、トーンテンプレートを選択します。"
-
-#: build/admin/airygen-app.js
-msgid "Scenarios"
-msgstr "シナリオ"
-
-#: build/admin/airygen-app.js
-msgid "Auto-sets content type + tone"
-msgstr "コンテンツタイプ＋トーンを自動設定"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content type"
-msgstr "コンテンツタイプ"
-
-#: build/admin/airygen-app.js
-msgid "Adjust manually if needed"
-msgstr "必要に応じて手動で調整"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Tone"
-msgstr "トーン"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load Content Blueprint records."
-msgstr "コンテンツブループリントレコードを読み込めません。"
-
-#: build/admin/airygen-app.js
-msgid "Target words"
-msgstr "ターゲット語数"
-
-#: build/admin/airygen-app.js
-msgid "Generated words"
-msgstr "生成された語数"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for Content Blueprint."
-msgstr "コンテンツブループリントのデフォルト設定を構成します。"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated blueprints."
-msgstr "AI生成ブループリントの出力言語を選択します。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Depth"
-msgstr "深さ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "H2 only"
-msgstr "H2のみ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "H2 + H3"
-msgstr "H2 + H3"
-
-#: build/admin/airygen-app.js
-msgid "Choose how deep the outline should go."
-msgstr "アウトラインの深さを選択します。"
-
-#: build/admin/airygen-app.js
-msgid "Length"
-msgstr "長さ"
-
-#: build/admin/airygen-app.js
-msgid "More items consume more credits and take longer to generate."
-msgstr "より多くの項目は、より多くのクレジットを消費し、生成に時間がかかります。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Basic (400 words)"
-msgstr "基本(400語)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Standard (1000 words)"
-msgstr "標準(1000語)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Deep (1600 words)"
-msgstr "詳細(1600語)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Pillar (2200 words)"
-msgstr "ピラー(2200語)"
-
-#: build/admin/airygen-app.js
-msgid "Match output length to your SEO goal."
-msgstr "出力の長さをSEO目標に合わせます。"
-
-#: build/admin/airygen-app.js
-msgid "Include the focus keyword in generated outlines."
-msgstr "生成されたアウトラインにフォーカスキーワードを含めます。"
-
-#: build/admin/airygen-app.js
-msgid "Set keyword inclusion targets for each content length."
-msgstr "各コンテンツ長のキーワード含有目標を設定します。"
-
-#: build/admin/airygen-app.js
-msgid "H1 keywords"
-msgstr "H1キーワード"
-
-#: build/admin/airygen-app.js
-msgid "H2 keywords"
-msgstr "H2キーワード"
-
-#: build/admin/airygen-app.js
-msgid "H3 keywords"
-msgstr "H3キーワード"
-
-#: build/admin/airygen-app.js
-msgid "Generated content blueprints. Records can be removed but not edited."
-msgstr "コンテンツブループリントが生成されました。レコードは削除できますが、編集できません。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load Article Builder records."
-msgstr "記事ビルダーレコードを読み込めません。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic"
-msgstr "トピック"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for Article Builder."
-msgstr "記事ビルダーのデフォルト設定を構成します。"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated articles."
-msgstr "AI生成記事の出力言語を選択します。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Article length target"
-msgstr "記事の長さの目標"
-
-#: build/admin/airygen-app.js
-msgid "Match draft length to your publishing goal."
-msgstr "下書きの長さを公開目標に合わせます。"
-
-#: build/admin/airygen-app.js
-msgid "Generated article drafts. Records can be removed but not edited."
-msgstr "記事ドラフトが生成されました。レコードは削除できますが、編集できません。"
 
 #: build/admin/airygen-app.js
 msgid "Set transparent color"
@@ -2538,16 +1767,6 @@ msgid "Font size"
 msgstr "フォントサイズ"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "FAQ"
-msgstr "FAQ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load FAQ records."
-msgstr "FAQレコードを読み込めません。"
-
-#: build/admin/airygen-app.js
 msgid "Snow Slate"
 msgstr "スノースレート"
 
@@ -2558,10 +1777,6 @@ msgstr "鮮明なスレートテキストのニュートラルホワイト+ラ�
 #: build/admin/airygen-app.js
 msgid "Honey Paper"
 msgstr "ハニーペーパー"
-
-#: build/admin/airygen-app.js
-msgid "Soft parchment yellow for warm, readable FAQs."
-msgstr "温かく読みやすいFAQのためのソフトパーチメントイエロー。"
 
 #: build/admin/airygen-app.js
 msgid "Sky Breeze"
@@ -2600,10 +1815,6 @@ msgid "Post"
 msgstr "投稿"
 
 #: build/admin/airygen-app.js
-msgid "Question"
-msgstr "質問"
-
-#: build/admin/airygen-app.js
 msgid "Layout"
 msgstr "レイアウト"
 
@@ -2612,10 +1823,6 @@ msgstr "レイアウト"
 #: build/classic-editor/airygen-editor.js
 msgid "Preview"
 msgstr "プレビュー"
-
-#: build/admin/airygen-app.js
-msgid "Configure manual output and automatic FAQ injection."
-msgstr "手動出力と FAQ の自動挿入を設定します。"
 
 #: build/admin/airygen-app.js
 msgid "Allow template function, shortcode, and block output."
@@ -2633,10 +1840,6 @@ msgid "Block"
 msgstr "ブロック"
 
 #: build/admin/airygen-app.js
-msgid "Automatically inject FAQ output into matched post types."
-msgstr "FAQ 出力を一致する投稿タイプに自動挿入します。"
-
-#: build/admin/airygen-app.js
 msgid "Insert position"
 msgstr "挿入位置"
 
@@ -2649,251 +1852,28 @@ msgid "After content"
 msgstr "コンテンツの後"
 
 #: build/admin/airygen-app.js
-msgid "Choose where FAQ output is injected in post content."
-msgstr "FAQ 出力を投稿コンテンツのどこに挿入するかを選択します。"
-
-#: build/admin/airygen-app.js
-msgid "Frequently Asked Questions"
-msgstr "よくある質問"
-
-#: build/admin/airygen-app.js
-msgid "AI Generation"
-msgstr "AI 生成"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for FAQ generation."
-msgstr "FAQ生成のデフォルト設定を構成します。"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated FAQs."
-msgstr "AI生成FAQの出力言語を選択します。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Answer length"
-msgstr "回答の長さ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Short"
-msgstr "短い"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Medium"
-msgstr "中"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Long"
-msgstr "長い"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Choose how long each answer should be."
-msgstr "各回答の長さを選択します。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Question count"
-msgstr "質問数"
-
-#: build/admin/airygen-app.js
-msgid "How many FAQ items to generate per request."
-msgstr "リクエストごとに生成するFAQ項目の数。"
-
-#: build/admin/airygen-app.js
 msgid "Scope"
 msgstr "範囲"
-
-#: build/admin/airygen-app.js
-msgid "Choose which post types can receive automatic FAQ injection."
-msgstr "FAQ の自動挿入を受け取ることができる投稿タイプを選択します。"
 
 #: build/admin/airygen-app.js
 msgid "Templates"
 msgstr "テンプレート"
 
 #: build/admin/airygen-app.js
-msgid "Choose a preset style for FAQ output."
-msgstr "FAQ 出力のプリセットスタイルを選択します。"
-
-#: build/admin/airygen-app.js
 msgid "Style"
 msgstr "スタイル"
-
-#: build/admin/airygen-app.js
-msgid "Adjust spacing and borders for list and collapse layouts."
-msgstr "リストと折りたたみレイアウトの間隔とボーダーを調整します。"
 
 #: build/admin/airygen-app.js
 msgid "List"
 msgstr "リスト"
 
 #: build/admin/airygen-app.js
-msgid "Collapse"
-msgstr "折りたたみ"
-
-#: build/admin/airygen-app.js
-msgid "Show FAQ border"
-msgstr "FAQボーダーを表示"
-
-#: build/admin/airygen-app.js
-msgid "Draw a border around the FAQ container."
-msgstr "FAQコンテナの周りにボーダーを描画します。"
-
-#: build/admin/airygen-app.js
-msgid "Select the line style for the FAQ container border."
-msgstr "FAQコンテナボーダーのラインスタイルを選択してください。"
-
-#: build/admin/airygen-app.js
-msgid "Set the border color for the list container."
-msgstr "リストコンテナのボーダー色を設定します。"
-
-#: build/admin/airygen-app.js
-msgid "Adjust the thickness of the FAQ border."
-msgstr "FAQボーダーの太さを調整します。"
-
-#: build/admin/airygen-app.js
-msgid "FAQ padding"
-msgstr "FAQ のパディング"
-
-#: build/admin/airygen-app.js
-msgid "Padding inside the FAQ list container."
-msgstr "FAQリストコンテナ内のパディング。"
-
-#: build/admin/airygen-app.js
-msgid "Background color of the FAQ list container."
-msgstr "FAQリストコンテナの背景色。"
-
-#: build/admin/airygen-app.js
-msgid "Question font color"
-msgstr "質問のフォント色"
-
-#: build/admin/airygen-app.js
-msgid "Text color for each FAQ question."
-msgstr "各FAQ質問のテキスト色。"
-
-#: build/admin/airygen-app.js
-msgid "Question font size"
-msgstr "質問のフォントサイズ"
-
-#: build/admin/airygen-app.js
-msgid "Font size used for each question line."
-msgstr "各質問行に使用されるフォントサイズ。"
-
-#: build/admin/airygen-app.js
-msgid "Answer font color"
-msgstr "回答のフォント色"
-
-#: build/admin/airygen-app.js
-msgid "Text color for each answer line."
-msgstr "各回答行のテキスト色。"
-
-#: build/admin/airygen-app.js
-msgid "Answer font size"
-msgstr "回答のフォントサイズ"
-
-#: build/admin/airygen-app.js
-msgid "Font size for the answer text."
-msgstr "回答テキストのフォントサイズ。"
-
-#: build/admin/airygen-app.js
-msgid "Collapse button"
-msgstr "折りたたみボタン"
-
-#: build/admin/airygen-app.js
-msgid "Collapse answers"
-msgstr "回答を折りたたむ"
-
-#: build/admin/airygen-app.js
-msgid "Background for the plus/minus button."
-msgstr "プラス/マイナスボタンの背景。"
-
-#: build/admin/airygen-app.js
-msgid "Icon color"
-msgstr "アイコンの色"
-
-#: build/admin/airygen-app.js
-msgid "Color for the plus/minus icon."
-msgstr "プラス/マイナスアイコンの色。"
-
-#: build/admin/airygen-app.js
-msgid "Border color for the toggle button."
-msgstr "トグルボタンのボーダー色。"
-
-#: build/admin/airygen-app.js
-msgid "Thickness of the toggle button border."
-msgstr "トグルボタンボーダーの太さ。"
-
-#: build/admin/airygen-app.js
-msgid "Background color for each question row."
-msgstr "各質問行の背景色。"
-
-#: build/admin/airygen-app.js
 msgid "Font color"
 msgstr "フォント色"
 
 #: build/admin/airygen-app.js
-msgid "Text color for the question title."
-msgstr "質問タイトルのテキスト色。"
-
-#: build/admin/airygen-app.js
-msgid "Border color around each question row."
-msgstr "各質問行の周囲のボーダー色。"
-
-#: build/admin/airygen-app.js
-msgid "Line style for the question border."
-msgstr "質問ボーダーのラインスタイル。"
-
-#: build/admin/airygen-app.js
-msgid "Font size for the question text."
-msgstr "質問テキストのフォントサイズ。"
-
-#: build/admin/airygen-app.js
-msgid "Padding inside each question row."
-msgstr "各質問行内のパディング。"
-
-#: build/admin/airygen-app.js
 msgid "Gap"
 msgstr "間隔"
-
-#: build/admin/airygen-app.js
-msgid "Spacing between each question row."
-msgstr "各質問行間の間隔。"
-
-#: build/admin/airygen-app.js
-msgid "Keep open"
-msgstr "開いたままにする"
-
-#: build/admin/airygen-app.js
-msgid "Allow multiple answers to stay open."
-msgstr "複数の回答を開いたままにすることを許可します。"
-
-#: build/admin/airygen-app.js
-msgid "Answer"
-msgstr "回答"
-
-#: build/admin/airygen-app.js
-msgid "Background for the expanded answer area."
-msgstr "展開された回答エリアの背景。"
-
-#: build/admin/airygen-app.js
-msgid "Text color for the answer content."
-msgstr "回答コンテンツのテキスト色。"
-
-#: build/admin/airygen-app.js
-msgid "Padding inside the answer panel."
-msgstr "回答パネル内のパディング。"
-
-#: build/admin/airygen-app.js
-msgid "Preview may differ from the live site because theme styles are applied there."
-msgstr "テーマスタイルが適用されているため、プレビューはライブサイトと異なる場合があります。"
 
 #: build/admin/airygen-app.js
 msgid "Laptop"
@@ -2906,18 +1886,6 @@ msgstr "タブレット"
 #: build/admin/airygen-app.js
 msgid "Cellphone"
 msgstr "携帯電話"
-
-#: build/admin/airygen-app.js
-msgid "FAQ preview"
-msgstr "FAQプレビュー"
-
-#: build/admin/airygen-app.js
-msgid "Preview is not available."
-msgstr "プレビューは利用できません。"
-
-#: build/admin/airygen-app.js
-msgid "Generated FAQ records. Records can be removed but not edited."
-msgstr "FAQレコードが生成されました。レコードは削除できますが、編集できません。"
 
 #: build/admin/airygen-app.js
 msgid "Section body container"
@@ -2972,354 +1940,18 @@ msgid "Indent"
 msgstr "インデント"
 
 #: build/admin/airygen-app.js
-msgid "topic expansion"
-msgstr "トピック展開"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load topic records."
-msgstr "トピックレコードを読み込めません。"
-
-#: build/admin/airygen-app.js
-msgid "Display"
-msgstr "表示"
-
-#: build/admin/airygen-app.js
-msgid "Shown"
-msgstr "表示"
-
-#: build/admin/airygen-app.js
-msgid "Hidden"
-msgstr "非表示"
-
-#: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "View"
 msgstr "表示"
 
 #: build/admin/airygen-app.js
-msgid "Soft parchment yellow for warm, readable topics."
-msgstr "温かく読みやすいトピックのためのソフトパーチメントイエロー。"
-
-#: build/admin/airygen-app.js
-msgid "Configure manual output and automatic topic expansion injection."
-msgstr "手動出力とトピック展開の自動挿入を設定します。"
-
-#: build/admin/airygen-app.js
-msgid "Automatically inject topic expansion output into content."
-msgstr "トピック展開の出力をコンテンツに自動挿入します。"
-
-#: build/admin/airygen-app.js
-msgid "Choose where topic expansion output is injected in post content."
-msgstr "トピック展開の出力を投稿コンテンツのどこに挿入するかを選択します。"
-
-#: build/admin/airygen-app.js
-msgid "Set how AI generates related topics."
-msgstr "AI が関連トピックをどのように生成するかを設定します。"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for related topics."
-msgstr "関連トピックの出力言語を選択します。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic length"
-msgstr "トピックの長さ"
-
-#: build/admin/airygen-app.js
-msgid "Choose the length for each topic suggestion."
-msgstr "各トピック提案の長さを選択します。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic count"
-msgstr "トピック数"
-
-#: build/admin/airygen-app.js
-msgid "How many related topics to generate per request."
-msgstr "リクエストごとに生成する関連トピックの数。"
-
-#: build/admin/airygen-app.js
-msgid "Pick a preset theme for topic output."
-msgstr "トピック出力のプリセットテーマを選択します。"
-
-#: build/admin/airygen-app.js
-msgid "Adjust how the related topics list appears on the page."
-msgstr "関連トピックリストがページに表示される方法を調整します。"
-
-#: build/admin/airygen-app.js
-msgid "Set whether topic text is bold, italic, or underlined."
-msgstr "トピックテキストを太字、斜体、または下線にするかを設定します。"
-
-#: build/admin/airygen-app.js
-msgid "Color for each topic link."
-msgstr "各トピックリンクの色。"
-
-#: build/admin/airygen-app.js
-msgid "Font size used for each topic link."
-msgstr "各トピックリンクに使用されるフォントサイズ。"
-
-#: build/admin/airygen-app.js
 msgid "Choose whether each line uses bullets, numbers, or plain text."
 msgstr "各行に箇条書き、番号付き、またはプレーンテキストを使用するかを選択します。"
 
 #: build/admin/airygen-app.js
-msgid "Set vertical spacing between each topic item."
-msgstr "各トピックアイテム間の縦方向のスペースを設定します。"
-
-#: build/admin/airygen-app.js
-msgid "Topic Expansion preview"
-msgstr "トピック拡張プレビュー"
-
-#: build/admin/airygen-app.js
 msgid "Preview is unavailable."
 msgstr "プレビューは利用できません。"
-
-#: build/admin/airygen-app.js
-msgid "SEO safety"
-msgstr "SEOの安全性"
-
-#: build/admin/airygen-app.js
-msgid "Allowing indexation can briefly lift long-tail traffic, but search engines may later remove those pages and harm site-wide SEO authority. Reduce duplication and focus on real user value."
-msgstr "インデックス登録を許可すると一時的にロングテールトラフィックが増加する可能性がありますが、検索エンジンが後でそれらのページを削除し、サイト全体のSEO権威を損なう可能性があります。重複を減らし、実際のユーザー価値に焦点を当ててください。"
-
-#: build/admin/airygen-app.js
-msgid "Prevent search engines from indexing highly repetitive, low-quality content."
-msgstr "検索エンジンが非常に繰り返しの多い低品質コンテンツをインデックスするのを防ぎます。"
-
-#: build/admin/airygen-app.js
-msgid "Disable indexing"
-msgstr "インデックス登録を無効化"
-
-#: build/admin/airygen-app.js
-msgid "Add nofollow to virtual links"
-msgstr "仮想リンクにnofollowを追加"
-
-#: build/admin/airygen-app.js
-msgid "Add rel=\"nofollow\" to reduce crawl budget spent on generated links."
-msgstr "生成されたリンクに消費されるクロールバジェットを削減するためにrel=\"nofollow\"を追加します。"
-
-#: build/admin/airygen-app.js
-msgid "Generated topic suggestions. Records can be removed but not edited."
-msgstr "トピック提案が生成されました。レコードは削除できますが、編集できません。"
-
-#: build/admin/airygen-app.js
-msgid "Auto detect"
-msgstr "自動検出"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "English (United States)"
-msgstr "英語(アメリカ合衆国)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "English"
-msgstr "英語"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Chinese (Traditional)"
-msgstr "中国語(繁体字)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Chinese (Simplified)"
-msgstr "中国語(簡体字)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Japanese"
-msgstr "日本語"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Korean"
-msgstr "韓国語"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Technology"
-msgstr "技術"
-
-#: build/admin/airygen-app.js
-msgid "Product, engineering, AI, and system-focused technical content."
-msgstr "製品、エンジニアリング、AI、システムに焦点を当てたテクニカルコンテンツ。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Business"
-msgstr "ビジネス"
-
-#: build/admin/airygen-app.js
-msgid "Growth, operations, strategy, and outcome-oriented business content."
-msgstr "成長、運営、戦略、成果志向のビジネスコンテンツ。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Finance"
-msgstr "金融"
-
-#: build/admin/airygen-app.js
-msgid "Numbers-first finance and investment analysis with risk context."
-msgstr "リスクコンテキストを含む数値優先の金融・投資分析。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Health"
-msgstr "ヘルス"
-
-#: build/admin/airygen-app.js
-msgid "Evidence-based health content with cautious and compliant language."
-msgstr "注意深く準拠した言葉で書かれたエビデンスベースの健康コンテンツ。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Lifestyle"
-msgstr "ライフスタイル"
-
-#: build/admin/airygen-app.js
-msgid "Practical lifestyle advice with real-world trade-offs."
-msgstr "現実的なトレードオフを含む実用的なライフスタイルのアドバイス。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Education"
-msgstr "教育"
-
-#: build/admin/airygen-app.js
-msgid "Learning-focused content with clear outcomes and methods."
-msgstr "明確な成果と方法に焦点を当てた学習向けコンテンツ。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Professional"
-msgstr "プロフェッショナル"
-
-#: build/admin/airygen-app.js
-msgid "Domain-expert content for consulting and regulated industries."
-msgstr "コンサルティングおよび規制業界向けのドメインエキスパートコンテンツ。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "General"
-msgstr "一般"
-
-#: build/admin/airygen-app.js
-msgid "Balanced, broadly readable content for mixed audiences."
-msgstr "さまざまな読者向けのバランスが取れた読みやすいコンテンツ。"
-
-#: build/admin/airygen-app.js
-msgid "Formal, precise, and decision-ready writing style."
-msgstr "形式的で正確な、意思決定に適した文章スタイル。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Conversational"
-msgstr "会話調"
-
-#: build/admin/airygen-app.js
-msgid "Natural and friendly style for broad readability."
-msgstr "幅広い読者向けの自然で親しみやすいスタイル。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Technical"
-msgstr "技術的"
-
-#: build/admin/airygen-app.js
-msgid "Spec-like style with implementation detail and precision."
-msgstr "実装の詳細と精度を備えた仕様書のようなスタイル。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Storytelling"
-msgstr "ストーリーテリング"
-
-#: build/admin/airygen-app.js
-msgid "Narrative-led style with clear takeaways and context."
-msgstr "明確なポイントとコンテキストを持つ物語主導のスタイル。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Instructional"
-msgstr "ハウツー"
-
-#: build/admin/airygen-app.js
-msgid "Action-first, step-by-step guidance style."
-msgstr "行動優先、ステップバイステップのガイドスタイル。"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Minimalist"
-msgstr "ミニマリスト"
-
-#: build/admin/airygen-app.js
-msgid "Compact, direct writing style with minimal filler."
-msgstr "余計な情報を省いたコンパクトで直接的な文章スタイル。"
-
-#: build/admin/airygen-app.js
-msgid "Quick answers for long‑tail keywords and fast indexing."
-msgstr "ロングテールキーワードと高速インデックスのための迅速な回答。"
-
-#: build/admin/airygen-app.js
-msgid "Balanced depth for most SEO topics."
-msgstr "ほとんどのSEOトピックに適したバランスの取れた深さ。"
-
-#: build/admin/airygen-app.js
-msgid "More detail for competitive keywords and comparisons."
-msgstr "競合キーワードと比較のための詳細情報。"
-
-#: build/admin/airygen-app.js
-msgid "The main article in a topic cluster that everything links to."
-msgstr "すべてがリンクするトピッククラスターのメイン記事。"
-
-#: build/admin/airygen-app.js
-msgid "Business report"
-msgstr "ビジネスレポート"
-
-#: build/admin/airygen-app.js
-msgid "Data-driven structure for decision-making and business review."
-msgstr "意思決定とビジネスレビュー向けのデータドリブン構造。"
-
-#: build/admin/airygen-app.js
-msgid "Tech blog"
-msgstr "テックブログ"
-
-#: build/admin/airygen-app.js
-msgid "Technical but easy-to-read format for broader audiences."
-msgstr "幅広い読者向けの技術的でも読みやすいフォーマット。"
-
-#: build/admin/airygen-app.js
-msgid "Tutorial"
-msgstr "チュートリアル"
-
-#: build/admin/airygen-app.js
-msgid "Step-by-step teaching format focused on actionable learning."
-msgstr "実践的な学習に焦点を当てたステップバイステップの教授形式。"
-
-#: build/admin/airygen-app.js
-msgid "Marketing content"
-msgstr "マーケティングコンテンツ"
-
-#: build/admin/airygen-app.js
-msgid "Story-led format focused on engagement and conversion."
-msgstr "エンゲージメントとコンバージョンに焦点を当てたストーリー主導のフォーマット。"
-
-#: build/admin/airygen-app.js
-msgid "Technical document"
-msgstr "技術文書"
-
-#: build/admin/airygen-app.js
-msgid "Precise engineering-style format for implementation details."
-msgstr "実装の詳細に対する正確なエンジニアリングスタイルのフォーマット。"
-
-#: build/admin/airygen-app.js
-msgid "AI-assisted writing and strategic planning for SEO content."
-msgstr "SEOコンテンツのためのAI支援ライティングと戦略的計画。"
 
 #: build/admin/airygen-app.js
 msgid "Configure"
@@ -3616,7 +2248,6 @@ msgid "Name"
 msgstr "名前"
 
 #: build/admin/airygen-app.js
-#: build/classic-editor/airygen-editor.js
 msgid "Pillar"
 msgstr "ピラー"
 
@@ -5950,88 +4581,16 @@ msgid "Open in a new tab to verify the generated sitemap index."
 msgstr "新しいタブで開いて生成されたサイトマップインデックスを確認します。"
 
 #: build/admin/airygen-app.js
-msgid "Head"
-msgstr "ヘッド"
-
-#: build/admin/airygen-app.js
-msgid "Snippets in this area are injected into the <head> section."
-msgstr "このエリアのスニペットは <head> セクションに挿入されます。"
-
-#: build/admin/airygen-app.js
 msgid "Body"
 msgstr "ボディ"
-
-#: build/admin/airygen-app.js
-msgid "Snippets in this area are injected right after <body>."
-msgstr "このエリアのスニペットは <body> の直後に挿入されます。"
 
 #: build/admin/airygen-app.js
 msgid "Footer"
 msgstr "フッター"
 
 #: build/admin/airygen-app.js
-msgid "Snippets in this area are injected before </body>."
-msgstr "このエリアのスニペットは </body> の前に挿入されます。"
-
-#: build/admin/airygen-app.js
-msgid "Disabled snippets staging area"
-msgstr "無効なスニペットのステージングエリア"
-
-#: build/admin/airygen-app.js
-msgid "Keep snippets here when you do not want them rendered."
-msgstr "レンダリングしたくないスニペットはここに保管してください。"
-
-#: build/admin/airygen-app.js
 msgid "No description"
 msgstr "説明なし"
-
-#: build/admin/airygen-app.js
-msgid "Code Snippets"
-msgstr "コードスニペット"
-
-#: build/admin/airygen-app.js
-msgid "Configure GA4, GTM, and custom tracking snippets for your site."
-msgstr "サイトの GA4、GTM、カスタムトラッキングスニペットを設定します。"
-
-#: build/admin/airygen-app.js
-msgid "Paste tracking IDs. Airygen SEO prints GA4/GTM tags automatically when IDs are set."
-msgstr "トラッキング ID を貼り付けてください。ID が設定されると Airygen SEO は GA4/GTM タグを自動的に出力します。"
-
-#: build/admin/airygen-app.js
-msgid "Google Analytics 4"
-msgstr "Google Analytics 4"
-
-#: build/admin/airygen-app.js
-msgid "Enable GA4 tracking"
-msgstr "GA4 トラッキングを有効にする"
-
-#: build/admin/airygen-app.js
-msgid "Measurement ID"
-msgstr "測定 ID"
-
-#. translators: %s is an HTML code tag for the GA4 ID prefix (G-).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste your Google Analytics 4 ID from Google Analytics Admin. It usually starts with %s."
-msgstr "Google Analytics 管理画面から Google Analytics 4 ID を貼り付けてください。通常 %s で始まります。"
-
-#: build/admin/airygen-app.js
-msgid "Google Tag Manager"
-msgstr "Google Tag Manager"
-
-#: build/admin/airygen-app.js
-msgid "Enable GTM tracking"
-msgstr "GTM トラッキングを有効にする"
-
-#: build/admin/airygen-app.js
-msgid "Container ID"
-msgstr "コンテナ ID"
-
-#. translators: %s is an HTML code tag for the GTM container prefix (GTM-).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste your Google Tag Manager container ID. It usually starts with %s."
-msgstr "Google Tag Manager のコンテナ ID を貼り付けてください。通常 %s で始まります。"
 
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
@@ -6040,42 +4599,8 @@ msgid "Custom"
 msgstr "カスタム"
 
 #: build/admin/airygen-app.js
-msgid "Create reusable snippets and drag them between output locations."
-msgstr "再利用可能なスニペットを作成し、出力先の間でドラッグします。"
-
-#: build/admin/airygen-app.js
-msgid "Add Snippet"
-msgstr "スニペットを追加"
-
-#: build/admin/airygen-app.js
-msgid "Add snippet"
-msgstr "スニペットを追加"
-
-#: build/admin/airygen-app.js
 msgid "Save changes"
 msgstr "変更を保存"
-
-#: build/admin/airygen-app.js
-msgid "Internal reference only. This is not output on the frontend."
-msgstr "内部参照のみ。フロントエンドには出力されません。"
-
-#: build/admin/airygen-app.js
-msgid "Code"
-msgstr "コード"
-
-#. translators: %s is an HTML code tag for script tags (<script>).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste code only. Do not include %s tags."
-msgstr "コードのみ貼り付けてください。%s タグは含めないでください。"
-
-#: build/admin/airygen-app.js
-msgid "Injection position"
-msgstr "挿入位置"
-
-#: build/admin/airygen-app.js
-msgid "Inactive"
-msgstr "非アクティブ"
 
 #: build/admin/airygen-app.js
 msgid "Site Verification"
@@ -8908,10 +7433,6 @@ msgid "Manage the sitemap index and exposed post types. When enabled, Airygen SE
 msgstr "サイトマップインデックスと公開する投稿タイプを管理します。有効にすると、Airygen SEO が WordPress のデフォルトサイトマップを置き換えます。"
 
 #: build/admin/airygen-app.js
-msgid "Manage GA4, GTM, and custom tracking snippets in one place."
-msgstr "GA4、GTM、カスタムトラッキングスニペットを一か所で管理します。"
-
-#: build/admin/airygen-app.js
 msgid "Add site verification tokens for search engines and webmaster platforms."
 msgstr "検索エンジンやウェブマスタープラットフォーム向けにサイト認証トークンを追加します。"
 
@@ -8950,10 +7471,6 @@ msgstr "エディタ内SEOスコアパネルとRESTエンドポイントを強�
 #: build/admin/airygen-app.js
 msgid "Monitor outbound URLs for errors once link counting completes."
 msgstr "リンクカウントが完了したら、外部URLのエラーを監視します。"
-
-#: build/admin/airygen-app.js
-msgid "AI-powered helpers for titles, descriptions, and content improvements."
-msgstr "タイトル、ディスクリプション、コンテンツ改善を支援するAI搭載ツール。"
 
 #: build/admin/airygen-app.js
 msgid "Create and prioritize redirect rules for your site."
@@ -9029,10 +7546,6 @@ msgid "Assign pillar and cluster relationships while editing."
 msgstr "編集中にピラーとクラスターの関係を割り当てます。"
 
 #: build/admin/airygen-app.js
-msgid "AI suggestions and CTR improvements while you edit."
-msgstr "編集中にAI提案とCTR改善を提供します。"
-
-#: build/admin/airygen-app.js
 msgid "Failed to load debug info."
 msgstr "デバッグ情報の読み込みに失敗しました。"
 
@@ -9053,14 +7566,6 @@ msgid "Failed to enable debug mode."
 msgstr "デバッグモードの有効化に失敗しました。"
 
 #: build/admin/airygen-app.js
-msgid "Logs cleared."
-msgstr "ログがクリアされました。"
-
-#: build/admin/airygen-app.js
-msgid "Failed to clear logs."
-msgstr "ログのクリアに失敗しました。"
-
-#: build/admin/airygen-app.js
 msgid "Classic editor mode enabled for testing."
 msgstr "テスト用にクラシックエディターモードが有効になりました。"
 
@@ -9079,14 +7584,6 @@ msgstr "デバッグレベルを更新しました。"
 #: build/admin/airygen-app.js
 msgid "Failed to update debug level."
 msgstr "デバッグレベルの更新に失敗しました。"
-
-#: build/admin/airygen-app.js
-msgid "Log file not found."
-msgstr "ログファイルが見つかりません。"
-
-#: build/admin/airygen-app.js
-msgid "Failed to load log file."
-msgstr "ログファイルの読み込みに失敗しました。"
 
 #: build/admin/airygen-app.js
 msgid "Failed to load settings."
@@ -9129,32 +7626,12 @@ msgid "notify module"
 msgstr "通知モジュール"
 
 #: build/admin/airygen-app.js
-msgid "This paid module cannot be enabled with the current subscription status."
-msgstr "この有料モジュールは現在のサブスクリプション状態では有効にできません。"
-
-#: build/admin/airygen-app.js
 msgid "Related Posts requires enabling Link Suggestions first."
 msgstr "関連投稿を使用するには、まずリンク候補を有効にする必要があります。"
 
 #: build/admin/airygen-app.js
 msgid "Airygen SEO Settings"
 msgstr "Airygen SEO 設定"
-
-#: build/admin/airygen-app.js
-msgid "Subscription inactive"
-msgstr "サブスクリプションが非アクティブ"
-
-#: build/admin/airygen-app.js
-msgid "Continue to disable"
-msgstr "無効にし続ける"
-
-#: build/admin/airygen-app.js
-msgid "Subscription is inactive. Enabled paid modules remain available, but new paid modules cannot be enabled until renewal."
-msgstr "サブスクリプションが非アクティブです。有効化済みの有料モジュールは引き続き利用できますが、更新されるまで新しい有料モジュールを有効にすることはできません。"
-
-#: build/admin/airygen-app.js
-msgid "View plans"
-msgstr "プランを表示"
 
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
@@ -9315,7 +7792,6 @@ msgstr "密度をチェックするためにフォーカスキーフレーズを
 msgid "Focus keyphrase density is 0%. Add it naturally to the content."
 msgstr "フォーカスキーフレーズ密度が0%です。コンテンツに自然に追加してください。"
 
-#. translators: percentage range for focus keyphrase density.
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "Adjust focus keyphrase density to 0.5%–2%."
@@ -9359,7 +7835,6 @@ msgid "To avoid keyword stuffing, each long-tail keyphrase should be supported b
 msgstr "キーワードスタッフィングを避けるために、各ロングテールキーフレーズは少なくとも150語の説明コンテンツでサポートする必要があります。意味のあるテキストなしでキーフレーズだけを繰り返さないでください。"
 
 #: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Got it"
 msgstr "了解"
 
@@ -9678,407 +8153,14 @@ msgstr "提案はまだありません。キーワードをインデックスで
 msgid "Insert"
 msgstr "挿入"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your content…"
-msgstr "コンテンツを分析中..."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Subscription is inactive. AI generation is unavailable until renewal."
-msgstr "サブスクリプションが非アクティブです。更新されるまで AI 生成は利用できません。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Detected content languages:"
-msgstr "検出されたコンテンツ言語:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Primary language:"
-msgstr "プライマリ言語:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Selected output language:"
-msgstr "選択された出力言語:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Continue?"
-msgstr "続けますか?"
-
-#: build/block-editor/airygen-editor.js
-msgid "SERP CTR Booster generated. Review and apply when ready."
-msgstr "SERP CTRブースターが生成されました。準備ができたらレビューして適用してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate CTR booster suggestions."
-msgstr "CTRブースター提案を生成できません。"
-
-#: build/block-editor/airygen-editor.js
-msgid "FAQ generated. Review and apply when ready."
-msgstr "FAQが生成されました。準備ができたらレビューして適用してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate FAQ suggestions."
-msgstr "FAQ提案を生成できません。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Topic Expansion generated. Review and apply when ready."
-msgstr "トピック拡張が生成されました。準備ができたらレビューして適用してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Topic Expansion suggestions."
-msgstr "トピック拡張提案を生成できません。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Content Blueprint generated. Review and apply when ready."
-msgstr "コンテンツブループリントが生成されました。準備ができたらレビューして適用してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Content Blueprint."
-msgstr "コンテンツブループリントを生成できません。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Article Builder generated. Review and apply when ready."
-msgstr "記事ビルダーが生成されました。準備ができたらレビューして適用してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Article Builder output."
-msgstr "記事ビルダー出力を生成できません。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Outline unavailable."
-msgstr "アウトラインは利用できません。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to update FAQ display settings."
-msgstr "FAQ表示設定を更新できません。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to update topic display settings."
-msgstr "トピック表示設定を更新できません。"
-
-#: build/block-editor/airygen-editor.js
-msgid "AI Assist is disabled. Enable it in Airygen → Modules."
-msgstr "AIアシストが無効です。Airygen → モジュールで有効にしてください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "AI Assist API is not configured."
-msgstr "AIアシストAPIが設定されていません。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate higher-CTR titles and descriptions with AI suggestions."
-msgstr "AI提案でCTRの高いタイトルとディスクリプションを生成します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate structured outlines and section summaries for faster planning."
-msgstr "より速い計画のために構造化されたアウトラインとセクション要約を生成します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate full-length articles from your topic and focus keyphrase."
-msgstr "トピックとフォーカスキーフレーズから完全な記事を生成します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate FAQ entries that expand on common user questions."
-msgstr "一般的なユーザーの質問を拡張するFAQエントリを生成します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate related topics to expand your content plan."
-msgstr "コンテンツ計画を拡張するために関連トピックを生成します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unavailable in your current plan."
-msgstr "現在のプランでは利用できません。"
-
-#: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "Display mode"
 msgstr "表示モード"
 
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
-msgid "Use settings"
-msgstr "設定を使用"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Manual"
 msgstr "手動"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose how FAQ output should be inserted for this post."
-msgstr "この投稿にFAQ出力を挿入する方法を選択します。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose how Topic Expansion output should be inserted for this post."
-msgstr "この投稿にトピック拡張出力を挿入する方法を選択します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "No AI modules are enabled for this post."
-msgstr "この投稿に対してAIモジュールが有効になっていません。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates a meta title, meta description, and excerpt based on your current content. Apply suggestions and save the post to make changes live."
-msgstr "現在のコンテンツに基づいてメタタイトル、メタディスクリプション、抜粋を生成します。提案を適用して投稿を保存すると変更が反映されます。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Uses the focus keyphrase set for this post."
-msgstr "この投稿に設定されたフォーカスキーフレーズを使用します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the language for AI-generated suggestions."
-msgstr "AI生成提案の言語を選択します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Require the focus keyphrase to appear in suggestions."
-msgstr "提案にフォーカスキーフレーズを表示することを要求します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Applied. Save the post to make the changes live."
-msgstr "適用されました。変更を反映するには投稿を保存してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one suggestion to apply."
-msgstr "適用する少なくとも1つの提案を選択してください。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Describe the article you want to plan."
-msgstr "計画したい記事を説明してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Defaults to the focus keyphrase."
-msgstr "フォーカスキーフレーズがデフォルトです。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Set a focus keyphrase in the SEO panel."
-msgstr "SEOパネルでフォーカスキーフレーズを設定してください。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose the output language for the outline."
-msgstr "アウトラインの出力言語を選択します。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Select a structure that matches your topic."
-msgstr "トピックに合った構造を選択してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose a voice for section summaries."
-msgstr "セクション要約のボイスを選択します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Control how many heading levels the outline includes."
-msgstr "アウトラインに含める見出しレベルの数を制御します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Include the focus keyword in outline headings."
-msgstr "アウトラインの見出しにフォーカスキーワードを含めます。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Outline length target"
-msgstr "アウトラインの長さの目標"
-
-#: build/block-editor/airygen-editor.js
-msgid "Longer blueprints take more time. Please keep this window open."
-msgstr "長いブループリントには時間がかかります。このウィンドウを開いたままにしてください。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Keep outline"
-msgstr "アウトラインを保持"
-
-#: build/block-editor/airygen-editor.js
-msgid "Keep your current headings and expand the article from them."
-msgstr "現在の見出しを保持し、それらから記事を拡張します。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content Blueprint is for planning new articles. Applying will replace the post content."
-msgstr "コンテンツブループリントは新しい記事を計画するためのものです。適用すると投稿コンテンツが置き換えられます。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "It does not generate a full draft; it proposes section headings to guide your writing."
-msgstr "完全なドラフトは生成しません。執筆をガイドするためのセクション見出しを提案します。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use this blueprint"
-msgstr "このブループリントを使用"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select a blueprint to apply."
-msgstr "適用するブループリントを選択してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to apply blueprint content."
-msgstr "ブループリントコンテンツを適用できません。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your topic…"
-msgstr "トピックを分析中..."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Building outline structure…"
-msgstr "アウトライン構造を構築中..."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Refining sections…"
-msgstr "セクションを洗練中..."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content source"
-msgstr "コンテンツソース"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Extract from editor content"
-msgstr "エディターコンテンツから抽出"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose where the AI should read source content from."
-msgstr "AIがソースコンテンツを読み取る場所を選択します。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Custom content"
-msgstr "カスタムコンテンツ"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Paste the source content for the AI draft."
-msgstr "AI下書き用のソースコンテンツを貼り付けてください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Markdown formatting works best."
-msgstr "Markdown形式が最適です。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the language for the generated article."
-msgstr "生成された記事の言語を選択します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the structure that best matches your topic."
-msgstr "トピックに最も適した構造を選択してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the voice and style for the draft."
-msgstr "下書きのボイスとスタイルを選択してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "AI targets can vary by about ten percent from the selected length."
-msgstr "AIターゲットは選択された長さから約10%変動する場合があります。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Longer articles take more time. Please keep this window open."
-msgstr "長い記事には時間がかかります。このウィンドウを開いたままにしてください。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use this article"
-msgstr "この記事を使用"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to apply Article Builder output."
-msgstr "記事ビルダー出力を適用できません。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select an article to apply."
-msgstr "適用する記事を選択してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting can take up to ~90 seconds depending on length. Please keep this window open."
-msgstr "下書きは長さに応じて最大約90秒かかる場合があります。このウィンドウを開いたままにしてください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting full sections…"
-msgstr "完全なセクションを下書き中..."
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the output language for FAQs."
-msgstr "FAQの出力言語を選択します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the content structure for FAQ responses."
-msgstr "FAQ回答のコンテンツ構造を選択してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the writing tone for answers."
-msgstr "回答のライティングトーンを選択してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "How many questions to generate per request."
-msgstr "リクエストごとに生成する質問の数。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates FAQ entries based on your current post content. Apply suggestions and save the post to publish updates."
-msgstr "現在の投稿コンテンツに基づいてFAQエントリを生成します。提案を適用して投稿を保存すると更新が公開されます。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Untitled FAQ"
-msgstr "無題のFAQ"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one FAQ item to apply."
-msgstr "適用する少なくとも1つのFAQ項目を選択してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting Q&A pairs…"
-msgstr "Q&Aペアを下書き中..."
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the output language for topics."
-msgstr "トピックの出力言語を選択します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the structure for topic suggestions."
-msgstr "トピック提案の構造を選択してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the writing tone for topics."
-msgstr "トピックのライティングトーンを選択してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose how long each topic description should be."
-msgstr "各トピックの説明の長さを選択します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "How many topics to generate per request."
-msgstr "リクエストごとに生成するトピックの数。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates related topic ideas based on your current content. Apply suggestions and save the post to publish updates."
-msgstr "現在のコンテンツに基づいて関連トピックのアイデアを生成します。提案を適用して投稿を保存すると更新が公開されます。"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Untitled topic"
-msgstr "無題のトピック"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one topic to apply."
-msgstr "適用する少なくとも1つのトピックを選択してください。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Expanding related topics…"
-msgstr "関連トピックを展開中..."
 
 #: build/block-editor/airygen-editor.js
 msgid "TOC display mode"
@@ -10228,18 +8310,6 @@ msgid "Renders the table of contents on the frontend."
 msgstr "フロントエンドで目次をレンダリングします。"
 
 #: build/block-editor/airygen-editor.js
-msgid "Airygen FAQ"
-msgstr "Airygen FAQ"
-
-#: build/block-editor/airygen-editor.js
-msgid "Insert AI-generated FAQ output."
-msgstr "AI生成FAQ出力を挿入します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Renders AI FAQ entries on the frontend."
-msgstr "フロントエンドでAI FAQエントリをレンダリングします。"
-
-#: build/block-editor/airygen-editor.js
 msgid "Airygen Breadcrumbs"
 msgstr "Airygen Breadcrumbs"
 
@@ -10252,34 +8322,8 @@ msgid "Renders breadcrumbs on the frontend."
 msgstr "フロントエンドでパンくずリストをレンダリングします。"
 
 #: build/block-editor/airygen-editor.js
-msgid "Airygen Topic Expansion"
-msgstr "Airygen トピック拡張"
-
-#: build/block-editor/airygen-editor.js
-msgid "Insert AI-generated related topics output."
-msgstr "AI生成関連トピック出力を挿入します。"
-
-#: build/block-editor/airygen-editor.js
-msgid "Renders related topic ideas on the frontend."
-msgstr "フロントエンドで関連トピックアイデアをレンダリングします。"
-
-#: build/block-editor/airygen-editor.js
 msgid "Rebots Meta"
 msgstr "Robots Meta"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Applied. Save Changes to persist updates."
-msgstr "適用されました。更新を保持するには変更を保存してください。"
-
-#. translators: %s is the thing to generate first, such as an outline or a draft.
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "No records yet. Generate %s to get started."
-msgstr "まだレコードがありません。始めるには %s を生成してください。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing content…"
-msgstr "コンテンツを分析中..."
 
 #: build/classic-editor/airygen-editor.js
 msgid "Total rules"
@@ -10377,174 +8421,10 @@ msgstr "デフォルトを継承 (%s)"
 msgid "Summary"
 msgstr "要約"
 
-#: build/classic-editor/airygen-editor.js
-msgid "Generate higher-CTR titles and meta descriptions."
-msgstr "CTRの高いタイトルとメタディスクリプションを生成します。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generate structured outlines with section summaries."
-msgstr "セクション要約付きの構造化されたアウトラインを生成します。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Draft full articles with AI guidance and structured prompts."
-msgstr "AIガイダンスと構造化されたプロンプトで完全な記事のドラフトを作成します。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Append frequently asked questions to the end of the article."
-msgstr "よくある質問を記事の最後に追加します。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Append related topic ideas after the FAQ section."
-msgstr "FAQセクションの後に関連トピックのアイデアを追加します。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Uses the saved focus keyphrase."
-msgstr "保存されたフォーカスキーフレーズを使用します。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Include the focus keyphrase in the output."
-msgstr "出力にフォーカスキーフレーズを含めます。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Used to guide the outline."
-msgstr "アウトラインをガイドするために使用されます。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for the outline."
-msgstr "アウトラインのトーンを選択してください。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Heading depth for the outline."
-msgstr "アウトラインの見出しの深さ。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Basic"
-msgstr "基本"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Deep"
-msgstr "詳細"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how long the outline should be."
-msgstr "アウトラインの長さを制御します。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Include the focus keyphrase in headings."
-msgstr "見出しにフォーカスキーフレーズを含めます。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Keep the existing outline when generating."
-msgstr "生成時に既存のアウトラインを保持します。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "an outline"
-msgstr "アウトライン"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Choose where to extract source content."
-msgstr "ソースコンテンツを抽出する場所を選択します。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the output language."
-msgstr "出力言語を選択してください。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the writing style type."
-msgstr "ライティングスタイルタイプを選択してください。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for the draft."
-msgstr "下書きのトーンを選択してください。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the target article length."
-msgstr "目標記事の長さを選択してください。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Keep the existing headings when generating."
-msgstr "生成時に既存の見出しを保持します。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "a draft"
-msgstr "下書き"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select output language."
-msgstr "出力言語を選択してください。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for answers."
-msgstr "回答のトーンを選択してください。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how detailed each answer should be."
-msgstr "各回答の詳細度を制御します。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Number of questions to generate."
-msgstr "生成する質問の数。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "questions"
-msgstr "質問"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for topics."
-msgstr "トピックのトーンを選択してください。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how detailed each topic is."
-msgstr "各トピックの詳細度を制御します。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Number of topics to generate."
-msgstr "生成するトピックの数。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "topics"
-msgstr "トピック"
-
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "(No title)"
 msgstr "(タイトルなし)"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your source…"
-msgstr "ソースを分析中..."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting article sections…"
-msgstr "記事セクションを下書き中..."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Refining language and tone…"
-msgstr "言語とトーンを洗練中..."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generating FAQs can take a moment. Please keep this window open."
-msgstr "FAQの生成には時間がかかる場合があります。このウィンドウを開いたままにしてください。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting questions…"
-msgstr "質問を下書き中..."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Writing answers…"
-msgstr "回答を作成中..."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generating topics can take a moment. Please keep this window open."
-msgstr "トピックの生成には時間がかかる場合があります。このウィンドウを開いたままにしてください。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting topic ideas…"
-msgstr "トピックアイデアを下書き中..."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Refining list…"
-msgstr "リストを洗練中..."
 
 #: build/classic-editor/airygen-editor.js
 msgid "Focus keyphrase density is in range (0.5%–2%)."
@@ -10563,22 +8443,6 @@ msgid "Focus keyphrase is not set."
 msgstr "フォーカスキーフレーズが設定されていません。"
 
 #: build/classic-editor/airygen-editor.js
-msgid "This AI module is unavailable in your current plan."
-msgstr "この AI モジュールは現在のプランでは利用できません。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Unable to complete the request."
-msgstr "リクエストを完了できません。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select a suggestion to apply."
-msgstr "適用する提案を選択してください。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select a record to apply."
-msgstr "適用するレコードを選択してください。"
-
-#: build/classic-editor/airygen-editor.js
 msgid "Save changes to apply your updates."
 msgstr "更新を適用するには変更を保存してください。"
 
@@ -10589,39 +8453,6 @@ msgstr "保存されました。"
 #: build/classic-editor/airygen-editor.js
 msgid "Failed to save changes."
 msgstr "変更の保存に失敗しました。"
-
-#. translators: %s is the estimated number of seconds.
-#: build/block-editor/airygen-editor.js
-#, php-format, js-format
-msgid "This can take up to ~%s seconds depending on the amount of content. Please keep this window open."
-msgstr "コンテンツ量に応じて、最大で約 %s 秒かかる場合があります。このウィンドウを開いたままにしてください。"
-
-msgid "Credit balance record not found"
-msgstr "クレジット残高レコードが見つかりません"
-
-#. translators: %s is the generated item type in plural form, e.g. "blueprints", "articles", or "drafts".
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "Longer %s take more time. Please keep this window open."
-msgstr "長い %s ほど時間がかかります。このウィンドウを開いたままにしてください。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "length"
-msgstr "長さ"
-
-#. translators: 1: estimated duration label, e.g. "~15 seconds". 2: what affects the duration, e.g. "length" or "count".
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "This can take up to %1$s depending on %2$s. Please keep this window open."
-msgstr "%2$s に応じて、最大 %1$s かかる場合があります。このウィンドウを開いたままにしてください。"
-
-#: build/classic-editor/airygen-editor.js
-msgid "blueprints"
-msgstr "ブループリント"
-
-#: build/classic-editor/airygen-editor.js
-msgid "drafts"
-msgstr "下書き"
 
 msgid "Sitewide SEO (scaled)"
 msgstr "サイト全体 SEO (スケール済み)"
@@ -10675,9 +8506,6 @@ msgstr "処理タイムアウト (秒)"
 #: build/admin/airygen-app.js
 msgid "Check basic sitewide SEO health and configuration."
 msgstr "サイト全体の基本的な SEO 状態と設定を確認します。"
-
-msgid "Mirror WordPress Sitewide SEO diagnostics with Airygen-specific checks (SSL, Safe Browsing, focus keywords)."
-msgstr "WordPress のサイト全体 SEO 診断を、Airygen 固有のチェック（SSL、Safe Browsing、フォーカスキーワード）とあわせて反映します。"
 
 msgid "Mind map items contain invalid post data."
 msgstr "マインドマップ項目に無効な投稿データが含まれています。"
@@ -11001,14 +8829,6 @@ msgid "Uses the IndexNow protocol to push new and updated URLs to Bing and other
 msgstr "IndexNowプロトコルを使用して、コンテンツが公開または変更された瞬間に新規・更新URLをBingやその他の対応する検索エンジンにプッシュします——クローラーの訪問を待つ必要がありません。ニュースサイトや時間に敏感なコンテンツに特に有効です。"
 
 #: build/admin/airygen-app.js
-msgid "Would you like AI to help you write article outlines, FAQ sets, or plan your full content strategy?"
-msgstr "AIに記事のアウトライン、FAQセット、またはコンテンツ戦略全体の計画を手伝ってもらいたいですか？"
-
-#: build/admin/airygen-app.js
-msgid "A smart AI toolkit that generates article outlines, Content Blueprints, full Article drafts, and Deep FAQ sets from a keyword — making content creation faster and easier."
-msgstr "キーワードから記事のアウトライン、コンテンツブループリント、完全な記事の下書き、詳細なFAQセットを生成するスマートAIツールキット——コンテンツ作成をより速く、より簡単にします。"
-
-#: build/admin/airygen-app.js
 msgid "Would you like AI tools like ChatGPT and Perplexity to more easily discover and cite your site?"
 msgstr "ChatGPTやPerplexityなどのAIツールがサイトをより簡単に発見・引用できるようにしたいですか？"
 
@@ -11023,26 +8843,6 @@ msgstr "llms.txtファイルを自動生成します——AIのサイトマッ�
 #: build/admin/airygen-app.js
 msgid "Automatically converts your posts into AI-friendly Markdown so AI agents can read and understand your content without struggling to parse HTML."
 msgstr "投稿をAIフレンドリーなMarkdown形式に自動変換し、AIエージェントがHTMLのパース処理に苦労することなくコンテンツを読み理解できるようにします。"
-
-#: build/admin/airygen-app.js
-msgid "Includes Deep FAQ, which automatically generates structured Q&A from your post content. AI search engines favor content that directly answers questions, boosting your visibility in AI-powered search results."
-msgstr "投稿コンテンツから構造化されたQ&Aを自動生成するDeep FAQを含みます。AI検索エンジンは質問に直接答えるコンテンツを好むため、AI搜索結果での露出度が高まります。"
-
-#: build/admin/airygen-app.js
-msgid "Free"
-msgstr "無料"
-
-#: build/admin/airygen-app.js
-msgid "Requires a plan upgrade"
-msgstr "プランのアップグレードが必要です"
-
-#: build/admin/airygen-app.js
-msgid "Requires"
-msgstr "必要条件"
-
-#: build/admin/airygen-app.js
-msgid "plan to activate"
-msgstr "プランを有効化"
 
 #: build/admin/airygen-app.js
 msgid "Got it, don't show again"
@@ -11069,32 +8869,8 @@ msgid "Welcome to Airygen SEO!"
 msgstr "Airygen SEOへようこそ！"
 
 #: build/admin/airygen-app.js
-msgid "Answer 10 quick questions and we'll recommend the right SEO modules for your site — then enable them all with one click."
-msgstr "10つの簡単な質問に答えると、サイトに適したSEOモジュールをご提案します——ワンクリックですべて有効化できます。"
-
-#: build/admin/airygen-app.js
 msgid "Don't worry — every question is just Yes or No. No technical knowledge needed. It takes about 2 minutes. 😊"
 msgstr "ご安心ください——すべての質問は「はい」か「いいえ」だけです。技術的な知識は不要です。約2分で完了します。😊"
-
-#: build/admin/airygen-app.js
-msgid "🎉 All done! Here's what we recommend based on your answers:"
-msgstr "🎉 完了！回答に基づいておすすめするモジュールはこちらです："
-
-#: build/admin/airygen-app.js
-msgid "Will be enabled (included in your plan)"
-msgstr "有効化されます（プランに含まれています）"
-
-#: build/admin/airygen-app.js
-msgid "Requires an upgrade to enable"
-msgstr "有効にするにはアップグレードが必要です"
-
-#: build/admin/airygen-app.js
-msgid "Upgrade to"
-msgstr "アップグレード先"
-
-#: build/admin/airygen-app.js
-msgid "No modules selected. Click Finish to close the wizard."
-msgstr "モジュールが選択されていません。「完了」をクリックしてウィザードを閉じてください。"
 
 #: build/admin/airygen-app.js
 msgid "Setup Wizard"
@@ -11152,12 +8928,33 @@ msgstr "ブロック間のギャップ（px）"
 msgid "Content top margin (px)"
 msgstr "コンテンツ上部マージン（px）"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "The focus keyphrase is the main keyword or phrase this post is optimized for. AI modules use it to guide content generation — keeping the output relevant and keyword-focused."
-msgstr "フォーカスキーフレーズは、この投稿が最適化されているメインキーワードまたはフレーズです。AIモジュールはこれをコンテンツ生成のガイドとして使用し、出力を関連性のあるキーワード中心に保ちます。"
+#. Plugin URI of the plugin
+msgid "https://www.airygen.com/en/airygen-seo/introduction"
+msgstr "https://www.airygen.com/en/airygen-seo/introduction"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Focus keyphrase help"
-msgstr "フォーカスキーフレーズのヘルプ"
+#. Description of the plugin
+msgid "Airygen SEO is a modular SEO toolkit for WordPress sites that need more than title and meta fields. It combines on-page SEO controls, structured data, technical SEO, internal link workflows, and automation tools in one plugin while keeping the editing experience inside WordPress."
+msgstr "Airygen SEO は、タイトルやメタフィールドだけでは物足りない WordPress サイト向けのモジュール型 SEO ツールキットです。ページ内 SEO 設定、構造化データ、テクニカル SEO、内部リンクワークフロー、自動化ツールを1つのプラグインにまとめながら、編集作業は WordPress 内で完結できます。"
+
+#. Author URI of the plugin
+msgid "https://www.airygen.com/"
+msgstr "https://www.airygen.com/"
+
+msgid "Transfer export settings filter must return an array."
+msgstr "エクスポート設定の転送フィルターは配列を返す必要があります。"
+
+#: build/admin/airygen-app.js
+msgid "Answer a few quick questions and we'll recommend the right SEO modules for your site — core modules are already enabled by default."
+msgstr "いくつかの簡単な質問に答えるだけで、サイトに最適な SEO モジュールをおすすめします。コアモジュールはデフォルトで有効になっています。"
+
+#: build/admin/airygen-app.js
+msgid "All done! Core modules (On-Page SEO, Breadcrumbs, Sitemap, Image SEO, Robots, Site Verification, Link Counter, Link Suggestions, Score Calculator) are already enabled by default."
+msgstr "すべて完了しました。コアモジュール（On-Page SEO、パンくずリスト、サイトマップ、Image SEO、Robots、Site Verification、Link Counter、Link Suggestions、Score Calculator）はデフォルトで有効になっています。"
+
+#: build/admin/airygen-app.js
+msgid "Additional modules to enable based on your answers"
+msgstr "回答に基づいて有効化する追加モジュール"
+
+#: build/admin/airygen-app.js
+msgid "No additional modules recommended. You can enable more from the dashboard anytime."
+msgstr "おすすめの追加モジュールはありません。ダッシュボードからいつでも追加のモジュールを有効化できます。"

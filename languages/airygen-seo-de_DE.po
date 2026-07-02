@@ -14,25 +14,9 @@ msgstr ""
 "X-Domain: airygen-seo\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
-#. Plugin Name of the plugin
-msgid "Airygen"
-msgstr "Airygen"
-
-#. Plugin URI of the plugin
-msgid "https://www.airygen.com/product/wordpress-seo-plugin/"
-msgstr "https://www.airygen.com/product/wordpress-seo-plugin/"
-
-#. Description of the plugin
-msgid "The best SEO plugin for WordPress to optimize your website for search engines and improve your rankings."
-msgstr "Das beste SEO-Plugin für WordPress zur Optimierung Ihrer Website für Suchmaschinen und zur Verbesserung Ihrer Rankings."
-
 #. Author of the plugin
 msgid "Airygen Team"
 msgstr "Airygen-Team"
-
-#. Author URI of the plugin
-msgid "https://github.com/airygen"
-msgstr "https://github.com/airygen"
 
 msgid "SEO title length"
 msgstr "SEO-Titellänge"
@@ -148,47 +132,6 @@ msgstr "Beschreibung"
 msgid "Sent by %1$s via %2$s."
 msgstr "Gesendet von %1$s über %2$s."
 
-msgid "Subscription Status"
-msgstr "Abonnement-Status"
-
-msgid "Manage your subscription details and version updates."
-msgstr "Verwalten Sie Ihre Abonnementdetails und Versionsaktualisierungen."
-
-msgid "Subscription ID"
-msgstr "Abonnement-ID"
-
-msgid "26 characters"
-msgstr "26 Zeichen"
-
-msgid "Your subscription details."
-msgstr "Ihre Abonnementdetails."
-
-msgid "Site Key"
-msgstr "Site-Schlüssel"
-
-msgid "Paste the Site Key used for Link Suggestions."
-msgstr "Fügen Sie den Site-Key ein, der für Link-Vorschläge verwendet wird."
-
-msgid "This key authenticates to the Airygen API. Keep it safe and do not share."
-msgstr "Dieser Schlüssel authentifiziert sich bei der Airygen-API. Bewahren Sie ihn sicher auf und teilen Sie ihn nicht."
-
-msgid "Save Subscription"
-msgstr "Abonnement speichern"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use"
-msgstr "Verwenden"
-
-msgid "Generate and browse AI suggestions for this taxonomy page title and description."
-msgstr "Generieren und durchsuchen Sie KI-Vorschläge für Titel und Beschreibung dieser Taxonomie-Seite."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "SERP CTR Booster"
-msgstr "SERP-CTR-Optimierer"
-
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
@@ -196,82 +139,23 @@ msgid "Close"
 msgstr "Schließen"
 
 #: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generate"
-msgstr "Generieren"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Browse"
-msgstr "Durchsuchen"
-
-msgid "Taxonomy terms do not include body content, so Airygen analyzes the latest five related post titles to generate suggestions."
-msgstr "Taxonomiebegriffe enthalten keinen Hauptinhalt, daher analysiert Airygen die letzten fünf verwandten Beitragstitel, um Vorschläge zu generieren."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Language"
-msgstr "Sprache"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the output language for suggestions."
-msgstr "Wählen Sie die Ausgabesprache für Vorschläge."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Focus keyphrase"
 msgstr "Fokus-Schlüsselphrase"
 
-msgid "Used when Include keyword is enabled."
-msgstr "Wird verwendet, wenn „Keyword einbeziehen“ aktiviert ist."
-
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Include keyword"
-msgstr "Schlüsselwort einschließen"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Yes"
 msgstr "Ja"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "No"
 msgstr "Nein"
 
-msgid "Include the focus keyphrase when generating title and description."
-msgstr "Fügen Sie die Fokus-Schlüsselphrase beim Generieren von Titel und Beschreibung ein."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generating…"
-msgstr "Generiere…"
-
-msgid "Analyzing your taxonomy context…"
-msgstr "Analysiere Ihren Taxonomie-Kontext…"
-
-msgid "This can take up to ~15 seconds depending on content. Please keep this window open."
-msgstr "Dies kann je nach Inhalt bis zu ~15 Sekunden dauern. Bitte lassen Sie dieses Fenster geöffnet."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Apply selected"
-msgstr "Ausgewählte anwenden"
-
-msgid "Please provide a valid log date."
-msgstr "Bitte geben Sie ein gültiges Protokolldatum an."
-
+#. Plugin Name of the plugin
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 msgid "Airygen SEO"
 msgstr "Airygen SEO"
 
-#: build/admin/airygen-app.js
 msgid "Dashboard"
 msgstr "Dashboard"
 
@@ -283,22 +167,12 @@ msgstr "Einstellungen"
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
-msgid "AI Assist"
-msgstr "KI-Assistent"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Topic Cluster"
 msgstr "Themencluster"
 
 #: build/admin/airygen-app.js
 msgid "Alerts"
 msgstr "Benachrichtigungen"
-
-#: build/admin/airygen-app.js
-msgid "Subscription"
-msgstr "Abonnement"
 
 #: build/admin/airygen-app.js
 msgid "Migration"
@@ -372,48 +246,8 @@ msgstr "Kurs"
 msgid "Course instance"
 msgstr "Kursinstanz"
 
-msgid "API key format is invalid."
-msgstr "API-Schlüsselformat ist ungültig."
-
-msgid "API key is required."
-msgstr "API-Schlüssel ist erforderlich."
-
-msgid "Live validation is temporarily unavailable. Showing last successful verification snapshot."
-msgstr "Live-Validierung ist vorübergehend nicht verfügbar. Letzter erfolgreicher Verifizierungs-Snapshot wird angezeigt."
-
-msgid "Unable to contact the subscription API."
-msgstr "Abonnement-API konnte nicht kontaktiert werden."
-
-msgid "Invalid record id."
-msgstr "Ungültige Datensatz-ID."
-
-#: build/admin/airygen-app.js
-msgid "Unable to delete record."
-msgstr "Datensatz konnte nicht gelöscht werden."
-
-msgid "Invalid post id."
-msgstr "Ungültige Beitrags-ID."
-
 msgid "Post not found."
 msgstr "Beitrag nicht gefunden."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Please set a focus keyword for this post before generating."
-msgstr "Bitte legen Sie ein Fokus-Keyword für diesen Beitrag fest, bevor Sie generieren."
-
-#: build/block-editor/airygen-editor.js
-msgid "Please provide source content before generating."
-msgstr "Bitte geben Sie Quellinhalte an, bevor Sie generieren."
-
-msgid "Unable to generate article."
-msgstr "Artikel konnte nicht generiert werden."
-
-msgid "Invalid gateway response."
-msgstr "Ungültige Gateway-Antwort."
-
-msgid "Unable to store Article Builder record."
-msgstr "Artikel-Builder-Datensatz konnte nicht gespeichert werden."
 
 msgid "Airygen Author SEO"
 msgstr "Airygen Autoren-SEO"
@@ -432,33 +266,6 @@ msgstr "Seite %s"
 #: build/admin/airygen-app.js
 msgid "Author"
 msgstr "Autor"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Please enter a topic before generating."
-msgstr "Bitte geben Sie ein Thema ein, bevor Sie generieren."
-
-msgid "Unable to generate blueprint."
-msgstr "Blueprint konnte nicht generiert werden."
-
-msgid "Unable to store Content Blueprint record."
-msgstr "Content-Blueprint-Datensatz konnte nicht gespeichert werden."
-
-msgid "Please add content before generating FAQ items."
-msgstr "Bitte fügen Sie Inhalte hinzu, bevor Sie FAQ-Elemente generieren."
-
-msgid "Unable to generate FAQ items."
-msgstr "FAQ-Elemente konnten nicht generiert werden."
-
-msgid "Unable to store FAQ record."
-msgstr "FAQ-Datensatz konnte nicht gespeichert werden."
-
-msgid "Unable to update FAQ display status."
-msgstr "FAQ-Anzeigestatus konnte nicht aktualisiert werden."
-
-#: build/admin/airygen-app.js
-msgid "Answers to What You're Probably Thinking"
-msgstr "Antworten auf das, was Sie wahrscheinlich denken"
 
 msgid "Invalid action."
 msgstr "Ungültige Aktion."
@@ -858,21 +665,6 @@ msgstr "Mindestlinks"
 msgid "Minimum external link count required for pass."
 msgstr "Mindestanzahl externer Links für Bestehen."
 
-msgid "Term not found."
-msgstr "Begriff nicht gefunden."
-
-msgid "A valid post or term is required."
-msgstr "Ein gültiger Beitrag oder Begriff ist erforderlich."
-
-msgid "Please set a focus keyword before generating."
-msgstr "Bitte legen Sie ein Fokus-Keyword fest, bevor Sie generieren."
-
-msgid "Unable to generate suggestions."
-msgstr "Vorschläge konnten nicht generiert werden."
-
-msgid "Unable to store CTR booster record."
-msgstr "CTR-Booster-Datensatz konnte nicht gespeichert werden."
-
 msgid "Airygen SEO: Core sitemap availability"
 msgstr "Airygen SEO: Core-Sitemap-Verfügbarkeit"
 
@@ -1106,69 +898,16 @@ msgstr "Diagnose"
 msgid "Table of contents"
 msgstr "Inhaltsverzeichnis"
 
-#: build/classic-editor/airygen-editor.js
-msgid "Unable to load records."
-msgstr "Datensätze konnten nicht geladen werden."
-
-msgid "Generating suggestions..."
-msgstr "Generiere Vorschläge..."
-
-msgid "Generation failed."
-msgstr "Generierung fehlgeschlagen."
-
-msgid "Generated successfully. Review and apply from Browse."
-msgstr "Erfolgreich generiert. Überprüfen und anwenden über Durchsuchen."
-
-msgid "Select fields and click Apply selected."
-msgstr "Wählen Sie Felder aus und klicken Sie auf \"Ausgewählte anwenden\"."
-
-msgid "No records yet."
-msgstr "Noch keine Datensätze."
-
-msgid "Applied suggestion. Save term to persist changes."
-msgstr "Vorschlag angewendet. Speichern Sie den Begriff, um Änderungen zu übernehmen."
-
-msgid "Untitled suggestion"
-msgstr "Vorschlag ohne Titel"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Keyword"
-msgstr "Schlüsselwort"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Meta title"
 msgstr "Meta-Titel"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Meta description"
 msgstr "Meta-Beschreibung"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Excerpt"
 msgstr "Auszug"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generating suggestions…"
-msgstr "Generiere Vorschläge…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Refining output…"
-msgstr "Verfeinere Ausgabe…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Almost ready…"
-msgstr "Fast fertig…"
 
 msgid "Custom SEO title for this taxonomy page. Leave blank to use the default value from settings."
 msgstr "Benutzerdefinierter SEO-Titel für diese Taxonomie-Seite. Leer lassen, um den Standardwert aus den Einstellungen zu verwenden."
@@ -1371,22 +1110,6 @@ msgstr "Topic-Cluster"
 msgid "Continue with the main article"
 msgstr "Mit dem Hauptartikel fortfahren"
 
-msgid "Please add content before generating topics."
-msgstr "Bitte fügen Sie Inhalte hinzu, bevor Sie Themen generieren."
-
-msgid "Unable to generate topics."
-msgstr "Themen konnten nicht generiert werden."
-
-msgid "Unable to store topic record."
-msgstr "Themendatensatz konnte nicht gespeichert werden."
-
-msgid "Unable to update topic display status."
-msgstr "Themen-Anzeigestatus konnte nicht aktualisiert werden."
-
-#: build/admin/airygen-app.js
-msgid "You Might Also Want to Know…"
-msgstr "Das könnte Sie auch interessieren…"
-
 msgid "You are not allowed to preview WooCommerce schema."
 msgstr "Sie sind nicht berechtigt, das WooCommerce-Schema in der Vorschau anzuzeigen."
 
@@ -1395,29 +1118,6 @@ msgstr "WooCommerce ist nicht verfügbar."
 
 msgid "Open the Airygen SEO dashboard"
 msgstr "Airygen SEO-Dashboard öffnen"
-
-#. translators: %s: directory path
-#, php-format
-msgid "Unable to create debug directory at %s."
-msgstr "Debug-Verzeichnis konnte nicht unter %s erstellt werden."
-
-msgid "Subscription has expired."
-msgstr "Abonnement ist abgelaufen."
-
-msgid "The system is busy. Please try again later."
-msgstr "Das System ist beschäftigt. Bitte versuchen Sie es später erneut."
-
-msgid "Balance is insufficient. Please top up or wait for the next refresh cycle."
-msgstr "Guthaben ist unzureichend. Bitte laden Sie auf oder warten Sie auf den nächsten Aktualisierungszyklus."
-
-msgid "Update package is authenticated and ready to download."
-msgstr "Update-Paket ist authentifiziert und zum Herunterladen bereit."
-
-msgid "A valid subscription key is required to download and install updates."
-msgstr "Ein gültiger Abonnement-Schlüssel ist erforderlich, um Updates herunterzuladen und zu installieren."
-
-msgid "Enter your key in Airygen Settings > Subscription."
-msgstr "Ihren Schlüssel unter Airygen Einstellungen > Abonnement eingeben."
 
 #: build/admin/airygen-app.js
 msgid "Close modal"
@@ -1501,14 +1201,6 @@ msgstr "Neu laden"
 #: build/admin/airygen-app.js
 msgid "More modules"
 msgstr "Weitere Module"
-
-#: build/admin/airygen-app.js
-msgid "Starter module"
-msgstr "Starter-Modul"
-
-#: build/admin/airygen-app.js
-msgid "Expert module"
-msgstr "Expertenmodul"
 
 #: build/admin/airygen-app.js
 msgid "Background Process"
@@ -1625,14 +1317,6 @@ msgstr "%s wird geladen…"
 msgid "No migration tools available yet."
 msgstr "Noch keine Migrationstools verfügbar."
 
-#. translators: %s is the record type label, such as CTR booster or FAQ.
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "No %s records yet."
-msgstr "Noch keine %s-Einträge."
-
 #: build/admin/airygen-app.js
 msgid "No logs yet."
 msgstr "Noch keine Protokolle."
@@ -1663,17 +1347,9 @@ msgid "No %1$s yet. Add one to configure %2$s."
 msgstr "Noch kein %1$s. Eines hinzufügen, um %2$s zu konfigurieren."
 
 #: build/admin/airygen-app.js
-msgid "Directory not found"
-msgstr "Verzeichnis nicht gefunden"
-
-#: build/admin/airygen-app.js
 #: build/classic-editor/airygen-editor.js
 msgid "Loading…"
 msgstr "Lade…"
-
-#: build/admin/airygen-app.js
-msgid "Debug Status"
-msgstr "Debug-Status"
 
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
@@ -1686,24 +1362,12 @@ msgid "Enable Debug Mode"
 msgstr "Debug-Modus aktivieren"
 
 #: build/admin/airygen-app.js
-msgid "Enable debug logging to file."
-msgstr "Debug-Protokollierung in Datei aktivieren."
-
-#: build/admin/airygen-app.js
 msgid "Force Classic Editor"
 msgstr "Classic Editor erzwingen"
 
 #: build/admin/airygen-app.js
-msgid "Disable the block editor and load Classic Editor for testing."
-msgstr "Deaktivieren Sie den Block-Editor und laden Sie den Classic Editor zum Testen."
-
-#: build/admin/airygen-app.js
 msgid "Debug level"
 msgstr "Debug-Stufe"
-
-#: build/admin/airygen-app.js
-msgid "Choose how much debug information is recorded."
-msgstr "Auswählen, wie viele Debug-Informationen aufgezeichnet werden."
 
 #: build/admin/airygen-app.js
 msgid "Error"
@@ -1723,76 +1387,12 @@ msgid "Refresh"
 msgstr "Aktualisieren"
 
 #: build/admin/airygen-app.js
-msgid "Log Directory"
-msgstr "Protokoll-Verzeichnis"
-
-#: build/admin/airygen-app.js
-msgid "Location where logs are stored."
-msgstr "Ort, an dem Protokolle gespeichert werden."
-
-#: build/admin/airygen-app.js
-msgid "No directory configured"
-msgstr "Kein Verzeichnis konfiguriert"
-
-#: build/admin/airygen-app.js
-msgid "Slug"
-msgstr "Slug"
-
-#: build/admin/airygen-app.js
-msgid "N/A"
-msgstr "N/A"
-
-#: build/admin/airygen-app.js
-msgid "Debug mode must be enabled to view logs."
-msgstr "Debug-Modus muss aktiviert sein, um Protokolle anzuzeigen."
-
-#: build/admin/airygen-app.js
-msgid "log content"
-msgstr "Protokollinhalt"
-
-#: build/admin/airygen-app.js
-msgid "Select a log file to view content."
-msgstr "Wählen Sie eine Protokolldatei, um den Inhalt anzuzeigen."
-
-#: build/admin/airygen-app.js
-msgid "Log Files"
-msgstr "Protokolldateien"
-
-#: build/admin/airygen-app.js
-msgid "Select a log file to view."
-msgstr "Wählen Sie eine Protokolldatei zum Anzeigen."
-
-#: build/admin/airygen-app.js
-msgid "No logs found"
-msgstr "Keine Protokolle gefunden"
-
-#: build/admin/airygen-app.js
-msgid "Load Log"
-msgstr "Protokoll laden"
-
-#: build/admin/airygen-app.js
-msgid "Refresh Logs"
-msgstr "Protokolle aktualisieren"
-
-#: build/admin/airygen-app.js
-msgid "Clear Logs"
-msgstr "Protokolle löschen"
-
-#: build/admin/airygen-app.js
 msgid "Configuration"
 msgstr "Konfiguration"
 
 #: build/admin/airygen-app.js
 msgid "Logs"
 msgstr "Protokolle"
-
-#: build/admin/airygen-app.js
-msgid "Debug Information"
-msgstr "Debug-Informationen"
-
-#: build/admin/airygen-app.js
-msgid "View debug information and logs."
-msgstr "Debug-Informationen und Protokolle ansehen."
 
 #: build/admin/airygen-app.js
 msgid "Bring SEO data from other plugins into Airygen SEO. Start with the tools you already use and migrate only what you need."
@@ -1993,124 +1593,8 @@ msgid "Import post-level redirects from SEOPress and add them to Airygen Redirec
 msgstr "Weiterleitungen auf Beitragsebene aus SEOPress importieren und zu Airygen-Weiterleitungen hinzufügen."
 
 #: build/admin/airygen-app.js
-msgid "Unable to load subscription status."
-msgstr "Abonnement-Status konnte nicht geladen werden."
-
-#: build/admin/airygen-app.js
-msgid "API key verified."
-msgstr "API-Schlüssel verifiziert."
-
-#: build/admin/airygen-app.js
-msgid "Unable to verify API key."
-msgstr "API-Schlüssel konnte nicht verifiziert werden."
-
-#: build/admin/airygen-app.js
-msgid "API key expired. Please renew your subscription."
-msgstr "API-Schlüssel abgelaufen. Bitte erneuern Sie Ihr Abonnement."
-
-#: build/admin/airygen-app.js
-msgid "API key was revoked. Please generate a new key."
-msgstr "API-Schlüssel wurde widerrufen. Bitte erstellen Sie einen neuen Schlüssel."
-
-#: build/admin/airygen-app.js
-msgid "API key does not match this site domain."
-msgstr "API-Schlüssel stimmt nicht mit dieser Website-Domain überein."
-
-#: build/admin/airygen-app.js
-msgid "API key is invalid."
-msgstr "API-Schlüssel ist ungültig."
-
-#: build/admin/airygen-app.js
-msgid "Subscription is active."
-msgstr "Abonnement ist aktiv."
-
-#: build/admin/airygen-app.js
-msgid "Verify your key to view the period end."
-msgstr "Verifizieren Sie Ihren Schlüssel, um das Zeitraumende anzuzeigen."
-
-#: build/admin/airygen-app.js
-msgid "Verified"
-msgstr "Verifiziert"
-
-#: build/admin/airygen-app.js
-msgid "Revoked"
-msgstr "Widerrufen"
-
-#: build/admin/airygen-app.js
-msgid "Expired"
-msgstr "Abgelaufen"
-
-#: build/admin/airygen-app.js
-msgid "Mismatch"
-msgstr "Keine Übereinstimmung"
-
-#: build/admin/airygen-app.js
-msgid "Invalid"
-msgstr "Ungültig"
-
-#: build/admin/airygen-app.js
-msgid "Missing"
-msgstr "Fehlend"
-
-#: build/admin/airygen-app.js
-msgid "Refreshing credits, please retry shortly."
-msgstr "Guthaben wird aktualisiert, bitte versuchen Sie es in Kürze erneut."
-
-#: build/admin/airygen-app.js
-msgid "Unable to load credits right now."
-msgstr "Guthaben kann derzeit nicht geladen werden."
-
-#: build/admin/airygen-app.js
-msgid "Verify your key to load credits."
-msgstr "Verifizieren Sie Ihren Schlüssel, um Guthaben zu laden."
-
-#: build/admin/airygen-app.js
-msgid "Subscription period"
-msgstr "Abonnementzeitraum"
-
-#: build/admin/airygen-app.js
-msgid "Subscription credits"
-msgstr "Abonnement-Guthaben"
-
-#: build/admin/airygen-app.js
-msgid "Credit pack"
-msgstr "Kreditpaket"
-
-#: build/admin/airygen-app.js
-msgid "Connect your API key to unlock Airygen modules that require cloud services."
-msgstr "Verbinden Sie Ihren API-Schlüssel, um Airygen-Module freizuschalten, die Cloud-Dienste benötigen."
-
-#: build/admin/airygen-app.js
 msgid "API key"
 msgstr "API-Schlüssel"
-
-#: build/admin/airygen-app.js
-msgid "Verify your API key to unlock cloud features."
-msgstr "Verifizieren Sie Ihren API-Schlüssel, um Cloud-Funktionen freizuschalten."
-
-#: build/admin/airygen-app.js
-msgid "Your key is active and linked to this site."
-msgstr "Ihr Schlüssel ist aktiv und mit dieser Website verknüpft."
-
-#: build/admin/airygen-app.js
-msgid "Enter a new key"
-msgstr "Neuen Schlüssel eingeben"
-
-#: build/admin/airygen-app.js
-msgid "Enter your API key"
-msgstr "Geben Sie Ihren API-Schlüssel ein"
-
-#: build/admin/airygen-app.js
-msgid "Enter and verify your key to enable cloud features."
-msgstr "Geben Sie Ihren Schlüssel ein und verifizieren Sie ihn, um Cloud-Funktionen zu aktivieren."
-
-#: build/admin/airygen-app.js
-msgid "Verifying…"
-msgstr "Wird verifiziert…"
-
-#: build/admin/airygen-app.js
-msgid "Verify & Save"
-msgstr "Verifizieren & Speichern"
 
 #: build/admin/airygen-app.js
 msgid "Status"
@@ -2121,64 +1605,10 @@ msgid "Debug"
 msgstr "Debug"
 
 #: build/admin/airygen-app.js
-msgid "Continue subscription"
-msgstr "Abonnement fortsetzen"
-
-#: build/admin/airygen-app.js
-msgid "AI-driven modules."
-msgstr "KI-gestützte Module."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content Blueprint"
-msgstr "Content-Plan"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Article Builder"
-msgstr "Artikel-Builder"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Deep FAQ"
-msgstr "Ausführliche FAQ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic Expansion"
-msgstr "Themenerweiterung"
-
-#: build/admin/airygen-app.js
-msgid "Create compelling titles and meta descriptions to increase SERP click-through rate."
-msgstr "Erstellen Sie überzeugende Titel und Meta-Beschreibungen, um die SERP-Klickrate zu erhöhen."
-
-#: build/admin/airygen-app.js
-msgid "Generate structured outlines with section summaries to plan your focus keyphrase."
-msgstr "Generieren Sie strukturierte Gliederungen mit Abschnittszusammenfassungen, um Ihre Fokus-Schlüsselphrase zu planen."
-
-#: build/admin/airygen-app.js
-msgid "Provide draft ideas to speed up writing."
-msgstr "Geben Sie Entwurfsideen an, um das Schreiben zu beschleunigen."
-
-#: build/admin/airygen-app.js
-msgid "Improve LLM recommendation visibility and time on page."
-msgstr "Verbessern Sie die LLM-Empfehlungssichtbarkeit und die Verweildauer auf der Seite."
-
-#: build/admin/airygen-app.js
-msgid "Reduce bounce rate and pogo-sticking to preserve SEO signals."
-msgstr "Reduzieren Sie die Absprungrate und Pogo-Sticking, um SEO-Signale zu erhalten."
-
-#: build/admin/airygen-app.js
 msgid "Records"
 msgstr "Datensätze"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Loading records…"
 msgstr "Lade Datensätze…"
 
@@ -2199,15 +1629,6 @@ msgid "Next"
 msgstr "Weiter"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load CTR booster records."
-msgstr "CTR-Booster-Datensätze konnten nicht geladen werden."
-
-#: build/admin/airygen-app.js
-msgid "Created at"
-msgstr "Erstellt am"
-
-#: build/admin/airygen-app.js
 msgid "Actions"
 msgstr "Aktionen"
 
@@ -2216,200 +1637,8 @@ msgid "Record deleted."
 msgstr "Datensatz gelöscht."
 
 #: build/admin/airygen-app.js
-msgid "Deleting…"
-msgstr "Wird gelöscht…"
-
-#: build/admin/airygen-app.js
 msgid "Delete"
 msgstr "Löschen"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for SERP CTR Booster."
-msgstr "Konfigurieren Sie Standardeinstellungen für den SERP-CTR-Booster."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated titles and descriptions."
-msgstr "Wählen Sie die Ausgabesprache für KI-generierte Titel und Beschreibungen."
-
-#: build/admin/airygen-app.js
-msgid "Always include the focus keyword in AI suggestions."
-msgstr "Fügen Sie das Fokus-Keyword immer in KI-Vorschläge ein."
-
-#: build/admin/airygen-app.js
-msgid "Generated CTR booster suggestions. Records can be removed but not edited."
-msgstr "CTR-Booster-Vorschläge generiert. Einträge können entfernt, aber nicht bearbeitet werden."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "CTR booster"
-msgstr "CTR-Booster"
-
-#: build/admin/airygen-app.js
-msgid "More info"
-msgstr "Mehr Informationen"
-
-#: build/admin/airygen-app.js
-msgid "AI Prompt Templates"
-msgstr "KI-Prompt-Vorlagen"
-
-#: build/admin/airygen-app.js
-msgid "Choose scenario, content type, and tone templates for AI generation."
-msgstr "Szenario-, Inhaltstyp- und Ton-Vorlagen für die KI-Generierung wählen."
-
-#: build/admin/airygen-app.js
-msgid "Scenarios"
-msgstr "Szenarien"
-
-#: build/admin/airygen-app.js
-msgid "Auto-sets content type + tone"
-msgstr "Legt Inhaltstyp und Ton automatisch fest"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content type"
-msgstr "Inhaltstyp"
-
-#: build/admin/airygen-app.js
-msgid "Adjust manually if needed"
-msgstr "Bei Bedarf manuell anpassen"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Tone"
-msgstr "Tonfall"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load Content Blueprint records."
-msgstr "Content-Blueprint-Datensätze konnten nicht geladen werden."
-
-#: build/admin/airygen-app.js
-msgid "Target words"
-msgstr "Zielwörter"
-
-#: build/admin/airygen-app.js
-msgid "Generated words"
-msgstr "Generierte Wörter"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for Content Blueprint."
-msgstr "Konfigurieren Sie Standardeinstellungen für Content Blueprint."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated blueprints."
-msgstr "Wählen Sie die Ausgabesprache für KI-generierte Blueprints."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Depth"
-msgstr "Tiefe"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "H2 only"
-msgstr "Nur H2"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "H2 + H3"
-msgstr "H2 + H3"
-
-#: build/admin/airygen-app.js
-msgid "Choose how deep the outline should go."
-msgstr "Wählen Sie, wie tief die Gliederung gehen soll."
-
-#: build/admin/airygen-app.js
-msgid "Length"
-msgstr "Länge"
-
-#: build/admin/airygen-app.js
-msgid "More items consume more credits and take longer to generate."
-msgstr "Mehr Elemente verbrauchen mehr Guthaben und benötigen länger zum Generieren."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Basic (400 words)"
-msgstr "Basis (400 Wörter)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Standard (1000 words)"
-msgstr "Standard (1000 Wörter)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Deep (1600 words)"
-msgstr "Tief (1600 Wörter)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Pillar (2200 words)"
-msgstr "Säule (2200 Wörter)"
-
-#: build/admin/airygen-app.js
-msgid "Match output length to your SEO goal."
-msgstr "Passen Sie die Ausgabelänge an Ihr SEO-Ziel an."
-
-#: build/admin/airygen-app.js
-msgid "Include the focus keyword in generated outlines."
-msgstr "Fügen Sie das Fokus-Schlüsselwort in generierten Gliederungen ein."
-
-#: build/admin/airygen-app.js
-msgid "Set keyword inclusion targets for each content length."
-msgstr "Legen Sie Keyword-Einschluss-Ziele für jede Inhaltslänge fest."
-
-#: build/admin/airygen-app.js
-msgid "H1 keywords"
-msgstr "H1-Schlüsselwörter"
-
-#: build/admin/airygen-app.js
-msgid "H2 keywords"
-msgstr "H2-Schlüsselwörter"
-
-#: build/admin/airygen-app.js
-msgid "H3 keywords"
-msgstr "H3-Schlüsselwörter"
-
-#: build/admin/airygen-app.js
-msgid "Generated content blueprints. Records can be removed but not edited."
-msgstr "Content Blueprints generiert. Einträge können entfernt, aber nicht bearbeitet werden."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load Article Builder records."
-msgstr "Artikel-Builder-Datensätze konnten nicht geladen werden."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic"
-msgstr "Thema"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for Article Builder."
-msgstr "Konfigurieren Sie Standardeinstellungen für den Artikel-Builder."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated articles."
-msgstr "Wählen Sie die Ausgabesprache für KI-generierte Artikel."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Article length target"
-msgstr "Ziel-Artikellänge"
-
-#: build/admin/airygen-app.js
-msgid "Match draft length to your publishing goal."
-msgstr "Passen Sie die Entwurfslänge an Ihr Veröffentlichungsziel an."
-
-#: build/admin/airygen-app.js
-msgid "Generated article drafts. Records can be removed but not edited."
-msgstr "Artikelentwürfe generiert. Einträge können entfernt, aber nicht bearbeitet werden."
 
 #: build/admin/airygen-app.js
 msgid "Set transparent color"
@@ -2538,16 +1767,6 @@ msgid "Font size"
 msgstr "Schriftgröße"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "FAQ"
-msgstr "FAQ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load FAQ records."
-msgstr "FAQ-Datensätze konnten nicht geladen werden."
-
-#: build/admin/airygen-app.js
 msgid "Snow Slate"
 msgstr "Schneeschiefer"
 
@@ -2558,10 +1777,6 @@ msgstr "Neutrales Weiß + Hellgrau mit klarem Schiefertext."
 #: build/admin/airygen-app.js
 msgid "Honey Paper"
 msgstr "Honigpapier"
-
-#: build/admin/airygen-app.js
-msgid "Soft parchment yellow for warm, readable FAQs."
-msgstr "Sanftes Pergamentgelb für warme, lesbare FAQs."
 
 #: build/admin/airygen-app.js
 msgid "Sky Breeze"
@@ -2600,10 +1815,6 @@ msgid "Post"
 msgstr "Beitrag"
 
 #: build/admin/airygen-app.js
-msgid "Question"
-msgstr "Frage"
-
-#: build/admin/airygen-app.js
 msgid "Layout"
 msgstr "Layout"
 
@@ -2612,10 +1823,6 @@ msgstr "Layout"
 #: build/classic-editor/airygen-editor.js
 msgid "Preview"
 msgstr "Vorschau"
-
-#: build/admin/airygen-app.js
-msgid "Configure manual output and automatic FAQ injection."
-msgstr "Manuelle Ausgabe und automatische FAQ-Einfügung konfigurieren."
 
 #: build/admin/airygen-app.js
 msgid "Allow template function, shortcode, and block output."
@@ -2633,10 +1840,6 @@ msgid "Block"
 msgstr "Block"
 
 #: build/admin/airygen-app.js
-msgid "Automatically inject FAQ output into matched post types."
-msgstr "FAQ-Ausgabe automatisch in übereinstimmende Beitragstypen einfügen."
-
-#: build/admin/airygen-app.js
 msgid "Insert position"
 msgstr "Einfügeposition"
 
@@ -2649,251 +1852,28 @@ msgid "After content"
 msgstr "Nach dem Inhalt"
 
 #: build/admin/airygen-app.js
-msgid "Choose where FAQ output is injected in post content."
-msgstr "Auswählen, wo die FAQ-Ausgabe in den Beitragsinhalt eingefügt wird."
-
-#: build/admin/airygen-app.js
-msgid "Frequently Asked Questions"
-msgstr "Häufig gestellte Fragen"
-
-#: build/admin/airygen-app.js
-msgid "AI Generation"
-msgstr "KI-Generierung"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for FAQ generation."
-msgstr "Konfigurieren Sie Standardeinstellungen für die FAQ-Generierung."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated FAQs."
-msgstr "Wählen Sie die Ausgabesprache für KI-generierte FAQs."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Answer length"
-msgstr "Antwortlänge"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Short"
-msgstr "Kurz"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Medium"
-msgstr "Mittel"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Long"
-msgstr "Lang"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Choose how long each answer should be."
-msgstr "Wählen Sie, wie lang jede Antwort sein soll."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Question count"
-msgstr "Fragenanzahl"
-
-#: build/admin/airygen-app.js
-msgid "How many FAQ items to generate per request."
-msgstr "Wie viele FAQ-Elemente pro Anfrage generiert werden sollen."
-
-#: build/admin/airygen-app.js
 msgid "Scope"
 msgstr "Geltungsbereich"
-
-#: build/admin/airygen-app.js
-msgid "Choose which post types can receive automatic FAQ injection."
-msgstr "Auswählen, welche Beitragstypen automatische FAQ-Einfügungen erhalten können."
 
 #: build/admin/airygen-app.js
 msgid "Templates"
 msgstr "Vorlagen"
 
 #: build/admin/airygen-app.js
-msgid "Choose a preset style for FAQ output."
-msgstr "Einen vordefinierten Stil für die FAQ-Ausgabe wählen."
-
-#: build/admin/airygen-app.js
 msgid "Style"
 msgstr "Stil"
-
-#: build/admin/airygen-app.js
-msgid "Adjust spacing and borders for list and collapse layouts."
-msgstr "Passen Sie Abstände und Rahmen für Listen- und Zusammenklapp-Layouts an."
 
 #: build/admin/airygen-app.js
 msgid "List"
 msgstr "Liste"
 
 #: build/admin/airygen-app.js
-msgid "Collapse"
-msgstr "Einklappen"
-
-#: build/admin/airygen-app.js
-msgid "Show FAQ border"
-msgstr "FAQ-Rahmen anzeigen"
-
-#: build/admin/airygen-app.js
-msgid "Draw a border around the FAQ container."
-msgstr "Zeichnen Sie einen Rahmen um den FAQ-Container."
-
-#: build/admin/airygen-app.js
-msgid "Select the line style for the FAQ container border."
-msgstr "Wählen Sie den Linienstil für den FAQ-Container-Rahmen."
-
-#: build/admin/airygen-app.js
-msgid "Set the border color for the list container."
-msgstr "Legen Sie die Rahmenfarbe für den Listen-Container fest."
-
-#: build/admin/airygen-app.js
-msgid "Adjust the thickness of the FAQ border."
-msgstr "Passen Sie die Stärke des FAQ-Rahmens an."
-
-#: build/admin/airygen-app.js
-msgid "FAQ padding"
-msgstr "FAQ-Innenabstand"
-
-#: build/admin/airygen-app.js
-msgid "Padding inside the FAQ list container."
-msgstr "Innenabstand innerhalb des FAQ-Listen-Containers."
-
-#: build/admin/airygen-app.js
-msgid "Background color of the FAQ list container."
-msgstr "Hintergrundfarbe des FAQ-Listen-Containers."
-
-#: build/admin/airygen-app.js
-msgid "Question font color"
-msgstr "Schriftfarbe der Frage"
-
-#: build/admin/airygen-app.js
-msgid "Text color for each FAQ question."
-msgstr "Textfarbe für jede FAQ-Frage."
-
-#: build/admin/airygen-app.js
-msgid "Question font size"
-msgstr "Fragen-Schriftgröße"
-
-#: build/admin/airygen-app.js
-msgid "Font size used for each question line."
-msgstr "Schriftgröße für jede Fragenzeile."
-
-#: build/admin/airygen-app.js
-msgid "Answer font color"
-msgstr "Schriftfarbe der Antwort"
-
-#: build/admin/airygen-app.js
-msgid "Text color for each answer line."
-msgstr "Textfarbe für jede Antwortzeile."
-
-#: build/admin/airygen-app.js
-msgid "Answer font size"
-msgstr "Antwort-Schriftgröße"
-
-#: build/admin/airygen-app.js
-msgid "Font size for the answer text."
-msgstr "Schriftgröße für den Antworttext."
-
-#: build/admin/airygen-app.js
-msgid "Collapse button"
-msgstr "Einklapp-Schaltfläche"
-
-#: build/admin/airygen-app.js
-msgid "Collapse answers"
-msgstr "Antworten einklappen"
-
-#: build/admin/airygen-app.js
-msgid "Background for the plus/minus button."
-msgstr "Hintergrund für die Plus/Minus-Schaltfläche."
-
-#: build/admin/airygen-app.js
-msgid "Icon color"
-msgstr "Symbolfarbe"
-
-#: build/admin/airygen-app.js
-msgid "Color for the plus/minus icon."
-msgstr "Farbe für das Plus/Minus-Symbol."
-
-#: build/admin/airygen-app.js
-msgid "Border color for the toggle button."
-msgstr "Rahmenfarbe für die Umschaltfläche."
-
-#: build/admin/airygen-app.js
-msgid "Thickness of the toggle button border."
-msgstr "Stärke des Umschaltflächen-Rahmens."
-
-#: build/admin/airygen-app.js
-msgid "Background color for each question row."
-msgstr "Hintergrundfarbe für jede Fragenzeile."
-
-#: build/admin/airygen-app.js
 msgid "Font color"
 msgstr "Schriftfarbe"
 
 #: build/admin/airygen-app.js
-msgid "Text color for the question title."
-msgstr "Textfarbe für den Fragentitel."
-
-#: build/admin/airygen-app.js
-msgid "Border color around each question row."
-msgstr "Rahmenfarbe um jede Fragenzeile."
-
-#: build/admin/airygen-app.js
-msgid "Line style for the question border."
-msgstr "Linienstil für den Fragenrahmen."
-
-#: build/admin/airygen-app.js
-msgid "Font size for the question text."
-msgstr "Schriftgröße für den Fragentext."
-
-#: build/admin/airygen-app.js
-msgid "Padding inside each question row."
-msgstr "Innenabstand in jeder Fragenzeile."
-
-#: build/admin/airygen-app.js
 msgid "Gap"
 msgstr "Abstand"
-
-#: build/admin/airygen-app.js
-msgid "Spacing between each question row."
-msgstr "Abstand zwischen den einzelnen Fragenzeilen."
-
-#: build/admin/airygen-app.js
-msgid "Keep open"
-msgstr "Geöffnet lassen"
-
-#: build/admin/airygen-app.js
-msgid "Allow multiple answers to stay open."
-msgstr "Erlaube, dass mehrere Antworten geöffnet bleiben."
-
-#: build/admin/airygen-app.js
-msgid "Answer"
-msgstr "Antwort"
-
-#: build/admin/airygen-app.js
-msgid "Background for the expanded answer area."
-msgstr "Hintergrund für den erweiterten Antwortbereich."
-
-#: build/admin/airygen-app.js
-msgid "Text color for the answer content."
-msgstr "Textfarbe für den Antwortinhalt."
-
-#: build/admin/airygen-app.js
-msgid "Padding inside the answer panel."
-msgstr "Innenabstand innerhalb des Antwort-Panels."
-
-#: build/admin/airygen-app.js
-msgid "Preview may differ from the live site because theme styles are applied there."
-msgstr "Die Vorschau kann von der Live-Website abweichen, da dort Theme-Stile angewendet werden."
 
 #: build/admin/airygen-app.js
 msgid "Laptop"
@@ -2906,18 +1886,6 @@ msgstr "Tablet"
 #: build/admin/airygen-app.js
 msgid "Cellphone"
 msgstr "Mobiltelefon"
-
-#: build/admin/airygen-app.js
-msgid "FAQ preview"
-msgstr "FAQ-Vorschau"
-
-#: build/admin/airygen-app.js
-msgid "Preview is not available."
-msgstr "Vorschau ist nicht verfügbar."
-
-#: build/admin/airygen-app.js
-msgid "Generated FAQ records. Records can be removed but not edited."
-msgstr "FAQ-Einträge generiert. Einträge können entfernt, aber nicht bearbeitet werden."
 
 #: build/admin/airygen-app.js
 msgid "Section body container"
@@ -2972,354 +1940,18 @@ msgid "Indent"
 msgstr "Einzug"
 
 #: build/admin/airygen-app.js
-msgid "topic expansion"
-msgstr "Themenerweiterung"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load topic records."
-msgstr "Themendatensätze konnten nicht geladen werden."
-
-#: build/admin/airygen-app.js
-msgid "Display"
-msgstr "Anzeige"
-
-#: build/admin/airygen-app.js
-msgid "Shown"
-msgstr "Angezeigt"
-
-#: build/admin/airygen-app.js
-msgid "Hidden"
-msgstr "Verborgen"
-
-#: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "View"
 msgstr "Ansehen"
 
 #: build/admin/airygen-app.js
-msgid "Soft parchment yellow for warm, readable topics."
-msgstr "Sanftes Pergamentgelb für warme, lesbare Themen."
-
-#: build/admin/airygen-app.js
-msgid "Configure manual output and automatic topic expansion injection."
-msgstr "Manuelle Ausgabe und automatische Themenentwicklungs-Einfügung konfigurieren."
-
-#: build/admin/airygen-app.js
-msgid "Automatically inject topic expansion output into content."
-msgstr "Themenentwicklungs-Ausgabe automatisch in den Inhalt einfügen."
-
-#: build/admin/airygen-app.js
-msgid "Choose where topic expansion output is injected in post content."
-msgstr "Auswählen, wo die Themenentwicklungs-Ausgabe in den Beitragsinhalt eingefügt wird."
-
-#: build/admin/airygen-app.js
-msgid "Set how AI generates related topics."
-msgstr "Festlegen, wie KI verwandte Themen generiert."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for related topics."
-msgstr "Wählen Sie die Ausgabesprache für verwandte Themen."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic length"
-msgstr "Themenlänge"
-
-#: build/admin/airygen-app.js
-msgid "Choose the length for each topic suggestion."
-msgstr "Wählen Sie die Länge für jeden Themenvorschlag."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic count"
-msgstr "Themenanzahl"
-
-#: build/admin/airygen-app.js
-msgid "How many related topics to generate per request."
-msgstr "Wie viele verwandte Themen pro Anfrage generiert werden sollen."
-
-#: build/admin/airygen-app.js
-msgid "Pick a preset theme for topic output."
-msgstr "Ein voreingestelltes Theme für die Themenausgabe wählen."
-
-#: build/admin/airygen-app.js
-msgid "Adjust how the related topics list appears on the page."
-msgstr "Passen Sie an, wie die Liste der verwandten Themen auf der Seite angezeigt wird."
-
-#: build/admin/airygen-app.js
-msgid "Set whether topic text is bold, italic, or underlined."
-msgstr "Festlegen, ob Thementext fett, kursiv oder unterstrichen ist."
-
-#: build/admin/airygen-app.js
-msgid "Color for each topic link."
-msgstr "Farbe für jeden Themen-Link."
-
-#: build/admin/airygen-app.js
-msgid "Font size used for each topic link."
-msgstr "Schriftgröße für jeden Themen-Link."
-
-#: build/admin/airygen-app.js
 msgid "Choose whether each line uses bullets, numbers, or plain text."
 msgstr "Auswählen, ob jede Zeile Aufzählungszeichen, Nummern oder einfachen Text verwendet."
 
 #: build/admin/airygen-app.js
-msgid "Set vertical spacing between each topic item."
-msgstr "Vertikalen Abstand zwischen jedem Themenelement festlegen."
-
-#: build/admin/airygen-app.js
-msgid "Topic Expansion preview"
-msgstr "Themenerweiterungs-Vorschau"
-
-#: build/admin/airygen-app.js
 msgid "Preview is unavailable."
 msgstr "Vorschau ist nicht verfügbar."
-
-#: build/admin/airygen-app.js
-msgid "SEO safety"
-msgstr "SEO-Sicherheit"
-
-#: build/admin/airygen-app.js
-msgid "Allowing indexation can briefly lift long-tail traffic, but search engines may later remove those pages and harm site-wide SEO authority. Reduce duplication and focus on real user value."
-msgstr "Das Zulassen der Indexierung kann kurzfristig den Long-Tail-Traffic steigern, aber Suchmaschinen können diese Seiten später entfernen und die SEO-Autorität der gesamten Website beeinträchtigen. Reduzieren Sie Duplikate und konzentrieren Sie sich auf echten Nutzen für Benutzer."
-
-#: build/admin/airygen-app.js
-msgid "Prevent search engines from indexing highly repetitive, low-quality content."
-msgstr "Verhindern Sie, dass Suchmaschinen hochgradig wiederholende, minderwertige Inhalte indexieren."
-
-#: build/admin/airygen-app.js
-msgid "Disable indexing"
-msgstr "Indexierung deaktivieren"
-
-#: build/admin/airygen-app.js
-msgid "Add nofollow to virtual links"
-msgstr "Nofollow zu virtuellen Links hinzufügen"
-
-#: build/admin/airygen-app.js
-msgid "Add rel=\"nofollow\" to reduce crawl budget spent on generated links."
-msgstr "Fügen Sie rel=\"nofollow\" hinzu, um das Crawl-Budget für generierte Links zu reduzieren."
-
-#: build/admin/airygen-app.js
-msgid "Generated topic suggestions. Records can be removed but not edited."
-msgstr "Themenvorschläge generiert. Einträge können entfernt, aber nicht bearbeitet werden."
-
-#: build/admin/airygen-app.js
-msgid "Auto detect"
-msgstr "Automatisch erkennen"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "English (United States)"
-msgstr "Englisch (Vereinigte Staaten)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "English"
-msgstr "Englisch"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Chinese (Traditional)"
-msgstr "Chinesisch (Traditionell)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Chinese (Simplified)"
-msgstr "Chinesisch (Vereinfacht)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Japanese"
-msgstr "Japanisch"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Korean"
-msgstr "Koreanisch"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Technology"
-msgstr "Technologie"
-
-#: build/admin/airygen-app.js
-msgid "Product, engineering, AI, and system-focused technical content."
-msgstr "Produkt-, Engineering-, KI- und systemorientierte technische Inhalte."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Business"
-msgstr "Geschäft"
-
-#: build/admin/airygen-app.js
-msgid "Growth, operations, strategy, and outcome-oriented business content."
-msgstr "Wachstums-, betriebs-, strategie- und ergebnisorientierte Geschäftsinhalte."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Finance"
-msgstr "Finanzen"
-
-#: build/admin/airygen-app.js
-msgid "Numbers-first finance and investment analysis with risk context."
-msgstr "Zahlenorientierte Finanz- und Investitionsanalyse mit Risikokontext."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Health"
-msgstr "Gesundheit"
-
-#: build/admin/airygen-app.js
-msgid "Evidence-based health content with cautious and compliant language."
-msgstr "Evidenzbasierte Gesundheitsinhalte mit vorsichtiger und regelkonformer Sprache."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Lifestyle"
-msgstr "Lifestyle"
-
-#: build/admin/airygen-app.js
-msgid "Practical lifestyle advice with real-world trade-offs."
-msgstr "Praktische Lifestyle-Ratschläge mit realen Abwägungen."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Education"
-msgstr "Bildung"
-
-#: build/admin/airygen-app.js
-msgid "Learning-focused content with clear outcomes and methods."
-msgstr "Lernorientierte Inhalte mit klaren Ergebnissen und Methoden."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Professional"
-msgstr "Professionell"
-
-#: build/admin/airygen-app.js
-msgid "Domain-expert content for consulting and regulated industries."
-msgstr "Fachkundige Inhalte für Beratungs- und regulierte Branchen."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "General"
-msgstr "Allgemein"
-
-#: build/admin/airygen-app.js
-msgid "Balanced, broadly readable content for mixed audiences."
-msgstr "Ausgewogener, allgemein verständlicher Inhalt für gemischte Zielgruppen."
-
-#: build/admin/airygen-app.js
-msgid "Formal, precise, and decision-ready writing style."
-msgstr "Formeller, präziser und entscheidungsreifer Schreibstil."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Conversational"
-msgstr "Gesprächig"
-
-#: build/admin/airygen-app.js
-msgid "Natural and friendly style for broad readability."
-msgstr "Natürlicher und freundlicher Stil für breite Lesbarkeit."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Technical"
-msgstr "Technisch"
-
-#: build/admin/airygen-app.js
-msgid "Spec-like style with implementation detail and precision."
-msgstr "Spezifikationsähnlicher Stil mit Implementierungsdetails und Präzision."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Storytelling"
-msgstr "Storytelling"
-
-#: build/admin/airygen-app.js
-msgid "Narrative-led style with clear takeaways and context."
-msgstr "Narrativer Stil mit klaren Erkenntnissen und Kontext."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Instructional"
-msgstr "Anleitend"
-
-#: build/admin/airygen-app.js
-msgid "Action-first, step-by-step guidance style."
-msgstr "Handlungsorientierter, schrittweiser Anleitungsstil."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Minimalist"
-msgstr "Minimalistisch"
-
-#: build/admin/airygen-app.js
-msgid "Compact, direct writing style with minimal filler."
-msgstr "Kompakter, direkter Schreibstil mit minimalem Fülltext."
-
-#: build/admin/airygen-app.js
-msgid "Quick answers for long‑tail keywords and fast indexing."
-msgstr "Schnelle Antworten für Long-Tail-Keywords und schnelle Indexierung."
-
-#: build/admin/airygen-app.js
-msgid "Balanced depth for most SEO topics."
-msgstr "Ausgewogene Tiefe für die meisten SEO-Themen."
-
-#: build/admin/airygen-app.js
-msgid "More detail for competitive keywords and comparisons."
-msgstr "Mehr Details für wettbewerbsfähige Keywords und Vergleiche."
-
-#: build/admin/airygen-app.js
-msgid "The main article in a topic cluster that everything links to."
-msgstr "Der Hauptartikel in einem Themencluster, auf den alles verlinkt."
-
-#: build/admin/airygen-app.js
-msgid "Business report"
-msgstr "Geschäftsbericht"
-
-#: build/admin/airygen-app.js
-msgid "Data-driven structure for decision-making and business review."
-msgstr "Datengestützte Struktur für Entscheidungsfindung und Geschäftsüberprüfung."
-
-#: build/admin/airygen-app.js
-msgid "Tech blog"
-msgstr "Tech-Blog"
-
-#: build/admin/airygen-app.js
-msgid "Technical but easy-to-read format for broader audiences."
-msgstr "Technisches, aber leicht lesbares Format für breitere Zielgruppen."
-
-#: build/admin/airygen-app.js
-msgid "Tutorial"
-msgstr "Tutorial"
-
-#: build/admin/airygen-app.js
-msgid "Step-by-step teaching format focused on actionable learning."
-msgstr "Schritt-für-Schritt-Lehrformat mit Fokus auf umsetzbares Lernen."
-
-#: build/admin/airygen-app.js
-msgid "Marketing content"
-msgstr "Marketing-Inhalt"
-
-#: build/admin/airygen-app.js
-msgid "Story-led format focused on engagement and conversion."
-msgstr "Story-basiertes Format mit Fokus auf Engagement und Conversion."
-
-#: build/admin/airygen-app.js
-msgid "Technical document"
-msgstr "Technisches Dokument"
-
-#: build/admin/airygen-app.js
-msgid "Precise engineering-style format for implementation details."
-msgstr "Präzises Engineering-Format für Implementierungsdetails."
-
-#: build/admin/airygen-app.js
-msgid "AI-assisted writing and strategic planning for SEO content."
-msgstr "KI-gestütztes Schreiben und strategische Planung für SEO-Inhalte."
 
 #: build/admin/airygen-app.js
 msgid "Configure"
@@ -3616,7 +2248,6 @@ msgid "Name"
 msgstr "Name"
 
 #: build/admin/airygen-app.js
-#: build/classic-editor/airygen-editor.js
 msgid "Pillar"
 msgstr "Säule"
 
@@ -5950,88 +4581,16 @@ msgid "Open in a new tab to verify the generated sitemap index."
 msgstr "In einem neuen Tab öffnen, um den generierten Sitemap-Index zu überprüfen."
 
 #: build/admin/airygen-app.js
-msgid "Head"
-msgstr "Head"
-
-#: build/admin/airygen-app.js
-msgid "Snippets in this area are injected into the <head> section."
-msgstr "Snippets in diesem Bereich werden in den <head>-Abschnitt eingefügt."
-
-#: build/admin/airygen-app.js
 msgid "Body"
 msgstr "Textkörper"
-
-#: build/admin/airygen-app.js
-msgid "Snippets in this area are injected right after <body>."
-msgstr "Snippets in diesem Bereich werden direkt nach <body> eingefügt."
 
 #: build/admin/airygen-app.js
 msgid "Footer"
 msgstr "Fußzeile"
 
 #: build/admin/airygen-app.js
-msgid "Snippets in this area are injected before </body>."
-msgstr "Snippets in diesem Bereich werden vor </body> eingefügt."
-
-#: build/admin/airygen-app.js
-msgid "Disabled snippets staging area"
-msgstr "Staging-Bereich für deaktivierte Snippets"
-
-#: build/admin/airygen-app.js
-msgid "Keep snippets here when you do not want them rendered."
-msgstr "Snippets hier aufbewahren, wenn sie nicht gerendert werden sollen."
-
-#: build/admin/airygen-app.js
 msgid "No description"
 msgstr "Keine Beschreibung"
-
-#: build/admin/airygen-app.js
-msgid "Code Snippets"
-msgstr "Code-Snippets"
-
-#: build/admin/airygen-app.js
-msgid "Configure GA4, GTM, and custom tracking snippets for your site."
-msgstr "GA4, GTM und benutzerdefinierte Tracking-Snippets für Ihre Website konfigurieren."
-
-#: build/admin/airygen-app.js
-msgid "Paste tracking IDs. Airygen SEO prints GA4/GTM tags automatically when IDs are set."
-msgstr "Tracking-IDs einfügen. Airygen SEO fügt GA4/GTM-Tags automatisch ein, wenn IDs gesetzt sind."
-
-#: build/admin/airygen-app.js
-msgid "Google Analytics 4"
-msgstr "Google Analytics 4"
-
-#: build/admin/airygen-app.js
-msgid "Enable GA4 tracking"
-msgstr "GA4-Tracking aktivieren"
-
-#: build/admin/airygen-app.js
-msgid "Measurement ID"
-msgstr "Mess-ID"
-
-#. translators: %s is an HTML code tag for the GA4 ID prefix (G-).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste your Google Analytics 4 ID from Google Analytics Admin. It usually starts with %s."
-msgstr "Fügen Sie Ihre Google Analytics 4-ID aus der Google Analytics-Verwaltung ein. Sie beginnt normalerweise mit %s."
-
-#: build/admin/airygen-app.js
-msgid "Google Tag Manager"
-msgstr "Google Tag Manager"
-
-#: build/admin/airygen-app.js
-msgid "Enable GTM tracking"
-msgstr "GTM-Tracking aktivieren"
-
-#: build/admin/airygen-app.js
-msgid "Container ID"
-msgstr "Container-ID"
-
-#. translators: %s is an HTML code tag for the GTM container prefix (GTM-).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste your Google Tag Manager container ID. It usually starts with %s."
-msgstr "Fügen Sie Ihre Google Tag Manager-Container-ID ein. Sie beginnt normalerweise mit %s."
 
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
@@ -6040,42 +4599,8 @@ msgid "Custom"
 msgstr "Benutzerdefiniert"
 
 #: build/admin/airygen-app.js
-msgid "Create reusable snippets and drag them between output locations."
-msgstr "Wiederverwendbare Snippets erstellen und zwischen Ausgabeorten verschieben."
-
-#: build/admin/airygen-app.js
-msgid "Add Snippet"
-msgstr "Snippet hinzufügen"
-
-#: build/admin/airygen-app.js
-msgid "Add snippet"
-msgstr "Snippet hinzufügen"
-
-#: build/admin/airygen-app.js
 msgid "Save changes"
 msgstr "Änderungen speichern"
-
-#: build/admin/airygen-app.js
-msgid "Internal reference only. This is not output on the frontend."
-msgstr "Nur interne Referenz. Dies wird nicht im Frontend ausgegeben."
-
-#: build/admin/airygen-app.js
-msgid "Code"
-msgstr "Code"
-
-#. translators: %s is an HTML code tag for script tags (<script>).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste code only. Do not include %s tags."
-msgstr "Nur Code einfügen. %s-Tags nicht einschließen."
-
-#: build/admin/airygen-app.js
-msgid "Injection position"
-msgstr "Einfügeposition"
-
-#: build/admin/airygen-app.js
-msgid "Inactive"
-msgstr "Inaktiv"
 
 #: build/admin/airygen-app.js
 msgid "Site Verification"
@@ -8908,10 +7433,6 @@ msgid "Manage the sitemap index and exposed post types. When enabled, Airygen SE
 msgstr "Verwalten Sie den Sitemap-Index und die bereitgestellten Beitragstypen. Wenn aktiviert, ersetzt Airygen SEO die Standard-Sitemap von WordPress."
 
 #: build/admin/airygen-app.js
-msgid "Manage GA4, GTM, and custom tracking snippets in one place."
-msgstr "GA4, GTM und benutzerdefinierte Tracking-Snippets an einem Ort verwalten."
-
-#: build/admin/airygen-app.js
 msgid "Add site verification tokens for search engines and webmaster platforms."
 msgstr "Website-Verifizierungstoken für Suchmaschinen und Webmaster-Plattformen hinzufügen."
 
@@ -8950,10 +7471,6 @@ msgstr "Ermöglicht das SEO-Bewertungspanel im Editor und REST-Endpunkt."
 #: build/admin/airygen-app.js
 msgid "Monitor outbound URLs for errors once link counting completes."
 msgstr "Überwachen Sie ausgehende URLs auf Fehler, sobald das Link-Zählen abgeschlossen ist."
-
-#: build/admin/airygen-app.js
-msgid "AI-powered helpers for titles, descriptions, and content improvements."
-msgstr "KI-gestützte Helfer für Titel, Beschreibungen und Inhaltsverbesserungen."
 
 #: build/admin/airygen-app.js
 msgid "Create and prioritize redirect rules for your site."
@@ -9029,10 +7546,6 @@ msgid "Assign pillar and cluster relationships while editing."
 msgstr "Weisen Sie beim Bearbeiten Säulen- und Cluster-Beziehungen zu."
 
 #: build/admin/airygen-app.js
-msgid "AI suggestions and CTR improvements while you edit."
-msgstr "KI-Vorschläge und CTR-Verbesserungen während der Bearbeitung."
-
-#: build/admin/airygen-app.js
 msgid "Failed to load debug info."
 msgstr "Fehler beim Laden der Debug-Informationen."
 
@@ -9053,14 +7566,6 @@ msgid "Failed to enable debug mode."
 msgstr "Fehler beim Aktivieren des Debug-Modus."
 
 #: build/admin/airygen-app.js
-msgid "Logs cleared."
-msgstr "Protokolle gelöscht."
-
-#: build/admin/airygen-app.js
-msgid "Failed to clear logs."
-msgstr "Fehler beim Löschen der Protokolle."
-
-#: build/admin/airygen-app.js
 msgid "Classic editor mode enabled for testing."
 msgstr "Klassischer Editor-Modus für Tests aktiviert."
 
@@ -9079,14 +7584,6 @@ msgstr "Debug-Stufe aktualisiert."
 #: build/admin/airygen-app.js
 msgid "Failed to update debug level."
 msgstr "Debug-Stufe konnte nicht aktualisiert werden."
-
-#: build/admin/airygen-app.js
-msgid "Log file not found."
-msgstr "Protokolldatei nicht gefunden."
-
-#: build/admin/airygen-app.js
-msgid "Failed to load log file."
-msgstr "Fehler beim Laden der Protokolldatei."
 
 #: build/admin/airygen-app.js
 msgid "Failed to load settings."
@@ -9129,32 +7626,12 @@ msgid "notify module"
 msgstr "Benachrichtigungsmodul"
 
 #: build/admin/airygen-app.js
-msgid "This paid module cannot be enabled with the current subscription status."
-msgstr "Dieses kostenpflichtige Modul kann mit dem aktuellen Abonnementstatus nicht aktiviert werden."
-
-#: build/admin/airygen-app.js
 msgid "Related Posts requires enabling Link Suggestions first."
 msgstr "Verwandte Beiträge erfordert zunächst die Aktivierung von Link-Vorschlägen."
 
 #: build/admin/airygen-app.js
 msgid "Airygen SEO Settings"
 msgstr "Airygen SEO-Einstellungen"
-
-#: build/admin/airygen-app.js
-msgid "Subscription inactive"
-msgstr "Abonnement inaktiv"
-
-#: build/admin/airygen-app.js
-msgid "Continue to disable"
-msgstr "Weiter deaktivieren"
-
-#: build/admin/airygen-app.js
-msgid "Subscription is inactive. Enabled paid modules remain available, but new paid modules cannot be enabled until renewal."
-msgstr "Abonnement ist inaktiv. Aktivierte bezahlte Module bleiben verfügbar, neue bezahlte Module können jedoch erst nach Erneuerung aktiviert werden."
-
-#: build/admin/airygen-app.js
-msgid "View plans"
-msgstr "Pläne ansehen"
 
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
@@ -9315,7 +7792,6 @@ msgstr "Legen Sie eine Fokus-Schlüsselphrase fest, um die Dichte zu überprüfe
 msgid "Focus keyphrase density is 0%. Add it naturally to the content."
 msgstr "Fokus-Schlüsselphrasen-Dichte beträgt 0 %. Fügen Sie sie natürlich in den Inhalt ein."
 
-#. translators: percentage range for focus keyphrase density.
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "Adjust focus keyphrase density to 0.5%–2%."
@@ -9359,7 +7835,6 @@ msgid "To avoid keyword stuffing, each long-tail keyphrase should be supported b
 msgstr "Um Keyword-Stuffing zu vermeiden, sollte jede Long-Tail-Schlüsselphrase durch mindestens 150 Wörter erklärenden Inhalt unterstützt werden; wiederholen Sie die Schlüsselphrase nicht isoliert ohne aussagekräftigen Text."
 
 #: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Got it"
 msgstr "Verstanden"
 
@@ -9678,407 +8153,14 @@ msgstr "Noch keine Vorschläge. Speichern Sie den Beitrag, damit wir seine Keywo
 msgid "Insert"
 msgstr "Einfügen"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your content…"
-msgstr "Analysiere Ihren Inhalt…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Subscription is inactive. AI generation is unavailable until renewal."
-msgstr "Abonnement ist inaktiv. KI-Generierung ist bis zur Erneuerung nicht verfügbar."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Detected content languages:"
-msgstr "Erkannte Inhaltssprachen:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Primary language:"
-msgstr "Primärsprache:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Selected output language:"
-msgstr "Ausgewählte Ausgabesprache:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Continue?"
-msgstr "Fortfahren?"
-
-#: build/block-editor/airygen-editor.js
-msgid "SERP CTR Booster generated. Review and apply when ready."
-msgstr "SERP CTR Booster generiert. Überprüfen und anwenden, wenn bereit."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate CTR booster suggestions."
-msgstr "CTR-Booster-Vorschläge konnten nicht generiert werden."
-
-#: build/block-editor/airygen-editor.js
-msgid "FAQ generated. Review and apply when ready."
-msgstr "FAQ generiert. Überprüfen und anwenden, wenn bereit."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate FAQ suggestions."
-msgstr "FAQ-Vorschläge konnten nicht generiert werden."
-
-#: build/block-editor/airygen-editor.js
-msgid "Topic Expansion generated. Review and apply when ready."
-msgstr "Themenerweiterung generiert. Überprüfen und anwenden, wenn bereit."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Topic Expansion suggestions."
-msgstr "Themenerweiterungs-Vorschläge konnten nicht generiert werden."
-
-#: build/block-editor/airygen-editor.js
-msgid "Content Blueprint generated. Review and apply when ready."
-msgstr "Content Blueprint generiert. Überprüfen und anwenden, wenn bereit."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Content Blueprint."
-msgstr "Content Blueprint konnte nicht generiert werden."
-
-#: build/block-editor/airygen-editor.js
-msgid "Article Builder generated. Review and apply when ready."
-msgstr "Artikel-Builder generiert. Überprüfen und anwenden, wenn bereit."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Article Builder output."
-msgstr "Artikel-Builder-Ausgabe konnte nicht generiert werden."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Outline unavailable."
-msgstr "Gliederung nicht verfügbar."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to update FAQ display settings."
-msgstr "FAQ-Anzeigeeinstellungen konnten nicht aktualisiert werden."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to update topic display settings."
-msgstr "Themen-Anzeigeeinstellungen konnten nicht aktualisiert werden."
-
-#: build/block-editor/airygen-editor.js
-msgid "AI Assist is disabled. Enable it in Airygen → Modules."
-msgstr "KI-Assistent ist deaktiviert. Aktivieren Sie ihn unter Airygen → Module."
-
-#: build/block-editor/airygen-editor.js
-msgid "AI Assist API is not configured."
-msgstr "KI-Assistent-API ist nicht konfiguriert."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate higher-CTR titles and descriptions with AI suggestions."
-msgstr "Generieren Sie Titel und Beschreibungen mit höherer CTR mit KI-Vorschlägen."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate structured outlines and section summaries for faster planning."
-msgstr "Generieren Sie strukturierte Gliederungen und Abschnittszusammenfassungen für schnellere Planung."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate full-length articles from your topic and focus keyphrase."
-msgstr "Generieren Sie vollständige Artikel aus Ihrem Thema und Ihrer Fokus-Schlüsselphrase."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate FAQ entries that expand on common user questions."
-msgstr "Generieren Sie FAQ-Einträge, die häufige Benutzerfragen erweitern."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate related topics to expand your content plan."
-msgstr "Generieren Sie verwandte Themen, um Ihren Inhaltsplan zu erweitern."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unavailable in your current plan."
-msgstr "In Ihrem aktuellen Plan nicht verfügbar."
-
-#: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "Display mode"
 msgstr "Anzeigemodus"
 
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
-msgid "Use settings"
-msgstr "Einstellungen verwenden"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Manual"
 msgstr "Manuell"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose how FAQ output should be inserted for this post."
-msgstr "Wählen Sie, wie die FAQ-Ausgabe für diesen Beitrag eingefügt werden soll."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose how Topic Expansion output should be inserted for this post."
-msgstr "Wählen Sie, wie die Themenerweiterungs-Ausgabe für diesen Beitrag eingefügt werden soll."
-
-#: build/block-editor/airygen-editor.js
-msgid "No AI modules are enabled for this post."
-msgstr "Keine KI-Module sind für diesen Beitrag aktiviert."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates a meta title, meta description, and excerpt based on your current content. Apply suggestions and save the post to make changes live."
-msgstr "Generiert Meta-Titel, Meta-Beschreibung und Auszug basierend auf Ihrem aktuellen Inhalt. Wenden Sie Vorschläge an und speichern Sie den Beitrag, um Änderungen zu aktivieren."
-
-#: build/block-editor/airygen-editor.js
-msgid "Uses the focus keyphrase set for this post."
-msgstr "Verwendet die für diesen Beitrag festgelegte Fokus-Schlüsselphrase."
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the language for AI-generated suggestions."
-msgstr "Wählen Sie die Sprache für KI-generierte Vorschläge."
-
-#: build/block-editor/airygen-editor.js
-msgid "Require the focus keyphrase to appear in suggestions."
-msgstr "Erfordern, dass die Fokus-Schlüsselphrase in Vorschlägen erscheint."
-
-#: build/block-editor/airygen-editor.js
-msgid "Applied. Save the post to make the changes live."
-msgstr "Angewendet. Speichern Sie den Beitrag, um die Änderungen zu aktivieren."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one suggestion to apply."
-msgstr "Wählen Sie mindestens einen Vorschlag zum Anwenden."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Describe the article you want to plan."
-msgstr "Beschreiben Sie den Artikel, den Sie planen möchten."
-
-#: build/block-editor/airygen-editor.js
-msgid "Defaults to the focus keyphrase."
-msgstr "Standardmäßig die Fokus-Schlüsselphrase."
-
-#: build/block-editor/airygen-editor.js
-msgid "Set a focus keyphrase in the SEO panel."
-msgstr "Legen Sie eine Fokus-Schlüsselphrase im SEO-Panel fest."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose the output language for the outline."
-msgstr "Wählen Sie die Ausgabesprache für die Gliederung."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Select a structure that matches your topic."
-msgstr "Wählen Sie eine Struktur, die zu Ihrem Thema passt."
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose a voice for section summaries."
-msgstr "Wählen Sie eine Stimme für Abschnittszusammenfassungen."
-
-#: build/block-editor/airygen-editor.js
-msgid "Control how many heading levels the outline includes."
-msgstr "Kontrollieren Sie, wie viele Überschriftenebenen die Gliederung enthält."
-
-#: build/block-editor/airygen-editor.js
-msgid "Include the focus keyword in outline headings."
-msgstr "Fügen Sie das Fokus-Schlüsselwort in Gliederungs-Überschriften ein."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Outline length target"
-msgstr "Ziel-Gliederungslänge"
-
-#: build/block-editor/airygen-editor.js
-msgid "Longer blueprints take more time. Please keep this window open."
-msgstr "Längere Blueprints benötigen mehr Zeit. Bitte lassen Sie dieses Fenster geöffnet."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Keep outline"
-msgstr "Gliederung behalten"
-
-#: build/block-editor/airygen-editor.js
-msgid "Keep your current headings and expand the article from them."
-msgstr "Behalten Sie Ihre aktuellen Überschriften bei und erweitern Sie den Artikel daraus."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content Blueprint is for planning new articles. Applying will replace the post content."
-msgstr "Content Blueprint dient der Planung neuer Artikel. Das Anwenden ersetzt den Beitragsinhalt."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "It does not generate a full draft; it proposes section headings to guide your writing."
-msgstr "Es generiert keinen vollständigen Entwurf; es schlägt Abschnittsüberschriften vor, um Ihr Schreiben zu leiten."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use this blueprint"
-msgstr "Diesen Blueprint verwenden"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select a blueprint to apply."
-msgstr "Wählen Sie eine Blaupause zum Anwenden."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to apply blueprint content."
-msgstr "Blueprint-Inhalt konnte nicht angewendet werden."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your topic…"
-msgstr "Analysiere Ihr Thema…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Building outline structure…"
-msgstr "Erstelle Gliederungsstruktur…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Refining sections…"
-msgstr "Verfeinere Abschnitte…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content source"
-msgstr "Inhaltsquelle"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Extract from editor content"
-msgstr "Aus Editor-Inhalt extrahieren"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose where the AI should read source content from."
-msgstr "Wählen Sie, woher die KI Quellinhalte lesen soll."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Custom content"
-msgstr "Benutzerdefinierter Inhalt"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Paste the source content for the AI draft."
-msgstr "Fügen Sie den Quellinhalt für den KI-Entwurf ein."
-
-#: build/block-editor/airygen-editor.js
-msgid "Markdown formatting works best."
-msgstr "Markdown-Formatierung funktioniert am besten."
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the language for the generated article."
-msgstr "Wählen Sie die Sprache für den generierten Artikel."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the structure that best matches your topic."
-msgstr "Wählen Sie die Struktur, die am besten zu Ihrem Thema passt."
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the voice and style for the draft."
-msgstr "Wählen Sie die Stimme und den Stil für den Entwurf."
-
-#: build/block-editor/airygen-editor.js
-msgid "AI targets can vary by about ten percent from the selected length."
-msgstr "KI-Ziele können um etwa zehn Prozent von der gewählten Länge abweichen."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Longer articles take more time. Please keep this window open."
-msgstr "Längere Artikel benötigen mehr Zeit. Bitte lassen Sie dieses Fenster geöffnet."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use this article"
-msgstr "Diesen Artikel verwenden"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to apply Article Builder output."
-msgstr "Artikel-Builder-Ausgabe konnte nicht angewendet werden."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select an article to apply."
-msgstr "Wählen Sie einen Artikel zum Anwenden."
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting can take up to ~90 seconds depending on length. Please keep this window open."
-msgstr "Die Erstellung kann je nach Länge bis zu ~90 Sekunden dauern. Bitte lassen Sie dieses Fenster geöffnet."
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting full sections…"
-msgstr "Erstelle vollständige Abschnitte…"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the output language for FAQs."
-msgstr "Wählen Sie die Ausgabesprache für FAQs."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the content structure for FAQ responses."
-msgstr "Wählen Sie die Inhaltsstruktur für FAQ-Antworten."
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the writing tone for answers."
-msgstr "Wählen Sie den Schreibton für Antworten."
-
-#: build/block-editor/airygen-editor.js
-msgid "How many questions to generate per request."
-msgstr "Wie viele Fragen pro Anfrage generiert werden sollen."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates FAQ entries based on your current post content. Apply suggestions and save the post to publish updates."
-msgstr "Generiert FAQ-Einträge basierend auf Ihrem aktuellen Beitragsinhalt. Wenden Sie Vorschläge an und speichern Sie den Beitrag, um Updates zu veröffentlichen."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Untitled FAQ"
-msgstr "FAQ ohne Titel"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one FAQ item to apply."
-msgstr "Wählen Sie mindestens ein FAQ-Element zum Anwenden."
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting Q&A pairs…"
-msgstr "Erstelle Q&A-Paare…"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the output language for topics."
-msgstr "Wählen Sie die Ausgabesprache für Themen."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the structure for topic suggestions."
-msgstr "Wählen Sie die Struktur für Themenvorschläge."
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the writing tone for topics."
-msgstr "Wählen Sie den Schreibton für Themen."
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose how long each topic description should be."
-msgstr "Wählen Sie, wie lang jede Themenbeschreibung sein soll."
-
-#: build/block-editor/airygen-editor.js
-msgid "How many topics to generate per request."
-msgstr "Wie viele Themen pro Anfrage generiert werden sollen."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates related topic ideas based on your current content. Apply suggestions and save the post to publish updates."
-msgstr "Generiert verwandte Themenideen basierend auf Ihrem aktuellen Inhalt. Wenden Sie Vorschläge an und speichern Sie den Beitrag, um Updates zu veröffentlichen."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Untitled topic"
-msgstr "Thema ohne Titel"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one topic to apply."
-msgstr "Wählen Sie mindestens ein Thema zum Anwenden."
-
-#: build/block-editor/airygen-editor.js
-msgid "Expanding related topics…"
-msgstr "Erweitere verwandte Themen…"
 
 #: build/block-editor/airygen-editor.js
 msgid "TOC display mode"
@@ -10228,18 +8310,6 @@ msgid "Renders the table of contents on the frontend."
 msgstr "Rendert das Inhaltsverzeichnis im Frontend."
 
 #: build/block-editor/airygen-editor.js
-msgid "Airygen FAQ"
-msgstr "Airygen FAQ"
-
-#: build/block-editor/airygen-editor.js
-msgid "Insert AI-generated FAQ output."
-msgstr "KI-generierte FAQ-Ausgabe einfügen."
-
-#: build/block-editor/airygen-editor.js
-msgid "Renders AI FAQ entries on the frontend."
-msgstr "Rendert KI-FAQ-Einträge im Frontend."
-
-#: build/block-editor/airygen-editor.js
 msgid "Airygen Breadcrumbs"
 msgstr "Airygen Breadcrumbs"
 
@@ -10252,34 +8322,8 @@ msgid "Renders breadcrumbs on the frontend."
 msgstr "Rendert Breadcrumbs im Frontend."
 
 #: build/block-editor/airygen-editor.js
-msgid "Airygen Topic Expansion"
-msgstr "Airygen Themenerweiterung"
-
-#: build/block-editor/airygen-editor.js
-msgid "Insert AI-generated related topics output."
-msgstr "KI-generierte verwandte Themen-Ausgabe einfügen."
-
-#: build/block-editor/airygen-editor.js
-msgid "Renders related topic ideas on the frontend."
-msgstr "Rendert verwandte Themenideen im Frontend."
-
-#: build/block-editor/airygen-editor.js
 msgid "Rebots Meta"
 msgstr "Robots-Meta"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Applied. Save Changes to persist updates."
-msgstr "Angewendet. Speichern Sie Änderungen, um Updates zu übernehmen."
-
-#. translators: %s is the thing to generate first, such as an outline or a draft.
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "No records yet. Generate %s to get started."
-msgstr "Noch keine Einträge. %s generieren, um zu beginnen."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing content…"
-msgstr "Analysiere Inhalt…"
 
 #: build/classic-editor/airygen-editor.js
 msgid "Total rules"
@@ -10377,174 +8421,10 @@ msgstr "Standard erben (%s)"
 msgid "Summary"
 msgstr "Zusammenfassung"
 
-#: build/classic-editor/airygen-editor.js
-msgid "Generate higher-CTR titles and meta descriptions."
-msgstr "Generieren Sie Titel und Meta-Beschreibungen mit höherer CTR."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generate structured outlines with section summaries."
-msgstr "Generieren Sie strukturierte Gliederungen mit Abschnittszusammenfassungen."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Draft full articles with AI guidance and structured prompts."
-msgstr "Entwerfen Sie vollständige Artikel mit KI-Anleitung und strukturierten Prompts."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Append frequently asked questions to the end of the article."
-msgstr "Fügen Sie häufig gestellte Fragen am Ende des Artikels hinzu."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Append related topic ideas after the FAQ section."
-msgstr "Fügen Sie verwandte Themenideen nach dem FAQ-Bereich hinzu."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Uses the saved focus keyphrase."
-msgstr "Verwendet die gespeicherte Fokus-Schlüsselphrase."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Include the focus keyphrase in the output."
-msgstr "Fügen Sie die Fokus-Schlüsselphrase in die Ausgabe ein."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Used to guide the outline."
-msgstr "Wird verwendet, um die Gliederung zu steuern."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for the outline."
-msgstr "Wählen Sie den Ton für die Gliederung."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Heading depth for the outline."
-msgstr "Überschriftentiefe für die Gliederung."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Basic"
-msgstr "Basis"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Deep"
-msgstr "Tief"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how long the outline should be."
-msgstr "Kontrolliert, wie lang die Gliederung sein soll."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Include the focus keyphrase in headings."
-msgstr "Fügen Sie die Fokus-Schlüsselphrase in Überschriften ein."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Keep the existing outline when generating."
-msgstr "Behalten Sie die vorhandene Gliederung beim Generieren bei."
-
-#: build/classic-editor/airygen-editor.js
-msgid "an outline"
-msgstr "eine Gliederung"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Choose where to extract source content."
-msgstr "Wählen Sie, woher Quellinhalte extrahiert werden sollen."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the output language."
-msgstr "Wählen Sie die Ausgabesprache."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the writing style type."
-msgstr "Wählen Sie den Schreibstil-Typ."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for the draft."
-msgstr "Wählen Sie den Ton für den Entwurf."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the target article length."
-msgstr "Wählen Sie die Ziel-Artikellänge."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Keep the existing headings when generating."
-msgstr "Behalten Sie die vorhandenen Überschriften beim Generieren bei."
-
-#: build/classic-editor/airygen-editor.js
-msgid "a draft"
-msgstr "ein Entwurf"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select output language."
-msgstr "Wählen Sie die Ausgabesprache."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for answers."
-msgstr "Wählen Sie den Ton für Antworten."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how detailed each answer should be."
-msgstr "Kontrolliert, wie detailliert jede Antwort sein soll."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Number of questions to generate."
-msgstr "Anzahl der zu generierenden Fragen."
-
-#: build/classic-editor/airygen-editor.js
-msgid "questions"
-msgstr "Fragen"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for topics."
-msgstr "Wählen Sie den Ton für Themen."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how detailed each topic is."
-msgstr "Kontrolliert, wie detailliert jedes Thema ist."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Number of topics to generate."
-msgstr "Anzahl der zu generierenden Themen."
-
-#: build/classic-editor/airygen-editor.js
-msgid "topics"
-msgstr "Themen"
-
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "(No title)"
 msgstr "(Kein Titel)"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your source…"
-msgstr "Analysiere Ihre Quelle…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting article sections…"
-msgstr "Erstelle Artikelabschnitte…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Refining language and tone…"
-msgstr "Verfeinere Sprache und Ton…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generating FAQs can take a moment. Please keep this window open."
-msgstr "Das Generieren von FAQs kann einen Moment dauern. Bitte lassen Sie dieses Fenster geöffnet."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting questions…"
-msgstr "Erstelle Fragen…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Writing answers…"
-msgstr "Schreibe Antworten…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generating topics can take a moment. Please keep this window open."
-msgstr "Das Generieren von Themen kann einen Moment dauern. Bitte lassen Sie dieses Fenster geöffnet."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting topic ideas…"
-msgstr "Erstelle Themenideen…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Refining list…"
-msgstr "Verfeinere Liste…"
 
 #: build/classic-editor/airygen-editor.js
 msgid "Focus keyphrase density is in range (0.5%–2%)."
@@ -10563,22 +8443,6 @@ msgid "Focus keyphrase is not set."
 msgstr "Fokus-Schlüsselphrase ist nicht festgelegt."
 
 #: build/classic-editor/airygen-editor.js
-msgid "This AI module is unavailable in your current plan."
-msgstr "Dieses KI-Modul ist in Ihrem aktuellen Plan nicht verfügbar."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Unable to complete the request."
-msgstr "Anfrage konnte nicht abgeschlossen werden."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select a suggestion to apply."
-msgstr "Wählen Sie einen Vorschlag zum Anwenden."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select a record to apply."
-msgstr "Wählen Sie einen Datensatz zum Anwenden."
-
-#: build/classic-editor/airygen-editor.js
 msgid "Save changes to apply your updates."
 msgstr "Speichern Sie Änderungen, um Ihre Updates anzuwenden."
 
@@ -10589,39 +8453,6 @@ msgstr "Gespeichert."
 #: build/classic-editor/airygen-editor.js
 msgid "Failed to save changes."
 msgstr "Fehler beim Speichern der Änderungen."
-
-#. translators: %s is the estimated number of seconds.
-#: build/block-editor/airygen-editor.js
-#, php-format, js-format
-msgid "This can take up to ~%s seconds depending on the amount of content. Please keep this window open."
-msgstr "Dies kann je nach Inhaltsmenge bis zu ca. %s Sekunden dauern. Bitte lassen Sie dieses Fenster geöffnet."
-
-msgid "Credit balance record not found"
-msgstr "Datensatz zum Guthaben nicht gefunden"
-
-#. translators: %s is the generated item type in plural form, e.g. "blueprints", "articles", or "drafts".
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "Longer %s take more time. Please keep this window open."
-msgstr "Längere %s benötigen mehr Zeit. Bitte lassen Sie dieses Fenster geöffnet."
-
-#: build/classic-editor/airygen-editor.js
-msgid "length"
-msgstr "Länge"
-
-#. translators: 1: estimated duration label, e.g. "~15 seconds". 2: what affects the duration, e.g. "length" or "count".
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "This can take up to %1$s depending on %2$s. Please keep this window open."
-msgstr "Dies kann je nach %2$s bis zu %1$s dauern. Bitte lassen Sie dieses Fenster geöffnet."
-
-#: build/classic-editor/airygen-editor.js
-msgid "blueprints"
-msgstr "Blaupausen"
-
-#: build/classic-editor/airygen-editor.js
-msgid "drafts"
-msgstr "Entwürfe"
 
 msgid "Sitewide SEO (scaled)"
 msgstr "Sitewide-SEO (skaliert)"
@@ -10675,9 +8506,6 @@ msgstr "Zeitlimit für Vorgang (Sekunden)"
 #: build/admin/airygen-app.js
 msgid "Check basic sitewide SEO health and configuration."
 msgstr "Prüfe die grundlegende websiteweite SEO-Gesundheit und Konfiguration."
-
-msgid "Mirror WordPress Sitewide SEO diagnostics with Airygen-specific checks (SSL, Safe Browsing, focus keywords)."
-msgstr "WordPress-Sitewide-SEO-Diagnosen mit Airygen-spezifischen Prüfungen spiegeln (SSL, Safe Browsing, Fokus-Keywords)."
 
 msgid "Mind map items contain invalid post data."
 msgstr "Elemente der Mind Map enthalten ungültige Beitragsdaten."
@@ -11001,14 +8829,6 @@ msgid "Uses the IndexNow protocol to push new and updated URLs to Bing and other
 msgstr "Verwendet das IndexNow-Protokoll, um neue und aktualisierte URLs sofort nach der Veröffentlichung oder Änderung an Bing und andere unterstützte Suchmaschinen zu übermitteln — kein Warten auf Crawler. Besonders wertvoll für Nachrichtenwebsites und zeitkritische Inhalte."
 
 #: build/admin/airygen-app.js
-msgid "Would you like AI to help you write article outlines, FAQ sets, or plan your full content strategy?"
-msgstr "Möchten Sie, dass KI Ihnen beim Schreiben von Artikelgliederungen, FAQ-Sets oder der Planung Ihrer gesamten Inhaltsstrategie hilft?"
-
-#: build/admin/airygen-app.js
-msgid "A smart AI toolkit that generates article outlines, Content Blueprints, full Article drafts, and Deep FAQ sets from a keyword — making content creation faster and easier."
-msgstr "Ein intelligentes KI-Toolkit, das aus einem Keyword Artikelgliederungen, Content Blueprints, vollständige Artikelentwürfe und umfangreiche FAQ-Sets generiert — für schnellere und einfachere Inhaltserstellung."
-
-#: build/admin/airygen-app.js
 msgid "Would you like AI tools like ChatGPT and Perplexity to more easily discover and cite your site?"
 msgstr "Möchten Sie, dass KI-Tools wie ChatGPT und Perplexity Ihre Website leichter entdecken und zitieren können?"
 
@@ -11023,26 +8843,6 @@ msgstr "Generiert automatisch eine llms.txt-Datei — wie eine Sitemap für KI �
 #: build/admin/airygen-app.js
 msgid "Automatically converts your posts into AI-friendly Markdown so AI agents can read and understand your content without struggling to parse HTML."
 msgstr "Konvertiert Ihre Beiträge automatisch in KI-freundliches Markdown, damit KI-Agenten Ihre Inhalte lesen und verstehen können, ohne sich mit HTML-Parsing abmühen zu müssen."
-
-#: build/admin/airygen-app.js
-msgid "Includes Deep FAQ, which automatically generates structured Q&A from your post content. AI search engines favor content that directly answers questions, boosting your visibility in AI-powered search results."
-msgstr "Enthält Deep FAQ, das automatisch strukturierte Fragen und Antworten aus Ihrem Beitragsinhalt generiert. KI-Suchmaschinen bevorzugen Inhalte, die Fragen direkt beantworten, und steigern so Ihre Sichtbarkeit in KI-gestützten Suchergebnissen."
-
-#: build/admin/airygen-app.js
-msgid "Free"
-msgstr "Kostenlos"
-
-#: build/admin/airygen-app.js
-msgid "Requires a plan upgrade"
-msgstr "Erfordert ein Plan-Upgrade"
-
-#: build/admin/airygen-app.js
-msgid "Requires"
-msgstr "Erfordert"
-
-#: build/admin/airygen-app.js
-msgid "plan to activate"
-msgstr "Plan zur Aktivierung"
 
 #: build/admin/airygen-app.js
 msgid "Got it, don't show again"
@@ -11069,32 +8869,8 @@ msgid "Welcome to Airygen SEO!"
 msgstr "Willkommen bei Airygen SEO!"
 
 #: build/admin/airygen-app.js
-msgid "Answer 10 quick questions and we'll recommend the right SEO modules for your site — then enable them all with one click."
-msgstr "Beantworten Sie 10 kurze Fragen und wir empfehlen Ihnen die richtigen SEO-Module für Ihre Website — aktivieren Sie alle mit einem Klick."
-
-#: build/admin/airygen-app.js
 msgid "Don't worry — every question is just Yes or No. No technical knowledge needed. It takes about 2 minutes. 😊"
 msgstr "Keine Sorge — jede Frage ist nur Ja oder Nein. Kein technisches Wissen erforderlich. Es dauert etwa 2 Minuten. 😊"
-
-#: build/admin/airygen-app.js
-msgid "🎉 All done! Here's what we recommend based on your answers:"
-msgstr "🎉 Alles erledigt! Das empfehlen wir basierend auf Ihren Antworten:"
-
-#: build/admin/airygen-app.js
-msgid "Will be enabled (included in your plan)"
-msgstr "Wird aktiviert (in Ihrem Plan enthalten)"
-
-#: build/admin/airygen-app.js
-msgid "Requires an upgrade to enable"
-msgstr "Erfordert ein Upgrade zur Aktivierung"
-
-#: build/admin/airygen-app.js
-msgid "Upgrade to"
-msgstr "Upgraden auf"
-
-#: build/admin/airygen-app.js
-msgid "No modules selected. Click Finish to close the wizard."
-msgstr "Keine Module ausgewählt. Klicken Sie auf Fertigstellen, um den Assistenten zu schließen."
 
 #: build/admin/airygen-app.js
 msgid "Setup Wizard"
@@ -11152,12 +8928,33 @@ msgstr "Abstand zwischen Blöcken (px)"
 msgid "Content top margin (px)"
 msgstr "Oberer Inhaltsabstand (px)"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "The focus keyphrase is the main keyword or phrase this post is optimized for. AI modules use it to guide content generation — keeping the output relevant and keyword-focused."
-msgstr "Die Fokus-Schlüsselphrase ist das Haupt-Keyword oder die Phrase, für die dieser Beitrag optimiert ist. KI-Module verwenden sie zur Steuerung der Inhaltsgenerierung — damit die Ausgabe relevant und keyword-fokussiert bleibt."
+#. Plugin URI of the plugin
+msgid "https://www.airygen.com/en/airygen-seo/introduction"
+msgstr "https://www.airygen.com/en/airygen-seo/introduction"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Focus keyphrase help"
-msgstr "Hilfe zur Fokus-Schlüsselphrase"
+#. Description of the plugin
+msgid "Airygen SEO is a modular SEO toolkit for WordPress sites that need more than title and meta fields. It combines on-page SEO controls, structured data, technical SEO, internal link workflows, and automation tools in one plugin while keeping the editing experience inside WordPress."
+msgstr "Airygen SEO ist ein modulares SEO-Toolkit für WordPress-Websites, die mehr als Titel- und Meta-Felder benötigen. Es vereint On-Page-SEO-Steuerungen, strukturierte Daten, technisches SEO, interne Verlinkungs-Workflows und Automatisierungstools in einem Plugin, während die Bearbeitung vollständig in WordPress bleibt."
+
+#. Author URI of the plugin
+msgid "https://www.airygen.com/"
+msgstr "https://www.airygen.com/"
+
+msgid "Transfer export settings filter must return an array."
+msgstr "Der Filter für die Export-Einstellungen des Transfers muss ein Array zurückgeben."
+
+#: build/admin/airygen-app.js
+msgid "Answer a few quick questions and we'll recommend the right SEO modules for your site — core modules are already enabled by default."
+msgstr "Beantworten Sie ein paar kurze Fragen und wir empfehlen Ihnen die passenden SEO-Module für Ihre Website — die Kernmodule sind bereits standardmäßig aktiviert."
+
+#: build/admin/airygen-app.js
+msgid "All done! Core modules (On-Page SEO, Breadcrumbs, Sitemap, Image SEO, Robots, Site Verification, Link Counter, Link Suggestions, Score Calculator) are already enabled by default."
+msgstr "Fertig! Die Kernmodule (On-Page SEO, Brotkrumen, Sitemap, Image SEO, Robots, Site Verification, Link Counter, Link Suggestions, Score Calculator) sind bereits standardmäßig aktiviert."
+
+#: build/admin/airygen-app.js
+msgid "Additional modules to enable based on your answers"
+msgstr "Zusätzliche Module, die basierend auf Ihren Antworten aktiviert werden"
+
+#: build/admin/airygen-app.js
+msgid "No additional modules recommended. You can enable more from the dashboard anytime."
+msgstr "Keine zusätzlichen Module empfohlen. Sie können jederzeit weitere Module über das Dashboard aktivieren."

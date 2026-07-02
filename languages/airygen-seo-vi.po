@@ -14,25 +14,9 @@ msgstr ""
 "X-Domain: airygen-seo\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
-#. Plugin Name of the plugin
-msgid "Airygen"
-msgstr "Airygen"
-
-#. Plugin URI of the plugin
-msgid "https://www.airygen.com/product/wordpress-seo-plugin/"
-msgstr "https://www.airygen.com/product/wordpress-seo-plugin/"
-
-#. Description of the plugin
-msgid "The best SEO plugin for WordPress to optimize your website for search engines and improve your rankings."
-msgstr "Plugin SEO tốt nhất cho WordPress để tối ưu hóa trang web cho công cụ tìm kiếm và cải thiện thứ hạng."
-
 #. Author of the plugin
 msgid "Airygen Team"
 msgstr "Đội ngũ Airygen"
-
-#. Author URI of the plugin
-msgid "https://github.com/airygen"
-msgstr "https://github.com/airygen"
 
 msgid "SEO title length"
 msgstr "Độ dài tiêu đề SEO"
@@ -148,47 +132,6 @@ msgstr "Mô tả"
 msgid "Sent by %1$s via %2$s."
 msgstr "Gửi bởi %1$s qua %2$s."
 
-msgid "Subscription Status"
-msgstr "Trạng thái gói đăng ký"
-
-msgid "Manage your subscription details and version updates."
-msgstr "Quản lý chi tiết gói đăng ký và cập nhật phiên bản."
-
-msgid "Subscription ID"
-msgstr "ID gói đăng ký"
-
-msgid "26 characters"
-msgstr "26 ký tự"
-
-msgid "Your subscription details."
-msgstr "Chi tiết gói đăng ký của bạn."
-
-msgid "Site Key"
-msgstr "Khóa trang web"
-
-msgid "Paste the Site Key used for Link Suggestions."
-msgstr "Dán Khóa trang web dùng cho Gợi ý liên kết."
-
-msgid "This key authenticates to the Airygen API. Keep it safe and do not share."
-msgstr "Khóa này xác thực với API Airygen. Giữ an toàn và không chia sẻ."
-
-msgid "Save Subscription"
-msgstr "Lưu gói đăng ký"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use"
-msgstr "Sử dụng"
-
-msgid "Generate and browse AI suggestions for this taxonomy page title and description."
-msgstr "Tạo và duyệt gợi ý AI cho tiêu đề và mô tả trang phân loại này."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "SERP CTR Booster"
-msgstr "Trình tăng CTR SERP"
-
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
@@ -196,82 +139,23 @@ msgid "Close"
 msgstr "Đóng"
 
 #: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generate"
-msgstr "Tạo"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Browse"
-msgstr "Duyệt"
-
-msgid "Taxonomy terms do not include body content, so Airygen analyzes the latest five related post titles to generate suggestions."
-msgstr "Thuật ngữ phân loại không bao gồm nội dung chính, nên Airygen phân tích năm tiêu đề bài viết liên quan mới nhất để tạo gợi ý."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Language"
-msgstr "Ngôn ngữ"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the output language for suggestions."
-msgstr "Chọn ngôn ngữ đầu ra cho gợi ý."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Focus keyphrase"
 msgstr "Từ khóa trọng tâm"
 
-msgid "Used when Include keyword is enabled."
-msgstr "Dùng khi Bao gồm từ khóa được bật."
-
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Include keyword"
-msgstr "Bao gồm từ khóa"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Yes"
 msgstr "Có"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "No"
 msgstr "Không"
 
-msgid "Include the focus keyphrase when generating title and description."
-msgstr "Bao gồm từ khóa trọng tâm khi tạo tiêu đề và mô tả."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generating…"
-msgstr "Đang tạo…"
-
-msgid "Analyzing your taxonomy context…"
-msgstr "Đang phân tích ngữ cảnh phân loại của bạn…"
-
-msgid "This can take up to ~15 seconds depending on content. Please keep this window open."
-msgstr "Quá trình này có thể mất tối đa ~15 giây tùy theo nội dung. Vui lòng giữ cửa sổ này mở."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Apply selected"
-msgstr "Áp dụng đã chọn"
-
-msgid "Please provide a valid log date."
-msgstr "Vui lòng cung cấp ngày nhật ký hợp lệ."
-
+#. Plugin Name of the plugin
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 msgid "Airygen SEO"
 msgstr "Airygen SEO"
 
-#: build/admin/airygen-app.js
 msgid "Dashboard"
 msgstr "Bảng điều khiển"
 
@@ -283,22 +167,12 @@ msgstr "Cài đặt"
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
-msgid "AI Assist"
-msgstr "Trợ lý AI"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Topic Cluster"
 msgstr "Cụm chủ đề"
 
 #: build/admin/airygen-app.js
 msgid "Alerts"
 msgstr "Cảnh báo"
-
-#: build/admin/airygen-app.js
-msgid "Subscription"
-msgstr "Gói đăng ký"
 
 #: build/admin/airygen-app.js
 msgid "Migration"
@@ -372,48 +246,8 @@ msgstr "Khóa học"
 msgid "Course instance"
 msgstr "Phiên khóa học"
 
-msgid "API key format is invalid."
-msgstr "Định dạng khóa API không hợp lệ."
-
-msgid "API key is required."
-msgstr "Khóa API là bắt buộc."
-
-msgid "Live validation is temporarily unavailable. Showing last successful verification snapshot."
-msgstr "Xác thực trực tiếp tạm không khả dụng. Hiển thị bản chụp xác minh thành công lần cuối."
-
-msgid "Unable to contact the subscription API."
-msgstr "Không thể liên hệ API gói đăng ký."
-
-msgid "Invalid record id."
-msgstr "ID bản ghi không hợp lệ."
-
-#: build/admin/airygen-app.js
-msgid "Unable to delete record."
-msgstr "Không thể xóa bản ghi."
-
-msgid "Invalid post id."
-msgstr "ID bài viết không hợp lệ."
-
 msgid "Post not found."
 msgstr "Không tìm thấy bài viết."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Please set a focus keyword for this post before generating."
-msgstr "Vui lòng đặt từ khóa trọng tâm cho bài viết này trước khi tạo."
-
-#: build/block-editor/airygen-editor.js
-msgid "Please provide source content before generating."
-msgstr "Vui lòng cung cấp nội dung nguồn trước khi tạo."
-
-msgid "Unable to generate article."
-msgstr "Không thể tạo bài viết."
-
-msgid "Invalid gateway response."
-msgstr "Phản hồi cổng không hợp lệ."
-
-msgid "Unable to store Article Builder record."
-msgstr "Không thể lưu bản ghi Article Builder."
 
 msgid "Airygen Author SEO"
 msgstr "Airygen Author SEO"
@@ -432,33 +266,6 @@ msgstr "Trang %s"
 #: build/admin/airygen-app.js
 msgid "Author"
 msgstr "Tác giả"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Please enter a topic before generating."
-msgstr "Vui lòng nhập chủ đề trước khi tạo."
-
-msgid "Unable to generate blueprint."
-msgstr "Không thể tạo bản kế hoạch."
-
-msgid "Unable to store Content Blueprint record."
-msgstr "Không thể lưu bản ghi Content Blueprint."
-
-msgid "Please add content before generating FAQ items."
-msgstr "Vui lòng thêm nội dung trước khi tạo mục FAQ."
-
-msgid "Unable to generate FAQ items."
-msgstr "Không thể tạo mục FAQ."
-
-msgid "Unable to store FAQ record."
-msgstr "Không thể lưu bản ghi FAQ."
-
-msgid "Unable to update FAQ display status."
-msgstr "Không thể cập nhật trạng thái hiển thị FAQ."
-
-#: build/admin/airygen-app.js
-msgid "Answers to What You're Probably Thinking"
-msgstr "Giải đáp những điều bạn có thể đang nghĩ"
 
 msgid "Invalid action."
 msgstr "Hành động không hợp lệ."
@@ -858,21 +665,6 @@ msgstr "Liên kết tối thiểu"
 msgid "Minimum external link count required for pass."
 msgstr "Số liên kết ngoài tối thiểu để đạt."
 
-msgid "Term not found."
-msgstr "Không tìm thấy thuật ngữ."
-
-msgid "A valid post or term is required."
-msgstr "Cần có bài viết hoặc thuật ngữ hợp lệ."
-
-msgid "Please set a focus keyword before generating."
-msgstr "Vui lòng đặt từ khóa trọng tâm trước khi tạo."
-
-msgid "Unable to generate suggestions."
-msgstr "Không thể tạo gợi ý."
-
-msgid "Unable to store CTR booster record."
-msgstr "Không thể lưu bản ghi tăng CTR."
-
 msgid "Airygen SEO: Core sitemap availability"
 msgstr "Airygen SEO: Khả dụng sơ đồ trang web lõi"
 
@@ -1106,69 +898,16 @@ msgstr "Chẩn đoán"
 msgid "Table of contents"
 msgstr "Mục lục"
 
-#: build/classic-editor/airygen-editor.js
-msgid "Unable to load records."
-msgstr "Không thể tải bản ghi."
-
-msgid "Generating suggestions..."
-msgstr "Đang tạo gợi ý..."
-
-msgid "Generation failed."
-msgstr "Tạo thất bại."
-
-msgid "Generated successfully. Review and apply from Browse."
-msgstr "Tạo thành công. Xem lại và áp dụng từ mục Duyệt."
-
-msgid "Select fields and click Apply selected."
-msgstr "Chọn trường và nhấp Áp dụng đã chọn."
-
-msgid "No records yet."
-msgstr "Chưa có bản ghi."
-
-msgid "Applied suggestion. Save term to persist changes."
-msgstr "Đã áp dụng gợi ý. Lưu thuật ngữ để giữ thay đổi."
-
-msgid "Untitled suggestion"
-msgstr "Gợi ý chưa đặt tiêu đề"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Keyword"
-msgstr "Từ khóa"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Meta title"
 msgstr "Tiêu đề meta"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Meta description"
 msgstr "Mô tả meta"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Excerpt"
 msgstr "Đoạn trích"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generating suggestions…"
-msgstr "Đang tạo gợi ý…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Refining output…"
-msgstr "Đang tinh chỉnh đầu ra…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Almost ready…"
-msgstr "Gần sẵn sàng…"
 
 msgid "Custom SEO title for this taxonomy page. Leave blank to use the default value from settings."
 msgstr "Tiêu đề SEO tùy chỉnh cho trang phân loại này. Để trống để sử dụng giá trị mặc định từ cài đặt."
@@ -1371,22 +1110,6 @@ msgstr "Cụm chủ đề"
 msgid "Continue with the main article"
 msgstr "Tiếp tục với bài viết chính"
 
-msgid "Please add content before generating topics."
-msgstr "Vui lòng thêm nội dung trước khi tạo chủ đề."
-
-msgid "Unable to generate topics."
-msgstr "Không thể tạo chủ đề."
-
-msgid "Unable to store topic record."
-msgstr "Không thể lưu bản ghi chủ đề."
-
-msgid "Unable to update topic display status."
-msgstr "Không thể cập nhật trạng thái hiển thị chủ đề."
-
-#: build/admin/airygen-app.js
-msgid "You Might Also Want to Know…"
-msgstr "Bạn cũng có thể muốn biết…"
-
 msgid "You are not allowed to preview WooCommerce schema."
 msgstr "Bạn không được phép xem trước schema WooCommerce."
 
@@ -1395,29 +1118,6 @@ msgstr "WooCommerce không khả dụng."
 
 msgid "Open the Airygen SEO dashboard"
 msgstr "Mở bảng điều khiển Airygen SEO"
-
-#. translators: %s: directory path
-#, php-format
-msgid "Unable to create debug directory at %s."
-msgstr "Không thể tạo thư mục gỡ lỗi tại %s."
-
-msgid "Subscription has expired."
-msgstr "Gói đăng ký đã hết hạn."
-
-msgid "The system is busy. Please try again later."
-msgstr "Hệ thống đang bận. Vui lòng thử lại sau."
-
-msgid "Balance is insufficient. Please top up or wait for the next refresh cycle."
-msgstr "Số dư không đủ. Vui lòng nạp thêm hoặc đợi chu kỳ làm mới tiếp theo."
-
-msgid "Update package is authenticated and ready to download."
-msgstr "Gói cập nhật đã xác thực và sẵn sàng tải xuống."
-
-msgid "A valid subscription key is required to download and install updates."
-msgstr "Cần có khóa gói đăng ký hợp lệ để tải xuống và cài đặt bản cập nhật."
-
-msgid "Enter your key in Airygen Settings > Subscription."
-msgstr "Nhập khóa trong Cài đặt Airygen > Gói đăng ký."
 
 #: build/admin/airygen-app.js
 msgid "Close modal"
@@ -1501,14 +1201,6 @@ msgstr "Tải lại"
 #: build/admin/airygen-app.js
 msgid "More modules"
 msgstr "Thêm mô-đun"
-
-#: build/admin/airygen-app.js
-msgid "Starter module"
-msgstr "Mô-đun khởi đầu"
-
-#: build/admin/airygen-app.js
-msgid "Expert module"
-msgstr "Mô-đun chuyên gia"
 
 #: build/admin/airygen-app.js
 msgid "Background Process"
@@ -1625,14 +1317,6 @@ msgstr "Đang tải %s…"
 msgid "No migration tools available yet."
 msgstr "Chưa có công cụ di chuyển nào."
 
-#. translators: %s is the record type label, such as CTR booster or FAQ.
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "No %s records yet."
-msgstr "Chưa có bản ghi %s nào."
-
 #: build/admin/airygen-app.js
 msgid "No logs yet."
 msgstr "Chưa có nhật ký."
@@ -1663,17 +1347,9 @@ msgid "No %1$s yet. Add one to configure %2$s."
 msgstr "Chưa có %1$s nào. Thêm một mục để cấu hình %2$s."
 
 #: build/admin/airygen-app.js
-msgid "Directory not found"
-msgstr "Không tìm thấy thư mục"
-
-#: build/admin/airygen-app.js
 #: build/classic-editor/airygen-editor.js
 msgid "Loading…"
 msgstr "Đang tải…"
-
-#: build/admin/airygen-app.js
-msgid "Debug Status"
-msgstr "Trạng thái gỡ lỗi"
 
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
@@ -1686,24 +1362,12 @@ msgid "Enable Debug Mode"
 msgstr "Bật chế độ gỡ lỗi"
 
 #: build/admin/airygen-app.js
-msgid "Enable debug logging to file."
-msgstr "Bật ghi nhật ký gỡ lỗi vào tệp."
-
-#: build/admin/airygen-app.js
 msgid "Force Classic Editor"
 msgstr "Buộc dùng Classic Editor"
 
 #: build/admin/airygen-app.js
-msgid "Disable the block editor and load Classic Editor for testing."
-msgstr "Tắt trình soạn thảo block và tải Classic Editor để kiểm thử."
-
-#: build/admin/airygen-app.js
 msgid "Debug level"
 msgstr "Mức gỡ lỗi"
-
-#: build/admin/airygen-app.js
-msgid "Choose how much debug information is recorded."
-msgstr "Chọn mức thông tin gỡ lỗi được ghi lại."
 
 #: build/admin/airygen-app.js
 msgid "Error"
@@ -1723,76 +1387,12 @@ msgid "Refresh"
 msgstr "Làm mới"
 
 #: build/admin/airygen-app.js
-msgid "Log Directory"
-msgstr "Thư mục nhật ký"
-
-#: build/admin/airygen-app.js
-msgid "Location where logs are stored."
-msgstr "Vị trí lưu trữ nhật ký."
-
-#: build/admin/airygen-app.js
-msgid "No directory configured"
-msgstr "Chưa cấu hình thư mục"
-
-#: build/admin/airygen-app.js
-msgid "Slug"
-msgstr "Slug"
-
-#: build/admin/airygen-app.js
-msgid "N/A"
-msgstr "N/A"
-
-#: build/admin/airygen-app.js
-msgid "Debug mode must be enabled to view logs."
-msgstr "Phải bật chế độ gỡ lỗi để xem nhật ký."
-
-#: build/admin/airygen-app.js
-msgid "log content"
-msgstr "nội dung nhật ký"
-
-#: build/admin/airygen-app.js
-msgid "Select a log file to view content."
-msgstr "Chọn tệp nhật ký để xem nội dung."
-
-#: build/admin/airygen-app.js
-msgid "Log Files"
-msgstr "Tệp nhật ký"
-
-#: build/admin/airygen-app.js
-msgid "Select a log file to view."
-msgstr "Chọn tệp nhật ký để xem."
-
-#: build/admin/airygen-app.js
-msgid "No logs found"
-msgstr "Không tìm thấy nhật ký"
-
-#: build/admin/airygen-app.js
-msgid "Load Log"
-msgstr "Tải nhật ký"
-
-#: build/admin/airygen-app.js
-msgid "Refresh Logs"
-msgstr "Làm mới nhật ký"
-
-#: build/admin/airygen-app.js
-msgid "Clear Logs"
-msgstr "Xóa nhật ký"
-
-#: build/admin/airygen-app.js
 msgid "Configuration"
 msgstr "Cấu hình"
 
 #: build/admin/airygen-app.js
 msgid "Logs"
 msgstr "Nhật ký"
-
-#: build/admin/airygen-app.js
-msgid "Debug Information"
-msgstr "Thông tin gỡ lỗi"
-
-#: build/admin/airygen-app.js
-msgid "View debug information and logs."
-msgstr "Xem thông tin gỡ lỗi và nhật ký."
 
 #: build/admin/airygen-app.js
 msgid "Bring SEO data from other plugins into Airygen SEO. Start with the tools you already use and migrate only what you need."
@@ -1993,124 +1593,8 @@ msgid "Import post-level redirects from SEOPress and add them to Airygen Redirec
 msgstr "Nhập chuyển hướng cấp bài viết từ SEOPress và thêm vào Airygen Redirects."
 
 #: build/admin/airygen-app.js
-msgid "Unable to load subscription status."
-msgstr "Không thể tải trạng thái gói đăng ký."
-
-#: build/admin/airygen-app.js
-msgid "API key verified."
-msgstr "Khóa API đã xác minh."
-
-#: build/admin/airygen-app.js
-msgid "Unable to verify API key."
-msgstr "Không thể xác minh khóa API."
-
-#: build/admin/airygen-app.js
-msgid "API key expired. Please renew your subscription."
-msgstr "Khóa API đã hết hạn. Vui lòng gia hạn gói đăng ký."
-
-#: build/admin/airygen-app.js
-msgid "API key was revoked. Please generate a new key."
-msgstr "Khóa API đã bị thu hồi. Vui lòng tạo khóa mới."
-
-#: build/admin/airygen-app.js
-msgid "API key does not match this site domain."
-msgstr "Khóa API không khớp với tên miền trang web này."
-
-#: build/admin/airygen-app.js
-msgid "API key is invalid."
-msgstr "Khóa API không hợp lệ."
-
-#: build/admin/airygen-app.js
-msgid "Subscription is active."
-msgstr "Gói đăng ký đang hoạt động."
-
-#: build/admin/airygen-app.js
-msgid "Verify your key to view the period end."
-msgstr "Xác minh khóa để xem ngày kết thúc thời hạn."
-
-#: build/admin/airygen-app.js
-msgid "Verified"
-msgstr "Đã xác minh"
-
-#: build/admin/airygen-app.js
-msgid "Revoked"
-msgstr "Đã thu hồi"
-
-#: build/admin/airygen-app.js
-msgid "Expired"
-msgstr "Đã hết hạn"
-
-#: build/admin/airygen-app.js
-msgid "Mismatch"
-msgstr "Không khớp"
-
-#: build/admin/airygen-app.js
-msgid "Invalid"
-msgstr "Không hợp lệ"
-
-#: build/admin/airygen-app.js
-msgid "Missing"
-msgstr "Thiếu"
-
-#: build/admin/airygen-app.js
-msgid "Refreshing credits, please retry shortly."
-msgstr "Đang làm mới tín dụng, vui lòng thử lại sau."
-
-#: build/admin/airygen-app.js
-msgid "Unable to load credits right now."
-msgstr "Không thể tải tín dụng lúc này."
-
-#: build/admin/airygen-app.js
-msgid "Verify your key to load credits."
-msgstr "Xác minh khóa để tải tín dụng."
-
-#: build/admin/airygen-app.js
-msgid "Subscription period"
-msgstr "Thời hạn gói đăng ký"
-
-#: build/admin/airygen-app.js
-msgid "Subscription credits"
-msgstr "Tín dụng gói đăng ký"
-
-#: build/admin/airygen-app.js
-msgid "Credit pack"
-msgstr "Gói tín dụng"
-
-#: build/admin/airygen-app.js
-msgid "Connect your API key to unlock Airygen modules that require cloud services."
-msgstr "Kết nối khóa API để mở khóa các mô-đun Airygen yêu cầu dịch vụ đám mây."
-
-#: build/admin/airygen-app.js
 msgid "API key"
 msgstr "Khóa API"
-
-#: build/admin/airygen-app.js
-msgid "Verify your API key to unlock cloud features."
-msgstr "Xác minh khóa API để mở khóa tính năng đám mây."
-
-#: build/admin/airygen-app.js
-msgid "Your key is active and linked to this site."
-msgstr "Khóa của bạn đang hoạt động và liên kết với trang web này."
-
-#: build/admin/airygen-app.js
-msgid "Enter a new key"
-msgstr "Nhập khóa mới"
-
-#: build/admin/airygen-app.js
-msgid "Enter your API key"
-msgstr "Nhập khóa API"
-
-#: build/admin/airygen-app.js
-msgid "Enter and verify your key to enable cloud features."
-msgstr "Nhập và xác minh khóa để bật tính năng đám mây."
-
-#: build/admin/airygen-app.js
-msgid "Verifying…"
-msgstr "Đang xác minh…"
-
-#: build/admin/airygen-app.js
-msgid "Verify & Save"
-msgstr "Xác minh & Lưu"
 
 #: build/admin/airygen-app.js
 msgid "Status"
@@ -2121,64 +1605,10 @@ msgid "Debug"
 msgstr "Gỡ lỗi"
 
 #: build/admin/airygen-app.js
-msgid "Continue subscription"
-msgstr "Tiếp tục gói đăng ký"
-
-#: build/admin/airygen-app.js
-msgid "AI-driven modules."
-msgstr "Mô-đun hỗ trợ bởi AI."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content Blueprint"
-msgstr "Bản thiết kế nội dung"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Article Builder"
-msgstr "Trình tạo bài viết"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Deep FAQ"
-msgstr "FAQ chuyên sâu"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic Expansion"
-msgstr "Mở rộng chủ đề"
-
-#: build/admin/airygen-app.js
-msgid "Create compelling titles and meta descriptions to increase SERP click-through rate."
-msgstr "Tạo tiêu đề và mô tả meta hấp dẫn để tăng tỷ lệ nhấp SERP."
-
-#: build/admin/airygen-app.js
-msgid "Generate structured outlines with section summaries to plan your focus keyphrase."
-msgstr "Tạo dàn ý có cấu trúc với tóm tắt phần để lập kế hoạch từ khóa trọng tâm."
-
-#: build/admin/airygen-app.js
-msgid "Provide draft ideas to speed up writing."
-msgstr "Cung cấp ý tưởng nháp để tăng tốc viết bài."
-
-#: build/admin/airygen-app.js
-msgid "Improve LLM recommendation visibility and time on page."
-msgstr "Cải thiện khả năng hiển thị đề xuất LLM và thời gian trên trang."
-
-#: build/admin/airygen-app.js
-msgid "Reduce bounce rate and pogo-sticking to preserve SEO signals."
-msgstr "Giảm tỷ lệ thoát và pogo-sticking để bảo toàn tín hiệu SEO."
-
-#: build/admin/airygen-app.js
 msgid "Records"
 msgstr "Bản ghi"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Loading records…"
 msgstr "Đang tải bản ghi…"
 
@@ -2199,15 +1629,6 @@ msgid "Next"
 msgstr "Tiếp theo"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load CTR booster records."
-msgstr "Không thể tải bản ghi tăng CTR."
-
-#: build/admin/airygen-app.js
-msgid "Created at"
-msgstr "Tạo lúc"
-
-#: build/admin/airygen-app.js
 msgid "Actions"
 msgstr "Hành động"
 
@@ -2216,200 +1637,8 @@ msgid "Record deleted."
 msgstr "Đã xóa bản ghi."
 
 #: build/admin/airygen-app.js
-msgid "Deleting…"
-msgstr "Đang xóa…"
-
-#: build/admin/airygen-app.js
 msgid "Delete"
 msgstr "Xóa"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for SERP CTR Booster."
-msgstr "Cấu hình tùy chọn mặc định cho SERP CTR Booster."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated titles and descriptions."
-msgstr "Chọn ngôn ngữ đầu ra cho tiêu đề và mô tả do AI tạo."
-
-#: build/admin/airygen-app.js
-msgid "Always include the focus keyword in AI suggestions."
-msgstr "Luôn bao gồm từ khóa trọng tâm trong gợi ý AI."
-
-#: build/admin/airygen-app.js
-msgid "Generated CTR booster suggestions. Records can be removed but not edited."
-msgstr "Gợi ý tăng CTR đã tạo. Bản ghi có thể xóa nhưng không chỉnh sửa."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "CTR booster"
-msgstr "Tăng CTR"
-
-#: build/admin/airygen-app.js
-msgid "More info"
-msgstr "Thêm thông tin"
-
-#: build/admin/airygen-app.js
-msgid "AI Prompt Templates"
-msgstr "Mẫu prompt AI"
-
-#: build/admin/airygen-app.js
-msgid "Choose scenario, content type, and tone templates for AI generation."
-msgstr "Chọn kịch bản, loại nội dung và mẫu giọng điệu cho tạo nội dung AI."
-
-#: build/admin/airygen-app.js
-msgid "Scenarios"
-msgstr "Kịch bản"
-
-#: build/admin/airygen-app.js
-msgid "Auto-sets content type + tone"
-msgstr "Tự động đặt loại nội dung + giọng điệu"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content type"
-msgstr "Loại nội dung"
-
-#: build/admin/airygen-app.js
-msgid "Adjust manually if needed"
-msgstr "Điều chỉnh thủ công nếu cần"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Tone"
-msgstr "Giọng điệu"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load Content Blueprint records."
-msgstr "Không thể tải bản ghi Content Blueprint."
-
-#: build/admin/airygen-app.js
-msgid "Target words"
-msgstr "Số từ mục tiêu"
-
-#: build/admin/airygen-app.js
-msgid "Generated words"
-msgstr "Số từ đã tạo"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for Content Blueprint."
-msgstr "Cấu hình tùy chọn mặc định cho Content Blueprint."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated blueprints."
-msgstr "Chọn ngôn ngữ đầu ra cho bản kế hoạch do AI tạo."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Depth"
-msgstr "Độ sâu"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "H2 only"
-msgstr "Chỉ H2"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "H2 + H3"
-msgstr "H2 + H3"
-
-#: build/admin/airygen-app.js
-msgid "Choose how deep the outline should go."
-msgstr "Chọn độ sâu cho dàn ý."
-
-#: build/admin/airygen-app.js
-msgid "Length"
-msgstr "Độ dài"
-
-#: build/admin/airygen-app.js
-msgid "More items consume more credits and take longer to generate."
-msgstr "Nhiều mục hơn tiêu tốn nhiều tín dụng hơn và mất nhiều thời gian hơn để tạo."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Basic (400 words)"
-msgstr "Cơ bản (400 từ)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Standard (1000 words)"
-msgstr "Tiêu chuẩn (1000 từ)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Deep (1600 words)"
-msgstr "Sâu (1600 từ)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Pillar (2200 words)"
-msgstr "Trụ cột (2200 từ)"
-
-#: build/admin/airygen-app.js
-msgid "Match output length to your SEO goal."
-msgstr "Phù hợp độ dài đầu ra với mục tiêu SEO."
-
-#: build/admin/airygen-app.js
-msgid "Include the focus keyword in generated outlines."
-msgstr "Bao gồm từ khóa trọng tâm trong dàn ý đã tạo."
-
-#: build/admin/airygen-app.js
-msgid "Set keyword inclusion targets for each content length."
-msgstr "Đặt mục tiêu bao gồm từ khóa cho mỗi độ dài nội dung."
-
-#: build/admin/airygen-app.js
-msgid "H1 keywords"
-msgstr "Từ khóa H1"
-
-#: build/admin/airygen-app.js
-msgid "H2 keywords"
-msgstr "Từ khóa H2"
-
-#: build/admin/airygen-app.js
-msgid "H3 keywords"
-msgstr "Từ khóa H3"
-
-#: build/admin/airygen-app.js
-msgid "Generated content blueprints. Records can be removed but not edited."
-msgstr "Bản kế hoạch nội dung đã tạo. Bản ghi có thể xóa nhưng không chỉnh sửa."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load Article Builder records."
-msgstr "Không thể tải bản ghi Article Builder."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic"
-msgstr "Chủ đề"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for Article Builder."
-msgstr "Cấu hình tùy chọn mặc định cho Article Builder."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated articles."
-msgstr "Chọn ngôn ngữ đầu ra cho bài viết do AI tạo."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Article length target"
-msgstr "Mục tiêu độ dài bài viết"
-
-#: build/admin/airygen-app.js
-msgid "Match draft length to your publishing goal."
-msgstr "Phù hợp độ dài bản nháp với mục tiêu xuất bản."
-
-#: build/admin/airygen-app.js
-msgid "Generated article drafts. Records can be removed but not edited."
-msgstr "Bản nháp bài viết đã tạo. Bản ghi có thể xóa nhưng không chỉnh sửa."
 
 #: build/admin/airygen-app.js
 msgid "Set transparent color"
@@ -2538,16 +1767,6 @@ msgid "Font size"
 msgstr "Kích thước chữ"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "FAQ"
-msgstr "FAQ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load FAQ records."
-msgstr "Không thể tải bản ghi FAQ."
-
-#: build/admin/airygen-app.js
 msgid "Snow Slate"
 msgstr "Snow Slate"
 
@@ -2558,10 +1777,6 @@ msgstr "Trắng trung tính + xám nhạt với chữ xám đậm sắc nét."
 #: build/admin/airygen-app.js
 msgid "Honey Paper"
 msgstr "Honey Paper"
-
-#: build/admin/airygen-app.js
-msgid "Soft parchment yellow for warm, readable FAQs."
-msgstr "Vàng giấy da mềm cho FAQ ấm áp, dễ đọc."
 
 #: build/admin/airygen-app.js
 msgid "Sky Breeze"
@@ -2600,10 +1815,6 @@ msgid "Post"
 msgstr "Bài viết"
 
 #: build/admin/airygen-app.js
-msgid "Question"
-msgstr "Câu hỏi"
-
-#: build/admin/airygen-app.js
 msgid "Layout"
 msgstr "Bố cục"
 
@@ -2612,10 +1823,6 @@ msgstr "Bố cục"
 #: build/classic-editor/airygen-editor.js
 msgid "Preview"
 msgstr "Xem trước"
-
-#: build/admin/airygen-app.js
-msgid "Configure manual output and automatic FAQ injection."
-msgstr "Cấu hình xuất thủ công và chèn FAQ tự động."
 
 #: build/admin/airygen-app.js
 msgid "Allow template function, shortcode, and block output."
@@ -2633,10 +1840,6 @@ msgid "Block"
 msgstr "Khối"
 
 #: build/admin/airygen-app.js
-msgid "Automatically inject FAQ output into matched post types."
-msgstr "Tự động chèn đầu ra FAQ vào các loại bài viết phù hợp."
-
-#: build/admin/airygen-app.js
 msgid "Insert position"
 msgstr "Vị trí chèn"
 
@@ -2649,251 +1852,28 @@ msgid "After content"
 msgstr "Sau nội dung"
 
 #: build/admin/airygen-app.js
-msgid "Choose where FAQ output is injected in post content."
-msgstr "Chọn vị trí chèn đầu ra FAQ trong nội dung bài viết."
-
-#: build/admin/airygen-app.js
-msgid "Frequently Asked Questions"
-msgstr "Câu hỏi thường gặp"
-
-#: build/admin/airygen-app.js
-msgid "AI Generation"
-msgstr "Tạo bằng AI"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for FAQ generation."
-msgstr "Cấu hình tùy chọn mặc định cho tạo FAQ."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated FAQs."
-msgstr "Chọn ngôn ngữ đầu ra cho FAQ do AI tạo."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Answer length"
-msgstr "Độ dài câu trả lời"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Short"
-msgstr "Ngắn"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Medium"
-msgstr "Trung bình"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Long"
-msgstr "Dài"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Choose how long each answer should be."
-msgstr "Chọn độ dài cho mỗi câu trả lời."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Question count"
-msgstr "Số câu hỏi"
-
-#: build/admin/airygen-app.js
-msgid "How many FAQ items to generate per request."
-msgstr "Số mục FAQ cần tạo mỗi yêu cầu."
-
-#: build/admin/airygen-app.js
 msgid "Scope"
 msgstr "Phạm vi"
-
-#: build/admin/airygen-app.js
-msgid "Choose which post types can receive automatic FAQ injection."
-msgstr "Chọn loại bài viết có thể nhận chèn FAQ tự động."
 
 #: build/admin/airygen-app.js
 msgid "Templates"
 msgstr "Mẫu"
 
 #: build/admin/airygen-app.js
-msgid "Choose a preset style for FAQ output."
-msgstr "Chọn kiểu thiết lập sẵn cho đầu ra FAQ."
-
-#: build/admin/airygen-app.js
 msgid "Style"
 msgstr "Kiểu"
-
-#: build/admin/airygen-app.js
-msgid "Adjust spacing and borders for list and collapse layouts."
-msgstr "Điều chỉnh khoảng cách và viền cho bố cục danh sách và thu gọn."
 
 #: build/admin/airygen-app.js
 msgid "List"
 msgstr "Danh sách"
 
 #: build/admin/airygen-app.js
-msgid "Collapse"
-msgstr "Thu gọn"
-
-#: build/admin/airygen-app.js
-msgid "Show FAQ border"
-msgstr "Hiện viền FAQ"
-
-#: build/admin/airygen-app.js
-msgid "Draw a border around the FAQ container."
-msgstr "Vẽ viền quanh khung chứa FAQ."
-
-#: build/admin/airygen-app.js
-msgid "Select the line style for the FAQ container border."
-msgstr "Chọn kiểu đường viền cho khung chứa FAQ."
-
-#: build/admin/airygen-app.js
-msgid "Set the border color for the list container."
-msgstr "Đặt màu viền cho khung chứa danh sách."
-
-#: build/admin/airygen-app.js
-msgid "Adjust the thickness of the FAQ border."
-msgstr "Điều chỉnh độ dày viền FAQ."
-
-#: build/admin/airygen-app.js
-msgid "FAQ padding"
-msgstr "Đệm FAQ"
-
-#: build/admin/airygen-app.js
-msgid "Padding inside the FAQ list container."
-msgstr "Đệm bên trong khung chứa danh sách FAQ."
-
-#: build/admin/airygen-app.js
-msgid "Background color of the FAQ list container."
-msgstr "Màu nền khung chứa danh sách FAQ."
-
-#: build/admin/airygen-app.js
-msgid "Question font color"
-msgstr "Màu chữ câu hỏi"
-
-#: build/admin/airygen-app.js
-msgid "Text color for each FAQ question."
-msgstr "Màu chữ cho mỗi câu hỏi FAQ."
-
-#: build/admin/airygen-app.js
-msgid "Question font size"
-msgstr "Kích thước chữ câu hỏi"
-
-#: build/admin/airygen-app.js
-msgid "Font size used for each question line."
-msgstr "Kích thước chữ cho mỗi dòng câu hỏi."
-
-#: build/admin/airygen-app.js
-msgid "Answer font color"
-msgstr "Màu chữ câu trả lời"
-
-#: build/admin/airygen-app.js
-msgid "Text color for each answer line."
-msgstr "Màu chữ cho mỗi dòng câu trả lời."
-
-#: build/admin/airygen-app.js
-msgid "Answer font size"
-msgstr "Kích thước chữ câu trả lời"
-
-#: build/admin/airygen-app.js
-msgid "Font size for the answer text."
-msgstr "Kích thước chữ cho văn bản câu trả lời."
-
-#: build/admin/airygen-app.js
-msgid "Collapse button"
-msgstr "Nút thu gọn"
-
-#: build/admin/airygen-app.js
-msgid "Collapse answers"
-msgstr "Thu gọn câu trả lời"
-
-#: build/admin/airygen-app.js
-msgid "Background for the plus/minus button."
-msgstr "Nền cho nút cộng/trừ."
-
-#: build/admin/airygen-app.js
-msgid "Icon color"
-msgstr "Màu biểu tượng"
-
-#: build/admin/airygen-app.js
-msgid "Color for the plus/minus icon."
-msgstr "Màu cho biểu tượng cộng/trừ."
-
-#: build/admin/airygen-app.js
-msgid "Border color for the toggle button."
-msgstr "Màu viền cho nút chuyển đổi."
-
-#: build/admin/airygen-app.js
-msgid "Thickness of the toggle button border."
-msgstr "Độ dày viền nút chuyển đổi."
-
-#: build/admin/airygen-app.js
-msgid "Background color for each question row."
-msgstr "Màu nền cho mỗi hàng câu hỏi."
-
-#: build/admin/airygen-app.js
 msgid "Font color"
 msgstr "Màu chữ"
 
 #: build/admin/airygen-app.js
-msgid "Text color for the question title."
-msgstr "Màu chữ cho tiêu đề câu hỏi."
-
-#: build/admin/airygen-app.js
-msgid "Border color around each question row."
-msgstr "Màu viền quanh mỗi hàng câu hỏi."
-
-#: build/admin/airygen-app.js
-msgid "Line style for the question border."
-msgstr "Kiểu đường viền cho câu hỏi."
-
-#: build/admin/airygen-app.js
-msgid "Font size for the question text."
-msgstr "Kích thước chữ cho văn bản câu hỏi."
-
-#: build/admin/airygen-app.js
-msgid "Padding inside each question row."
-msgstr "Đệm bên trong mỗi hàng câu hỏi."
-
-#: build/admin/airygen-app.js
 msgid "Gap"
 msgstr "Khoảng cách"
-
-#: build/admin/airygen-app.js
-msgid "Spacing between each question row."
-msgstr "Khoảng cách giữa mỗi hàng câu hỏi."
-
-#: build/admin/airygen-app.js
-msgid "Keep open"
-msgstr "Giữ mở"
-
-#: build/admin/airygen-app.js
-msgid "Allow multiple answers to stay open."
-msgstr "Cho phép nhiều câu trả lời mở cùng lúc."
-
-#: build/admin/airygen-app.js
-msgid "Answer"
-msgstr "Câu trả lời"
-
-#: build/admin/airygen-app.js
-msgid "Background for the expanded answer area."
-msgstr "Nền cho vùng câu trả lời mở rộng."
-
-#: build/admin/airygen-app.js
-msgid "Text color for the answer content."
-msgstr "Màu chữ cho nội dung câu trả lời."
-
-#: build/admin/airygen-app.js
-msgid "Padding inside the answer panel."
-msgstr "Đệm bên trong bảng câu trả lời."
-
-#: build/admin/airygen-app.js
-msgid "Preview may differ from the live site because theme styles are applied there."
-msgstr "Xem trước có thể khác với trang thực vì kiểu giao diện được áp dụng ở đó."
 
 #: build/admin/airygen-app.js
 msgid "Laptop"
@@ -2906,18 +1886,6 @@ msgstr "Máy tính bảng"
 #: build/admin/airygen-app.js
 msgid "Cellphone"
 msgstr "Điện thoại di động"
-
-#: build/admin/airygen-app.js
-msgid "FAQ preview"
-msgstr "Xem trước FAQ"
-
-#: build/admin/airygen-app.js
-msgid "Preview is not available."
-msgstr "Xem trước không khả dụng."
-
-#: build/admin/airygen-app.js
-msgid "Generated FAQ records. Records can be removed but not edited."
-msgstr "Bản ghi FAQ đã tạo. Bản ghi có thể xóa nhưng không chỉnh sửa."
 
 #: build/admin/airygen-app.js
 msgid "Section body container"
@@ -2972,354 +1940,18 @@ msgid "Indent"
 msgstr "Thụt lề"
 
 #: build/admin/airygen-app.js
-msgid "topic expansion"
-msgstr "mở rộng chủ đề"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load topic records."
-msgstr "Không thể tải bản ghi chủ đề."
-
-#: build/admin/airygen-app.js
-msgid "Display"
-msgstr "Hiển thị"
-
-#: build/admin/airygen-app.js
-msgid "Shown"
-msgstr "Đã hiện"
-
-#: build/admin/airygen-app.js
-msgid "Hidden"
-msgstr "Ẩn"
-
-#: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "View"
 msgstr "Xem"
 
 #: build/admin/airygen-app.js
-msgid "Soft parchment yellow for warm, readable topics."
-msgstr "Vàng giấy da mềm cho chủ đề ấm áp, dễ đọc."
-
-#: build/admin/airygen-app.js
-msgid "Configure manual output and automatic topic expansion injection."
-msgstr "Cấu hình xuất thủ công và chèn mở rộng chủ đề tự động."
-
-#: build/admin/airygen-app.js
-msgid "Automatically inject topic expansion output into content."
-msgstr "Tự động chèn đầu ra mở rộng chủ đề vào nội dung."
-
-#: build/admin/airygen-app.js
-msgid "Choose where topic expansion output is injected in post content."
-msgstr "Chọn vị trí chèn đầu ra mở rộng chủ đề trong nội dung bài viết."
-
-#: build/admin/airygen-app.js
-msgid "Set how AI generates related topics."
-msgstr "Đặt cách AI tạo chủ đề liên quan."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for related topics."
-msgstr "Chọn ngôn ngữ đầu ra cho chủ đề liên quan."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic length"
-msgstr "Độ dài chủ đề"
-
-#: build/admin/airygen-app.js
-msgid "Choose the length for each topic suggestion."
-msgstr "Chọn độ dài cho mỗi gợi ý chủ đề."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic count"
-msgstr "Số chủ đề"
-
-#: build/admin/airygen-app.js
-msgid "How many related topics to generate per request."
-msgstr "Số chủ đề liên quan cần tạo mỗi yêu cầu."
-
-#: build/admin/airygen-app.js
-msgid "Pick a preset theme for topic output."
-msgstr "Chọn giao diện thiết lập sẵn cho đầu ra chủ đề."
-
-#: build/admin/airygen-app.js
-msgid "Adjust how the related topics list appears on the page."
-msgstr "Điều chỉnh cách hiển thị danh sách chủ đề liên quan trên trang."
-
-#: build/admin/airygen-app.js
-msgid "Set whether topic text is bold, italic, or underlined."
-msgstr "Đặt văn bản chủ đề in đậm, in nghiêng hoặc gạch chân."
-
-#: build/admin/airygen-app.js
-msgid "Color for each topic link."
-msgstr "Màu cho mỗi liên kết chủ đề."
-
-#: build/admin/airygen-app.js
-msgid "Font size used for each topic link."
-msgstr "Kích thước chữ cho mỗi liên kết chủ đề."
-
-#: build/admin/airygen-app.js
 msgid "Choose whether each line uses bullets, numbers, or plain text."
 msgstr "Chọn mỗi dòng dùng gạch đầu dòng, số thứ tự hoặc văn bản thuần."
 
 #: build/admin/airygen-app.js
-msgid "Set vertical spacing between each topic item."
-msgstr "Đặt khoảng cách dọc giữa mỗi mục chủ đề."
-
-#: build/admin/airygen-app.js
-msgid "Topic Expansion preview"
-msgstr "Xem trước Topic Expansion"
-
-#: build/admin/airygen-app.js
 msgid "Preview is unavailable."
 msgstr "Xem trước không khả dụng."
-
-#: build/admin/airygen-app.js
-msgid "SEO safety"
-msgstr "An toàn SEO"
-
-#: build/admin/airygen-app.js
-msgid "Allowing indexation can briefly lift long-tail traffic, but search engines may later remove those pages and harm site-wide SEO authority. Reduce duplication and focus on real user value."
-msgstr "Cho phép lập chỉ mục có thể tạm thời tăng lưu lượng từ khóa đuôi dài, nhưng công cụ tìm kiếm có thể sau đó xóa các trang đó và ảnh hưởng đến uy tín SEO toàn trang. Giảm nội dung trùng lặp và tập trung vào giá trị thực cho người dùng."
-
-#: build/admin/airygen-app.js
-msgid "Prevent search engines from indexing highly repetitive, low-quality content."
-msgstr "Ngăn công cụ tìm kiếm lập chỉ mục nội dung lặp lại nhiều, chất lượng thấp."
-
-#: build/admin/airygen-app.js
-msgid "Disable indexing"
-msgstr "Tắt lập chỉ mục"
-
-#: build/admin/airygen-app.js
-msgid "Add nofollow to virtual links"
-msgstr "Thêm nofollow vào liên kết ảo"
-
-#: build/admin/airygen-app.js
-msgid "Add rel=\"nofollow\" to reduce crawl budget spent on generated links."
-msgstr "Thêm rel=\"nofollow\" để giảm ngân sách thu thập dữ liệu dành cho liên kết được tạo."
-
-#: build/admin/airygen-app.js
-msgid "Generated topic suggestions. Records can be removed but not edited."
-msgstr "Gợi ý chủ đề đã tạo. Bản ghi có thể xóa nhưng không chỉnh sửa."
-
-#: build/admin/airygen-app.js
-msgid "Auto detect"
-msgstr "Tự động phát hiện"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "English (United States)"
-msgstr "Tiếng Anh (Hoa Kỳ)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "English"
-msgstr "Tiếng Anh"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Chinese (Traditional)"
-msgstr "Tiếng Trung (Phồn thể)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Chinese (Simplified)"
-msgstr "Tiếng Trung (Giản thể)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Japanese"
-msgstr "Tiếng Nhật"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Korean"
-msgstr "Tiếng Hàn"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Technology"
-msgstr "Công nghệ"
-
-#: build/admin/airygen-app.js
-msgid "Product, engineering, AI, and system-focused technical content."
-msgstr "Nội dung kỹ thuật tập trung vào sản phẩm, kỹ thuật, AI và hệ thống."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Business"
-msgstr "Doanh nghiệp"
-
-#: build/admin/airygen-app.js
-msgid "Growth, operations, strategy, and outcome-oriented business content."
-msgstr "Nội dung doanh nghiệp hướng tăng trưởng, vận hành, chiến lược và kết quả."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Finance"
-msgstr "Tài chính"
-
-#: build/admin/airygen-app.js
-msgid "Numbers-first finance and investment analysis with risk context."
-msgstr "Phân tích tài chính và đầu tư ưu tiên số liệu với bối cảnh rủi ro."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Health"
-msgstr "Sức khỏe"
-
-#: build/admin/airygen-app.js
-msgid "Evidence-based health content with cautious and compliant language."
-msgstr "Nội dung sức khỏe dựa trên bằng chứng với ngôn ngữ thận trọng và tuân thủ."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Lifestyle"
-msgstr "Lối sống"
-
-#: build/admin/airygen-app.js
-msgid "Practical lifestyle advice with real-world trade-offs."
-msgstr "Lời khuyên lối sống thực tế với sự đánh đổi thực tế."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Education"
-msgstr "Giáo dục"
-
-#: build/admin/airygen-app.js
-msgid "Learning-focused content with clear outcomes and methods."
-msgstr "Nội dung hướng học tập với kết quả và phương pháp rõ ràng."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Professional"
-msgstr "Chuyên nghiệp"
-
-#: build/admin/airygen-app.js
-msgid "Domain-expert content for consulting and regulated industries."
-msgstr "Nội dung chuyên gia cho ngành tư vấn và ngành được quản lý."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "General"
-msgstr "Tổng quát"
-
-#: build/admin/airygen-app.js
-msgid "Balanced, broadly readable content for mixed audiences."
-msgstr "Nội dung cân bằng, dễ đọc cho nhiều đối tượng."
-
-#: build/admin/airygen-app.js
-msgid "Formal, precise, and decision-ready writing style."
-msgstr "Phong cách viết trang trọng, chính xác và sẵn sàng cho ra quyết định."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Conversational"
-msgstr "Hội thoại"
-
-#: build/admin/airygen-app.js
-msgid "Natural and friendly style for broad readability."
-msgstr "Phong cách tự nhiên và thân thiện cho khả năng đọc rộng."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Technical"
-msgstr "Kỹ thuật"
-
-#: build/admin/airygen-app.js
-msgid "Spec-like style with implementation detail and precision."
-msgstr "Phong cách đặc tả với chi tiết triển khai và độ chính xác."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Storytelling"
-msgstr "Kể chuyện"
-
-#: build/admin/airygen-app.js
-msgid "Narrative-led style with clear takeaways and context."
-msgstr "Phong cách dẫn dắt theo câu chuyện với kết luận và bối cảnh rõ ràng."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Instructional"
-msgstr "Hướng dẫn"
-
-#: build/admin/airygen-app.js
-msgid "Action-first, step-by-step guidance style."
-msgstr "Phong cách hướng dẫn từng bước, ưu tiên hành động."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Minimalist"
-msgstr "Tối giản"
-
-#: build/admin/airygen-app.js
-msgid "Compact, direct writing style with minimal filler."
-msgstr "Phong cách viết ngắn gọn, trực tiếp, ít từ thừa."
-
-#: build/admin/airygen-app.js
-msgid "Quick answers for long‑tail keywords and fast indexing."
-msgstr "Câu trả lời nhanh cho từ khóa đuôi dài và lập chỉ mục nhanh."
-
-#: build/admin/airygen-app.js
-msgid "Balanced depth for most SEO topics."
-msgstr "Độ sâu cân bằng cho hầu hết chủ đề SEO."
-
-#: build/admin/airygen-app.js
-msgid "More detail for competitive keywords and comparisons."
-msgstr "Chi tiết hơn cho từ khóa cạnh tranh và so sánh."
-
-#: build/admin/airygen-app.js
-msgid "The main article in a topic cluster that everything links to."
-msgstr "Bài viết chính trong cụm chủ đề mà mọi thứ liên kết đến."
-
-#: build/admin/airygen-app.js
-msgid "Business report"
-msgstr "Báo cáo doanh nghiệp"
-
-#: build/admin/airygen-app.js
-msgid "Data-driven structure for decision-making and business review."
-msgstr "Cấu trúc dựa trên dữ liệu cho ra quyết định và đánh giá doanh nghiệp."
-
-#: build/admin/airygen-app.js
-msgid "Tech blog"
-msgstr "Blog công nghệ"
-
-#: build/admin/airygen-app.js
-msgid "Technical but easy-to-read format for broader audiences."
-msgstr "Định dạng kỹ thuật nhưng dễ đọc cho đối tượng rộng hơn."
-
-#: build/admin/airygen-app.js
-msgid "Tutorial"
-msgstr "Hướng dẫn"
-
-#: build/admin/airygen-app.js
-msgid "Step-by-step teaching format focused on actionable learning."
-msgstr "Định dạng dạy từng bước tập trung vào học tập thực hành."
-
-#: build/admin/airygen-app.js
-msgid "Marketing content"
-msgstr "Nội dung tiếp thị"
-
-#: build/admin/airygen-app.js
-msgid "Story-led format focused on engagement and conversion."
-msgstr "Định dạng dẫn dắt câu chuyện tập trung vào tương tác và chuyển đổi."
-
-#: build/admin/airygen-app.js
-msgid "Technical document"
-msgstr "Tài liệu kỹ thuật"
-
-#: build/admin/airygen-app.js
-msgid "Precise engineering-style format for implementation details."
-msgstr "Định dạng kiểu kỹ thuật chính xác cho chi tiết triển khai."
-
-#: build/admin/airygen-app.js
-msgid "AI-assisted writing and strategic planning for SEO content."
-msgstr "Hỗ trợ viết bằng AI và lập kế hoạch chiến lược cho nội dung SEO."
 
 #: build/admin/airygen-app.js
 msgid "Configure"
@@ -3616,7 +2248,6 @@ msgid "Name"
 msgstr "Tên"
 
 #: build/admin/airygen-app.js
-#: build/classic-editor/airygen-editor.js
 msgid "Pillar"
 msgstr "Trụ cột"
 
@@ -5950,88 +4581,16 @@ msgid "Open in a new tab to verify the generated sitemap index."
 msgstr "Mở trong tab mới để xác minh chỉ mục sơ đồ trang web đã tạo."
 
 #: build/admin/airygen-app.js
-msgid "Head"
-msgstr "Tiêu đề"
-
-#: build/admin/airygen-app.js
-msgid "Snippets in this area are injected into the <head> section."
-msgstr "Đoạn trích trong vùng này được chèn vào phần <head>."
-
-#: build/admin/airygen-app.js
 msgid "Body"
 msgstr "Nội dung"
-
-#: build/admin/airygen-app.js
-msgid "Snippets in this area are injected right after <body>."
-msgstr "Đoạn trích trong vùng này được chèn ngay sau <body>."
 
 #: build/admin/airygen-app.js
 msgid "Footer"
 msgstr "Chân trang"
 
 #: build/admin/airygen-app.js
-msgid "Snippets in this area are injected before </body>."
-msgstr "Đoạn trích trong vùng này được chèn trước </body>."
-
-#: build/admin/airygen-app.js
-msgid "Disabled snippets staging area"
-msgstr "Vùng tạm đoạn trích đã tắt"
-
-#: build/admin/airygen-app.js
-msgid "Keep snippets here when you do not want them rendered."
-msgstr "Giữ đoạn trích ở đây khi bạn không muốn hiển thị chúng."
-
-#: build/admin/airygen-app.js
 msgid "No description"
 msgstr "Không có mô tả"
-
-#: build/admin/airygen-app.js
-msgid "Code Snippets"
-msgstr "Đoạn mã"
-
-#: build/admin/airygen-app.js
-msgid "Configure GA4, GTM, and custom tracking snippets for your site."
-msgstr "Cấu hình GA4, GTM và đoạn mã theo dõi tùy chỉnh cho trang web."
-
-#: build/admin/airygen-app.js
-msgid "Paste tracking IDs. Airygen SEO prints GA4/GTM tags automatically when IDs are set."
-msgstr "Dán ID theo dõi. Airygen SEO tự động in thẻ GA4/GTM khi ID được đặt."
-
-#: build/admin/airygen-app.js
-msgid "Google Analytics 4"
-msgstr "Google Analytics 4"
-
-#: build/admin/airygen-app.js
-msgid "Enable GA4 tracking"
-msgstr "Bật theo dõi GA4"
-
-#: build/admin/airygen-app.js
-msgid "Measurement ID"
-msgstr "ID đo lường"
-
-#. translators: %s is an HTML code tag for the GA4 ID prefix (G-).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste your Google Analytics 4 ID from Google Analytics Admin. It usually starts with %s."
-msgstr "Dán ID Google Analytics 4 từ Google Analytics Admin. Thường bắt đầu bằng %s."
-
-#: build/admin/airygen-app.js
-msgid "Google Tag Manager"
-msgstr "Google Tag Manager"
-
-#: build/admin/airygen-app.js
-msgid "Enable GTM tracking"
-msgstr "Bật theo dõi GTM"
-
-#: build/admin/airygen-app.js
-msgid "Container ID"
-msgstr "ID khung chứa"
-
-#. translators: %s is an HTML code tag for the GTM container prefix (GTM-).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste your Google Tag Manager container ID. It usually starts with %s."
-msgstr "Dán ID khung chứa Google Tag Manager. Thường bắt đầu bằng %s."
 
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
@@ -6040,42 +4599,8 @@ msgid "Custom"
 msgstr "Tùy chỉnh"
 
 #: build/admin/airygen-app.js
-msgid "Create reusable snippets and drag them between output locations."
-msgstr "Tạo đoạn trích tái sử dụng và kéo giữa các vị trí đầu ra."
-
-#: build/admin/airygen-app.js
-msgid "Add Snippet"
-msgstr "Thêm đoạn trích"
-
-#: build/admin/airygen-app.js
-msgid "Add snippet"
-msgstr "Thêm đoạn trích"
-
-#: build/admin/airygen-app.js
 msgid "Save changes"
 msgstr "Lưu thay đổi"
-
-#: build/admin/airygen-app.js
-msgid "Internal reference only. This is not output on the frontend."
-msgstr "Chỉ tham chiếu nội bộ. Không xuất ra giao diện."
-
-#: build/admin/airygen-app.js
-msgid "Code"
-msgstr "Mã"
-
-#. translators: %s is an HTML code tag for script tags (<script>).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste code only. Do not include %s tags."
-msgstr "Chỉ dán mã. Không bao gồm thẻ %s."
-
-#: build/admin/airygen-app.js
-msgid "Injection position"
-msgstr "Vị trí chèn"
-
-#: build/admin/airygen-app.js
-msgid "Inactive"
-msgstr "Không hoạt động"
 
 #: build/admin/airygen-app.js
 msgid "Site Verification"
@@ -8908,10 +7433,6 @@ msgid "Manage the sitemap index and exposed post types. When enabled, Airygen SE
 msgstr "Quản lý chỉ mục sơ đồ trang web và loại bài viết được hiển thị. Khi bật, Airygen SEO thay thế sơ đồ trang web mặc định của WordPress."
 
 #: build/admin/airygen-app.js
-msgid "Manage GA4, GTM, and custom tracking snippets in one place."
-msgstr "Quản lý GA4, GTM và đoạn mã theo dõi tùy chỉnh tại một nơi."
-
-#: build/admin/airygen-app.js
 msgid "Add site verification tokens for search engines and webmaster platforms."
 msgstr "Thêm mã xác minh trang web cho công cụ tìm kiếm và nền tảng quản trị web."
 
@@ -8950,10 +7471,6 @@ msgstr "Cung cấp bảng điểm SEO trong trình soạn thảo và endpoint RE
 #: build/admin/airygen-app.js
 msgid "Monitor outbound URLs for errors once link counting completes."
 msgstr "Giám sát URL ra ngoài để phát hiện lỗi sau khi đếm liên kết hoàn tất."
-
-#: build/admin/airygen-app.js
-msgid "AI-powered helpers for titles, descriptions, and content improvements."
-msgstr "Trợ lý AI cho tiêu đề, mô tả và cải thiện nội dung."
 
 #: build/admin/airygen-app.js
 msgid "Create and prioritize redirect rules for your site."
@@ -9029,10 +7546,6 @@ msgid "Assign pillar and cluster relationships while editing."
 msgstr "Gán mối quan hệ trụ cột và cụm khi chỉnh sửa."
 
 #: build/admin/airygen-app.js
-msgid "AI suggestions and CTR improvements while you edit."
-msgstr "Gợi ý AI và cải thiện CTR khi bạn chỉnh sửa."
-
-#: build/admin/airygen-app.js
 msgid "Failed to load debug info."
 msgstr "Tải thông tin gỡ lỗi thất bại."
 
@@ -9053,14 +7566,6 @@ msgid "Failed to enable debug mode."
 msgstr "Bật chế độ gỡ lỗi thất bại."
 
 #: build/admin/airygen-app.js
-msgid "Logs cleared."
-msgstr "Đã xóa nhật ký."
-
-#: build/admin/airygen-app.js
-msgid "Failed to clear logs."
-msgstr "Xóa nhật ký thất bại."
-
-#: build/admin/airygen-app.js
 msgid "Classic editor mode enabled for testing."
 msgstr "Đã bật chế độ trình soạn thảo cổ điển để kiểm thử."
 
@@ -9079,14 +7584,6 @@ msgstr "Đã cập nhật mức gỡ lỗi."
 #: build/admin/airygen-app.js
 msgid "Failed to update debug level."
 msgstr "Cập nhật mức gỡ lỗi thất bại."
-
-#: build/admin/airygen-app.js
-msgid "Log file not found."
-msgstr "Không tìm thấy tệp nhật ký."
-
-#: build/admin/airygen-app.js
-msgid "Failed to load log file."
-msgstr "Tải tệp nhật ký thất bại."
 
 #: build/admin/airygen-app.js
 msgid "Failed to load settings."
@@ -9129,32 +7626,12 @@ msgid "notify module"
 msgstr "mô-đun thông báo"
 
 #: build/admin/airygen-app.js
-msgid "This paid module cannot be enabled with the current subscription status."
-msgstr "Mô-đun trả phí này không thể bật với trạng thái gói đăng ký hiện tại."
-
-#: build/admin/airygen-app.js
 msgid "Related Posts requires enabling Link Suggestions first."
 msgstr "Bài viết liên quan yêu cầu bật Gợi ý liên kết trước."
 
 #: build/admin/airygen-app.js
 msgid "Airygen SEO Settings"
 msgstr "Cài đặt Airygen SEO"
-
-#: build/admin/airygen-app.js
-msgid "Subscription inactive"
-msgstr "Gói đăng ký không hoạt động"
-
-#: build/admin/airygen-app.js
-msgid "Continue to disable"
-msgstr "Tiếp tục tắt"
-
-#: build/admin/airygen-app.js
-msgid "Subscription is inactive. Enabled paid modules remain available, but new paid modules cannot be enabled until renewal."
-msgstr "Gói đăng ký không hoạt động. Các mô-đun trả phí đã bật vẫn khả dụng, nhưng không thể bật mô-đun trả phí mới cho đến khi gia hạn."
-
-#: build/admin/airygen-app.js
-msgid "View plans"
-msgstr "Xem gói"
 
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
@@ -9315,7 +7792,6 @@ msgstr "Đặt từ khóa trọng tâm để kiểm tra mật độ."
 msgid "Focus keyphrase density is 0%. Add it naturally to the content."
 msgstr "Mật độ từ khóa trọng tâm là 0%. Thêm tự nhiên vào nội dung."
 
-#. translators: percentage range for focus keyphrase density.
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "Adjust focus keyphrase density to 0.5%–2%."
@@ -9359,7 +7835,6 @@ msgid "To avoid keyword stuffing, each long-tail keyphrase should be supported b
 msgstr "Để tránh nhồi từ khóa, mỗi từ khóa đuôi dài nên được hỗ trợ bởi ít nhất 150 từ nội dung giải thích; không lặp từ khóa trọng tâm đơn lẻ mà không có văn bản có ý nghĩa."
 
 #: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Got it"
 msgstr "Đã hiểu"
 
@@ -9678,407 +8153,14 @@ msgstr "Chưa có gợi ý. Lưu bài viết để chúng tôi lập chỉ mục
 msgid "Insert"
 msgstr "Chèn"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your content…"
-msgstr "Đang phân tích nội dung của bạn…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Subscription is inactive. AI generation is unavailable until renewal."
-msgstr "Gói đăng ký không hoạt động. Tạo bằng AI không khả dụng cho đến khi gia hạn."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Detected content languages:"
-msgstr "Ngôn ngữ nội dung được phát hiện:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Primary language:"
-msgstr "Ngôn ngữ chính:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Selected output language:"
-msgstr "Ngôn ngữ đầu ra đã chọn:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Continue?"
-msgstr "Tiếp tục?"
-
-#: build/block-editor/airygen-editor.js
-msgid "SERP CTR Booster generated. Review and apply when ready."
-msgstr "SERP CTR Booster đã tạo xong. Xem lại và áp dụng khi sẵn sàng."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate CTR booster suggestions."
-msgstr "Không thể tạo gợi ý tăng CTR."
-
-#: build/block-editor/airygen-editor.js
-msgid "FAQ generated. Review and apply when ready."
-msgstr "FAQ đã tạo xong. Xem lại và áp dụng khi sẵn sàng."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate FAQ suggestions."
-msgstr "Không thể tạo gợi ý FAQ."
-
-#: build/block-editor/airygen-editor.js
-msgid "Topic Expansion generated. Review and apply when ready."
-msgstr "Topic Expansion đã tạo xong. Xem lại và áp dụng khi sẵn sàng."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Topic Expansion suggestions."
-msgstr "Không thể tạo gợi ý Topic Expansion."
-
-#: build/block-editor/airygen-editor.js
-msgid "Content Blueprint generated. Review and apply when ready."
-msgstr "Content Blueprint đã tạo xong. Xem lại và áp dụng khi sẵn sàng."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Content Blueprint."
-msgstr "Không thể tạo Content Blueprint."
-
-#: build/block-editor/airygen-editor.js
-msgid "Article Builder generated. Review and apply when ready."
-msgstr "Article Builder đã tạo xong. Xem lại và áp dụng khi sẵn sàng."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Article Builder output."
-msgstr "Không thể tạo đầu ra Article Builder."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Outline unavailable."
-msgstr "Dàn ý không khả dụng."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to update FAQ display settings."
-msgstr "Không thể cập nhật cài đặt hiển thị FAQ."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to update topic display settings."
-msgstr "Không thể cập nhật cài đặt hiển thị chủ đề."
-
-#: build/block-editor/airygen-editor.js
-msgid "AI Assist is disabled. Enable it in Airygen → Modules."
-msgstr "AI Assist đã bị tắt. Bật tại Airygen → Mô-đun."
-
-#: build/block-editor/airygen-editor.js
-msgid "AI Assist API is not configured."
-msgstr "API của AI Assist chưa được cấu hình."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate higher-CTR titles and descriptions with AI suggestions."
-msgstr "Tạo tiêu đề và mô tả có CTR cao hơn bằng gợi ý AI."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate structured outlines and section summaries for faster planning."
-msgstr "Tạo dàn ý có cấu trúc và tóm tắt phần để lập kế hoạch nhanh hơn."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate full-length articles from your topic and focus keyphrase."
-msgstr "Tạo bài viết đầy đủ từ chủ đề và từ khóa trọng tâm."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate FAQ entries that expand on common user questions."
-msgstr "Tạo mục FAQ mở rộng về các câu hỏi phổ biến của người dùng."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate related topics to expand your content plan."
-msgstr "Tạo chủ đề liên quan để mở rộng kế hoạch nội dung."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unavailable in your current plan."
-msgstr "Không khả dụng trong gói hiện tại."
-
-#: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "Display mode"
 msgstr "Chế độ hiển thị"
 
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
-msgid "Use settings"
-msgstr "Sử dụng cài đặt"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Manual"
 msgstr "Thủ công"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose how FAQ output should be inserted for this post."
-msgstr "Chọn cách chèn đầu ra FAQ cho bài viết này."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose how Topic Expansion output should be inserted for this post."
-msgstr "Chọn cách chèn đầu ra Topic Expansion cho bài viết này."
-
-#: build/block-editor/airygen-editor.js
-msgid "No AI modules are enabled for this post."
-msgstr "Không có mô-đun AI nào được bật cho bài viết này."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates a meta title, meta description, and excerpt based on your current content. Apply suggestions and save the post to make changes live."
-msgstr "Tạo tiêu đề meta, mô tả meta và đoạn trích dựa trên nội dung hiện tại. Áp dụng gợi ý và lưu bài viết để thay đổi có hiệu lực."
-
-#: build/block-editor/airygen-editor.js
-msgid "Uses the focus keyphrase set for this post."
-msgstr "Sử dụng từ khóa trọng tâm đã đặt cho bài viết này."
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the language for AI-generated suggestions."
-msgstr "Chọn ngôn ngữ cho gợi ý do AI tạo."
-
-#: build/block-editor/airygen-editor.js
-msgid "Require the focus keyphrase to appear in suggestions."
-msgstr "Yêu cầu từ khóa trọng tâm xuất hiện trong gợi ý."
-
-#: build/block-editor/airygen-editor.js
-msgid "Applied. Save the post to make the changes live."
-msgstr "Đã áp dụng. Lưu bài viết để thay đổi có hiệu lực."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one suggestion to apply."
-msgstr "Chọn ít nhất một gợi ý để áp dụng."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Describe the article you want to plan."
-msgstr "Mô tả bài viết bạn muốn lên kế hoạch."
-
-#: build/block-editor/airygen-editor.js
-msgid "Defaults to the focus keyphrase."
-msgstr "Mặc định sử dụng từ khóa trọng tâm."
-
-#: build/block-editor/airygen-editor.js
-msgid "Set a focus keyphrase in the SEO panel."
-msgstr "Đặt từ khóa trọng tâm trong bảng SEO."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose the output language for the outline."
-msgstr "Chọn ngôn ngữ đầu ra cho dàn ý."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Select a structure that matches your topic."
-msgstr "Chọn cấu trúc phù hợp với chủ đề."
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose a voice for section summaries."
-msgstr "Chọn giọng điệu cho tóm tắt phần."
-
-#: build/block-editor/airygen-editor.js
-msgid "Control how many heading levels the outline includes."
-msgstr "Kiểm soát dàn ý bao gồm bao nhiêu cấp tiêu đề."
-
-#: build/block-editor/airygen-editor.js
-msgid "Include the focus keyword in outline headings."
-msgstr "Bao gồm từ khóa trọng tâm trong tiêu đề dàn ý."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Outline length target"
-msgstr "Mục tiêu độ dài dàn ý"
-
-#: build/block-editor/airygen-editor.js
-msgid "Longer blueprints take more time. Please keep this window open."
-msgstr "Bản kế hoạch dài hơn mất nhiều thời gian hơn. Vui lòng giữ cửa sổ này mở."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Keep outline"
-msgstr "Giữ dàn ý"
-
-#: build/block-editor/airygen-editor.js
-msgid "Keep your current headings and expand the article from them."
-msgstr "Giữ tiêu đề hiện tại và mở rộng bài viết từ đó."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content Blueprint is for planning new articles. Applying will replace the post content."
-msgstr "Content Blueprint dùng để lập kế hoạch bài viết mới. Áp dụng sẽ thay thế nội dung bài viết."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "It does not generate a full draft; it proposes section headings to guide your writing."
-msgstr "Không tạo bản nháp đầy đủ; chỉ đề xuất tiêu đề phần để hướng dẫn bạn viết."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use this blueprint"
-msgstr "Sử dụng bản kế hoạch này"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select a blueprint to apply."
-msgstr "Chọn bản kế hoạch để áp dụng."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to apply blueprint content."
-msgstr "Không thể áp dụng nội dung bản kế hoạch."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your topic…"
-msgstr "Đang phân tích chủ đề của bạn…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Building outline structure…"
-msgstr "Đang xây dựng cấu trúc dàn ý…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Refining sections…"
-msgstr "Đang tinh chỉnh các phần…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content source"
-msgstr "Nguồn nội dung"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Extract from editor content"
-msgstr "Trích xuất từ nội dung trình soạn thảo"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose where the AI should read source content from."
-msgstr "Chọn nơi AI đọc nội dung nguồn."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Custom content"
-msgstr "Nội dung tùy chỉnh"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Paste the source content for the AI draft."
-msgstr "Dán nội dung nguồn cho bản nháp AI."
-
-#: build/block-editor/airygen-editor.js
-msgid "Markdown formatting works best."
-msgstr "Định dạng Markdown hoạt động tốt nhất."
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the language for the generated article."
-msgstr "Chọn ngôn ngữ cho bài viết được tạo."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the structure that best matches your topic."
-msgstr "Chọn cấu trúc phù hợp nhất với chủ đề."
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the voice and style for the draft."
-msgstr "Chọn giọng điệu và phong cách cho bản nháp."
-
-#: build/block-editor/airygen-editor.js
-msgid "AI targets can vary by about ten percent from the selected length."
-msgstr "Mục tiêu AI có thể chênh lệch khoảng mười phần trăm so với độ dài đã chọn."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Longer articles take more time. Please keep this window open."
-msgstr "Bài viết dài hơn mất nhiều thời gian hơn. Vui lòng giữ cửa sổ này mở."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use this article"
-msgstr "Sử dụng bài viết này"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to apply Article Builder output."
-msgstr "Không thể áp dụng đầu ra Article Builder."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select an article to apply."
-msgstr "Chọn bài viết để áp dụng."
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting can take up to ~90 seconds depending on length. Please keep this window open."
-msgstr "Quá trình soạn có thể mất tối đa ~90 giây tùy theo độ dài. Vui lòng giữ cửa sổ này mở."
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting full sections…"
-msgstr "Đang soạn các phần đầy đủ…"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the output language for FAQs."
-msgstr "Chọn ngôn ngữ đầu ra cho FAQ."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the content structure for FAQ responses."
-msgstr "Chọn cấu trúc nội dung cho câu trả lời FAQ."
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the writing tone for answers."
-msgstr "Chọn giọng điệu viết cho câu trả lời."
-
-#: build/block-editor/airygen-editor.js
-msgid "How many questions to generate per request."
-msgstr "Số câu hỏi cần tạo mỗi yêu cầu."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates FAQ entries based on your current post content. Apply suggestions and save the post to publish updates."
-msgstr "Tạo mục FAQ dựa trên nội dung bài viết hiện tại. Áp dụng gợi ý và lưu bài viết để xuất bản cập nhật."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Untitled FAQ"
-msgstr "FAQ chưa đặt tiêu đề"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one FAQ item to apply."
-msgstr "Chọn ít nhất một mục FAQ để áp dụng."
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting Q&A pairs…"
-msgstr "Đang soạn cặp hỏi & đáp…"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the output language for topics."
-msgstr "Chọn ngôn ngữ đầu ra cho chủ đề."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the structure for topic suggestions."
-msgstr "Chọn cấu trúc cho gợi ý chủ đề."
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the writing tone for topics."
-msgstr "Chọn giọng điệu viết cho chủ đề."
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose how long each topic description should be."
-msgstr "Chọn độ dài cho mỗi mô tả chủ đề."
-
-#: build/block-editor/airygen-editor.js
-msgid "How many topics to generate per request."
-msgstr "Số chủ đề cần tạo mỗi yêu cầu."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates related topic ideas based on your current content. Apply suggestions and save the post to publish updates."
-msgstr "Tạo ý tưởng chủ đề liên quan dựa trên nội dung hiện tại. Áp dụng gợi ý và lưu bài viết để xuất bản cập nhật."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Untitled topic"
-msgstr "Chủ đề chưa đặt tiêu đề"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one topic to apply."
-msgstr "Chọn ít nhất một chủ đề để áp dụng."
-
-#: build/block-editor/airygen-editor.js
-msgid "Expanding related topics…"
-msgstr "Đang mở rộng chủ đề liên quan…"
 
 #: build/block-editor/airygen-editor.js
 msgid "TOC display mode"
@@ -10228,18 +8310,6 @@ msgid "Renders the table of contents on the frontend."
 msgstr "Hiển thị mục lục trên giao diện."
 
 #: build/block-editor/airygen-editor.js
-msgid "Airygen FAQ"
-msgstr "Airygen FAQ"
-
-#: build/block-editor/airygen-editor.js
-msgid "Insert AI-generated FAQ output."
-msgstr "Chèn đầu ra FAQ do AI tạo."
-
-#: build/block-editor/airygen-editor.js
-msgid "Renders AI FAQ entries on the frontend."
-msgstr "Hiển thị mục FAQ AI trên giao diện."
-
-#: build/block-editor/airygen-editor.js
 msgid "Airygen Breadcrumbs"
 msgstr "Airygen Breadcrumbs"
 
@@ -10252,34 +8322,8 @@ msgid "Renders breadcrumbs on the frontend."
 msgstr "Hiển thị đường dẫn điều hướng trên giao diện."
 
 #: build/block-editor/airygen-editor.js
-msgid "Airygen Topic Expansion"
-msgstr "Airygen Topic Expansion"
-
-#: build/block-editor/airygen-editor.js
-msgid "Insert AI-generated related topics output."
-msgstr "Chèn đầu ra chủ đề liên quan do AI tạo."
-
-#: build/block-editor/airygen-editor.js
-msgid "Renders related topic ideas on the frontend."
-msgstr "Hiển thị ý tưởng chủ đề liên quan trên giao diện."
-
-#: build/block-editor/airygen-editor.js
 msgid "Rebots Meta"
 msgstr "Thẻ meta Robots"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Applied. Save Changes to persist updates."
-msgstr "Đã áp dụng. Lưu thay đổi để giữ cập nhật."
-
-#. translators: %s is the thing to generate first, such as an outline or a draft.
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "No records yet. Generate %s to get started."
-msgstr "Chưa có bản ghi. Tạo %s để bắt đầu."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing content…"
-msgstr "Đang phân tích nội dung…"
 
 #: build/classic-editor/airygen-editor.js
 msgid "Total rules"
@@ -10377,174 +8421,10 @@ msgstr "Kế thừa mặc định (%s)"
 msgid "Summary"
 msgstr "Tóm tắt"
 
-#: build/classic-editor/airygen-editor.js
-msgid "Generate higher-CTR titles and meta descriptions."
-msgstr "Tạo tiêu đề và mô tả meta có CTR cao hơn."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generate structured outlines with section summaries."
-msgstr "Tạo dàn ý có cấu trúc với tóm tắt phần."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Draft full articles with AI guidance and structured prompts."
-msgstr "Soạn bài viết đầy đủ với hướng dẫn AI và prompt có cấu trúc."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Append frequently asked questions to the end of the article."
-msgstr "Thêm câu hỏi thường gặp vào cuối bài viết."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Append related topic ideas after the FAQ section."
-msgstr "Thêm ý tưởng chủ đề liên quan sau phần FAQ."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Uses the saved focus keyphrase."
-msgstr "Sử dụng từ khóa trọng tâm đã lưu."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Include the focus keyphrase in the output."
-msgstr "Bao gồm từ khóa trọng tâm trong đầu ra."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Used to guide the outline."
-msgstr "Dùng để hướng dẫn dàn ý."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for the outline."
-msgstr "Chọn giọng điệu cho dàn ý."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Heading depth for the outline."
-msgstr "Độ sâu tiêu đề cho dàn ý."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Basic"
-msgstr "Cơ bản"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Deep"
-msgstr "Sâu"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how long the outline should be."
-msgstr "Kiểm soát độ dài dàn ý."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Include the focus keyphrase in headings."
-msgstr "Bao gồm từ khóa trọng tâm trong tiêu đề."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Keep the existing outline when generating."
-msgstr "Giữ dàn ý hiện có khi tạo."
-
-#: build/classic-editor/airygen-editor.js
-msgid "an outline"
-msgstr "dàn ý"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Choose where to extract source content."
-msgstr "Chọn nơi trích xuất nội dung nguồn."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the output language."
-msgstr "Chọn ngôn ngữ đầu ra."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the writing style type."
-msgstr "Chọn loại phong cách viết."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for the draft."
-msgstr "Chọn giọng điệu cho bản nháp."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the target article length."
-msgstr "Chọn độ dài bài viết mục tiêu."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Keep the existing headings when generating."
-msgstr "Giữ tiêu đề hiện có khi tạo."
-
-#: build/classic-editor/airygen-editor.js
-msgid "a draft"
-msgstr "bản nháp"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select output language."
-msgstr "Chọn ngôn ngữ đầu ra."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for answers."
-msgstr "Chọn giọng điệu cho câu trả lời."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how detailed each answer should be."
-msgstr "Kiểm soát mức độ chi tiết cho mỗi câu trả lời."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Number of questions to generate."
-msgstr "Số câu hỏi cần tạo."
-
-#: build/classic-editor/airygen-editor.js
-msgid "questions"
-msgstr "câu hỏi"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for topics."
-msgstr "Chọn giọng điệu cho chủ đề."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how detailed each topic is."
-msgstr "Kiểm soát mức độ chi tiết cho mỗi chủ đề."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Number of topics to generate."
-msgstr "Số chủ đề cần tạo."
-
-#: build/classic-editor/airygen-editor.js
-msgid "topics"
-msgstr "chủ đề"
-
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "(No title)"
 msgstr "(Không có tiêu đề)"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your source…"
-msgstr "Đang phân tích nguồn của bạn…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting article sections…"
-msgstr "Đang soạn các phần bài viết…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Refining language and tone…"
-msgstr "Đang tinh chỉnh ngôn ngữ và giọng điệu…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generating FAQs can take a moment. Please keep this window open."
-msgstr "Tạo FAQ có thể mất một lúc. Vui lòng giữ cửa sổ này mở."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting questions…"
-msgstr "Đang soạn câu hỏi…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Writing answers…"
-msgstr "Đang viết câu trả lời…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generating topics can take a moment. Please keep this window open."
-msgstr "Tạo chủ đề có thể mất một lúc. Vui lòng giữ cửa sổ này mở."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting topic ideas…"
-msgstr "Đang soạn ý tưởng chủ đề…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Refining list…"
-msgstr "Đang tinh chỉnh danh sách…"
 
 #: build/classic-editor/airygen-editor.js
 msgid "Focus keyphrase density is in range (0.5%–2%)."
@@ -10563,22 +8443,6 @@ msgid "Focus keyphrase is not set."
 msgstr "Chưa đặt từ khóa trọng tâm."
 
 #: build/classic-editor/airygen-editor.js
-msgid "This AI module is unavailable in your current plan."
-msgstr "Mô-đun AI này không khả dụng trong gói hiện tại."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Unable to complete the request."
-msgstr "Không thể hoàn tất yêu cầu."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select a suggestion to apply."
-msgstr "Chọn gợi ý để áp dụng."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select a record to apply."
-msgstr "Chọn bản ghi để áp dụng."
-
-#: build/classic-editor/airygen-editor.js
 msgid "Save changes to apply your updates."
 msgstr "Lưu thay đổi để áp dụng cập nhật."
 
@@ -10589,39 +8453,6 @@ msgstr "Đã lưu."
 #: build/classic-editor/airygen-editor.js
 msgid "Failed to save changes."
 msgstr "Lưu thay đổi thất bại."
-
-#. translators: %s is the estimated number of seconds.
-#: build/block-editor/airygen-editor.js
-#, php-format, js-format
-msgid "This can take up to ~%s seconds depending on the amount of content. Please keep this window open."
-msgstr "Việc này có thể mất tới khoảng %s giây tùy theo lượng nội dung. Vui lòng giữ cửa sổ này mở."
-
-msgid "Credit balance record not found"
-msgstr "Không tìm thấy bản ghi số dư tín dụng"
-
-#. translators: %s is the generated item type in plural form, e.g. "blueprints", "articles", or "drafts".
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "Longer %s take more time. Please keep this window open."
-msgstr "%s dài hơn sẽ mất nhiều thời gian hơn. Vui lòng giữ cửa sổ này mở."
-
-#: build/classic-editor/airygen-editor.js
-msgid "length"
-msgstr "độ dài"
-
-#. translators: 1: estimated duration label, e.g. "~15 seconds". 2: what affects the duration, e.g. "length" or "count".
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "This can take up to %1$s depending on %2$s. Please keep this window open."
-msgstr "Việc này có thể mất tới %1$s tùy theo %2$s. Vui lòng giữ cửa sổ này mở."
-
-#: build/classic-editor/airygen-editor.js
-msgid "blueprints"
-msgstr "bản thiết kế"
-
-#: build/classic-editor/airygen-editor.js
-msgid "drafts"
-msgstr "bản nháp"
 
 msgid "Sitewide SEO (scaled)"
 msgstr "SEO toàn trang (theo thang điểm)"
@@ -10675,9 +8506,6 @@ msgstr "Thời gian chờ thao tác (giây)"
 #: build/admin/airygen-app.js
 msgid "Check basic sitewide SEO health and configuration."
 msgstr "Kiểm tra tình trạng SEO cơ bản toàn site và cấu hình."
-
-msgid "Mirror WordPress Sitewide SEO diagnostics with Airygen-specific checks (SSL, Safe Browsing, focus keywords)."
-msgstr "Phản ánh chẩn đoán SEO toàn trang của WordPress bằng các kiểm tra riêng của Airygen (SSL, Safe Browsing, từ khóa trọng tâm)."
 
 msgid "Mind map items contain invalid post data."
 msgstr "Các mục trong sơ đồ tư duy chứa dữ liệu bài viết không hợp lệ."
@@ -11001,14 +8829,6 @@ msgid "Uses the IndexNow protocol to push new and updated URLs to Bing and other
 msgstr "Sử dụng giao thức IndexNow để đẩy URL mới đến Bing ngay khi nội dung được xuất bản."
 
 #: build/admin/airygen-app.js
-msgid "Would you like AI to help you write article outlines, FAQ sets, or plan your full content strategy?"
-msgstr "Bạn có muốn AI giúp bạn viết phác thảo bài viết, bộ FAQ hoặc lên kế hoạch cho chiến lược nội dung không?"
-
-#: build/admin/airygen-app.js
-msgid "A smart AI toolkit that generates article outlines, Content Blueprints, full Article drafts, and Deep FAQ sets from a keyword — making content creation faster and easier."
-msgstr "Bộ công cụ AI thông minh tạo phác thảo bài viết, Bản thiết kế Nội dung, bản nháp bài viết hoàn chỉnh và bộ Deep FAQ từ một từ khóa."
-
-#: build/admin/airygen-app.js
 msgid "Would you like AI tools like ChatGPT and Perplexity to more easily discover and cite your site?"
 msgstr "Bạn có muốn các công cụ AI như ChatGPT và Perplexity dễ dàng khám phá và trích dẫn trang web của bạn hơn không?"
 
@@ -11023,26 +8843,6 @@ msgstr "Tự động tạo tệp llms.txt — như sitemap cho AI — để các
 #: build/admin/airygen-app.js
 msgid "Automatically converts your posts into AI-friendly Markdown so AI agents can read and understand your content without struggling to parse HTML."
 msgstr "Tự động chuyển đổi bài viết của bạn sang Markdown thân thiện với AI để các tác nhân AI có thể đọc và hiểu nội dung của bạn."
-
-#: build/admin/airygen-app.js
-msgid "Includes Deep FAQ, which automatically generates structured Q&A from your post content. AI search engines favor content that directly answers questions, boosting your visibility in AI-powered search results."
-msgstr "Bao gồm Deep FAQ, tự động tạo Q&A có cấu trúc từ nội dung bài đăng của bạn."
-
-#: build/admin/airygen-app.js
-msgid "Free"
-msgstr "Miễn phí"
-
-#: build/admin/airygen-app.js
-msgid "Requires a plan upgrade"
-msgstr "Yêu cầu nâng cấp gói"
-
-#: build/admin/airygen-app.js
-msgid "Requires"
-msgstr "Yêu cầu"
-
-#: build/admin/airygen-app.js
-msgid "plan to activate"
-msgstr "gói để kích hoạt"
 
 #: build/admin/airygen-app.js
 msgid "Got it, don't show again"
@@ -11069,32 +8869,8 @@ msgid "Welcome to Airygen SEO!"
 msgstr "Chào mừng đến với Airygen SEO!"
 
 #: build/admin/airygen-app.js
-msgid "Answer 10 quick questions and we'll recommend the right SEO modules for your site — then enable them all with one click."
-msgstr "Trả lời 10 câu hỏi nhanh và chúng tôi sẽ đề xuất các mô-đun SEO phù hợp cho trang web của bạn — sau đó bật tất cả chỉ bằng một cú nhấp."
-
-#: build/admin/airygen-app.js
 msgid "Don't worry — every question is just Yes or No. No technical knowledge needed. It takes about 2 minutes. 😊"
 msgstr "Đừng lo lắng — mỗi câu hỏi chỉ là Có hoặc Không. Không cần kiến thức kỹ thuật. Chỉ mất khoảng 2 phút. 😊"
-
-#: build/admin/airygen-app.js
-msgid "🎉 All done! Here's what we recommend based on your answers:"
-msgstr "🎉 Xong rồi! Đây là những gì chúng tôi đề xuất dựa trên câu trả lời của bạn:"
-
-#: build/admin/airygen-app.js
-msgid "Will be enabled (included in your plan)"
-msgstr "Sẽ được bật (bao gồm trong gói của bạn)"
-
-#: build/admin/airygen-app.js
-msgid "Requires an upgrade to enable"
-msgstr "Yêu cầu nâng cấp để bật"
-
-#: build/admin/airygen-app.js
-msgid "Upgrade to"
-msgstr "Nâng cấp lên"
-
-#: build/admin/airygen-app.js
-msgid "No modules selected. Click Finish to close the wizard."
-msgstr "Không có mô-đun nào được chọn. Nhấp vào Hoàn thành để đóng trình hướng dẫn."
 
 #: build/admin/airygen-app.js
 msgid "Setup Wizard"
@@ -11152,12 +8928,33 @@ msgstr "Khoảng cách giữa các khối (px)"
 msgid "Content top margin (px)"
 msgstr "Lề trên cùng của nội dung (px)"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "The focus keyphrase is the main keyword or phrase this post is optimized for. AI modules use it to guide content generation — keeping the output relevant and keyword-focused."
-msgstr "Cụm từ khóa trọng tâm là từ khóa chính mà bài đăng này được tối ưu hóa. Các mô-đun AI sử dụng nó để hướng dẫn tạo nội dung."
+#. Plugin URI of the plugin
+msgid "https://www.airygen.com/en/airygen-seo/introduction"
+msgstr "https://www.airygen.com/en/airygen-seo/introduction"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Focus keyphrase help"
-msgstr "Trợ giúp từ khóa trọng tâm"
+#. Description of the plugin
+msgid "Airygen SEO is a modular SEO toolkit for WordPress sites that need more than title and meta fields. It combines on-page SEO controls, structured data, technical SEO, internal link workflows, and automation tools in one plugin while keeping the editing experience inside WordPress."
+msgstr "Airygen SEO là bộ công cụ SEO dạng mô-đun dành cho các trang WordPress cần nhiều hơn tiêu đề và các trường meta. Plugin kết hợp các tùy chỉnh SEO trên trang, dữ liệu có cấu trúc, SEO kỹ thuật, quy trình liên kết nội bộ và công cụ tự động hóa trong một plugin duy nhất, đồng thời giữ trải nghiệm chỉnh sửa ngay trong WordPress."
+
+#. Author URI of the plugin
+msgid "https://www.airygen.com/"
+msgstr "https://www.airygen.com/"
+
+msgid "Transfer export settings filter must return an array."
+msgstr "Bộ lọc cài đặt xuất chuyển dữ liệu phải trả về một mảng."
+
+#: build/admin/airygen-app.js
+msgid "Answer a few quick questions and we'll recommend the right SEO modules for your site — core modules are already enabled by default."
+msgstr "Trả lời vài câu hỏi nhanh và chúng tôi sẽ đề xuất các mô-đun SEO phù hợp cho trang của bạn — các mô-đun cốt lõi đã được bật theo mặc định."
+
+#: build/admin/airygen-app.js
+msgid "All done! Core modules (On-Page SEO, Breadcrumbs, Sitemap, Image SEO, Robots, Site Verification, Link Counter, Link Suggestions, Score Calculator) are already enabled by default."
+msgstr "Hoàn tất! Các mô-đun cốt lõi (On-Page SEO, Breadcrumbs, Sitemap, Image SEO, Robots, Site Verification, Link Counter, Link Suggestions, Score Calculator) đã được bật theo mặc định."
+
+#: build/admin/airygen-app.js
+msgid "Additional modules to enable based on your answers"
+msgstr "Các mô-đun bổ sung sẽ được bật dựa trên câu trả lời của bạn"
+
+#: build/admin/airygen-app.js
+msgid "No additional modules recommended. You can enable more from the dashboard anytime."
+msgstr "Không có mô-đun bổ sung nào được đề xuất. Bạn có thể bật thêm từ bảng tin bất cứ lúc nào."

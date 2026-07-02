@@ -14,25 +14,9 @@ msgstr ""
 "X-Domain: airygen-seo\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
-#. Plugin Name of the plugin
-msgid "Airygen"
-msgstr "Airygen"
-
-#. Plugin URI of the plugin
-msgid "https://www.airygen.com/product/wordpress-seo-plugin/"
-msgstr "https://www.airygen.com/product/wordpress-seo-plugin/"
-
-#. Description of the plugin
-msgid "The best SEO plugin for WordPress to optimize your website for search engines and improve your rankings."
-msgstr "সার্চ ইঞ্জিনের জন্য আপনার ওয়েবসাইট অপ্টিমাইজ করতে এবং র‍্যাঙ্কিং উন্নত করতে WordPress-এর সেরা SEO প্লাগইন।"
-
 #. Author of the plugin
 msgid "Airygen Team"
 msgstr "Airygen Team"
-
-#. Author URI of the plugin
-msgid "https://github.com/airygen"
-msgstr "https://github.com/airygen"
 
 msgid "SEO title length"
 msgstr "SEO শিরোনামের দৈর্ঘ্য"
@@ -148,47 +132,6 @@ msgstr "বর্ণনা"
 msgid "Sent by %1$s via %2$s."
 msgstr "%2$s-এর মাধ্যমে %1$s পাঠিয়েছে।"
 
-msgid "Subscription Status"
-msgstr "সাবস্ক্রিপশন স্ট্যাটাস"
-
-msgid "Manage your subscription details and version updates."
-msgstr "আপনার সাবস্ক্রিপশনের বিস্তারিত ও সংস্করণ আপডেট পরিচালনা করুন।"
-
-msgid "Subscription ID"
-msgstr "সাবস্ক্রিপশন ID"
-
-msgid "26 characters"
-msgstr "26টি অক্ষর"
-
-msgid "Your subscription details."
-msgstr "আপনার সাবস্ক্রিপশনের বিস্তারিত।"
-
-msgid "Site Key"
-msgstr "সাইট কী"
-
-msgid "Paste the Site Key used for Link Suggestions."
-msgstr "Link Suggestions-এর জন্য ব্যবহৃত Site Key পেস্ট করুন।"
-
-msgid "This key authenticates to the Airygen API. Keep it safe and do not share."
-msgstr "এই কীটি Airygen API-তে প্রমাণীকরণ করে। এটি নিরাপদ রাখুন এবং শেয়ার করবেন না।"
-
-msgid "Save Subscription"
-msgstr "সাবস্ক্রিপশন সংরক্ষণ করুন"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use"
-msgstr "ব্যবহার করুন"
-
-msgid "Generate and browse AI suggestions for this taxonomy page title and description."
-msgstr "এই ট্যাক্সোনমি পৃষ্ঠার শিরোনাম ও বর্ণনার জন্য AI পরামর্শ তৈরি করুন এবং ব্রাউজ করুন।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "SERP CTR Booster"
-msgstr "SERP CTR বুস্টার"
-
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
@@ -196,82 +139,23 @@ msgid "Close"
 msgstr "বন্ধ করুন"
 
 #: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generate"
-msgstr "তৈরি করুন"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Browse"
-msgstr "ব্রাউজ করুন"
-
-msgid "Taxonomy terms do not include body content, so Airygen analyzes the latest five related post titles to generate suggestions."
-msgstr "ট্যাক্সোনমি টার্মে বডি কনটেন্ট নেই, তাই Airygen পরামর্শ তৈরি করতে সর্বশেষ পাঁচটি সম্পর্কিত পোস্টের শিরোনাম বিশ্লেষণ করে।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Language"
-msgstr "ভাষা"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the output language for suggestions."
-msgstr "পরামর্শের জন্য আউটপুট ভাষা নির্বাচন করুন।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Focus keyphrase"
 msgstr "ফোকাস কীফ্রেজ"
 
-msgid "Used when Include keyword is enabled."
-msgstr "Include keyword সক্রিয় থাকলে ব্যবহৃত।"
-
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Include keyword"
-msgstr "কীওয়ার্ড অন্তর্ভুক্ত করুন"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Yes"
 msgstr "হ্যাঁ"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "No"
 msgstr "না"
 
-msgid "Include the focus keyphrase when generating title and description."
-msgstr "শিরোনাম ও বর্ণনা তৈরির সময় ফোকাস কীফ্রেজ অন্তর্ভুক্ত করুন।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generating…"
-msgstr "তৈরি হচ্ছে…"
-
-msgid "Analyzing your taxonomy context…"
-msgstr "আপনার ট্যাক্সোনমি কনটেক্সট বিশ্লেষণ করা হচ্ছে…"
-
-msgid "This can take up to ~15 seconds depending on content. Please keep this window open."
-msgstr "কনটেন্টের উপর নির্ভর করে এটি ~১৫ সেকেন্ড পর্যন্ত সময় নিতে পারে। অনুগ্রহ করে এই উইন্ডোটি খোলা রাখুন।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Apply selected"
-msgstr "নির্বাচিতগুলো প্রয়োগ করুন"
-
-msgid "Please provide a valid log date."
-msgstr "অনুগ্রহ করে একটি বৈধ লগের তারিখ প্রদান করুন।"
-
+#. Plugin Name of the plugin
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 msgid "Airygen SEO"
 msgstr "Airygen SEO"
 
-#: build/admin/airygen-app.js
 msgid "Dashboard"
 msgstr "ড্যাশবোর্ড"
 
@@ -283,22 +167,12 @@ msgstr "সেটিংস"
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
-msgid "AI Assist"
-msgstr "AI সহায়তা"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Topic Cluster"
 msgstr "টপিক ক্লাস্টার"
 
 #: build/admin/airygen-app.js
 msgid "Alerts"
 msgstr "সতর্কতা"
-
-#: build/admin/airygen-app.js
-msgid "Subscription"
-msgstr "সাবস্ক্রিপশন"
 
 #: build/admin/airygen-app.js
 msgid "Migration"
@@ -372,48 +246,8 @@ msgstr "কোর্স"
 msgid "Course instance"
 msgstr "কোর্স ইনস্ট্যান্স"
 
-msgid "API key format is invalid."
-msgstr "API key-এর ফরম্যাট অবৈধ।"
-
-msgid "API key is required."
-msgstr "API key প্রয়োজন।"
-
-msgid "Live validation is temporarily unavailable. Showing last successful verification snapshot."
-msgstr "লাইভ যাচাইকরণ সাময়িকভাবে অনুপলব্ধ। শেষ সফল যাচাইকরণ স্ন্যাপশট দেখাচ্ছে।"
-
-msgid "Unable to contact the subscription API."
-msgstr "সাবস্ক্রিপশন API-এর সাথে যোগাযোগ করতে অক্ষম।"
-
-msgid "Invalid record id."
-msgstr "অবৈধ রেকর্ড id।"
-
-#: build/admin/airygen-app.js
-msgid "Unable to delete record."
-msgstr "রেকর্ড মুছতে অক্ষম।"
-
-msgid "Invalid post id."
-msgstr "অবৈধ পোস্ট id।"
-
 msgid "Post not found."
 msgstr "পোস্ট পাওয়া যায়নি।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Please set a focus keyword for this post before generating."
-msgstr "তৈরির আগে অনুগ্রহ করে এই পোস্টের জন্য একটি ফোকাস কীওয়ার্ড সেট করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Please provide source content before generating."
-msgstr "তৈরির আগে অনুগ্রহ করে সোর্স কনটেন্ট প্রদান করুন।"
-
-msgid "Unable to generate article."
-msgstr "আর্টিকেল তৈরি করতে অক্ষম।"
-
-msgid "Invalid gateway response."
-msgstr "অবৈধ গেটওয়ে প্রতিক্রিয়া।"
-
-msgid "Unable to store Article Builder record."
-msgstr "Article Builder রেকর্ড সংরক্ষণ করতে অক্ষম।"
 
 msgid "Airygen Author SEO"
 msgstr "Airygen Author SEO"
@@ -432,33 +266,6 @@ msgstr "পৃষ্ঠা %s"
 #: build/admin/airygen-app.js
 msgid "Author"
 msgstr "লেখক"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Please enter a topic before generating."
-msgstr "তৈরির আগে অনুগ্রহ করে একটি বিষয় প্রবেশ করুন।"
-
-msgid "Unable to generate blueprint."
-msgstr "ব্লুপ্রিন্ট তৈরি করতে অক্ষম।"
-
-msgid "Unable to store Content Blueprint record."
-msgstr "Content Blueprint রেকর্ড সংরক্ষণ করতে অক্ষম।"
-
-msgid "Please add content before generating FAQ items."
-msgstr "FAQ আইটেম তৈরির আগে অনুগ্রহ করে কনটেন্ট যোগ করুন।"
-
-msgid "Unable to generate FAQ items."
-msgstr "FAQ আইটেম তৈরি করতে অক্ষম।"
-
-msgid "Unable to store FAQ record."
-msgstr "FAQ রেকর্ড সংরক্ষণ করতে অক্ষম।"
-
-msgid "Unable to update FAQ display status."
-msgstr "FAQ প্রদর্শন স্ট্যাটাস আপডেট করতে অক্ষম।"
-
-#: build/admin/airygen-app.js
-msgid "Answers to What You're Probably Thinking"
-msgstr "আপনি সম্ভবত যা ভাবছেন, তার উত্তর"
 
 msgid "Invalid action."
 msgstr "অবৈধ অ্যাকশন।"
@@ -858,21 +665,6 @@ msgstr "সর্বনিম্ন লিংক"
 msgid "Minimum external link count required for pass."
 msgstr "পাস করার জন্য প্রয়োজনীয় সর্বনিম্ন বাহ্যিক লিংক গণনা।"
 
-msgid "Term not found."
-msgstr "টার্ম পাওয়া যায়নি।"
-
-msgid "A valid post or term is required."
-msgstr "একটি বৈধ পোস্ট বা টার্ম প্রয়োজন।"
-
-msgid "Please set a focus keyword before generating."
-msgstr "তৈরির আগে অনুগ্রহ করে একটি ফোকাস কীওয়ার্ড সেট করুন।"
-
-msgid "Unable to generate suggestions."
-msgstr "পরামর্শ তৈরি করতে অক্ষম।"
-
-msgid "Unable to store CTR booster record."
-msgstr "CTR বুস্টার রেকর্ড সংরক্ষণ করতে অক্ষম।"
-
 msgid "Airygen SEO: Core sitemap availability"
 msgstr "Airygen SEO: কোর সাইটম্যাপ উপলভ্যতা"
 
@@ -1106,69 +898,16 @@ msgstr "ডায়াগনস্টিক"
 msgid "Table of contents"
 msgstr "সূচিপত্র"
 
-#: build/classic-editor/airygen-editor.js
-msgid "Unable to load records."
-msgstr "রেকর্ড লোড করতে অক্ষম।"
-
-msgid "Generating suggestions..."
-msgstr "পরামর্শ তৈরি হচ্ছে..."
-
-msgid "Generation failed."
-msgstr "তৈরি করতে ব্যর্থ।"
-
-msgid "Generated successfully. Review and apply from Browse."
-msgstr "সফলভাবে তৈরি হয়েছে। Browse থেকে পর্যালোচনা করুন এবং প্রয়োগ করুন।"
-
-msgid "Select fields and click Apply selected."
-msgstr "ক্ষেত্র নির্বাচন করুন এবং নির্বাচিত প্রয়োগ করুন ক্লিক করুন।"
-
-msgid "No records yet."
-msgstr "এখনো কোনো রেকর্ড নেই।"
-
-msgid "Applied suggestion. Save term to persist changes."
-msgstr "পরামর্শ প্রয়োগ করা হয়েছে। পরিবর্তন স্থায়ী করতে টার্ম সংরক্ষণ করুন।"
-
-msgid "Untitled suggestion"
-msgstr "শিরোনামহীন পরামর্শ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Keyword"
-msgstr "কীওয়ার্ড"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Meta title"
 msgstr "মেটা শিরোনাম"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Meta description"
 msgstr "মেটা বর্ণনা"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Excerpt"
 msgstr "এক্সার্পট"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generating suggestions…"
-msgstr "পরামর্শ তৈরি হচ্ছে…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Refining output…"
-msgstr "আউটপুট পরিমার্জন হচ্ছে…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Almost ready…"
-msgstr "প্রায় প্রস্তুত…"
 
 msgid "Custom SEO title for this taxonomy page. Leave blank to use the default value from settings."
 msgstr "এই taxonomy page-এর জন্য কাস্টম SEO title। settings-এর default মান ব্যবহার করতে খালি রাখুন।"
@@ -1371,22 +1110,6 @@ msgstr "Topic Cluster"
 msgid "Continue with the main article"
 msgstr "মূল article নিয়ে এগিয়ে যান"
 
-msgid "Please add content before generating topics."
-msgstr "বিষয় তৈরির আগে অনুগ্রহ করে কনটেন্ট যোগ করুন।"
-
-msgid "Unable to generate topics."
-msgstr "বিষয় তৈরি করতে অক্ষম।"
-
-msgid "Unable to store topic record."
-msgstr "বিষয়ের রেকর্ড সংরক্ষণ করতে অক্ষম।"
-
-msgid "Unable to update topic display status."
-msgstr "বিষয় প্রদর্শন স্ট্যাটাস আপডেট করতে অক্ষম।"
-
-#: build/admin/airygen-app.js
-msgid "You Might Also Want to Know…"
-msgstr "আপনি হয়তো আরও জানতে চাইতে পারেন…"
-
 msgid "You are not allowed to preview WooCommerce schema."
 msgstr "আপনাকে WooCommerce স্কিমা প্রিভিউ করার অনুমতি নেই।"
 
@@ -1395,29 +1118,6 @@ msgstr "WooCommerce পাওয়া যাচ্ছে না।"
 
 msgid "Open the Airygen SEO dashboard"
 msgstr "Airygen SEO ড্যাশবোর্ড খুলুন"
-
-#. translators: %s: directory path
-#, php-format
-msgid "Unable to create debug directory at %s."
-msgstr "%s-এ ডিবাগ ডিরেক্টরি তৈরি করতে অক্ষম।"
-
-msgid "Subscription has expired."
-msgstr "সাবস্ক্রিপশনের মেয়াদ শেষ হয়েছে।"
-
-msgid "The system is busy. Please try again later."
-msgstr "সিস্টেম ব্যস্ত। অনুগ্রহ করে পরে আবার চেষ্টা করুন।"
-
-msgid "Balance is insufficient. Please top up or wait for the next refresh cycle."
-msgstr "ব্যালেন্স পর্যাপ্ত নয়। অনুগ্রহ করে রিচার্জ করুন বা পরবর্তী রিফ্রেশ সাইকেল পর্যন্ত অপেক্ষা করুন।"
-
-msgid "Update package is authenticated and ready to download."
-msgstr "আপডেট প্যাকেজ প্রমাণীকৃত এবং ডাউনলোড করার জন্য প্রস্তুত।"
-
-msgid "A valid subscription key is required to download and install updates."
-msgstr "আপডেট ডাউনলোড ও ইনস্টল করতে একটি বৈধ সাবস্ক্রিপশন কী প্রয়োজন।"
-
-msgid "Enter your key in Airygen Settings > Subscription."
-msgstr "Airygen Settings > Subscription-এ আপনার কী প্রবেশ করুন।"
 
 #: build/admin/airygen-app.js
 msgid "Close modal"
@@ -1501,14 +1201,6 @@ msgstr "পুনরায় লোড করুন"
 #: build/admin/airygen-app.js
 msgid "More modules"
 msgstr "আরও মডিউল"
-
-#: build/admin/airygen-app.js
-msgid "Starter module"
-msgstr "স্টার্টার মডিউল"
-
-#: build/admin/airygen-app.js
-msgid "Expert module"
-msgstr "বিশেষজ্ঞ মডিউল"
 
 #: build/admin/airygen-app.js
 msgid "Background Process"
@@ -1625,14 +1317,6 @@ msgstr "%s লোড হচ্ছে…"
 msgid "No migration tools available yet."
 msgstr "এখনো কোনো মাইগ্রেশন টুল পাওয়া যাচ্ছে না।"
 
-#. translators: %s is the record type label, such as CTR booster or FAQ.
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "No %s records yet."
-msgstr "এখনো কোনো %s রেকর্ড নেই।"
-
 #: build/admin/airygen-app.js
 msgid "No logs yet."
 msgstr "এখনো কোনো লগ নেই।"
@@ -1663,17 +1347,9 @@ msgid "No %1$s yet. Add one to configure %2$s."
 msgstr "এখনো কোনো %1$s নেই। %2$s কনফিগার করতে একটি যোগ করুন।"
 
 #: build/admin/airygen-app.js
-msgid "Directory not found"
-msgstr "ডিরেক্টরি পাওয়া যায়নি"
-
-#: build/admin/airygen-app.js
 #: build/classic-editor/airygen-editor.js
 msgid "Loading…"
 msgstr "লোড হচ্ছে…"
-
-#: build/admin/airygen-app.js
-msgid "Debug Status"
-msgstr "ডিবাগ স্ট্যাটাস"
 
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
@@ -1686,24 +1362,12 @@ msgid "Enable Debug Mode"
 msgstr "ডিবাগ মোড সক্রিয় করুন"
 
 #: build/admin/airygen-app.js
-msgid "Enable debug logging to file."
-msgstr "ফাইলে ডিবাগ লগিং সক্রিয় করুন।"
-
-#: build/admin/airygen-app.js
 msgid "Force Classic Editor"
 msgstr "Classic Editor জোর করে চালু করুন"
 
 #: build/admin/airygen-app.js
-msgid "Disable the block editor and load Classic Editor for testing."
-msgstr "পরীক্ষার জন্য ব্লক এডিটর নিষ্ক্রিয় করুন এবং Classic Editor লোড করুন।"
-
-#: build/admin/airygen-app.js
 msgid "Debug level"
 msgstr "ডিবাগ স্তর"
-
-#: build/admin/airygen-app.js
-msgid "Choose how much debug information is recorded."
-msgstr "কতটুকু debug information রেকর্ড হবে তা বেছে নিন।"
 
 #: build/admin/airygen-app.js
 msgid "Error"
@@ -1723,76 +1387,12 @@ msgid "Refresh"
 msgstr "রিফ্রেশ করুন"
 
 #: build/admin/airygen-app.js
-msgid "Log Directory"
-msgstr "লগ ডিরেক্টরি"
-
-#: build/admin/airygen-app.js
-msgid "Location where logs are stored."
-msgstr "লগ সংরক্ষণের অবস্থান।"
-
-#: build/admin/airygen-app.js
-msgid "No directory configured"
-msgstr "কোনো ডিরেক্টরি কনফিগার করা নেই"
-
-#: build/admin/airygen-app.js
-msgid "Slug"
-msgstr "স্লাগ"
-
-#: build/admin/airygen-app.js
-msgid "N/A"
-msgstr "প্রযোজ্য নয়"
-
-#: build/admin/airygen-app.js
-msgid "Debug mode must be enabled to view logs."
-msgstr "লগ দেখতে ডিবাগ মোড সক্রিয় করতে হবে।"
-
-#: build/admin/airygen-app.js
-msgid "log content"
-msgstr "লগ কনটেন্ট"
-
-#: build/admin/airygen-app.js
-msgid "Select a log file to view content."
-msgstr "কনটেন্ট দেখতে একটি লগ ফাইল নির্বাচন করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Log Files"
-msgstr "লগ ফাইলসমূহ"
-
-#: build/admin/airygen-app.js
-msgid "Select a log file to view."
-msgstr "দেখার জন্য একটি লগ ফাইল নির্বাচন করুন।"
-
-#: build/admin/airygen-app.js
-msgid "No logs found"
-msgstr "কোনো লগ পাওয়া যায়নি"
-
-#: build/admin/airygen-app.js
-msgid "Load Log"
-msgstr "লগ লোড করুন"
-
-#: build/admin/airygen-app.js
-msgid "Refresh Logs"
-msgstr "লগ রিফ্রেশ করুন"
-
-#: build/admin/airygen-app.js
-msgid "Clear Logs"
-msgstr "লগ পরিষ্কার করুন"
-
-#: build/admin/airygen-app.js
 msgid "Configuration"
 msgstr "কনফিগারেশন"
 
 #: build/admin/airygen-app.js
 msgid "Logs"
 msgstr "লগসমূহ"
-
-#: build/admin/airygen-app.js
-msgid "Debug Information"
-msgstr "ডিবাগ তথ্য"
-
-#: build/admin/airygen-app.js
-msgid "View debug information and logs."
-msgstr "ডিবাগ তথ্য ও লগ দেখুন।"
 
 #: build/admin/airygen-app.js
 msgid "Bring SEO data from other plugins into Airygen SEO. Start with the tools you already use and migrate only what you need."
@@ -1993,124 +1593,8 @@ msgid "Import post-level redirects from SEOPress and add them to Airygen Redirec
 msgstr "SEOPress থেকে পোস্ট-স্তরের রিডাইরেক্ট আমদানি করুন এবং Airygen Redirects-এ যোগ করুন।"
 
 #: build/admin/airygen-app.js
-msgid "Unable to load subscription status."
-msgstr "সাবস্ক্রিপশন স্ট্যাটাস লোড করতে অক্ষম।"
-
-#: build/admin/airygen-app.js
-msgid "API key verified."
-msgstr "API key যাচাই করা হয়েছে।"
-
-#: build/admin/airygen-app.js
-msgid "Unable to verify API key."
-msgstr "API key যাচাই করতে অক্ষম।"
-
-#: build/admin/airygen-app.js
-msgid "API key expired. Please renew your subscription."
-msgstr "API key-এর মেয়াদ শেষ হয়েছে। অনুগ্রহ করে আপনার সাবস্ক্রিপশন নবায়ন করুন।"
-
-#: build/admin/airygen-app.js
-msgid "API key was revoked. Please generate a new key."
-msgstr "API key বাতিল করা হয়েছে। অনুগ্রহ করে একটি নতুন কী তৈরি করুন।"
-
-#: build/admin/airygen-app.js
-msgid "API key does not match this site domain."
-msgstr "API key এই সাইটের ডোমেইনের সাথে মেলে না।"
-
-#: build/admin/airygen-app.js
-msgid "API key is invalid."
-msgstr "API key অবৈধ।"
-
-#: build/admin/airygen-app.js
-msgid "Subscription is active."
-msgstr "সাবস্ক্রিপশন সক্রিয়।"
-
-#: build/admin/airygen-app.js
-msgid "Verify your key to view the period end."
-msgstr "মেয়াদের শেষ দেখতে আপনার কী যাচাই করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Verified"
-msgstr "যাচাই করা হয়েছে"
-
-#: build/admin/airygen-app.js
-msgid "Revoked"
-msgstr "বাতিল করা হয়েছে"
-
-#: build/admin/airygen-app.js
-msgid "Expired"
-msgstr "মেয়াদোত্তীর্ণ"
-
-#: build/admin/airygen-app.js
-msgid "Mismatch"
-msgstr "অমিল"
-
-#: build/admin/airygen-app.js
-msgid "Invalid"
-msgstr "অবৈধ"
-
-#: build/admin/airygen-app.js
-msgid "Missing"
-msgstr "অনুপস্থিত"
-
-#: build/admin/airygen-app.js
-msgid "Refreshing credits, please retry shortly."
-msgstr "ক্রেডিট রিফ্রেশ হচ্ছে, অনুগ্রহ করে শীঘ্রই পুনরায় চেষ্টা করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Unable to load credits right now."
-msgstr "এখন ক্রেডিট লোড করতে অক্ষম।"
-
-#: build/admin/airygen-app.js
-msgid "Verify your key to load credits."
-msgstr "ক্রেডিট লোড করতে আপনার কী যাচাই করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Subscription period"
-msgstr "সাবস্ক্রিপশনের মেয়াদ"
-
-#: build/admin/airygen-app.js
-msgid "Subscription credits"
-msgstr "সাবস্ক্রিপশন ক্রেডিট"
-
-#: build/admin/airygen-app.js
-msgid "Credit pack"
-msgstr "ক্রেডিট প্যাক"
-
-#: build/admin/airygen-app.js
-msgid "Connect your API key to unlock Airygen modules that require cloud services."
-msgstr "cloud service প্রয়োজন এমন Airygen moduleগুলো আনলক করতে আপনার API key সংযুক্ত করুন।"
-
-#: build/admin/airygen-app.js
 msgid "API key"
 msgstr "API key"
-
-#: build/admin/airygen-app.js
-msgid "Verify your API key to unlock cloud features."
-msgstr "ক্লাউড ফিচার আনলক করতে আপনার API key যাচাই করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Your key is active and linked to this site."
-msgstr "আপনার কী সক্রিয় এবং এই সাইটের সাথে লিংক করা।"
-
-#: build/admin/airygen-app.js
-msgid "Enter a new key"
-msgstr "একটি নতুন কী প্রবেশ করুন"
-
-#: build/admin/airygen-app.js
-msgid "Enter your API key"
-msgstr "আপনার API key প্রবেশ করুন"
-
-#: build/admin/airygen-app.js
-msgid "Enter and verify your key to enable cloud features."
-msgstr "ক্লাউড ফিচার সক্রিয় করতে আপনার কী প্রবেশ করুন এবং যাচাই করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Verifying…"
-msgstr "যাচাই হচ্ছে…"
-
-#: build/admin/airygen-app.js
-msgid "Verify & Save"
-msgstr "যাচাই করুন ও সংরক্ষণ করুন"
 
 #: build/admin/airygen-app.js
 msgid "Status"
@@ -2121,64 +1605,10 @@ msgid "Debug"
 msgstr "ডিবাগ"
 
 #: build/admin/airygen-app.js
-msgid "Continue subscription"
-msgstr "সাবস্ক্রিপশন চালিয়ে যান"
-
-#: build/admin/airygen-app.js
-msgid "AI-driven modules."
-msgstr "AI-চালিত মডিউল।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content Blueprint"
-msgstr "কনটেন্ট ব্লুপ্রিন্ট"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Article Builder"
-msgstr "আর্টিকেল বিল্ডার"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Deep FAQ"
-msgstr "গভীর FAQ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic Expansion"
-msgstr "বিষয় সম্প্রসারণ"
-
-#: build/admin/airygen-app.js
-msgid "Create compelling titles and meta descriptions to increase SERP click-through rate."
-msgstr "SERP click-through rate বাড়াতে আকর্ষণীয় title ও মেটা বর্ণনা তৈরি করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Generate structured outlines with section summaries to plan your focus keyphrase."
-msgstr "আপনার ফোকাস কীফ্রেজ পরিকল্পনা করতে অংশের সারসংক্ষেপ সহ কাঠামোবদ্ধ আউটলাইন তৈরি করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Provide draft ideas to speed up writing."
-msgstr "লেখা দ্রুত করতে ড্রাফটের ধারণা প্রদান করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Improve LLM recommendation visibility and time on page."
-msgstr "LLM সুপারিশ দৃশ্যমানতা এবং পৃষ্ঠায় সময় উন্নত করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Reduce bounce rate and pogo-sticking to preserve SEO signals."
-msgstr "SEO সংকেত সংরক্ষণ করতে বাউন্স রেট ও পোগো-স্টিকিং কমান।"
-
-#: build/admin/airygen-app.js
 msgid "Records"
 msgstr "রেকর্ড"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Loading records…"
 msgstr "রেকর্ড লোড হচ্ছে…"
 
@@ -2199,15 +1629,6 @@ msgid "Next"
 msgstr "পরবর্তী"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load CTR booster records."
-msgstr "CTR বুস্টার রেকর্ড লোড করতে অক্ষম।"
-
-#: build/admin/airygen-app.js
-msgid "Created at"
-msgstr "তৈরির সময়"
-
-#: build/admin/airygen-app.js
 msgid "Actions"
 msgstr "অ্যাকশনসমূহ"
 
@@ -2216,200 +1637,8 @@ msgid "Record deleted."
 msgstr "রেকর্ড মুছে গেছে।"
 
 #: build/admin/airygen-app.js
-msgid "Deleting…"
-msgstr "মুছে ফেলা হচ্ছে…"
-
-#: build/admin/airygen-app.js
 msgid "Delete"
 msgstr "মুছুন"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for SERP CTR Booster."
-msgstr "SERP CTR Booster-এর default preference কনফিগার করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated titles and descriptions."
-msgstr "AI-generated title ও description-এর output language বেছে নিন।"
-
-#: build/admin/airygen-app.js
-msgid "Always include the focus keyword in AI suggestions."
-msgstr "AI পরামর্শে সবসময় ফোকাস কীওয়ার্ড অন্তর্ভুক্ত করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Generated CTR booster suggestions. Records can be removed but not edited."
-msgstr "CTR বুস্টার পরামর্শ তৈরি হয়েছে। রেকর্ড সরানো যাবে কিন্তু সম্পাদনা করা যাবে না।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "CTR booster"
-msgstr "CTR বুস্টার"
-
-#: build/admin/airygen-app.js
-msgid "More info"
-msgstr "আরও তথ্য"
-
-#: build/admin/airygen-app.js
-msgid "AI Prompt Templates"
-msgstr "AI প্রম্পট টেমপ্লেট"
-
-#: build/admin/airygen-app.js
-msgid "Choose scenario, content type, and tone templates for AI generation."
-msgstr "AI generation-এর জন্য scenario, content type ও tone template বেছে নিন।"
-
-#: build/admin/airygen-app.js
-msgid "Scenarios"
-msgstr "দৃশ্যকল্পসমূহ"
-
-#: build/admin/airygen-app.js
-msgid "Auto-sets content type + tone"
-msgstr "কনটেন্ট টাইপ + টোন স্বয়ংক্রিয়ভাবে সেট করে"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content type"
-msgstr "কনটেন্টের ধরন"
-
-#: build/admin/airygen-app.js
-msgid "Adjust manually if needed"
-msgstr "প্রয়োজনে ম্যানুয়ালি সামঞ্জস্য করুন"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Tone"
-msgstr "টোন"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load Content Blueprint records."
-msgstr "Content Blueprint রেকর্ড লোড করতে অক্ষম।"
-
-#: build/admin/airygen-app.js
-msgid "Target words"
-msgstr "লক্ষ্য শব্দ"
-
-#: build/admin/airygen-app.js
-msgid "Generated words"
-msgstr "তৈরিকৃত শব্দ"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for Content Blueprint."
-msgstr "Content Blueprint-এর default preference কনফিগার করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated blueprints."
-msgstr "AI-generated blueprintগুলোর output language বেছে নিন।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Depth"
-msgstr "গভীরতা"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "H2 only"
-msgstr "শুধুমাত্র H2"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "H2 + H3"
-msgstr "H2 + H3"
-
-#: build/admin/airygen-app.js
-msgid "Choose how deep the outline should go."
-msgstr "outline কত গভীর পর্যন্ত যাবে তা বেছে নিন।"
-
-#: build/admin/airygen-app.js
-msgid "Length"
-msgstr "দৈর্ঘ্য"
-
-#: build/admin/airygen-app.js
-msgid "More items consume more credits and take longer to generate."
-msgstr "বেশি আইটেম বেশি ক্রেডিট খরচ করে এবং তৈরি করতে বেশি সময় লাগে।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Basic (400 words)"
-msgstr "বেসিক (400 শব্দ)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Standard (1000 words)"
-msgstr "মানক (১০০০ শব্দ)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Deep (1600 words)"
-msgstr "গভীর (১৬০০ শব্দ)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Pillar (2200 words)"
-msgstr "পিলার (২২০০ শব্দ)"
-
-#: build/admin/airygen-app.js
-msgid "Match output length to your SEO goal."
-msgstr "আপনার SEO লক্ষ্যের সাথে আউটপুট দৈর্ঘ্য মেলান।"
-
-#: build/admin/airygen-app.js
-msgid "Include the focus keyword in generated outlines."
-msgstr "তৈরিকৃত আউটলাইনে ফোকাস কীওয়ার্ড অন্তর্ভুক্ত করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Set keyword inclusion targets for each content length."
-msgstr "প্রতিটি কনটেন্টের দৈর্ঘ্যের জন্য কীওয়ার্ড অন্তর্ভুক্তির লক্ষ্য সেট করুন।"
-
-#: build/admin/airygen-app.js
-msgid "H1 keywords"
-msgstr "H1 কীওয়ার্ড"
-
-#: build/admin/airygen-app.js
-msgid "H2 keywords"
-msgstr "H2 কীওয়ার্ড"
-
-#: build/admin/airygen-app.js
-msgid "H3 keywords"
-msgstr "H3 কীওয়ার্ড"
-
-#: build/admin/airygen-app.js
-msgid "Generated content blueprints. Records can be removed but not edited."
-msgstr "কনটেন্ট ব্লুপ্রিন্ট তৈরি হয়েছে। রেকর্ড সরানো যাবে কিন্তু সম্পাদনা করা যাবে না।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load Article Builder records."
-msgstr "Article Builder রেকর্ড লোড করতে অক্ষম।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic"
-msgstr "বিষয়"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for Article Builder."
-msgstr "Article Builder-এর default preference কনফিগার করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated articles."
-msgstr "AI-generated articleগুলোর output language বেছে নিন।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Article length target"
-msgstr "আর্টিকেলের দৈর্ঘ্যের লক্ষ্য"
-
-#: build/admin/airygen-app.js
-msgid "Match draft length to your publishing goal."
-msgstr "আপনার প্রকাশনার লক্ষ্যের সাথে ড্রাফট দৈর্ঘ্য মেলান।"
-
-#: build/admin/airygen-app.js
-msgid "Generated article drafts. Records can be removed but not edited."
-msgstr "আর্টিকেলের ড্রাফট তৈরি হয়েছে। রেকর্ড সরানো যাবে কিন্তু সম্পাদনা করা যাবে না।"
 
 #: build/admin/airygen-app.js
 msgid "Set transparent color"
@@ -2538,16 +1767,6 @@ msgid "Font size"
 msgstr "ফন্ট আকার"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "FAQ"
-msgstr "FAQ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load FAQ records."
-msgstr "FAQ রেকর্ড লোড করতে অক্ষম।"
-
-#: build/admin/airygen-app.js
 msgid "Snow Slate"
 msgstr "Snow Slate"
 
@@ -2558,10 +1777,6 @@ msgstr "তীক্ষ্ণ স্লেট টেক্সট সহ নি�
 #: build/admin/airygen-app.js
 msgid "Honey Paper"
 msgstr "Honey Paper"
-
-#: build/admin/airygen-app.js
-msgid "Soft parchment yellow for warm, readable FAQs."
-msgstr "উষ্ণ, পাঠযোগ্য FAQ-এর জন্য নরম চামড়া হলুদ।"
 
 #: build/admin/airygen-app.js
 msgid "Sky Breeze"
@@ -2600,10 +1815,6 @@ msgid "Post"
 msgstr "পোস্ট"
 
 #: build/admin/airygen-app.js
-msgid "Question"
-msgstr "প্রশ্ন"
-
-#: build/admin/airygen-app.js
 msgid "Layout"
 msgstr "লেআউট"
 
@@ -2612,10 +1823,6 @@ msgstr "লেআউট"
 #: build/classic-editor/airygen-editor.js
 msgid "Preview"
 msgstr "প্রিভিউ"
-
-#: build/admin/airygen-app.js
-msgid "Configure manual output and automatic FAQ injection."
-msgstr "manual output ও automatic FAQ injection কনফিগার করুন।"
 
 #: build/admin/airygen-app.js
 msgid "Allow template function, shortcode, and block output."
@@ -2633,10 +1840,6 @@ msgid "Block"
 msgstr "ব্লক"
 
 #: build/admin/airygen-app.js
-msgid "Automatically inject FAQ output into matched post types."
-msgstr "মিল থাকা পোস্ট টাইপে FAQ আউটপুট স্বয়ংক্রিয়ভাবে ইনজেক্ট করুন।"
-
-#: build/admin/airygen-app.js
 msgid "Insert position"
 msgstr "ঢোকানোর অবস্থান"
 
@@ -2649,251 +1852,28 @@ msgid "After content"
 msgstr "কনটেন্টের পরে"
 
 #: build/admin/airygen-app.js
-msgid "Choose where FAQ output is injected in post content."
-msgstr "post content-এর কোথায় FAQ output inject হবে তা বেছে নিন।"
-
-#: build/admin/airygen-app.js
-msgid "Frequently Asked Questions"
-msgstr "প্রায়শই জিজ্ঞাসিত প্রশ্নসমূহ"
-
-#: build/admin/airygen-app.js
-msgid "AI Generation"
-msgstr "AI জেনারেশন"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for FAQ generation."
-msgstr "FAQ generation-এর default preference কনফিগার করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated FAQs."
-msgstr "AI-generated FAQগুলোর output language বেছে নিন।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Answer length"
-msgstr "উত্তরের দৈর্ঘ্য"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Short"
-msgstr "ছোট"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Medium"
-msgstr "মাঝারি"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Long"
-msgstr "দীর্ঘ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Choose how long each answer should be."
-msgstr "প্রতিটি answer কত দীর্ঘ হবে তা বেছে নিন।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Question count"
-msgstr "প্রশ্নের গণনা"
-
-#: build/admin/airygen-app.js
-msgid "How many FAQ items to generate per request."
-msgstr "প্রতিটি অনুরোধে কতটি FAQ আইটেম তৈরি করতে হবে।"
-
-#: build/admin/airygen-app.js
 msgid "Scope"
 msgstr "স্কোপ"
-
-#: build/admin/airygen-app.js
-msgid "Choose which post types can receive automatic FAQ injection."
-msgstr "কোন post typeগুলো automatic FAQ injection পেতে পারবে তা বেছে নিন।"
 
 #: build/admin/airygen-app.js
 msgid "Templates"
 msgstr "টেমপ্লেটসমূহ"
 
 #: build/admin/airygen-app.js
-msgid "Choose a preset style for FAQ output."
-msgstr "FAQ output-এর জন্য একটি preset style বেছে নিন।"
-
-#: build/admin/airygen-app.js
 msgid "Style"
 msgstr "স্টাইল"
-
-#: build/admin/airygen-app.js
-msgid "Adjust spacing and borders for list and collapse layouts."
-msgstr "লিস্ট ও কোলাপ্স লেআউটের স্পেসিং এবং বর্ডার সামঞ্জস্য করুন।"
 
 #: build/admin/airygen-app.js
 msgid "List"
 msgstr "তালিকা"
 
 #: build/admin/airygen-app.js
-msgid "Collapse"
-msgstr "সংকুচিত করুন"
-
-#: build/admin/airygen-app.js
-msgid "Show FAQ border"
-msgstr "FAQ বর্ডার দেখান"
-
-#: build/admin/airygen-app.js
-msgid "Draw a border around the FAQ container."
-msgstr "FAQ কন্টেইনারের চারপাশে একটি বর্ডার আঁকুন।"
-
-#: build/admin/airygen-app.js
-msgid "Select the line style for the FAQ container border."
-msgstr "FAQ কন্টেইনার বর্ডারের লাইন স্টাইল নির্বাচন করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Set the border color for the list container."
-msgstr "তালিকা কন্টেইনারের বর্ডার রং সেট করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Adjust the thickness of the FAQ border."
-msgstr "FAQ বর্ডারের পুরুত্ব সামঞ্জস্য করুন।"
-
-#: build/admin/airygen-app.js
-msgid "FAQ padding"
-msgstr "FAQ প্যাডিং"
-
-#: build/admin/airygen-app.js
-msgid "Padding inside the FAQ list container."
-msgstr "FAQ তালিকা কন্টেইনারের ভেতরে প্যাডিং।"
-
-#: build/admin/airygen-app.js
-msgid "Background color of the FAQ list container."
-msgstr "FAQ তালিকা কন্টেইনারের ব্যাকগ্রাউন্ড রঙ।"
-
-#: build/admin/airygen-app.js
-msgid "Question font color"
-msgstr "প্রশ্নের ফন্ট রং"
-
-#: build/admin/airygen-app.js
-msgid "Text color for each FAQ question."
-msgstr "প্রতিটি FAQ প্রশ্নের টেক্সট রং।"
-
-#: build/admin/airygen-app.js
-msgid "Question font size"
-msgstr "প্রশ্নের ফন্ট আকার"
-
-#: build/admin/airygen-app.js
-msgid "Font size used for each question line."
-msgstr "প্রতিটি প্রশ্ন লাইনের জন্য ব্যবহৃত ফন্ট আকার।"
-
-#: build/admin/airygen-app.js
-msgid "Answer font color"
-msgstr "উত্তরের ফন্টের রঙ"
-
-#: build/admin/airygen-app.js
-msgid "Text color for each answer line."
-msgstr "প্রতিটি উত্তর লাইনের টেক্সট রং।"
-
-#: build/admin/airygen-app.js
-msgid "Answer font size"
-msgstr "উত্তরের ফন্ট সাইজ"
-
-#: build/admin/airygen-app.js
-msgid "Font size for the answer text."
-msgstr "উত্তর টেক্সটের ফন্ট আকার।"
-
-#: build/admin/airygen-app.js
-msgid "Collapse button"
-msgstr "সংকুচিত করার বোতাম"
-
-#: build/admin/airygen-app.js
-msgid "Collapse answers"
-msgstr "উত্তরগুলো সংকুচিত করুন"
-
-#: build/admin/airygen-app.js
-msgid "Background for the plus/minus button."
-msgstr "plus/minus বোতামের ব্যাকগ্রাউন্ড।"
-
-#: build/admin/airygen-app.js
-msgid "Icon color"
-msgstr "আইকন রং"
-
-#: build/admin/airygen-app.js
-msgid "Color for the plus/minus icon."
-msgstr "plus/minus icon-এর রঙ।"
-
-#: build/admin/airygen-app.js
-msgid "Border color for the toggle button."
-msgstr "টগল বোতামের বর্ডারের রঙ।"
-
-#: build/admin/airygen-app.js
-msgid "Thickness of the toggle button border."
-msgstr "টগল বাটনের বর্ডারের পুরুত্ব।"
-
-#: build/admin/airygen-app.js
-msgid "Background color for each question row."
-msgstr "প্রতিটি প্রশ্ন সারির ব্যাকগ্রাউন্ড রঙ।"
-
-#: build/admin/airygen-app.js
 msgid "Font color"
 msgstr "ফন্ট রং"
 
 #: build/admin/airygen-app.js
-msgid "Text color for the question title."
-msgstr "প্রশ্নের শিরোনামের টেক্সট রং।"
-
-#: build/admin/airygen-app.js
-msgid "Border color around each question row."
-msgstr "প্রতিটি প্রশ্ন সারির চারপাশের বর্ডারের রঙ।"
-
-#: build/admin/airygen-app.js
-msgid "Line style for the question border."
-msgstr "প্রশ্নের বর্ডারের লাইন স্টাইল।"
-
-#: build/admin/airygen-app.js
-msgid "Font size for the question text."
-msgstr "প্রশ্ন টেক্সটের ফন্ট আকার।"
-
-#: build/admin/airygen-app.js
-msgid "Padding inside each question row."
-msgstr "প্রতিটি প্রশ্ন সারির ভেতরে প্যাডিং।"
-
-#: build/admin/airygen-app.js
 msgid "Gap"
 msgstr "ফাঁক"
-
-#: build/admin/airygen-app.js
-msgid "Spacing between each question row."
-msgstr "প্রতিটি প্রশ্ন সারির মধ্যে স্পেসিং।"
-
-#: build/admin/airygen-app.js
-msgid "Keep open"
-msgstr "খোলা রাখুন"
-
-#: build/admin/airygen-app.js
-msgid "Allow multiple answers to stay open."
-msgstr "একাধিক উত্তর খোলা রাখতে দিন।"
-
-#: build/admin/airygen-app.js
-msgid "Answer"
-msgstr "উত্তর"
-
-#: build/admin/airygen-app.js
-msgid "Background for the expanded answer area."
-msgstr "প্রসারিত উত্তরের এরিয়ার ব্যাকগ্রাউন্ড।"
-
-#: build/admin/airygen-app.js
-msgid "Text color for the answer content."
-msgstr "উত্তর কনটেন্টের টেক্সট রং।"
-
-#: build/admin/airygen-app.js
-msgid "Padding inside the answer panel."
-msgstr "উত্তর প্যানেলের ভেতরে প্যাডিং।"
-
-#: build/admin/airygen-app.js
-msgid "Preview may differ from the live site because theme styles are applied there."
-msgstr "প্রিভিউ লাইভ সাইট থেকে ভিন্ন হতে পারে কারণ সেখানে থিম স্টাইল প্রয়োগ হয়।"
 
 #: build/admin/airygen-app.js
 msgid "Laptop"
@@ -2906,18 +1886,6 @@ msgstr "ট্যাবলেট"
 #: build/admin/airygen-app.js
 msgid "Cellphone"
 msgstr "মোবাইল ফোন"
-
-#: build/admin/airygen-app.js
-msgid "FAQ preview"
-msgstr "FAQ প্রিভিউ"
-
-#: build/admin/airygen-app.js
-msgid "Preview is not available."
-msgstr "প্রিভিউ পাওয়া যাচ্ছে না।"
-
-#: build/admin/airygen-app.js
-msgid "Generated FAQ records. Records can be removed but not edited."
-msgstr "FAQ রেকর্ড তৈরি হয়েছে। রেকর্ড সরানো যাবে কিন্তু সম্পাদনা করা যাবে না।"
 
 #: build/admin/airygen-app.js
 msgid "Section body container"
@@ -2972,354 +1940,18 @@ msgid "Indent"
 msgstr "ইন্ডেন্ট"
 
 #: build/admin/airygen-app.js
-msgid "topic expansion"
-msgstr "বিষয় সম্প্রসারণ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load topic records."
-msgstr "বিষয়ের রেকর্ড লোড করতে অক্ষম।"
-
-#: build/admin/airygen-app.js
-msgid "Display"
-msgstr "প্রদর্শন"
-
-#: build/admin/airygen-app.js
-msgid "Shown"
-msgstr "দেখানো হচ্ছে"
-
-#: build/admin/airygen-app.js
-msgid "Hidden"
-msgstr "লুকানো"
-
-#: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "View"
 msgstr "দেখুন"
 
 #: build/admin/airygen-app.js
-msgid "Soft parchment yellow for warm, readable topics."
-msgstr "উষ্ণ, পাঠযোগ্য বিষয়গুলোর জন্য নরম চামড়া হলুদ।"
-
-#: build/admin/airygen-app.js
-msgid "Configure manual output and automatic topic expansion injection."
-msgstr "manual output ও automatic topic expansion injection কনফিগার করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Automatically inject topic expansion output into content."
-msgstr "Topic Expansion আউটপুট স্বয়ংক্রিয়ভাবে কনটেন্টে ইনজেক্ট করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Choose where topic expansion output is injected in post content."
-msgstr "post content-এর কোথায় topic expansion output inject হবে তা বেছে নিন।"
-
-#: build/admin/airygen-app.js
-msgid "Set how AI generates related topics."
-msgstr "AI কীভাবে সম্পর্কিত বিষয় তৈরি করে তা সেট করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for related topics."
-msgstr "related topicগুলোর output language বেছে নিন।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic length"
-msgstr "বিষয়ের দৈর্ঘ্য"
-
-#: build/admin/airygen-app.js
-msgid "Choose the length for each topic suggestion."
-msgstr "প্রতিটি topic suggestion-এর দৈর্ঘ্য বেছে নিন।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic count"
-msgstr "বিষয়ের গণনা"
-
-#: build/admin/airygen-app.js
-msgid "How many related topics to generate per request."
-msgstr "প্রতিটি অনুরোধে কতটি সম্পর্কিত বিষয় তৈরি করতে হবে।"
-
-#: build/admin/airygen-app.js
-msgid "Pick a preset theme for topic output."
-msgstr "বিষয় আউটপুটের জন্য একটি প্রিসেট থিম বেছে নিন।"
-
-#: build/admin/airygen-app.js
-msgid "Adjust how the related topics list appears on the page."
-msgstr "পৃষ্ঠায় সম্পর্কিত বিষয়ের তালিকা কীভাবে প্রদর্শিত হবে তা সামঞ্জস্য করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Set whether topic text is bold, italic, or underlined."
-msgstr "বিষয়ের টেক্সট বোল্ড, ইটালিক বা আন্ডারলাইন হবে কিনা সেট করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Color for each topic link."
-msgstr "প্রতিটি topic link-এর রঙ।"
-
-#: build/admin/airygen-app.js
-msgid "Font size used for each topic link."
-msgstr "প্রতিটি বিষয়ের লিংকের জন্য ব্যবহৃত ফন্ট আকার।"
-
-#: build/admin/airygen-app.js
 msgid "Choose whether each line uses bullets, numbers, or plain text."
 msgstr "প্রতিটি line-এ bullet, number নাকি plain text ব্যবহার হবে তা বেছে নিন।"
 
 #: build/admin/airygen-app.js
-msgid "Set vertical spacing between each topic item."
-msgstr "প্রতিটি বিষয়ের আইটেমের মধ্যে উল্লম্ব স্পেসিং সেট করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Topic Expansion preview"
-msgstr "বিষয় সম্প্রসারণ প্রিভিউ"
-
-#: build/admin/airygen-app.js
 msgid "Preview is unavailable."
 msgstr "প্রিভিউ অনুপলব্ধ।"
-
-#: build/admin/airygen-app.js
-msgid "SEO safety"
-msgstr "SEO নিরাপত্তা"
-
-#: build/admin/airygen-app.js
-msgid "Allowing indexation can briefly lift long-tail traffic, but search engines may later remove those pages and harm site-wide SEO authority. Reduce duplication and focus on real user value."
-msgstr "ইনডেক্সিং অনুমোদন করলে স্বল্প সময়ের জন্য long-tail traffic বাড়তে পারে, কিন্তু পরে সার্চ ইঞ্জিন সেই পৃষ্ঠাগুলো সরিয়ে দিতে পারে এবং এতে সাইটজুড়ে SEO authority ক্ষতিগ্রস্ত হতে পারে। ডুপ্লিকেশন কমান এবং বাস্তব ব্যবহারকারীর মূল্যকে অগ্রাধিকার দিন।"
-
-#: build/admin/airygen-app.js
-msgid "Prevent search engines from indexing highly repetitive, low-quality content."
-msgstr "অত্যন্ত পুনরাবৃত্তিমূলক, নিম্নমানের কনটেন্ট ইন্ডেক্স করা থেকে সার্চ ইঞ্জিনকে বিরত করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Disable indexing"
-msgstr "ইন্ডেক্সিং নিষ্ক্রিয় করুন"
-
-#: build/admin/airygen-app.js
-msgid "Add nofollow to virtual links"
-msgstr "ভার্চুয়াল লিংক-এ nofollow যোগ করুন"
-
-#: build/admin/airygen-app.js
-msgid "Add rel=\"nofollow\" to reduce crawl budget spent on generated links."
-msgstr "জেনারেট করা লিংকে ব্যয় হওয়া ক্রল বাজেট কমাতে rel=\"nofollow\" যোগ করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Generated topic suggestions. Records can be removed but not edited."
-msgstr "বিষয়ের পরামর্শ তৈরি হয়েছে। রেকর্ড সরানো যাবে কিন্তু সম্পাদনা করা যাবে না।"
-
-#: build/admin/airygen-app.js
-msgid "Auto detect"
-msgstr "স্বয়ংক্রিয়ভাবে শনাক্ত করুন"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "English (United States)"
-msgstr "ইংরেজি (মার্কিন যুক্তরাষ্ট্র)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "English"
-msgstr "ইংরেজি"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Chinese (Traditional)"
-msgstr "চীনা (প্রথাগত)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Chinese (Simplified)"
-msgstr "চীনা (সরলীকৃত)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Japanese"
-msgstr "জাপানিজ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Korean"
-msgstr "কোরিয়ান"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Technology"
-msgstr "প্রযুক্তি"
-
-#: build/admin/airygen-app.js
-msgid "Product, engineering, AI, and system-focused technical content."
-msgstr "প্রোডাক্ট, ইঞ্জিনিয়ারিং, AI এবং সিস্টেম-কেন্দ্রিক প্রযুক্তিগত কনটেন্ট।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Business"
-msgstr "ব্যবসা"
-
-#: build/admin/airygen-app.js
-msgid "Growth, operations, strategy, and outcome-oriented business content."
-msgstr "প্রবৃদ্ধি, পরিচালনা, কৌশল এবং ফলাফল-উন্মুখ ব্যবসায়িক কনটেন্ট।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Finance"
-msgstr "অর্থনীতি"
-
-#: build/admin/airygen-app.js
-msgid "Numbers-first finance and investment analysis with risk context."
-msgstr "ঝুঁকির প্রসঙ্গ সহ সংখ্যা-প্রথম অর্থ ও বিনিয়োগ বিশ্লেষণ।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Health"
-msgstr "স্বাস্থ্য"
-
-#: build/admin/airygen-app.js
-msgid "Evidence-based health content with cautious and compliant language."
-msgstr "সতর্ক ও সম্মতিপূর্ণ ভাষায় প্রমাণ-ভিত্তিক স্বাস্থ্য কনটেন্ট।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Lifestyle"
-msgstr "জীবনধারা"
-
-#: build/admin/airygen-app.js
-msgid "Practical lifestyle advice with real-world trade-offs."
-msgstr "বাস্তব জীবনের আপস সহ ব্যবহারিক জীবনধারার পরামর্শ।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Education"
-msgstr "শিক্ষা"
-
-#: build/admin/airygen-app.js
-msgid "Learning-focused content with clear outcomes and methods."
-msgstr "স্পষ্ট ফলাফল ও পদ্ধতি সহ শিক্ষা-কেন্দ্রিক কনটেন্ট।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Professional"
-msgstr "পেশাদার"
-
-#: build/admin/airygen-app.js
-msgid "Domain-expert content for consulting and regulated industries."
-msgstr "পরামর্শ ও নিয়ন্ত্রিত শিল্পের জন্য ডোমেইন-বিশেষজ্ঞ কনটেন্ট।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "General"
-msgstr "সাধারণ"
-
-#: build/admin/airygen-app.js
-msgid "Balanced, broadly readable content for mixed audiences."
-msgstr "মিশ্র পাঠকের জন্য ভারসাম্যপূর্ণ, সহজপাঠ্য কনটেন্ট।"
-
-#: build/admin/airygen-app.js
-msgid "Formal, precise, and decision-ready writing style."
-msgstr "আনুষ্ঠানিক, নির্ভুল এবং সিদ্ধান্ত-প্রস্তুত লেখার ধরন।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Conversational"
-msgstr "কথোপকথনধর্মী"
-
-#: build/admin/airygen-app.js
-msgid "Natural and friendly style for broad readability."
-msgstr "ব্যাপক পাঠযোগ্যতার জন্য স্বাভাবিক ও বন্ধুত্বপূর্ণ ধরন।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Technical"
-msgstr "প্রযুক্তিগত"
-
-#: build/admin/airygen-app.js
-msgid "Spec-like style with implementation detail and precision."
-msgstr "বাস্তবায়নের বিস্তারিত ও নির্ভুলতা সহ স্পেসিফিকেশন-সদৃশ স্টাইল।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Storytelling"
-msgstr "গল্প বলা"
-
-#: build/admin/airygen-app.js
-msgid "Narrative-led style with clear takeaways and context."
-msgstr "স্পষ্ট উপসংহার ও প্রসঙ্গ সহ বর্ণনা-নেতৃত্বাধীন ধরন।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Instructional"
-msgstr "নির্দেশমূলক"
-
-#: build/admin/airygen-app.js
-msgid "Action-first, step-by-step guidance style."
-msgstr "অ্যাকশন-প্রথম, ধাপে-ধাপে নির্দেশনার ধরন।"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Minimalist"
-msgstr "মিনিমালিস্ট"
-
-#: build/admin/airygen-app.js
-msgid "Compact, direct writing style with minimal filler."
-msgstr "অপ্রয়োজনীয় বাড়তি কথা কম রেখে সংক্ষিপ্ত ও সরাসরি লেখার ধরন।"
-
-#: build/admin/airygen-app.js
-msgid "Quick answers for long‑tail keywords and fast indexing."
-msgstr "লং-টেইল কীওয়ার্ড ও দ্রুত ইন্ডেক্সিংয়ের জন্য দ্রুত উত্তর।"
-
-#: build/admin/airygen-app.js
-msgid "Balanced depth for most SEO topics."
-msgstr "অধিকাংশ SEO টপিকের জন্য ভারসাম্যপূর্ণ গভীরতা।"
-
-#: build/admin/airygen-app.js
-msgid "More detail for competitive keywords and comparisons."
-msgstr "প্রতিযোগিতামূলক কীওয়ার্ড ও তুলনার জন্য আরও বিস্তারিত।"
-
-#: build/admin/airygen-app.js
-msgid "The main article in a topic cluster that everything links to."
-msgstr "টপিক ক্লাস্টারের মূল আর্টিকেল যেটিতে সব কিছু লিংক করে।"
-
-#: build/admin/airygen-app.js
-msgid "Business report"
-msgstr "ব্যবসার প্রতিবেদন"
-
-#: build/admin/airygen-app.js
-msgid "Data-driven structure for decision-making and business review."
-msgstr "সিদ্ধান্ত গ্রহণ ও ব্যবসায়িক পর্যালোচনার জন্য ডেটা-চালিত কাঠামো।"
-
-#: build/admin/airygen-app.js
-msgid "Tech blog"
-msgstr "প্রযুক্তি ব্লগ"
-
-#: build/admin/airygen-app.js
-msgid "Technical but easy-to-read format for broader audiences."
-msgstr "বৃহত্তর দর্শকদের জন্য প্রযুক্তিগত কিন্তু সহজে পড়া যায় এমন ফরম্যাট।"
-
-#: build/admin/airygen-app.js
-msgid "Tutorial"
-msgstr "টিউটোরিয়াল"
-
-#: build/admin/airygen-app.js
-msgid "Step-by-step teaching format focused on actionable learning."
-msgstr "কার্যকর শিক্ষার উপর মনোযোগ দিয়ে ধাপে-ধাপে শিক্ষণ ফরম্যাট।"
-
-#: build/admin/airygen-app.js
-msgid "Marketing content"
-msgstr "মার্কেটিং কনটেন্ট"
-
-#: build/admin/airygen-app.js
-msgid "Story-led format focused on engagement and conversion."
-msgstr "এনগেজমেন্ট ও রূপান্তরের উপর মনোযোগ দিয়ে গল্প-নেতৃত্বাধীন ফরম্যাট।"
-
-#: build/admin/airygen-app.js
-msgid "Technical document"
-msgstr "প্রযুক্তিগত নথি"
-
-#: build/admin/airygen-app.js
-msgid "Precise engineering-style format for implementation details."
-msgstr "বাস্তবায়নের বিস্তারিতের জন্য নির্ভুল ইঞ্জিনিয়ারিং-স্টাইল ফরম্যাট।"
-
-#: build/admin/airygen-app.js
-msgid "AI-assisted writing and strategic planning for SEO content."
-msgstr "SEO কনটেন্টের জন্য AI-সহায়িত লেখা এবং কৌশলগত পরিকল্পনা।"
 
 #: build/admin/airygen-app.js
 msgid "Configure"
@@ -3616,7 +2248,6 @@ msgid "Name"
 msgstr "নাম"
 
 #: build/admin/airygen-app.js
-#: build/classic-editor/airygen-editor.js
 msgid "Pillar"
 msgstr "পিলার"
 
@@ -5950,88 +4581,16 @@ msgid "Open in a new tab to verify the generated sitemap index."
 msgstr "তৈরিকৃত সাইটম্যাপ ইন্ডেক্স যাচাই করতে নতুন ট্যাবে খুলুন।"
 
 #: build/admin/airygen-app.js
-msgid "Head"
-msgstr "হেড"
-
-#: build/admin/airygen-app.js
-msgid "Snippets in this area are injected into the <head> section."
-msgstr "এই এলাকার স্নিপেটগুলো <head> অংশে ইনজেক্ট করা হয়।"
-
-#: build/admin/airygen-app.js
 msgid "Body"
 msgstr "বডি"
-
-#: build/admin/airygen-app.js
-msgid "Snippets in this area are injected right after <body>."
-msgstr "এই এলাকার স্নিপেটগুলো <body>-এর ঠিক পরে ইনজেক্ট করা হয়।"
 
 #: build/admin/airygen-app.js
 msgid "Footer"
 msgstr "ফুটার"
 
 #: build/admin/airygen-app.js
-msgid "Snippets in this area are injected before </body>."
-msgstr "এই এলাকার স্নিপেটগুলো </body>-এর আগে ইনজেক্ট করা হয়।"
-
-#: build/admin/airygen-app.js
-msgid "Disabled snippets staging area"
-msgstr "নিষ্ক্রিয় স্নিপেটের স্টেজিং এলাকা"
-
-#: build/admin/airygen-app.js
-msgid "Keep snippets here when you do not want them rendered."
-msgstr "রেন্ডার করতে না চাইলে এখানে স্নিপেট রাখুন।"
-
-#: build/admin/airygen-app.js
 msgid "No description"
 msgstr "কোনো বর্ণনা নেই"
-
-#: build/admin/airygen-app.js
-msgid "Code Snippets"
-msgstr "কোড স্নিপেট"
-
-#: build/admin/airygen-app.js
-msgid "Configure GA4, GTM, and custom tracking snippets for your site."
-msgstr "আপনার সাইটের জন্য GA4, GTM এবং custom tracking snippet কনফিগার করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Paste tracking IDs. Airygen SEO prints GA4/GTM tags automatically when IDs are set."
-msgstr "ট্র্যাকিং ID পেস্ট করুন। ID সেট করা থাকলে Airygen SEO স্বয়ংক্রিয়ভাবে GA4/GTM ট্যাগ প্রিন্ট করে।"
-
-#: build/admin/airygen-app.js
-msgid "Google Analytics 4"
-msgstr "Google Analytics 4"
-
-#: build/admin/airygen-app.js
-msgid "Enable GA4 tracking"
-msgstr "GA4 ট্র্যাকিং সক্রিয় করুন"
-
-#: build/admin/airygen-app.js
-msgid "Measurement ID"
-msgstr "পরিমাপ ID"
-
-#. translators: %s is an HTML code tag for the GA4 ID prefix (G-).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste your Google Analytics 4 ID from Google Analytics Admin. It usually starts with %s."
-msgstr "Google Analytics Admin থেকে আপনার Google Analytics 4 ID পেস্ট করুন। এটি সাধারণত %s দিয়ে শুরু হয়।"
-
-#: build/admin/airygen-app.js
-msgid "Google Tag Manager"
-msgstr "Google Tag Manager"
-
-#: build/admin/airygen-app.js
-msgid "Enable GTM tracking"
-msgstr "GTM ট্র্যাকিং সক্রিয় করুন"
-
-#: build/admin/airygen-app.js
-msgid "Container ID"
-msgstr "কনটেইনার ID"
-
-#. translators: %s is an HTML code tag for the GTM container prefix (GTM-).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste your Google Tag Manager container ID. It usually starts with %s."
-msgstr "আপনার Google Tag Manager কন্টেইনার ID পেস্ট করুন। এটি সাধারণত %s দিয়ে শুরু হয়।"
 
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
@@ -6040,42 +4599,8 @@ msgid "Custom"
 msgstr "কাস্টম"
 
 #: build/admin/airygen-app.js
-msgid "Create reusable snippets and drag them between output locations."
-msgstr "পুনঃব্যবহারযোগ্য snippet তৈরি করুন এবং সেগুলো output location-এর মধ্যে drag করুন।"
-
-#: build/admin/airygen-app.js
-msgid "Add Snippet"
-msgstr "স্নিপেট যোগ করুন"
-
-#: build/admin/airygen-app.js
-msgid "Add snippet"
-msgstr "স্নিপেট যোগ করুন"
-
-#: build/admin/airygen-app.js
 msgid "Save changes"
 msgstr "পরিবর্তন সংরক্ষণ করুন"
-
-#: build/admin/airygen-app.js
-msgid "Internal reference only. This is not output on the frontend."
-msgstr "শুধুমাত্র অভ্যন্তরীণ রেফারেন্স। এটি ফ্রন্টএন্ডে আউটপুট হয় না।"
-
-#: build/admin/airygen-app.js
-msgid "Code"
-msgstr "কোড"
-
-#. translators: %s is an HTML code tag for script tags (<script>).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste code only. Do not include %s tags."
-msgstr "শুধুমাত্র কোড পেস্ট করুন। %s ট্যাগ অন্তর্ভুক্ত করবেন না।"
-
-#: build/admin/airygen-app.js
-msgid "Injection position"
-msgstr "ইনজেকশন অবস্থান"
-
-#: build/admin/airygen-app.js
-msgid "Inactive"
-msgstr "নিষ্ক্রিয়"
 
 #: build/admin/airygen-app.js
 msgid "Site Verification"
@@ -8908,10 +7433,6 @@ msgid "Manage the sitemap index and exposed post types. When enabled, Airygen SE
 msgstr "সাইটম্যাপ ইন্ডেক্স ও প্রকাশিত পোস্ট ধরন পরিচালনা করুন। সক্রিয় হলে Airygen SEO WordPress-এর ডিফল্ট সাইটম্যাপ প্রতিস্থাপন করে।"
 
 #: build/admin/airygen-app.js
-msgid "Manage GA4, GTM, and custom tracking snippets in one place."
-msgstr "GA4, GTM এবং কাস্টম ট্র্যাকিং স্নিপেট এক জায়গায় পরিচালনা করুন।"
-
-#: build/admin/airygen-app.js
 msgid "Add site verification tokens for search engines and webmaster platforms."
 msgstr "সার্চ ইঞ্জিন এবং ওয়েবমাস্টার প্ল্যাটফর্মের জন্য সাইট ভেরিফিকেশন টোকেন যোগ করুন।"
 
@@ -8950,10 +7471,6 @@ msgstr "এডিটরের SEO স্কোর প্যানেল ও REST
 #: build/admin/airygen-app.js
 msgid "Monitor outbound URLs for errors once link counting completes."
 msgstr "লিংক গণনা সম্পূর্ণ হলে ত্রুটির জন্য আউটবাউন্ড URL মনিটর করুন।"
-
-#: build/admin/airygen-app.js
-msgid "AI-powered helpers for titles, descriptions, and content improvements."
-msgstr "শিরোনাম, বর্ণনা এবং কনটেন্ট উন্নতির জন্য AI-চালিত সহায়ক।"
 
 #: build/admin/airygen-app.js
 msgid "Create and prioritize redirect rules for your site."
@@ -9029,10 +7546,6 @@ msgid "Assign pillar and cluster relationships while editing."
 msgstr "এডিট করার সময় পিলার এবং ক্লাস্টার সম্পর্ক নির্ধারণ করুন।"
 
 #: build/admin/airygen-app.js
-msgid "AI suggestions and CTR improvements while you edit."
-msgstr "এডিট করার সময় AI পরামর্শ এবং CTR উন্নতি।"
-
-#: build/admin/airygen-app.js
 msgid "Failed to load debug info."
 msgstr "ডিবাগ তথ্য লোড করতে ব্যর্থ।"
 
@@ -9053,14 +7566,6 @@ msgid "Failed to enable debug mode."
 msgstr "ডিবাগ মোড সক্রিয় করতে ব্যর্থ।"
 
 #: build/admin/airygen-app.js
-msgid "Logs cleared."
-msgstr "লগ পরিষ্কার হয়েছে।"
-
-#: build/admin/airygen-app.js
-msgid "Failed to clear logs."
-msgstr "লগ মুছতে ব্যর্থ।"
-
-#: build/admin/airygen-app.js
 msgid "Classic editor mode enabled for testing."
 msgstr "পরীক্ষার জন্য Classic editor mode সক্রিয় করা হয়েছে।"
 
@@ -9079,14 +7584,6 @@ msgstr "ডিবাগ স্তর আপডেট করা হয়েছ�
 #: build/admin/airygen-app.js
 msgid "Failed to update debug level."
 msgstr "ডিবাগ স্তর আপডেট করতে ব্যর্থ।"
-
-#: build/admin/airygen-app.js
-msgid "Log file not found."
-msgstr "লগ ফাইল পাওয়া যায়নি।"
-
-#: build/admin/airygen-app.js
-msgid "Failed to load log file."
-msgstr "লগ ফাইল লোড করতে ব্যর্থ।"
 
 #: build/admin/airygen-app.js
 msgid "Failed to load settings."
@@ -9129,32 +7626,12 @@ msgid "notify module"
 msgstr "বিজ্ঞপ্তি মডিউল"
 
 #: build/admin/airygen-app.js
-msgid "This paid module cannot be enabled with the current subscription status."
-msgstr "বর্তমান সাবস্ক্রিপশন স্ট্যাটাসে এই পেইড মডিউল সক্রিয় করা যাবে না।"
-
-#: build/admin/airygen-app.js
 msgid "Related Posts requires enabling Link Suggestions first."
 msgstr "Related Posts-এর জন্য প্রথমে Link Suggestions সক্রিয় করতে হবে।"
 
 #: build/admin/airygen-app.js
 msgid "Airygen SEO Settings"
 msgstr "Airygen SEO Settings"
-
-#: build/admin/airygen-app.js
-msgid "Subscription inactive"
-msgstr "সাবস্ক্রিপশন নিষ্ক্রিয়"
-
-#: build/admin/airygen-app.js
-msgid "Continue to disable"
-msgstr "নিষ্ক্রিয় করা চালিয়ে যান"
-
-#: build/admin/airygen-app.js
-msgid "Subscription is inactive. Enabled paid modules remain available, but new paid modules cannot be enabled until renewal."
-msgstr "সাবস্ক্রিপশন নিষ্ক্রিয়। সক্রিয় পেইড মডিউলগুলো পাওয়া যাবে, কিন্তু নবায়ন না হওয়া পর্যন্ত নতুন পেইড মডিউল সক্রিয় করা যাবে না।"
-
-#: build/admin/airygen-app.js
-msgid "View plans"
-msgstr "প্ল্যান দেখুন"
 
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
@@ -9315,7 +7792,6 @@ msgstr "ঘনত্ব পরীক্ষা করতে একটি ফো�
 msgid "Focus keyphrase density is 0%. Add it naturally to the content."
 msgstr "ফোকাস কীফ্রেজ ঘনত্ব ০%। কনটেন্টে এটি স্বাভাবিকভাবে যোগ করুন।"
 
-#. translators: percentage range for focus keyphrase density.
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "Adjust focus keyphrase density to 0.5%–2%."
@@ -9359,7 +7835,6 @@ msgid "To avoid keyword stuffing, each long-tail keyphrase should be supported b
 msgstr "কীওয়ার্ড স্টাফিং এড়াতে, প্রতিটি লং-টেইল কীফ্রেজকে কমপক্ষে ১৫০ শব্দের ব্যাখ্যামূলক কনটেন্ট দ্বারা সমর্থন করা উচিত; অর্থপূর্ণ টেক্সট ছাড়া কীফ্রেজ একা পুনরাবৃত্তি করবেন না।"
 
 #: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Got it"
 msgstr "বুঝেছি"
 
@@ -9678,407 +8153,14 @@ msgstr "এখনো কোনো পরামর্শ নেই। পোস�
 msgid "Insert"
 msgstr "ঢোকান"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your content…"
-msgstr "আপনার কনটেন্ট বিশ্লেষণ করা হচ্ছে…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Subscription is inactive. AI generation is unavailable until renewal."
-msgstr "সাবস্ক্রিপশন নিষ্ক্রিয়। নবায়ন না হওয়া পর্যন্ত AI জেনারেশন পাওয়া যাবে না।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Detected content languages:"
-msgstr "শনাক্তকৃত কনটেন্ট ভাষাসমূহ:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Primary language:"
-msgstr "প্রাথমিক ভাষা:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Selected output language:"
-msgstr "নির্বাচিত আউটপুট ভাষা:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Continue?"
-msgstr "চালিয়ে যাবেন?"
-
-#: build/block-editor/airygen-editor.js
-msgid "SERP CTR Booster generated. Review and apply when ready."
-msgstr "SERP CTR বুস্টার তৈরি হয়েছে। প্রস্তুত হলে পর্যালোচনা করুন এবং প্রয়োগ করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate CTR booster suggestions."
-msgstr "CTR বুস্টার পরামর্শ তৈরি করতে অক্ষম।"
-
-#: build/block-editor/airygen-editor.js
-msgid "FAQ generated. Review and apply when ready."
-msgstr "FAQ তৈরি হয়েছে। প্রস্তুত হলে পর্যালোচনা করুন এবং প্রয়োগ করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate FAQ suggestions."
-msgstr "FAQ পরামর্শ তৈরি করতে অক্ষম।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Topic Expansion generated. Review and apply when ready."
-msgstr "বিষয় সম্প্রসারণ তৈরি হয়েছে। প্রস্তুত হলে পর্যালোচনা করুন এবং প্রয়োগ করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Topic Expansion suggestions."
-msgstr "বিষয় সম্প্রসারণ পরামর্শ তৈরি করতে অক্ষম।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Content Blueprint generated. Review and apply when ready."
-msgstr "Content Blueprint তৈরি হয়েছে। প্রস্তুত হলে পর্যালোচনা করে প্রয়োগ করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Content Blueprint."
-msgstr "Content Blueprint তৈরি করতে অক্ষম।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Article Builder generated. Review and apply when ready."
-msgstr "Article Builder তৈরি হয়েছে। প্রস্তুত হলে পর্যালোচনা করে প্রয়োগ করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Article Builder output."
-msgstr "Article Builder আউটপুট তৈরি করতে অক্ষম।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Outline unavailable."
-msgstr "আউটলাইন পাওয়া যাচ্ছে না।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to update FAQ display settings."
-msgstr "FAQ প্রদর্শন সেটিংস আপডেট করতে অক্ষম।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to update topic display settings."
-msgstr "বিষয় প্রদর্শন সেটিংস আপডেট করতে অক্ষম।"
-
-#: build/block-editor/airygen-editor.js
-msgid "AI Assist is disabled. Enable it in Airygen → Modules."
-msgstr "AI Assist নিষ্ক্রিয় আছে। এটি Airygen → Modules-এ সক্রিয় করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "AI Assist API is not configured."
-msgstr "AI Assist API কনফিগার করা নেই।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate higher-CTR titles and descriptions with AI suggestions."
-msgstr "AI পরামর্শের সাথে উচ্চ-CTR শিরোনাম ও বর্ণনা তৈরি করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate structured outlines and section summaries for faster planning."
-msgstr "দ্রুত পরিকল্পনার জন্য কাঠামোবদ্ধ আউটলাইন ও অংশের সারসংক্ষেপ তৈরি করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate full-length articles from your topic and focus keyphrase."
-msgstr "আপনার বিষয় ও ফোকাস কীফ্রেজ থেকে পূর্ণ দৈর্ঘ্যের আর্টিকেল তৈরি করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate FAQ entries that expand on common user questions."
-msgstr "সাধারণ ব্যবহারকারীর প্রশ্নগুলো সম্প্রসারিত করে FAQ এন্ট্রি তৈরি করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate related topics to expand your content plan."
-msgstr "আপনার কনটেন্ট পরিকল্পনা সম্প্রসারিত করতে সম্পর্কিত বিষয় তৈরি করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unavailable in your current plan."
-msgstr "আপনার বর্তমান প্ল্যানে পাওয়া যাচ্ছে না।"
-
-#: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "Display mode"
 msgstr "প্রদর্শন মোড"
 
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
-msgid "Use settings"
-msgstr "সেটিংস ব্যবহার করুন"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Manual"
 msgstr "ম্যানুয়াল"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose how FAQ output should be inserted for this post."
-msgstr "এই post-এর জন্য FAQ output কীভাবে insert হবে তা বেছে নিন।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose how Topic Expansion output should be inserted for this post."
-msgstr "এই post-এর জন্য Topic Expansion output কীভাবে insert হবে তা বেছে নিন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "No AI modules are enabled for this post."
-msgstr "এই পোস্টের জন্য কোনো AI মডিউল সক্রিয় নেই।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates a meta title, meta description, and excerpt based on your current content. Apply suggestions and save the post to make changes live."
-msgstr "আপনার বর্তমান কনটেন্টের উপর ভিত্তি করে একটি মেটা শিরোনাম, মেটা বর্ণনা এবং এক্সার্পট তৈরি করে। পরিবর্তন লাইভ করতে পরামর্শ প্রয়োগ করুন এবং পোস্ট সংরক্ষণ করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Uses the focus keyphrase set for this post."
-msgstr "এই পোস্টের জন্য সেট করা ফোকাস কীফ্রেজ ব্যবহার করে।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the language for AI-generated suggestions."
-msgstr "AI-generated suggestionগুলোর ভাষা বেছে নিন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Require the focus keyphrase to appear in suggestions."
-msgstr "পরামর্শে ফোকাস কীফ্রেজ উপস্থিত থাকা বাধ্যতামূলক করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Applied. Save the post to make the changes live."
-msgstr "প্রয়োগ করা হয়েছে। পরিবর্তন লাইভ করতে পোস্ট সেভ করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one suggestion to apply."
-msgstr "প্রয়োগ করার জন্য অন্তত একটি পরামর্শ নির্বাচন করুন।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Describe the article you want to plan."
-msgstr "আপনি যে আর্টিকেলটি পরিকল্পনা করতে চান তা বর্ণনা করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Defaults to the focus keyphrase."
-msgstr "ফোকাস কীফ্রেজে ডিফল্ট হয়।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Set a focus keyphrase in the SEO panel."
-msgstr "SEO প্যানেলে একটি ফোকাস কীফ্রেজ সেট করুন।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose the output language for the outline."
-msgstr "outline-এর output language বেছে নিন।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Select a structure that matches your topic."
-msgstr "আপনার বিষয়ের সাথে মিলে এমন একটি কাঠামো নির্বাচন করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose a voice for section summaries."
-msgstr "section summaryগুলোর জন্য একটি voice বেছে নিন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Control how many heading levels the outline includes."
-msgstr "outline-এ কতগুলো heading level থাকবে তা নিয়ন্ত্রণ করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Include the focus keyword in outline headings."
-msgstr "আউটলাইন শিরোনামে ফোকাস কীওয়ার্ড অন্তর্ভুক্ত করুন।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Outline length target"
-msgstr "আউটলাইনের দৈর্ঘ্য লক্ষ্যমাত্রা"
-
-#: build/block-editor/airygen-editor.js
-msgid "Longer blueprints take more time. Please keep this window open."
-msgstr "দীর্ঘ ব্লুপ্রিন্টে বেশি সময় লাগে। অনুগ্রহ করে এই উইন্ডোটি খোলা রাখুন।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Keep outline"
-msgstr "আউটলাইন রাখুন"
-
-#: build/block-editor/airygen-editor.js
-msgid "Keep your current headings and expand the article from them."
-msgstr "আপনার বর্তমান শিরোনাম রাখুন এবং সেগুলো থেকে আর্টিকেল সম্প্রসারিত করুন।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content Blueprint is for planning new articles. Applying will replace the post content."
-msgstr "Content Blueprint নতুন article পরিকল্পনার জন্য। এটি প্রয়োগ করলে post content প্রতিস্থাপিত হবে।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "It does not generate a full draft; it proposes section headings to guide your writing."
-msgstr "এটি সম্পূর্ণ ড্রাফট তৈরি করে না; এটি আপনার লেখাকে পথ দেখাতে অংশের শিরোনাম প্রস্তাব করে।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use this blueprint"
-msgstr "এই ব্লুপ্রিন্ট ব্যবহার করুন"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select a blueprint to apply."
-msgstr "প্রয়োগ করার জন্য একটি ব্লুপ্রিন্ট নির্বাচন করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to apply blueprint content."
-msgstr "ব্লুপ্রিন্ট কনটেন্ট প্রয়োগ করতে অক্ষম।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your topic…"
-msgstr "আপনার টপিক বিশ্লেষণ করা হচ্ছে…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Building outline structure…"
-msgstr "outline structure তৈরি করা হচ্ছে…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Refining sections…"
-msgstr "অংশ পরিমার্জন হচ্ছে…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content source"
-msgstr "কনটেন্টের উৎস"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Extract from editor content"
-msgstr "এডিটর কনটেন্ট থেকে বের করুন"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose where the AI should read source content from."
-msgstr "AI কোন উৎস থেকে source content পড়বে তা বেছে নিন।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Custom content"
-msgstr "কাস্টম কনটেন্ট"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Paste the source content for the AI draft."
-msgstr "AI ড্রাফটের জন্য সোর্স কনটেন্ট পেস্ট করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Markdown formatting works best."
-msgstr "Markdown ফরম্যাটিং সবচেয়ে ভালো কাজ করে।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the language for the generated article."
-msgstr "generated article-এর ভাষা বেছে নিন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the structure that best matches your topic."
-msgstr "আপনার বিষয়ের সাথে সবচেয়ে বেশি মিলে এমন কাঠামো নির্বাচন করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the voice and style for the draft."
-msgstr "ড্রাফটের জন্য ভয়েস ও স্টাইল বেছে নিন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "AI targets can vary by about ten percent from the selected length."
-msgstr "AI লক্ষ্যগুলো নির্বাচিত দৈর্ঘ্য থেকে প্রায় দশ শতাংশ পর্যন্ত ভিন্ন হতে পারে।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Longer articles take more time. Please keep this window open."
-msgstr "দীর্ঘ আর্টিকেলে বেশি সময় লাগে। অনুগ্রহ করে এই উইন্ডোটি খোলা রাখুন।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use this article"
-msgstr "এই আর্টিকেল ব্যবহার করুন"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to apply Article Builder output."
-msgstr "Article Builder আউটপুট প্রয়োগ করতে অক্ষম।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select an article to apply."
-msgstr "প্রয়োগ করার জন্য একটি আর্টিকেল নির্বাচন করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting can take up to ~90 seconds depending on length. Please keep this window open."
-msgstr "দৈর্ঘ্যের উপর নির্ভর করে ড্রাফটিং ~৯০ সেকেন্ড পর্যন্ত সময় নিতে পারে। অনুগ্রহ করে এই উইন্ডোটি খোলা রাখুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting full sections…"
-msgstr "সম্পূর্ণ অংশ ড্রাফট করা হচ্ছে…"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the output language for FAQs."
-msgstr "FAQগুলোর output language বেছে নিন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the content structure for FAQ responses."
-msgstr "FAQ উত্তরের জন্য কনটেন্ট কাঠামো নির্বাচন করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the writing tone for answers."
-msgstr "উত্তরের জন্য লেখার টোন বেছে নিন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "How many questions to generate per request."
-msgstr "প্রতিটি অনুরোধে কতটি প্রশ্ন তৈরি করতে হবে।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates FAQ entries based on your current post content. Apply suggestions and save the post to publish updates."
-msgstr "আপনার বর্তমান পোস্ট কনটেন্টের উপর ভিত্তি করে FAQ এন্ট্রি তৈরি করে। আপডেট প্রকাশ করতে পরামর্শ প্রয়োগ করুন এবং পোস্ট সংরক্ষণ করুন।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Untitled FAQ"
-msgstr "শিরোনামহীন FAQ"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one FAQ item to apply."
-msgstr "প্রয়োগ করার জন্য অন্তত একটি FAQ আইটেম নির্বাচন করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting Q&A pairs…"
-msgstr "Q&A জোড়া ড্রাফট করা হচ্ছে…"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the output language for topics."
-msgstr "topicগুলোর output language বেছে নিন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the structure for topic suggestions."
-msgstr "বিষয়ের পরামর্শের জন্য কাঠামো নির্বাচন করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the writing tone for topics."
-msgstr "বিষয়গুলোর জন্য লেখার টোন বেছে নিন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose how long each topic description should be."
-msgstr "প্রতিটি topic description কত দীর্ঘ হবে তা বেছে নিন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "How many topics to generate per request."
-msgstr "প্রতিটি অনুরোধে কতটি বিষয় তৈরি করতে হবে।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates related topic ideas based on your current content. Apply suggestions and save the post to publish updates."
-msgstr "আপনার বর্তমান কনটেন্টের উপর ভিত্তি করে সম্পর্কিত বিষয়ের ধারণা তৈরি করে। আপডেট প্রকাশ করতে পরামর্শ প্রয়োগ করুন এবং পোস্ট সংরক্ষণ করুন।"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Untitled topic"
-msgstr "শিরোনামহীন বিষয়"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one topic to apply."
-msgstr "প্রয়োগ করার জন্য অন্তত একটি বিষয় নির্বাচন করুন।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Expanding related topics…"
-msgstr "সম্পর্কিত বিষয় সম্প্রসারিত করা হচ্ছে…"
 
 #: build/block-editor/airygen-editor.js
 msgid "TOC display mode"
@@ -10228,18 +8310,6 @@ msgid "Renders the table of contents on the frontend."
 msgstr "ফ্রন্টএন্ডে সূচিপত্র রেন্ডার করে।"
 
 #: build/block-editor/airygen-editor.js
-msgid "Airygen FAQ"
-msgstr "Airygen FAQ"
-
-#: build/block-editor/airygen-editor.js
-msgid "Insert AI-generated FAQ output."
-msgstr "AI-তৈরি FAQ আউটপুট ঢোকান।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Renders AI FAQ entries on the frontend."
-msgstr "ফ্রন্টএন্ডে AI FAQ এন্ট্রি রেন্ডার করে।"
-
-#: build/block-editor/airygen-editor.js
 msgid "Airygen Breadcrumbs"
 msgstr "Airygen Breadcrumbs"
 
@@ -10252,34 +8322,8 @@ msgid "Renders breadcrumbs on the frontend."
 msgstr "ফ্রন্টএন্ডে breadcrumbs রেন্ডার করে।"
 
 #: build/block-editor/airygen-editor.js
-msgid "Airygen Topic Expansion"
-msgstr "Airygen Topic Expansion"
-
-#: build/block-editor/airygen-editor.js
-msgid "Insert AI-generated related topics output."
-msgstr "AI-তৈরি সম্পর্কিত বিষয়ের আউটপুট ঢোকান।"
-
-#: build/block-editor/airygen-editor.js
-msgid "Renders related topic ideas on the frontend."
-msgstr "ফ্রন্টএন্ডে সম্পর্কিত বিষয়ের ধারণা রেন্ডার করে।"
-
-#: build/block-editor/airygen-editor.js
 msgid "Rebots Meta"
 msgstr "Robots মেটা"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Applied. Save Changes to persist updates."
-msgstr "প্রয়োগ করা হয়েছে। আপডেট স্থায়ী করতে পরিবর্তন সংরক্ষণ করুন।"
-
-#. translators: %s is the thing to generate first, such as an outline or a draft.
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "No records yet. Generate %s to get started."
-msgstr "এখনো কোনো রেকর্ড নেই। শুরু করতে %s তৈরি করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing content…"
-msgstr "কনটেন্ট বিশ্লেষণ করা হচ্ছে…"
 
 #: build/classic-editor/airygen-editor.js
 msgid "Total rules"
@@ -10377,174 +8421,10 @@ msgstr "ডিফল্ট উত্তরাধিকার করুন (%s)"
 msgid "Summary"
 msgstr "সারসংক্ষেপ"
 
-#: build/classic-editor/airygen-editor.js
-msgid "Generate higher-CTR titles and meta descriptions."
-msgstr "উচ্চ-CTR শিরোনাম ও মেটা বর্ণনা তৈরি করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generate structured outlines with section summaries."
-msgstr "অংশের সারসংক্ষেপ সহ কাঠামোবদ্ধ আউটলাইন তৈরি করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Draft full articles with AI guidance and structured prompts."
-msgstr "AI নির্দেশনা ও কাঠামোবদ্ধ প্রম্পটের সাথে সম্পূর্ণ আর্টিকেল ড্রাফট করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Append frequently asked questions to the end of the article."
-msgstr "আর্টিকেলের শেষে FAQ যোগ করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Append related topic ideas after the FAQ section."
-msgstr "FAQ সেকশনের পরে সম্পর্কিত বিষয়ের আইডিয়া যোগ করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Uses the saved focus keyphrase."
-msgstr "সংরক্ষিত ফোকাস কীফ্রেজ ব্যবহার করে।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Include the focus keyphrase in the output."
-msgstr "আউটপুটে ফোকাস কীফ্রেজ অন্তর্ভুক্ত করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Used to guide the outline."
-msgstr "আউটলাইন পথ দেখাতে ব্যবহৃত।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for the outline."
-msgstr "আউটলাইনের জন্য টোন নির্বাচন করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Heading depth for the outline."
-msgstr "আউটলাইনের জন্য শিরোনামের গভীরতা।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Basic"
-msgstr "বেসিক"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Deep"
-msgstr "গভীর"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how long the outline should be."
-msgstr "outline কত দীর্ঘ হবে তা নিয়ন্ত্রণ করে।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Include the focus keyphrase in headings."
-msgstr "শিরোনামে ফোকাস কীফ্রেজ অন্তর্ভুক্ত করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Keep the existing outline when generating."
-msgstr "তৈরির সময় বিদ্যমান আউটলাইন রাখুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "an outline"
-msgstr "একটি আউটলাইন"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Choose where to extract source content."
-msgstr "source content কোথা থেকে extract করা হবে তা বেছে নিন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the output language."
-msgstr "আউটপুট ভাষা নির্বাচন করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the writing style type."
-msgstr "লেখার স্টাইলের ধরন নির্বাচন করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for the draft."
-msgstr "ড্রাফটের জন্য টোন নির্বাচন করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the target article length."
-msgstr "লক্ষ্য আর্টিকেলের দৈর্ঘ্য নির্বাচন করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Keep the existing headings when generating."
-msgstr "তৈরির সময় বিদ্যমান শিরোনাম রাখুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "a draft"
-msgstr "একটি ড্রাফট"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select output language."
-msgstr "আউটপুট ভাষা নির্বাচন করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for answers."
-msgstr "উত্তরের জন্য টোন নির্বাচন করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how detailed each answer should be."
-msgstr "প্রতিটি answer কতটা বিস্তারিত হবে তা নিয়ন্ত্রণ করে।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Number of questions to generate."
-msgstr "তৈরি করার প্রশ্নের সংখ্যা।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "questions"
-msgstr "প্রশ্নসমূহ"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for topics."
-msgstr "বিষয়গুলোর জন্য টোন নির্বাচন করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how detailed each topic is."
-msgstr "প্রতিটি topic কতটা বিস্তারিত হবে তা নিয়ন্ত্রণ করে।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Number of topics to generate."
-msgstr "তৈরি করার বিষয়ের সংখ্যা।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "topics"
-msgstr "বিষয়সমূহ"
-
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "(No title)"
 msgstr "(কোনো শিরোনাম নেই)"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your source…"
-msgstr "আপনার সোর্স বিশ্লেষণ করা হচ্ছে…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting article sections…"
-msgstr "আর্টিকেলের অংশ ড্রাফট করা হচ্ছে…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Refining language and tone…"
-msgstr "ভাষা ও টোন পরিমার্জন হচ্ছে…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generating FAQs can take a moment. Please keep this window open."
-msgstr "FAQ তৈরি করতে কিছু সময় লাগতে পারে। অনুগ্রহ করে এই উইন্ডোটি খোলা রাখুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting questions…"
-msgstr "প্রশ্ন ড্রাফট করা হচ্ছে…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Writing answers…"
-msgstr "উত্তর লেখা হচ্ছে…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generating topics can take a moment. Please keep this window open."
-msgstr "বিষয় তৈরি করতে কিছু সময় লাগতে পারে। অনুগ্রহ করে এই উইন্ডোটি খোলা রাখুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting topic ideas…"
-msgstr "বিষয়ের ধারণা ড্রাফট করা হচ্ছে…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Refining list…"
-msgstr "তালিকা পরিমার্জন হচ্ছে…"
 
 #: build/classic-editor/airygen-editor.js
 msgid "Focus keyphrase density is in range (0.5%–2%)."
@@ -10563,22 +8443,6 @@ msgid "Focus keyphrase is not set."
 msgstr "ফোকাস কীফ্রেজ সেট করা নেই।"
 
 #: build/classic-editor/airygen-editor.js
-msgid "This AI module is unavailable in your current plan."
-msgstr "এই AI মডিউল আপনার বর্তমান প্ল্যানে পাওয়া যাচ্ছে না।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Unable to complete the request."
-msgstr "অনুরোধ সম্পূর্ণ করতে অক্ষম।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select a suggestion to apply."
-msgstr "প্রয়োগ করার জন্য একটি পরামর্শ নির্বাচন করুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select a record to apply."
-msgstr "প্রয়োগ করার জন্য একটি রেকর্ড নির্বাচন করুন।"
-
-#: build/classic-editor/airygen-editor.js
 msgid "Save changes to apply your updates."
 msgstr "আপডেট প্রয়োগ করতে পরিবর্তন সংরক্ষণ করুন।"
 
@@ -10589,39 +8453,6 @@ msgstr "সংরক্ষণ হয়েছে।"
 #: build/classic-editor/airygen-editor.js
 msgid "Failed to save changes."
 msgstr "পরিবর্তন সংরক্ষণ করতে ব্যর্থ।"
-
-#. translators: %s is the estimated number of seconds.
-#: build/block-editor/airygen-editor.js
-#, php-format, js-format
-msgid "This can take up to ~%s seconds depending on the amount of content. Please keep this window open."
-msgstr "কনটেন্টের পরিমাণের ওপর নির্ভর করে এটি প্রায় %s সেকেন্ড পর্যন্ত সময় নিতে পারে। অনুগ্রহ করে এই উইন্ডোটি খোলা রাখুন।"
-
-msgid "Credit balance record not found"
-msgstr "ক্রেডিট ব্যালেন্স রেকর্ড পাওয়া যায়নি"
-
-#. translators: %s is the generated item type in plural form, e.g. "blueprints", "articles", or "drafts".
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "Longer %s take more time. Please keep this window open."
-msgstr "দীর্ঘ %s সম্পন্ন হতে বেশি সময় লাগে। অনুগ্রহ করে এই উইন্ডোটি খোলা রাখুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "length"
-msgstr "দৈর্ঘ্য"
-
-#. translators: 1: estimated duration label, e.g. "~15 seconds". 2: what affects the duration, e.g. "length" or "count".
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "This can take up to %1$s depending on %2$s. Please keep this window open."
-msgstr "এটি %2$s-এর ওপর নির্ভর করে সর্বোচ্চ %1$s সময় নিতে পারে। অনুগ্রহ করে এই উইন্ডোটি খোলা রাখুন।"
-
-#: build/classic-editor/airygen-editor.js
-msgid "blueprints"
-msgstr "ব্লুপ্রিন্টসমূহ"
-
-#: build/classic-editor/airygen-editor.js
-msgid "drafts"
-msgstr "খসড়াসমূহ"
 
 msgid "Sitewide SEO (scaled)"
 msgstr "সাইটজুড়ে SEO (স্কেলকৃত)"
@@ -10675,9 +8506,6 @@ msgstr "অপারেশনের সময়সীমা (সেকেন্
 #: build/admin/airygen-app.js
 msgid "Check basic sitewide SEO health and configuration."
 msgstr "সাইটজুড়ে মৌলিক SEO স্বাস্থ্য ও কনফিগারেশন পরীক্ষা করুন।"
-
-msgid "Mirror WordPress Sitewide SEO diagnostics with Airygen-specific checks (SSL, Safe Browsing, focus keywords)."
-msgstr "WordPress Sitewide SEO diagnostics-কে Airygen-নির্দিষ্ট চেক (SSL, Safe Browsing, focus keywords) সহ মিরর করুন।"
 
 msgid "Mind map items contain invalid post data."
 msgstr "মাইন্ড ম্যাপের আইটেমগুলোতে অবৈধ পোস্ট ডেটা রয়েছে।"
@@ -11001,14 +8829,6 @@ msgid "Uses the IndexNow protocol to push new and updated URLs to Bing and other
 msgstr "কন্টেন্ট প্রকাশিত হওয়ার সাথে সাথে Bing-এ নতুন URL পুশ করতে IndexNow প্রোটোকল ব্যবহার করে।"
 
 #: build/admin/airygen-app.js
-msgid "Would you like AI to help you write article outlines, FAQ sets, or plan your full content strategy?"
-msgstr "আপনি কি চান AI আর্টিকেল আউটলাইন, FAQ সেট লিখতে বা আপনার কন্টেন্ট কৌশল পরিকল্পনা করতে সাহায্য করুক?"
-
-#: build/admin/airygen-app.js
-msgid "A smart AI toolkit that generates article outlines, Content Blueprints, full Article drafts, and Deep FAQ sets from a keyword — making content creation faster and easier."
-msgstr "একটি স্মার্ট AI টুলকিট যা কীওয়ার্ড থেকে আর্টিকেল আউটলাইন, কন্টেন্ট ব্লুপ্রিন্ট, সম্পূর্ণ আর্টিকেল ড্রাফট এবং ডিপ FAQ সেট তৈরি করে।"
-
-#: build/admin/airygen-app.js
 msgid "Would you like AI tools like ChatGPT and Perplexity to more easily discover and cite your site?"
 msgstr "আপনি কি চান ChatGPT এবং Perplexity-এর মতো AI টুলগুলি আপনার সাইট আরও সহজে আবিষ্কার এবং উদ্ধৃত করুক?"
 
@@ -11023,26 +8843,6 @@ msgstr "স্বয়ংক্রিয়ভাবে একটি llms.txt �
 #: build/admin/airygen-app.js
 msgid "Automatically converts your posts into AI-friendly Markdown so AI agents can read and understand your content without struggling to parse HTML."
 msgstr "আপনার পোস্টগুলি স্বয়ংক্রিয়ভাবে AI-বান্ধব Markdown-এ রূপান্তর করে যাতে AI এজেন্টরা HTML পার্স না করেই আপনার কন্টেন্ট পড়তে পারে।"
-
-#: build/admin/airygen-app.js
-msgid "Includes Deep FAQ, which automatically generates structured Q&A from your post content. AI search engines favor content that directly answers questions, boosting your visibility in AI-powered search results."
-msgstr "ডিপ FAQ অন্তর্ভুক্ত, যা আপনার পোস্ট কন্টেন্ট থেকে স্বয়ংক্রিয়ভাবে কাঠামোবদ্ধ প্রশ্নোত্তর তৈরি করে।"
-
-#: build/admin/airygen-app.js
-msgid "Free"
-msgstr "বিনামূল্যে"
-
-#: build/admin/airygen-app.js
-msgid "Requires a plan upgrade"
-msgstr "প্ল্যান আপগ্রেড প্রয়োজন"
-
-#: build/admin/airygen-app.js
-msgid "Requires"
-msgstr "প্রয়োজন"
-
-#: build/admin/airygen-app.js
-msgid "plan to activate"
-msgstr "সক্রিয় করতে প্ল্যান"
 
 #: build/admin/airygen-app.js
 msgid "Got it, don't show again"
@@ -11069,32 +8869,8 @@ msgid "Welcome to Airygen SEO!"
 msgstr "Airygen SEO-তে স্বাগতম!"
 
 #: build/admin/airygen-app.js
-msgid "Answer 10 quick questions and we'll recommend the right SEO modules for your site — then enable them all with one click."
-msgstr "১০টি দ্রুত প্রশ্নের উত্তর দিন এবং আমরা আপনার সাইটের জন্য সঠিক SEO মডিউলগুলি সুপারিশ করব — তারপর একটি ক্লিকে সেগুলি সক্ষম করুন।"
-
-#: build/admin/airygen-app.js
 msgid "Don't worry — every question is just Yes or No. No technical knowledge needed. It takes about 2 minutes. 😊"
 msgstr "চিন্তা করবেন না — প্রতিটি প্রশ্ন শুধু হ্যাঁ বা না। কোনো প্রযুক্তিগত জ্ঞানের প্রয়োজন নেই। এতে প্রায় ২ মিনিট সময় লাগে। 😊"
-
-#: build/admin/airygen-app.js
-msgid "🎉 All done! Here's what we recommend based on your answers:"
-msgstr "🎉 সব শেষ! আপনার উত্তরের ভিত্তিতে আমরা যা সুপারিশ করি:"
-
-#: build/admin/airygen-app.js
-msgid "Will be enabled (included in your plan)"
-msgstr "সক্ষম করা হবে (আপনার প্ল্যানে অন্তর্ভুক্ত)"
-
-#: build/admin/airygen-app.js
-msgid "Requires an upgrade to enable"
-msgstr "সক্ষম করতে আপগ্রেড প্রয়োজন"
-
-#: build/admin/airygen-app.js
-msgid "Upgrade to"
-msgstr "আপগ্রেড করুন"
-
-#: build/admin/airygen-app.js
-msgid "No modules selected. Click Finish to close the wizard."
-msgstr "কোনো মডিউল নির্বাচন করা হয়নি। উইজার্ড বন্ধ করতে সম্পন্ন ক্লিক করুন।"
 
 #: build/admin/airygen-app.js
 msgid "Setup Wizard"
@@ -11152,12 +8928,33 @@ msgstr "ব্লকের মধ্যে গ্যাপ (px)"
 msgid "Content top margin (px)"
 msgstr "কন্টেন্টের উপরের মার্জিন (px)"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "The focus keyphrase is the main keyword or phrase this post is optimized for. AI modules use it to guide content generation — keeping the output relevant and keyword-focused."
-msgstr "ফোকাস কীফ্রেজ হল প্রধান কীওয়ার্ড যার জন্য এই পোস্টটি অপ্টিমাইজ করা হয়েছে। AI মডিউলগুলি কন্টেন্ট জেনারেশন গাইড করতে এটি ব্যবহার করে।"
+#. Plugin URI of the plugin
+msgid "https://www.airygen.com/en/airygen-seo/introduction"
+msgstr "https://www.airygen.com/en/airygen-seo/introduction"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Focus keyphrase help"
-msgstr "ফোকাস কীফ্রেজ সহায়তা"
+#. Description of the plugin
+msgid "Airygen SEO is a modular SEO toolkit for WordPress sites that need more than title and meta fields. It combines on-page SEO controls, structured data, technical SEO, internal link workflows, and automation tools in one plugin while keeping the editing experience inside WordPress."
+msgstr "Airygen SEO হলো সেইসব WordPress সাইটের জন্য একটি মডিউলার SEO টুলকিট, যাদের শিরোনাম ও মেটা ফিল্ডের চেয়ে বেশি কিছু প্রয়োজন। এটি অন-পেজ SEO নিয়ন্ত্রণ, স্ট্রাকচার্ড ডেটা, টেকনিক্যাল SEO, অভ্যন্তরীণ লিংক ওয়ার্কফ্লো এবং অটোমেশন টুলগুলোকে একটি প্লাগইনে একত্রিত করে, আর সম্পাদনার অভিজ্ঞতা WordPress-এর ভেতরেই রাখে।"
+
+#. Author URI of the plugin
+msgid "https://www.airygen.com/"
+msgstr "https://www.airygen.com/"
+
+msgid "Transfer export settings filter must return an array."
+msgstr "ট্রান্সফার এক্সপোর্ট সেটিংস ফিল্টারকে অবশ্যই একটি অ্যারে রিটার্ন করতে হবে।"
+
+#: build/admin/airygen-app.js
+msgid "Answer a few quick questions and we'll recommend the right SEO modules for your site — core modules are already enabled by default."
+msgstr "কয়েকটি সংক্ষিপ্ত প্রশ্নের উত্তর দিন, আমরা আপনার সাইটের জন্য উপযুক্ত SEO মডিউল সুপারিশ করব — মূল মডিউলগুলো ইতিমধ্যে ডিফল্টভাবে সক্রিয় রয়েছে।"
+
+#: build/admin/airygen-app.js
+msgid "All done! Core modules (On-Page SEO, Breadcrumbs, Sitemap, Image SEO, Robots, Site Verification, Link Counter, Link Suggestions, Score Calculator) are already enabled by default."
+msgstr "সব সম্পন্ন! মূল মডিউলগুলো (On-Page SEO, ব্রেডক্রাম্বস, সাইটম্যাপ, Image SEO, রোবটস, Site Verification, Link Counter, Link Suggestions, Score Calculator) ইতিমধ্যে ডিফল্টভাবে সক্রিয় রয়েছে।"
+
+#: build/admin/airygen-app.js
+msgid "Additional modules to enable based on your answers"
+msgstr "আপনার উত্তরের ভিত্তিতে সক্রিয় করার জন্য অতিরিক্ত মডিউল"
+
+#: build/admin/airygen-app.js
+msgid "No additional modules recommended. You can enable more from the dashboard anytime."
+msgstr "কোনো অতিরিক্ত মডিউল সুপারিশ করা হয়নি। আপনি যেকোনো সময় ড্যাশবোর্ড থেকে আরও মডিউল সক্রিয় করতে পারেন।"

@@ -14,25 +14,9 @@ msgstr ""
 "X-Domain: airygen-seo\n"
 "X-Generator: WP-CLI 2.12.0\n"
 
-#. Plugin Name of the plugin
-msgid "Airygen"
-msgstr "Airygen"
-
-#. Plugin URI of the plugin
-msgid "https://www.airygen.com/product/wordpress-seo-plugin/"
-msgstr "https://www.airygen.com/product/wordpress-seo-plugin/"
-
-#. Description of the plugin
-msgid "The best SEO plugin for WordPress to optimize your website for search engines and improve your rankings."
-msgstr "검색 엔진을 위해 웹사이트를 최적화하고 순위를 향상시키는 WordPress용 최고의 SEO 플러그인입니다."
-
 #. Author of the plugin
 msgid "Airygen Team"
 msgstr "Airygen 팀"
-
-#. Author URI of the plugin
-msgid "https://github.com/airygen"
-msgstr "https://github.com/airygen"
 
 msgid "SEO title length"
 msgstr "SEO 제목 길이"
@@ -148,47 +132,6 @@ msgstr "설명"
 msgid "Sent by %1$s via %2$s."
 msgstr "%1$s이(가) %2$s를 통해 전송됨."
 
-msgid "Subscription Status"
-msgstr "구독 상태"
-
-msgid "Manage your subscription details and version updates."
-msgstr "구독 세부 정보 및 버전 업데이트를 관리합니다."
-
-msgid "Subscription ID"
-msgstr "구독 ID"
-
-msgid "26 characters"
-msgstr "26자"
-
-msgid "Your subscription details."
-msgstr "구독 세부 정보입니다."
-
-msgid "Site Key"
-msgstr "사이트 키"
-
-msgid "Paste the Site Key used for Link Suggestions."
-msgstr "링크 제안에 사용되는 Site Key를 붙여넣으세요."
-
-msgid "This key authenticates to the Airygen API. Keep it safe and do not share."
-msgstr "이 키는 Airygen API에 인증합니다. 안전하게 보관하고 공유하지 마세요."
-
-msgid "Save Subscription"
-msgstr "구독 저장"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use"
-msgstr "사용"
-
-msgid "Generate and browse AI suggestions for this taxonomy page title and description."
-msgstr "이 분류 페이지 제목 및 설명에 대한 AI 제안을 생성하고 찾아봅니다."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "SERP CTR Booster"
-msgstr "SERP CTR 부스터"
-
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
@@ -196,82 +139,23 @@ msgid "Close"
 msgstr "닫기"
 
 #: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generate"
-msgstr "생성"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Browse"
-msgstr "찾아보기"
-
-msgid "Taxonomy terms do not include body content, so Airygen analyzes the latest five related post titles to generate suggestions."
-msgstr "분류 용어에는 본문 콘텐츠가 포함되지 않으므로 Airygen은 제안을 생성하기 위해 최신 관련 게시물 제목 5개를 분석합니다."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Language"
-msgstr "언어"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the output language for suggestions."
-msgstr "제안을 위한 출력 언어를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Focus keyphrase"
 msgstr "포커스 키프레이즈"
 
-msgid "Used when Include keyword is enabled."
-msgstr "키워드 포함이 활성화된 경우 사용됩니다."
-
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Include keyword"
-msgstr "키워드 포함"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Yes"
 msgstr "예"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "No"
 msgstr "아니오"
 
-msgid "Include the focus keyphrase when generating title and description."
-msgstr "제목 및 설명을 생성할 때 포커스 키프레이즈를 포함합니다."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generating…"
-msgstr "생성 중…"
-
-msgid "Analyzing your taxonomy context…"
-msgstr "분류 컨텍스트 분석 중…"
-
-msgid "This can take up to ~15 seconds depending on content. Please keep this window open."
-msgstr "콘텐츠에 따라 최대 ~15초가 걸릴 수 있습니다. 이 창을 열어 두세요."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Apply selected"
-msgstr "선택 항목 적용"
-
-msgid "Please provide a valid log date."
-msgstr "유효한 로그 날짜를 제공하세요."
-
+#. Plugin Name of the plugin
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 msgid "Airygen SEO"
 msgstr "Airygen SEO"
 
-#: build/admin/airygen-app.js
 msgid "Dashboard"
 msgstr "대시보드"
 
@@ -283,22 +167,12 @@ msgstr "설정"
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
-msgid "AI Assist"
-msgstr "AI 어시스트"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Topic Cluster"
 msgstr "주제 클러스터"
 
 #: build/admin/airygen-app.js
 msgid "Alerts"
 msgstr "알림"
-
-#: build/admin/airygen-app.js
-msgid "Subscription"
-msgstr "구독"
 
 #: build/admin/airygen-app.js
 msgid "Migration"
@@ -372,48 +246,8 @@ msgstr "과정"
 msgid "Course instance"
 msgstr "과정 인스턴스"
 
-msgid "API key format is invalid."
-msgstr "API 키 형식이 잘못되었습니다."
-
-msgid "API key is required."
-msgstr "API 키가 필요합니다."
-
-msgid "Live validation is temporarily unavailable. Showing last successful verification snapshot."
-msgstr "실시간 검증을 일시적으로 사용할 수 없습니다. 마지막으로 성공한 검증 스냅샷을 표시합니다."
-
-msgid "Unable to contact the subscription API."
-msgstr "구독 API에 연결할 수 없습니다."
-
-msgid "Invalid record id."
-msgstr "유효하지 않은 레코드 ID입니다."
-
-#: build/admin/airygen-app.js
-msgid "Unable to delete record."
-msgstr "레코드를 삭제할 수 없습니다."
-
-msgid "Invalid post id."
-msgstr "유효하지 않은 게시물 ID입니다."
-
 msgid "Post not found."
 msgstr "게시물을 찾을 수 없습니다."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Please set a focus keyword for this post before generating."
-msgstr "생성하기 전에 이 게시물의 포커스 키워드를 설정하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Please provide source content before generating."
-msgstr "생성하기 전에 소스 콘텐츠를 제공하세요."
-
-msgid "Unable to generate article."
-msgstr "기사를 생성할 수 없습니다."
-
-msgid "Invalid gateway response."
-msgstr "유효하지 않은 게이트웨이 응답입니다."
-
-msgid "Unable to store Article Builder record."
-msgstr "기사 작성 도구 레코드를 저장할 수 없습니다."
 
 msgid "Airygen Author SEO"
 msgstr "Airygen 작성자 SEO"
@@ -432,33 +266,6 @@ msgstr "페이지 %s"
 #: build/admin/airygen-app.js
 msgid "Author"
 msgstr "작성자"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Please enter a topic before generating."
-msgstr "생성하기 전에 주제를 입력하세요."
-
-msgid "Unable to generate blueprint."
-msgstr "블루프린트를 생성할 수 없습니다."
-
-msgid "Unable to store Content Blueprint record."
-msgstr "콘텐츠 블루프린트 레코드를 저장할 수 없습니다."
-
-msgid "Please add content before generating FAQ items."
-msgstr "FAQ 항목을 생성하기 전에 콘텐츠를 추가하세요."
-
-msgid "Unable to generate FAQ items."
-msgstr "FAQ 항목을 생성할 수 없습니다."
-
-msgid "Unable to store FAQ record."
-msgstr "FAQ 레코드를 저장할 수 없습니다."
-
-msgid "Unable to update FAQ display status."
-msgstr "FAQ 표시 상태를 업데이트할 수 없습니다."
-
-#: build/admin/airygen-app.js
-msgid "Answers to What You're Probably Thinking"
-msgstr "아마 궁금해할 질문에 대한 답변"
 
 msgid "Invalid action."
 msgstr "유효하지 않은 작업입니다."
@@ -858,21 +665,6 @@ msgstr "최소 링크 수"
 msgid "Minimum external link count required for pass."
 msgstr "통과에 필요한 최소 외부 링크 수입니다."
 
-msgid "Term not found."
-msgstr "용어를 찾을 수 없습니다."
-
-msgid "A valid post or term is required."
-msgstr "유효한 게시물 또는 용어가 필요합니다."
-
-msgid "Please set a focus keyword before generating."
-msgstr "생성하기 전에 포커스 키워드를 설정하세요."
-
-msgid "Unable to generate suggestions."
-msgstr "제안을 생성할 수 없습니다."
-
-msgid "Unable to store CTR booster record."
-msgstr "CTR 부스터 레코드를 저장할 수 없습니다."
-
 msgid "Airygen SEO: Core sitemap availability"
 msgstr "Airygen SEO: 코어 사이트맵 가용성"
 
@@ -1106,69 +898,16 @@ msgstr "진단"
 msgid "Table of contents"
 msgstr "목차"
 
-#: build/classic-editor/airygen-editor.js
-msgid "Unable to load records."
-msgstr "레코드를 로드할 수 없습니다."
-
-msgid "Generating suggestions..."
-msgstr "제안 생성 중..."
-
-msgid "Generation failed."
-msgstr "생성에 실패했습니다."
-
-msgid "Generated successfully. Review and apply from Browse."
-msgstr "성공적으로 생성되었습니다. 찾아보기에서 검토하고 적용하세요."
-
-msgid "Select fields and click Apply selected."
-msgstr "필드를 선택하고 선택 항목 적용을 클릭하세요."
-
-msgid "No records yet."
-msgstr "아직 레코드가 없습니다."
-
-msgid "Applied suggestion. Save term to persist changes."
-msgstr "제안을 적용했습니다. 변경 사항을 유지하려면 용어를 저장하세요."
-
-msgid "Untitled suggestion"
-msgstr "제목 없는 제안"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Keyword"
-msgstr "키워드"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Meta title"
 msgstr "메타 제목"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Meta description"
 msgstr "메타 설명"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Excerpt"
 msgstr "발췌"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generating suggestions…"
-msgstr "제안 생성 중…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Refining output…"
-msgstr "출력 다듬는 중…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Almost ready…"
-msgstr "거의 준비됐습니다…"
 
 msgid "Custom SEO title for this taxonomy page. Leave blank to use the default value from settings."
 msgstr "이 분류 페이지에 대한 사용자 정의 SEO 제목입니다. 설정의 기본값을 사용하려면 비워 두세요."
@@ -1371,22 +1110,6 @@ msgstr "토픽 클러스터"
 msgid "Continue with the main article"
 msgstr "메인 글로 계속 진행"
 
-msgid "Please add content before generating topics."
-msgstr "주제를 생성하기 전에 콘텐츠를 추가하세요."
-
-msgid "Unable to generate topics."
-msgstr "주제를 생성할 수 없습니다."
-
-msgid "Unable to store topic record."
-msgstr "주제 레코드를 저장할 수 없습니다."
-
-msgid "Unable to update topic display status."
-msgstr "주제 표시 상태를 업데이트할 수 없습니다."
-
-#: build/admin/airygen-app.js
-msgid "You Might Also Want to Know…"
-msgstr "또한 알아두면 좋은 사항…"
-
 msgid "You are not allowed to preview WooCommerce schema."
 msgstr "WooCommerce 스키마를 미리 볼 권한이 없습니다."
 
@@ -1395,29 +1118,6 @@ msgstr "WooCommerce를 사용할 수 없습니다."
 
 msgid "Open the Airygen SEO dashboard"
 msgstr "Airygen SEO 대시보드 열기"
-
-#. translators: %s: directory path
-#, php-format
-msgid "Unable to create debug directory at %s."
-msgstr "%s에 디버그 디렉터리를 생성할 수 없습니다."
-
-msgid "Subscription has expired."
-msgstr "구독이 만료되었습니다."
-
-msgid "The system is busy. Please try again later."
-msgstr "시스템이 사용 중입니다. 나중에 다시 시도하세요."
-
-msgid "Balance is insufficient. Please top up or wait for the next refresh cycle."
-msgstr "잔액이 부족합니다. 충전하거나 다음 갱신 주기를 기다리세요."
-
-msgid "Update package is authenticated and ready to download."
-msgstr "업데이트 패키지가 인증되었고 다운로드할 준비가 되었습니다."
-
-msgid "A valid subscription key is required to download and install updates."
-msgstr "업데이트를 다운로드하고 설치하려면 유효한 구독 키가 필요합니다."
-
-msgid "Enter your key in Airygen Settings > Subscription."
-msgstr "Airygen 설정 > 구독에서 키를 입력하세요."
 
 #: build/admin/airygen-app.js
 msgid "Close modal"
@@ -1501,14 +1201,6 @@ msgstr "다시 로드"
 #: build/admin/airygen-app.js
 msgid "More modules"
 msgstr "더 많은 모듈"
-
-#: build/admin/airygen-app.js
-msgid "Starter module"
-msgstr "스타터 모듈"
-
-#: build/admin/airygen-app.js
-msgid "Expert module"
-msgstr "전문가 모듈"
 
 #: build/admin/airygen-app.js
 msgid "Background Process"
@@ -1625,14 +1317,6 @@ msgstr "%s 로딩 중…"
 msgid "No migration tools available yet."
 msgstr "아직 사용 가능한 마이그레이션 도구가 없습니다."
 
-#. translators: %s is the record type label, such as CTR booster or FAQ.
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "No %s records yet."
-msgstr "아직 %s 레코드가 없습니다."
-
 #: build/admin/airygen-app.js
 msgid "No logs yet."
 msgstr "아직 로그가 없습니다."
@@ -1663,17 +1347,9 @@ msgid "No %1$s yet. Add one to configure %2$s."
 msgstr "아직 %1$s가 없습니다. %2$s을(를) 구성하려면 하나를 추가하세요."
 
 #: build/admin/airygen-app.js
-msgid "Directory not found"
-msgstr "디렉터리를 찾을 수 없습니다"
-
-#: build/admin/airygen-app.js
 #: build/classic-editor/airygen-editor.js
 msgid "Loading…"
 msgstr "로딩 중…"
-
-#: build/admin/airygen-app.js
-msgid "Debug Status"
-msgstr "디버그 상태"
 
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
@@ -1686,24 +1362,12 @@ msgid "Enable Debug Mode"
 msgstr "디버그 모드 활성화"
 
 #: build/admin/airygen-app.js
-msgid "Enable debug logging to file."
-msgstr "파일에 디버그 로깅을 활성화합니다."
-
-#: build/admin/airygen-app.js
 msgid "Force Classic Editor"
 msgstr "클래식 에디터 강제 사용"
 
 #: build/admin/airygen-app.js
-msgid "Disable the block editor and load Classic Editor for testing."
-msgstr "블록 에디터를 비활성화하고 테스트를 위해 클래식 에디터를 로드합니다."
-
-#: build/admin/airygen-app.js
 msgid "Debug level"
 msgstr "디버그 수준"
-
-#: build/admin/airygen-app.js
-msgid "Choose how much debug information is recorded."
-msgstr "기록할 디버그 정보의 양을 선택하세요."
 
 #: build/admin/airygen-app.js
 msgid "Error"
@@ -1723,76 +1387,12 @@ msgid "Refresh"
 msgstr "새로 고침"
 
 #: build/admin/airygen-app.js
-msgid "Log Directory"
-msgstr "로그 디렉터리"
-
-#: build/admin/airygen-app.js
-msgid "Location where logs are stored."
-msgstr "로그가 저장되는 위치입니다."
-
-#: build/admin/airygen-app.js
-msgid "No directory configured"
-msgstr "디렉터리가 구성되지 않았습니다"
-
-#: build/admin/airygen-app.js
-msgid "Slug"
-msgstr "슬러그"
-
-#: build/admin/airygen-app.js
-msgid "N/A"
-msgstr "해당 없음"
-
-#: build/admin/airygen-app.js
-msgid "Debug mode must be enabled to view logs."
-msgstr "로그를 보려면 디버그 모드를 활성화해야 합니다."
-
-#: build/admin/airygen-app.js
-msgid "log content"
-msgstr "로그 내용"
-
-#: build/admin/airygen-app.js
-msgid "Select a log file to view content."
-msgstr "내용을 보려면 로그 파일을 선택하세요."
-
-#: build/admin/airygen-app.js
-msgid "Log Files"
-msgstr "로그 파일"
-
-#: build/admin/airygen-app.js
-msgid "Select a log file to view."
-msgstr "보려면 로그 파일을 선택하세요."
-
-#: build/admin/airygen-app.js
-msgid "No logs found"
-msgstr "로그를 찾을 수 없습니다"
-
-#: build/admin/airygen-app.js
-msgid "Load Log"
-msgstr "로그 로드"
-
-#: build/admin/airygen-app.js
-msgid "Refresh Logs"
-msgstr "로그 새로 고침"
-
-#: build/admin/airygen-app.js
-msgid "Clear Logs"
-msgstr "로그 지우기"
-
-#: build/admin/airygen-app.js
 msgid "Configuration"
 msgstr "구성"
 
 #: build/admin/airygen-app.js
 msgid "Logs"
 msgstr "로그"
-
-#: build/admin/airygen-app.js
-msgid "Debug Information"
-msgstr "디버그 정보"
-
-#: build/admin/airygen-app.js
-msgid "View debug information and logs."
-msgstr "디버그 정보 및 로그를 확인합니다."
 
 #: build/admin/airygen-app.js
 msgid "Bring SEO data from other plugins into Airygen SEO. Start with the tools you already use and migrate only what you need."
@@ -1993,124 +1593,8 @@ msgid "Import post-level redirects from SEOPress and add them to Airygen Redirec
 msgstr "SEOPress의 게시물 수준 리디렉션을 가져와 Airygen 리디렉션에 추가합니다."
 
 #: build/admin/airygen-app.js
-msgid "Unable to load subscription status."
-msgstr "구독 상태를 로드할 수 없습니다."
-
-#: build/admin/airygen-app.js
-msgid "API key verified."
-msgstr "API 키가 확인되었습니다."
-
-#: build/admin/airygen-app.js
-msgid "Unable to verify API key."
-msgstr "API 키를 확인할 수 없습니다."
-
-#: build/admin/airygen-app.js
-msgid "API key expired. Please renew your subscription."
-msgstr "API 키가 만료되었습니다. 구독을 갱신하세요."
-
-#: build/admin/airygen-app.js
-msgid "API key was revoked. Please generate a new key."
-msgstr "API 키가 취소되었습니다. 새 키를 생성하세요."
-
-#: build/admin/airygen-app.js
-msgid "API key does not match this site domain."
-msgstr "API 키가 이 사이트 도메인과 일치하지 않습니다."
-
-#: build/admin/airygen-app.js
-msgid "API key is invalid."
-msgstr "API 키가 유효하지 않습니다."
-
-#: build/admin/airygen-app.js
-msgid "Subscription is active."
-msgstr "구독이 활성화되었습니다."
-
-#: build/admin/airygen-app.js
-msgid "Verify your key to view the period end."
-msgstr "기간 종료를 확인하려면 키를 확인하세요."
-
-#: build/admin/airygen-app.js
-msgid "Verified"
-msgstr "확인됨"
-
-#: build/admin/airygen-app.js
-msgid "Revoked"
-msgstr "취소됨"
-
-#: build/admin/airygen-app.js
-msgid "Expired"
-msgstr "만료됨"
-
-#: build/admin/airygen-app.js
-msgid "Mismatch"
-msgstr "불일치"
-
-#: build/admin/airygen-app.js
-msgid "Invalid"
-msgstr "유효하지 않음"
-
-#: build/admin/airygen-app.js
-msgid "Missing"
-msgstr "누락"
-
-#: build/admin/airygen-app.js
-msgid "Refreshing credits, please retry shortly."
-msgstr "크레딧을 새로 고치는 중입니다. 잠시 후 다시 시도하세요."
-
-#: build/admin/airygen-app.js
-msgid "Unable to load credits right now."
-msgstr "지금 크레딧을 로드할 수 없습니다."
-
-#: build/admin/airygen-app.js
-msgid "Verify your key to load credits."
-msgstr "크레딧을 로드하려면 키를 확인하세요."
-
-#: build/admin/airygen-app.js
-msgid "Subscription period"
-msgstr "구독 기간"
-
-#: build/admin/airygen-app.js
-msgid "Subscription credits"
-msgstr "구독 크레딧"
-
-#: build/admin/airygen-app.js
-msgid "Credit pack"
-msgstr "크레딧 팩"
-
-#: build/admin/airygen-app.js
-msgid "Connect your API key to unlock Airygen modules that require cloud services."
-msgstr "클라우드 서비스가 필요한 Airygen 모듈을 잠금 해제하려면 API 키를 연결하세요."
-
-#: build/admin/airygen-app.js
 msgid "API key"
 msgstr "API 키"
-
-#: build/admin/airygen-app.js
-msgid "Verify your API key to unlock cloud features."
-msgstr "클라우드 기능을 잠금 해제하려면 API 키를 확인하세요."
-
-#: build/admin/airygen-app.js
-msgid "Your key is active and linked to this site."
-msgstr "키가 활성화되어 이 사이트에 연결되어 있습니다."
-
-#: build/admin/airygen-app.js
-msgid "Enter a new key"
-msgstr "새 키 입력"
-
-#: build/admin/airygen-app.js
-msgid "Enter your API key"
-msgstr "API 키 입력"
-
-#: build/admin/airygen-app.js
-msgid "Enter and verify your key to enable cloud features."
-msgstr "클라우드 기능을 활성화하려면 키를 입력하고 확인하세요."
-
-#: build/admin/airygen-app.js
-msgid "Verifying…"
-msgstr "확인 중…"
-
-#: build/admin/airygen-app.js
-msgid "Verify & Save"
-msgstr "확인 및 저장"
 
 #: build/admin/airygen-app.js
 msgid "Status"
@@ -2121,64 +1605,10 @@ msgid "Debug"
 msgstr "디버그"
 
 #: build/admin/airygen-app.js
-msgid "Continue subscription"
-msgstr "구독 계속"
-
-#: build/admin/airygen-app.js
-msgid "AI-driven modules."
-msgstr "AI 기반 모듈."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content Blueprint"
-msgstr "콘텐츠 블루프린트"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Article Builder"
-msgstr "기사 작성 도구"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Deep FAQ"
-msgstr "심화 FAQ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic Expansion"
-msgstr "주제 확장"
-
-#: build/admin/airygen-app.js
-msgid "Create compelling titles and meta descriptions to increase SERP click-through rate."
-msgstr "SERP 클릭률을 높이기 위해 설득력 있는 제목과 메타 설명을 만드세요."
-
-#: build/admin/airygen-app.js
-msgid "Generate structured outlines with section summaries to plan your focus keyphrase."
-msgstr "포커스 키프레이즈를 계획하기 위해 섹션 요약이 포함된 구조화된 개요를 생성합니다."
-
-#: build/admin/airygen-app.js
-msgid "Provide draft ideas to speed up writing."
-msgstr "작성 속도를 높이기 위해 초안 아이디어를 제공합니다."
-
-#: build/admin/airygen-app.js
-msgid "Improve LLM recommendation visibility and time on page."
-msgstr "LLM 추천 가시성 및 페이지 체류 시간을 개선합니다."
-
-#: build/admin/airygen-app.js
-msgid "Reduce bounce rate and pogo-sticking to preserve SEO signals."
-msgstr "SEO 신호를 보존하기 위해 이탈률 및 포고스틱을 줄입니다."
-
-#: build/admin/airygen-app.js
 msgid "Records"
 msgstr "레코드"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Loading records…"
 msgstr "레코드 로딩 중…"
 
@@ -2199,15 +1629,6 @@ msgid "Next"
 msgstr "다음"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load CTR booster records."
-msgstr "CTR 부스터 레코드를 로드할 수 없습니다."
-
-#: build/admin/airygen-app.js
-msgid "Created at"
-msgstr "생성 일시"
-
-#: build/admin/airygen-app.js
 msgid "Actions"
 msgstr "작업"
 
@@ -2216,200 +1637,8 @@ msgid "Record deleted."
 msgstr "레코드가 삭제되었습니다."
 
 #: build/admin/airygen-app.js
-msgid "Deleting…"
-msgstr "삭제 중…"
-
-#: build/admin/airygen-app.js
 msgid "Delete"
 msgstr "삭제"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for SERP CTR Booster."
-msgstr "SERP CTR 부스터에 대한 기본 설정을 구성하세요."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated titles and descriptions."
-msgstr "AI 생성 제목 및 설명의 출력 언어를 선택하세요."
-
-#: build/admin/airygen-app.js
-msgid "Always include the focus keyword in AI suggestions."
-msgstr "AI 제안에 항상 포커스 키워드를 포함합니다."
-
-#: build/admin/airygen-app.js
-msgid "Generated CTR booster suggestions. Records can be removed but not edited."
-msgstr "CTR 부스터 제안이 생성되었습니다. 레코드는 제거할 수 있지만 편집할 수 없습니다."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "CTR booster"
-msgstr "CTR 부스터"
-
-#: build/admin/airygen-app.js
-msgid "More info"
-msgstr "자세한 정보"
-
-#: build/admin/airygen-app.js
-msgid "AI Prompt Templates"
-msgstr "AI 프롬프트 템플릿"
-
-#: build/admin/airygen-app.js
-msgid "Choose scenario, content type, and tone templates for AI generation."
-msgstr "AI 생성에 사용할 시나리오, 콘텐츠 유형 및 톤 템플릿을 선택하세요."
-
-#: build/admin/airygen-app.js
-msgid "Scenarios"
-msgstr "시나리오"
-
-#: build/admin/airygen-app.js
-msgid "Auto-sets content type + tone"
-msgstr "콘텐츠 유형 + 어조 자동 설정"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content type"
-msgstr "콘텐츠 유형"
-
-#: build/admin/airygen-app.js
-msgid "Adjust manually if needed"
-msgstr "필요하면 수동으로 조정하세요"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Tone"
-msgstr "어조"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load Content Blueprint records."
-msgstr "콘텐츠 블루프린트 레코드를 로드할 수 없습니다."
-
-#: build/admin/airygen-app.js
-msgid "Target words"
-msgstr "목표 단어 수"
-
-#: build/admin/airygen-app.js
-msgid "Generated words"
-msgstr "생성된 단어"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for Content Blueprint."
-msgstr "콘텐츠 블루프린트에 대한 기본 설정을 구성하세요."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated blueprints."
-msgstr "AI 생성 블루프린트의 출력 언어를 선택하세요."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Depth"
-msgstr "깊이"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "H2 only"
-msgstr "H2만"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "H2 + H3"
-msgstr "H2 + H3"
-
-#: build/admin/airygen-app.js
-msgid "Choose how deep the outline should go."
-msgstr "개요의 깊이를 선택하세요."
-
-#: build/admin/airygen-app.js
-msgid "Length"
-msgstr "길이"
-
-#: build/admin/airygen-app.js
-msgid "More items consume more credits and take longer to generate."
-msgstr "더 많은 항목은 더 많은 크레딧을 소비하고 생성하는 데 더 오래 걸립니다."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Basic (400 words)"
-msgstr "기본 (400단어)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Standard (1000 words)"
-msgstr "표준 (1000단어)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Deep (1600 words)"
-msgstr "심화 (1600단어)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Pillar (2200 words)"
-msgstr "필러 (2200단어)"
-
-#: build/admin/airygen-app.js
-msgid "Match output length to your SEO goal."
-msgstr "출력 길이를 SEO 목표에 맞춥니다."
-
-#: build/admin/airygen-app.js
-msgid "Include the focus keyword in generated outlines."
-msgstr "생성된 개요에 포커스 키워드를 포함합니다."
-
-#: build/admin/airygen-app.js
-msgid "Set keyword inclusion targets for each content length."
-msgstr "각 콘텐츠 길이에 대한 키워드 포함 목표를 설정하세요."
-
-#: build/admin/airygen-app.js
-msgid "H1 keywords"
-msgstr "H1 키워드"
-
-#: build/admin/airygen-app.js
-msgid "H2 keywords"
-msgstr "H2 키워드"
-
-#: build/admin/airygen-app.js
-msgid "H3 keywords"
-msgstr "H3 키워드"
-
-#: build/admin/airygen-app.js
-msgid "Generated content blueprints. Records can be removed but not edited."
-msgstr "콘텐츠 블루프린트가 생성되었습니다. 레코드는 제거할 수 있지만 편집할 수 없습니다."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load Article Builder records."
-msgstr "기사 작성 도구 레코드를 로드할 수 없습니다."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic"
-msgstr "주제"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for Article Builder."
-msgstr "기사 작성 도구에 대한 기본 설정을 구성하세요."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated articles."
-msgstr "AI 생성 기사의 출력 언어를 선택하세요."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Article length target"
-msgstr "기사 길이 목표"
-
-#: build/admin/airygen-app.js
-msgid "Match draft length to your publishing goal."
-msgstr "초안 길이를 게시 목표에 맞춥니다."
-
-#: build/admin/airygen-app.js
-msgid "Generated article drafts. Records can be removed but not edited."
-msgstr "기사 초안이 생성되었습니다. 레코드는 제거할 수 있지만 편집할 수 없습니다."
 
 #: build/admin/airygen-app.js
 msgid "Set transparent color"
@@ -2538,16 +1767,6 @@ msgid "Font size"
 msgstr "글꼴 크기"
 
 #: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "FAQ"
-msgstr "FAQ"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load FAQ records."
-msgstr "FAQ 레코드를 로드할 수 없습니다."
-
-#: build/admin/airygen-app.js
 msgid "Snow Slate"
 msgstr "스노우 슬레이트"
 
@@ -2558,10 +1777,6 @@ msgstr "선명한 슬레이트 텍스트가 있는 중성 흰색 + 밝은 회색
 #: build/admin/airygen-app.js
 msgid "Honey Paper"
 msgstr "허니 페이퍼"
-
-#: build/admin/airygen-app.js
-msgid "Soft parchment yellow for warm, readable FAQs."
-msgstr "따뜻하고 읽기 쉬운 FAQ를 위한 부드러운 양피지 노란색입니다."
 
 #: build/admin/airygen-app.js
 msgid "Sky Breeze"
@@ -2600,10 +1815,6 @@ msgid "Post"
 msgstr "게시물"
 
 #: build/admin/airygen-app.js
-msgid "Question"
-msgstr "질문"
-
-#: build/admin/airygen-app.js
 msgid "Layout"
 msgstr "레이아웃"
 
@@ -2612,10 +1823,6 @@ msgstr "레이아웃"
 #: build/classic-editor/airygen-editor.js
 msgid "Preview"
 msgstr "미리보기"
-
-#: build/admin/airygen-app.js
-msgid "Configure manual output and automatic FAQ injection."
-msgstr "수동 출력 및 자동 FAQ 삽입을 구성하세요."
 
 #: build/admin/airygen-app.js
 msgid "Allow template function, shortcode, and block output."
@@ -2633,10 +1840,6 @@ msgid "Block"
 msgstr "블록"
 
 #: build/admin/airygen-app.js
-msgid "Automatically inject FAQ output into matched post types."
-msgstr "일치하는 게시물 유형에 FAQ 출력을 자동 삽입합니다."
-
-#: build/admin/airygen-app.js
 msgid "Insert position"
 msgstr "삽입 위치"
 
@@ -2649,251 +1852,28 @@ msgid "After content"
 msgstr "콘텐츠 다음"
 
 #: build/admin/airygen-app.js
-msgid "Choose where FAQ output is injected in post content."
-msgstr "게시물 콘텐츠에서 FAQ 출력이 삽입될 위치를 선택하세요."
-
-#: build/admin/airygen-app.js
-msgid "Frequently Asked Questions"
-msgstr "자주 묻는 질문"
-
-#: build/admin/airygen-app.js
-msgid "AI Generation"
-msgstr "AI 생성"
-
-#: build/admin/airygen-app.js
-msgid "Configure default preferences for FAQ generation."
-msgstr "FAQ 생성에 대한 기본 설정을 구성하세요."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for AI-generated FAQs."
-msgstr "AI 생성 FAQ의 출력 언어를 선택하세요."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Answer length"
-msgstr "답변 길이"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Short"
-msgstr "짧음"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Medium"
-msgstr "중간"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Long"
-msgstr "긴"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Choose how long each answer should be."
-msgstr "각 답변의 길이를 선택하세요."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Question count"
-msgstr "질문 수"
-
-#: build/admin/airygen-app.js
-msgid "How many FAQ items to generate per request."
-msgstr "요청당 생성할 FAQ 항목 수입니다."
-
-#: build/admin/airygen-app.js
 msgid "Scope"
 msgstr "범위"
-
-#: build/admin/airygen-app.js
-msgid "Choose which post types can receive automatic FAQ injection."
-msgstr "자동 FAQ 삽입을 받을 수 있는 게시물 유형을 선택하세요."
 
 #: build/admin/airygen-app.js
 msgid "Templates"
 msgstr "템플릿"
 
 #: build/admin/airygen-app.js
-msgid "Choose a preset style for FAQ output."
-msgstr "FAQ 출력용 프리셋 스타일을 선택하세요."
-
-#: build/admin/airygen-app.js
 msgid "Style"
 msgstr "스타일"
-
-#: build/admin/airygen-app.js
-msgid "Adjust spacing and borders for list and collapse layouts."
-msgstr "목록 및 축소 레이아웃의 간격 및 테두리를 조정하세요."
 
 #: build/admin/airygen-app.js
 msgid "List"
 msgstr "목록"
 
 #: build/admin/airygen-app.js
-msgid "Collapse"
-msgstr "축소"
-
-#: build/admin/airygen-app.js
-msgid "Show FAQ border"
-msgstr "FAQ 테두리 표시"
-
-#: build/admin/airygen-app.js
-msgid "Draw a border around the FAQ container."
-msgstr "FAQ 컨테이너 주위에 테두리를 그립니다."
-
-#: build/admin/airygen-app.js
-msgid "Select the line style for the FAQ container border."
-msgstr "FAQ 컨테이너 테두리의 선 스타일을 선택하세요."
-
-#: build/admin/airygen-app.js
-msgid "Set the border color for the list container."
-msgstr "목록 컨테이너의 테두리 색상을 설정하세요."
-
-#: build/admin/airygen-app.js
-msgid "Adjust the thickness of the FAQ border."
-msgstr "FAQ 테두리의 두께를 조정하세요."
-
-#: build/admin/airygen-app.js
-msgid "FAQ padding"
-msgstr "FAQ 여백"
-
-#: build/admin/airygen-app.js
-msgid "Padding inside the FAQ list container."
-msgstr "FAQ 목록 컨테이너 내부의 패딩입니다."
-
-#: build/admin/airygen-app.js
-msgid "Background color of the FAQ list container."
-msgstr "FAQ 목록 컨테이너의 배경색입니다."
-
-#: build/admin/airygen-app.js
-msgid "Question font color"
-msgstr "질문 글꼴 색상"
-
-#: build/admin/airygen-app.js
-msgid "Text color for each FAQ question."
-msgstr "각 FAQ 질문의 텍스트 색상입니다."
-
-#: build/admin/airygen-app.js
-msgid "Question font size"
-msgstr "질문 글꼴 크기"
-
-#: build/admin/airygen-app.js
-msgid "Font size used for each question line."
-msgstr "각 질문 줄에 사용되는 글꼴 크기입니다."
-
-#: build/admin/airygen-app.js
-msgid "Answer font color"
-msgstr "답변 글꼴 색상"
-
-#: build/admin/airygen-app.js
-msgid "Text color for each answer line."
-msgstr "각 답변 줄의 텍스트 색상입니다."
-
-#: build/admin/airygen-app.js
-msgid "Answer font size"
-msgstr "답변 글꼴 크기"
-
-#: build/admin/airygen-app.js
-msgid "Font size for the answer text."
-msgstr "답변 텍스트의 글꼴 크기입니다."
-
-#: build/admin/airygen-app.js
-msgid "Collapse button"
-msgstr "축소 버튼"
-
-#: build/admin/airygen-app.js
-msgid "Collapse answers"
-msgstr "답변 축소"
-
-#: build/admin/airygen-app.js
-msgid "Background for the plus/minus button."
-msgstr "더하기/빼기 버튼의 배경입니다."
-
-#: build/admin/airygen-app.js
-msgid "Icon color"
-msgstr "아이콘 색상"
-
-#: build/admin/airygen-app.js
-msgid "Color for the plus/minus icon."
-msgstr "더하기/빼기 아이콘의 색상입니다."
-
-#: build/admin/airygen-app.js
-msgid "Border color for the toggle button."
-msgstr "토글 버튼의 테두리 색상입니다."
-
-#: build/admin/airygen-app.js
-msgid "Thickness of the toggle button border."
-msgstr "토글 버튼 테두리의 두께입니다."
-
-#: build/admin/airygen-app.js
-msgid "Background color for each question row."
-msgstr "각 질문 행의 배경색입니다."
-
-#: build/admin/airygen-app.js
 msgid "Font color"
 msgstr "글꼴 색상"
 
 #: build/admin/airygen-app.js
-msgid "Text color for the question title."
-msgstr "질문 제목의 텍스트 색상입니다."
-
-#: build/admin/airygen-app.js
-msgid "Border color around each question row."
-msgstr "각 질문 행 주변의 테두리 색상입니다."
-
-#: build/admin/airygen-app.js
-msgid "Line style for the question border."
-msgstr "질문 테두리의 선 스타일입니다."
-
-#: build/admin/airygen-app.js
-msgid "Font size for the question text."
-msgstr "질문 텍스트의 글꼴 크기입니다."
-
-#: build/admin/airygen-app.js
-msgid "Padding inside each question row."
-msgstr "각 질문 행 내부의 패딩입니다."
-
-#: build/admin/airygen-app.js
 msgid "Gap"
 msgstr "간격"
-
-#: build/admin/airygen-app.js
-msgid "Spacing between each question row."
-msgstr "각 질문 행 사이의 간격입니다."
-
-#: build/admin/airygen-app.js
-msgid "Keep open"
-msgstr "열어 두기"
-
-#: build/admin/airygen-app.js
-msgid "Allow multiple answers to stay open."
-msgstr "여러 답변을 열린 상태로 유지합니다."
-
-#: build/admin/airygen-app.js
-msgid "Answer"
-msgstr "답변"
-
-#: build/admin/airygen-app.js
-msgid "Background for the expanded answer area."
-msgstr "확장된 답변 영역의 배경입니다."
-
-#: build/admin/airygen-app.js
-msgid "Text color for the answer content."
-msgstr "답변 콘텐츠의 텍스트 색상입니다."
-
-#: build/admin/airygen-app.js
-msgid "Padding inside the answer panel."
-msgstr "답변 패널 내부의 패딩입니다."
-
-#: build/admin/airygen-app.js
-msgid "Preview may differ from the live site because theme styles are applied there."
-msgstr "미리보기는 테마 스타일이 적용되는 실제 사이트와 다를 수 있습니다."
 
 #: build/admin/airygen-app.js
 msgid "Laptop"
@@ -2906,18 +1886,6 @@ msgstr "태블릿"
 #: build/admin/airygen-app.js
 msgid "Cellphone"
 msgstr "휴대전화"
-
-#: build/admin/airygen-app.js
-msgid "FAQ preview"
-msgstr "FAQ 미리보기"
-
-#: build/admin/airygen-app.js
-msgid "Preview is not available."
-msgstr "미리보기를 사용할 수 없습니다."
-
-#: build/admin/airygen-app.js
-msgid "Generated FAQ records. Records can be removed but not edited."
-msgstr "FAQ 레코드가 생성되었습니다. 레코드는 제거할 수 있지만 편집할 수 없습니다."
 
 #: build/admin/airygen-app.js
 msgid "Section body container"
@@ -2972,354 +1940,18 @@ msgid "Indent"
 msgstr "들여쓰기"
 
 #: build/admin/airygen-app.js
-msgid "topic expansion"
-msgstr "주제 확장"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Unable to load topic records."
-msgstr "주제 레코드를 로드할 수 없습니다."
-
-#: build/admin/airygen-app.js
-msgid "Display"
-msgstr "표시"
-
-#: build/admin/airygen-app.js
-msgid "Shown"
-msgstr "표시됨"
-
-#: build/admin/airygen-app.js
-msgid "Hidden"
-msgstr "숨김"
-
-#: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "View"
 msgstr "보기"
 
 #: build/admin/airygen-app.js
-msgid "Soft parchment yellow for warm, readable topics."
-msgstr "따뜻하고 읽기 쉬운 주제를 위한 부드러운 양피지 노란색입니다."
-
-#: build/admin/airygen-app.js
-msgid "Configure manual output and automatic topic expansion injection."
-msgstr "수동 출력 및 자동 주제 확장 삽입을 구성하세요."
-
-#: build/admin/airygen-app.js
-msgid "Automatically inject topic expansion output into content."
-msgstr "주제 확장 출력을 콘텐츠에 자동 삽입합니다."
-
-#: build/admin/airygen-app.js
-msgid "Choose where topic expansion output is injected in post content."
-msgstr "게시물 콘텐츠에서 주제 확장 출력이 삽입될 위치를 선택하세요."
-
-#: build/admin/airygen-app.js
-msgid "Set how AI generates related topics."
-msgstr "AI가 관련 주제를 생성하는 방식을 설정하세요."
-
-#: build/admin/airygen-app.js
-msgid "Choose the output language for related topics."
-msgstr "관련 주제의 출력 언어를 선택하세요."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic length"
-msgstr "주제 길이"
-
-#: build/admin/airygen-app.js
-msgid "Choose the length for each topic suggestion."
-msgstr "각 주제 제안의 길이를 선택하세요."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Topic count"
-msgstr "주제 수"
-
-#: build/admin/airygen-app.js
-msgid "How many related topics to generate per request."
-msgstr "요청당 생성할 관련 주제 수입니다."
-
-#: build/admin/airygen-app.js
-msgid "Pick a preset theme for topic output."
-msgstr "주제 출력에 사용할 프리셋 테마를 선택하세요."
-
-#: build/admin/airygen-app.js
-msgid "Adjust how the related topics list appears on the page."
-msgstr "관련 주제 목록이 페이지에 표시되는 방식을 조정하세요."
-
-#: build/admin/airygen-app.js
-msgid "Set whether topic text is bold, italic, or underlined."
-msgstr "주제 텍스트를 굵게, 기울임 또는 밑줄로 표시할지 설정하세요."
-
-#: build/admin/airygen-app.js
-msgid "Color for each topic link."
-msgstr "각 주제 링크의 색상입니다."
-
-#: build/admin/airygen-app.js
-msgid "Font size used for each topic link."
-msgstr "각 주제 링크에 사용되는 글꼴 크기입니다."
-
-#: build/admin/airygen-app.js
 msgid "Choose whether each line uses bullets, numbers, or plain text."
 msgstr "각 줄을 글머리 기호, 번호 또는 일반 텍스트로 표시할지 선택하세요."
 
 #: build/admin/airygen-app.js
-msgid "Set vertical spacing between each topic item."
-msgstr "각 주제 항목 간의 세로 간격을 설정하세요."
-
-#: build/admin/airygen-app.js
-msgid "Topic Expansion preview"
-msgstr "주제 확장 미리보기"
-
-#: build/admin/airygen-app.js
 msgid "Preview is unavailable."
 msgstr "미리보기를 사용할 수 없습니다."
-
-#: build/admin/airygen-app.js
-msgid "SEO safety"
-msgstr "SEO 안전성"
-
-#: build/admin/airygen-app.js
-msgid "Allowing indexation can briefly lift long-tail traffic, but search engines may later remove those pages and harm site-wide SEO authority. Reduce duplication and focus on real user value."
-msgstr "색인 생성을 허용하면 롱테일 트래픽을 일시적으로 높일 수 있지만, 검색 엔진이 나중에 해당 페이지를 제거하고 사이트 전체 SEO 권한을 해칠 수 있습니다. 중복을 줄이고 실제 사용자 가치에 집중하세요."
-
-#: build/admin/airygen-app.js
-msgid "Prevent search engines from indexing highly repetitive, low-quality content."
-msgstr "검색 엔진이 반복적이고 저품질 콘텐츠를 색인하지 못하도록 방지합니다."
-
-#: build/admin/airygen-app.js
-msgid "Disable indexing"
-msgstr "색인 생성 비활성화"
-
-#: build/admin/airygen-app.js
-msgid "Add nofollow to virtual links"
-msgstr "가상 링크에 nofollow 추가"
-
-#: build/admin/airygen-app.js
-msgid "Add rel=\"nofollow\" to reduce crawl budget spent on generated links."
-msgstr "생성된 링크에 소비되는 크롤링 예산을 줄이려면 rel=\"nofollow\"를 추가하세요."
-
-#: build/admin/airygen-app.js
-msgid "Generated topic suggestions. Records can be removed but not edited."
-msgstr "주제 제안이 생성되었습니다. 레코드는 제거할 수 있지만 편집할 수 없습니다."
-
-#: build/admin/airygen-app.js
-msgid "Auto detect"
-msgstr "자동 감지"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "English (United States)"
-msgstr "영어 (미국)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "English"
-msgstr "영어"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Chinese (Traditional)"
-msgstr "중국어 (번체)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Chinese (Simplified)"
-msgstr "중국어 (간체)"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Japanese"
-msgstr "일본어"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Korean"
-msgstr "한국어"
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Technology"
-msgstr "기술"
-
-#: build/admin/airygen-app.js
-msgid "Product, engineering, AI, and system-focused technical content."
-msgstr "제품, 엔지니어링, AI 및 시스템 중심의 기술 콘텐츠."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Business"
-msgstr "비즈니스"
-
-#: build/admin/airygen-app.js
-msgid "Growth, operations, strategy, and outcome-oriented business content."
-msgstr "성장, 운영, 전략 및 성과 중심의 비즈니스 콘텐츠."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Finance"
-msgstr "금융"
-
-#: build/admin/airygen-app.js
-msgid "Numbers-first finance and investment analysis with risk context."
-msgstr "위험 맥락을 포함한 숫자 중심의 금융 및 투자 분석."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Health"
-msgstr "상태"
-
-#: build/admin/airygen-app.js
-msgid "Evidence-based health content with cautious and compliant language."
-msgstr "신중하고 규정을 준수하는 언어로 작성된 근거 기반 건강 콘텐츠."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Lifestyle"
-msgstr "라이프스타일"
-
-#: build/admin/airygen-app.js
-msgid "Practical lifestyle advice with real-world trade-offs."
-msgstr "현실적인 장단점을 고려한 실용적인 라이프스타일 조언."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Education"
-msgstr "교육"
-
-#: build/admin/airygen-app.js
-msgid "Learning-focused content with clear outcomes and methods."
-msgstr "명확한 결과와 방법에 초점을 맞춘 학습 중심 콘텐츠입니다."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Professional"
-msgstr "전문적"
-
-#: build/admin/airygen-app.js
-msgid "Domain-expert content for consulting and regulated industries."
-msgstr "컨설팅 및 규제 산업을 위한 도메인 전문 콘텐츠."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "General"
-msgstr "일반"
-
-#: build/admin/airygen-app.js
-msgid "Balanced, broadly readable content for mixed audiences."
-msgstr "다양한 대상이 폭넓게 읽기 쉬운 균형 잡힌 콘텐츠."
-
-#: build/admin/airygen-app.js
-msgid "Formal, precise, and decision-ready writing style."
-msgstr "격식 있고 정확하며 의사결정에 적합한 글쓰기 스타일."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Conversational"
-msgstr "대화체"
-
-#: build/admin/airygen-app.js
-msgid "Natural and friendly style for broad readability."
-msgstr "폭넓은 가독성을 위한 자연스럽고 친근한 스타일입니다."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Technical"
-msgstr "기술적"
-
-#: build/admin/airygen-app.js
-msgid "Spec-like style with implementation detail and precision."
-msgstr "구현 세부사항과 정밀성을 갖춘 사양형 스타일입니다."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Storytelling"
-msgstr "스토리텔링"
-
-#: build/admin/airygen-app.js
-msgid "Narrative-led style with clear takeaways and context."
-msgstr "명확한 핵심 내용과 맥락을 담은 서사 중심 스타일입니다."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Instructional"
-msgstr "교육적"
-
-#: build/admin/airygen-app.js
-msgid "Action-first, step-by-step guidance style."
-msgstr "행동 우선의 단계별 안내 스타일."
-
-#: build/admin/airygen-app.js
-#: build/block-editor/airygen-editor.js
-msgid "Minimalist"
-msgstr "미니멀"
-
-#: build/admin/airygen-app.js
-msgid "Compact, direct writing style with minimal filler."
-msgstr "군더더기를 최소화한 간결하고 직접적인 작성 스타일."
-
-#: build/admin/airygen-app.js
-msgid "Quick answers for long‑tail keywords and fast indexing."
-msgstr "롱테일 키워드 및 빠른 색인 생성을 위한 빠른 답변입니다."
-
-#: build/admin/airygen-app.js
-msgid "Balanced depth for most SEO topics."
-msgstr "대부분의 SEO 주제에 대한 균형 잡힌 깊이입니다."
-
-#: build/admin/airygen-app.js
-msgid "More detail for competitive keywords and comparisons."
-msgstr "경쟁 키워드 및 비교를 위한 더 많은 세부 정보입니다."
-
-#: build/admin/airygen-app.js
-msgid "The main article in a topic cluster that everything links to."
-msgstr "모든 것이 연결되는 주제 클러스터의 주요 기사입니다."
-
-#: build/admin/airygen-app.js
-msgid "Business report"
-msgstr "비즈니스 보고서"
-
-#: build/admin/airygen-app.js
-msgid "Data-driven structure for decision-making and business review."
-msgstr "의사 결정과 비즈니스 검토를 위한 데이터 기반 구조."
-
-#: build/admin/airygen-app.js
-msgid "Tech blog"
-msgstr "기술 블로그"
-
-#: build/admin/airygen-app.js
-msgid "Technical but easy-to-read format for broader audiences."
-msgstr "폭넓은 독자를 위한 기술적이지만 읽기 쉬운 형식입니다."
-
-#: build/admin/airygen-app.js
-msgid "Tutorial"
-msgstr "튜토리얼"
-
-#: build/admin/airygen-app.js
-msgid "Step-by-step teaching format focused on actionable learning."
-msgstr "실행 가능한 학습에 중점을 둔 단계별 교육 형식입니다."
-
-#: build/admin/airygen-app.js
-msgid "Marketing content"
-msgstr "마케팅 콘텐츠"
-
-#: build/admin/airygen-app.js
-msgid "Story-led format focused on engagement and conversion."
-msgstr "참여와 전환에 중점을 둔 스토리 중심 형식입니다."
-
-#: build/admin/airygen-app.js
-msgid "Technical document"
-msgstr "기술 문서"
-
-#: build/admin/airygen-app.js
-msgid "Precise engineering-style format for implementation details."
-msgstr "구현 세부 사항을 위한 정밀한 엔지니어링 스타일 형식."
-
-#: build/admin/airygen-app.js
-msgid "AI-assisted writing and strategic planning for SEO content."
-msgstr "SEO 콘텐츠를 위한 AI 지원 작성 및 전략 기획."
 
 #: build/admin/airygen-app.js
 msgid "Configure"
@@ -3616,7 +2248,6 @@ msgid "Name"
 msgstr "이름"
 
 #: build/admin/airygen-app.js
-#: build/classic-editor/airygen-editor.js
 msgid "Pillar"
 msgstr "필러"
 
@@ -5950,88 +4581,16 @@ msgid "Open in a new tab to verify the generated sitemap index."
 msgstr "새 탭에서 열어 생성된 사이트맵 인덱스를 확인하세요."
 
 #: build/admin/airygen-app.js
-msgid "Head"
-msgstr "헤드"
-
-#: build/admin/airygen-app.js
-msgid "Snippets in this area are injected into the <head> section."
-msgstr "이 영역의 스니펫은 <head> 섹션에 삽입됩니다."
-
-#: build/admin/airygen-app.js
 msgid "Body"
 msgstr "본문"
-
-#: build/admin/airygen-app.js
-msgid "Snippets in this area are injected right after <body>."
-msgstr "이 영역의 스니펫은 <body> 바로 뒤에 삽입됩니다."
 
 #: build/admin/airygen-app.js
 msgid "Footer"
 msgstr "푸터"
 
 #: build/admin/airygen-app.js
-msgid "Snippets in this area are injected before </body>."
-msgstr "이 영역의 스니펫은 </body> 앞에 삽입됩니다."
-
-#: build/admin/airygen-app.js
-msgid "Disabled snippets staging area"
-msgstr "비활성화된 스니펫 스테이징 영역"
-
-#: build/admin/airygen-app.js
-msgid "Keep snippets here when you do not want them rendered."
-msgstr "렌더링하지 않으려는 스니펫은 여기에 보관하세요."
-
-#: build/admin/airygen-app.js
 msgid "No description"
 msgstr "설명 없음"
-
-#: build/admin/airygen-app.js
-msgid "Code Snippets"
-msgstr "코드 스니펫"
-
-#: build/admin/airygen-app.js
-msgid "Configure GA4, GTM, and custom tracking snippets for your site."
-msgstr "사이트의 GA4, GTM 및 사용자 정의 추적 스니펫을 구성하세요."
-
-#: build/admin/airygen-app.js
-msgid "Paste tracking IDs. Airygen SEO prints GA4/GTM tags automatically when IDs are set."
-msgstr "추적 ID를 붙여넣으세요. Airygen SEO는 ID가 설정되면 GA4/GTM 태그를 자동으로 출력합니다."
-
-#: build/admin/airygen-app.js
-msgid "Google Analytics 4"
-msgstr "Google Analytics 4"
-
-#: build/admin/airygen-app.js
-msgid "Enable GA4 tracking"
-msgstr "GA4 추적 활성화"
-
-#: build/admin/airygen-app.js
-msgid "Measurement ID"
-msgstr "측정 ID"
-
-#. translators: %s is an HTML code tag for the GA4 ID prefix (G-).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste your Google Analytics 4 ID from Google Analytics Admin. It usually starts with %s."
-msgstr "Google Analytics 관리자에서 Google Analytics 4 ID를 붙여넣으세요. 일반적으로 %s로 시작합니다."
-
-#: build/admin/airygen-app.js
-msgid "Google Tag Manager"
-msgstr "Google Tag Manager"
-
-#: build/admin/airygen-app.js
-msgid "Enable GTM tracking"
-msgstr "GTM 추적 활성화"
-
-#: build/admin/airygen-app.js
-msgid "Container ID"
-msgstr "컨테이너 ID"
-
-#. translators: %s is an HTML code tag for the GTM container prefix (GTM-).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste your Google Tag Manager container ID. It usually starts with %s."
-msgstr "Google Tag Manager 컨테이너 ID를 붙여넣으세요. 일반적으로 %s로 시작합니다."
 
 #: build/admin/airygen-app.js
 #: build/block-editor/airygen-editor.js
@@ -6040,42 +4599,8 @@ msgid "Custom"
 msgstr "사용자 정의"
 
 #: build/admin/airygen-app.js
-msgid "Create reusable snippets and drag them between output locations."
-msgstr "재사용 가능한 스니펫을 만들고 출력 위치 사이로 드래그하세요."
-
-#: build/admin/airygen-app.js
-msgid "Add Snippet"
-msgstr "스니펫 추가"
-
-#: build/admin/airygen-app.js
-msgid "Add snippet"
-msgstr "스니펫 추가"
-
-#: build/admin/airygen-app.js
 msgid "Save changes"
 msgstr "변경 사항 저장"
-
-#: build/admin/airygen-app.js
-msgid "Internal reference only. This is not output on the frontend."
-msgstr "내부 참조용입니다. 프론트엔드에는 출력되지 않습니다."
-
-#: build/admin/airygen-app.js
-msgid "Code"
-msgstr "코드"
-
-#. translators: %s is an HTML code tag for script tags (<script>).
-#: build/admin/airygen-app.js
-#, js-format
-msgid "Paste code only. Do not include %s tags."
-msgstr "코드만 붙여넣으세요. %s 태그는 포함하지 마세요."
-
-#: build/admin/airygen-app.js
-msgid "Injection position"
-msgstr "삽입 위치"
-
-#: build/admin/airygen-app.js
-msgid "Inactive"
-msgstr "비활성"
 
 #: build/admin/airygen-app.js
 msgid "Site Verification"
@@ -8908,10 +7433,6 @@ msgid "Manage the sitemap index and exposed post types. When enabled, Airygen SE
 msgstr "사이트맵 인덱스와 노출된 게시물 유형을 관리합니다. 활성화하면 Airygen SEO가 WordPress의 기본 사이트맵을 대체합니다."
 
 #: build/admin/airygen-app.js
-msgid "Manage GA4, GTM, and custom tracking snippets in one place."
-msgstr "한 곳에서 GA4, GTM 및 사용자 정의 추적 스니펫을 관리하세요."
-
-#: build/admin/airygen-app.js
 msgid "Add site verification tokens for search engines and webmaster platforms."
 msgstr "검색 엔진 및 웹마스터 플랫폼용 사이트 인증 토큰을 추가하세요."
 
@@ -8950,10 +7471,6 @@ msgstr "에디터 내 SEO 점수 패널 및 REST 엔드포인트를 지원합니
 #: build/admin/airygen-app.js
 msgid "Monitor outbound URLs for errors once link counting completes."
 msgstr "링크 카운팅이 완료되면 아웃바운드 URL의 오류를 모니터링합니다."
-
-#: build/admin/airygen-app.js
-msgid "AI-powered helpers for titles, descriptions, and content improvements."
-msgstr "제목, 설명 및 콘텐츠 개선을 위한 AI 기반 도우미."
 
 #: build/admin/airygen-app.js
 msgid "Create and prioritize redirect rules for your site."
@@ -9029,10 +7546,6 @@ msgid "Assign pillar and cluster relationships while editing."
 msgstr "편집하는 동안 필러 및 클러스터 관계를 할당합니다."
 
 #: build/admin/airygen-app.js
-msgid "AI suggestions and CTR improvements while you edit."
-msgstr "편집하는 동안 AI 제안 및 CTR 개선."
-
-#: build/admin/airygen-app.js
 msgid "Failed to load debug info."
 msgstr "디버그 정보를 로드하지 못했습니다."
 
@@ -9053,14 +7566,6 @@ msgid "Failed to enable debug mode."
 msgstr "디버그 모드를 활성화하지 못했습니다."
 
 #: build/admin/airygen-app.js
-msgid "Logs cleared."
-msgstr "로그가 지워졌습니다."
-
-#: build/admin/airygen-app.js
-msgid "Failed to clear logs."
-msgstr "로그를 지우지 못했습니다."
-
-#: build/admin/airygen-app.js
 msgid "Classic editor mode enabled for testing."
 msgstr "테스트를 위해 클래식 에디터 모드가 활성화되었습니다."
 
@@ -9079,14 +7584,6 @@ msgstr "디버그 수준이 업데이트되었습니다."
 #: build/admin/airygen-app.js
 msgid "Failed to update debug level."
 msgstr "디버그 수준을 업데이트하지 못했습니다."
-
-#: build/admin/airygen-app.js
-msgid "Log file not found."
-msgstr "로그 파일을 찾을 수 없습니다."
-
-#: build/admin/airygen-app.js
-msgid "Failed to load log file."
-msgstr "로그 파일을 로드하지 못했습니다."
 
 #: build/admin/airygen-app.js
 msgid "Failed to load settings."
@@ -9129,32 +7626,12 @@ msgid "notify module"
 msgstr "Notify 모듈"
 
 #: build/admin/airygen-app.js
-msgid "This paid module cannot be enabled with the current subscription status."
-msgstr "현재 구독 상태로는 이 유료 모듈을 활성화할 수 없습니다."
-
-#: build/admin/airygen-app.js
 msgid "Related Posts requires enabling Link Suggestions first."
 msgstr "관련 게시물을 사용하려면 먼저 링크 제안을 활성화해야 합니다."
 
 #: build/admin/airygen-app.js
 msgid "Airygen SEO Settings"
 msgstr "Airygen SEO 설정"
-
-#: build/admin/airygen-app.js
-msgid "Subscription inactive"
-msgstr "구독 비활성"
-
-#: build/admin/airygen-app.js
-msgid "Continue to disable"
-msgstr "비활성화를 계속"
-
-#: build/admin/airygen-app.js
-msgid "Subscription is inactive. Enabled paid modules remain available, but new paid modules cannot be enabled until renewal."
-msgstr "구독이 비활성화되어 있습니다. 활성화된 유료 모듈은 계속 사용할 수 있지만, 갱신 전에는 새 유료 모듈을 활성화할 수 없습니다."
-
-#: build/admin/airygen-app.js
-msgid "View plans"
-msgstr "요금제 보기"
 
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
@@ -9315,7 +7792,6 @@ msgstr "밀도를 확인하려면 포커스 키프레이즈를 설정하세요."
 msgid "Focus keyphrase density is 0%. Add it naturally to the content."
 msgstr "포커스 키프레이즈 밀도가 0%입니다. 콘텐츠에 자연스럽게 추가하세요."
 
-#. translators: percentage range for focus keyphrase density.
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "Adjust focus keyphrase density to 0.5%–2%."
@@ -9359,7 +7835,6 @@ msgid "To avoid keyword stuffing, each long-tail keyphrase should be supported b
 msgstr "키워드 채우기를 피하기 위해 각 롱테일 키프레이즈는 최소 150단어의 설명 콘텐츠로 뒷받침되어야 합니다. 의미 있는 텍스트 없이 키프레이즈를 단독으로 반복하지 마세요."
 
 #: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Got it"
 msgstr "알겠습니다"
 
@@ -9678,407 +8153,14 @@ msgstr "아직 제안이 없습니다. 키워드를 색인할 수 있도록 게�
 msgid "Insert"
 msgstr "삽입"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your content…"
-msgstr "콘텐츠 분석 중…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Subscription is inactive. AI generation is unavailable until renewal."
-msgstr "구독이 비활성화되어 있습니다. 갱신 전까지 AI 생성이 불가능합니다."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Detected content languages:"
-msgstr "감지된 콘텐츠 언어:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Primary language:"
-msgstr "기본 언어:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Selected output language:"
-msgstr "선택된 출력 언어:"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Continue?"
-msgstr "계속하시겠습니까?"
-
-#: build/block-editor/airygen-editor.js
-msgid "SERP CTR Booster generated. Review and apply when ready."
-msgstr "SERP CTR 부스터가 생성되었습니다. 준비가 되면 검토하고 적용하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate CTR booster suggestions."
-msgstr "CTR 부스터 제안을 생성할 수 없습니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "FAQ generated. Review and apply when ready."
-msgstr "FAQ가 생성되었습니다. 준비가 되면 검토하고 적용하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate FAQ suggestions."
-msgstr "FAQ 제안을 생성할 수 없습니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Topic Expansion generated. Review and apply when ready."
-msgstr "주제 확장이 생성되었습니다. 준비가 되면 검토하고 적용하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Topic Expansion suggestions."
-msgstr "주제 확장 제안을 생성할 수 없습니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Content Blueprint generated. Review and apply when ready."
-msgstr "콘텐츠 블루프린트가 생성되었습니다. 준비가 되면 검토하고 적용하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Content Blueprint."
-msgstr "콘텐츠 블루프린트를 생성할 수 없습니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Article Builder generated. Review and apply when ready."
-msgstr "기사 작성 도구가 생성되었습니다. 준비가 되면 검토하고 적용하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to generate Article Builder output."
-msgstr "기사 작성 도구 출력을 생성할 수 없습니다."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Outline unavailable."
-msgstr "개요를 사용할 수 없습니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to update FAQ display settings."
-msgstr "FAQ 표시 설정을 업데이트할 수 없습니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to update topic display settings."
-msgstr "주제 표시 설정을 업데이트할 수 없습니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "AI Assist is disabled. Enable it in Airygen → Modules."
-msgstr "AI 어시스트가 비활성화되어 있습니다. Airygen → 모듈에서 활성화하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "AI Assist API is not configured."
-msgstr "AI 어시스트 API가 구성되지 않았습니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate higher-CTR titles and descriptions with AI suggestions."
-msgstr "AI 제안으로 더 높은 CTR 제목 및 설명을 생성합니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate structured outlines and section summaries for faster planning."
-msgstr "더 빠른 기획을 위해 구조화된 개요 및 섹션 요약을 생성합니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate full-length articles from your topic and focus keyphrase."
-msgstr "주제 및 포커스 키프레이즈에서 전체 길이 기사를 생성합니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate FAQ entries that expand on common user questions."
-msgstr "일반적인 사용자 질문을 확장하는 FAQ 항목을 생성합니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Generate related topics to expand your content plan."
-msgstr "콘텐츠 계획을 확장하기 위해 관련 주제를 생성합니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unavailable in your current plan."
-msgstr "현재 요금제에서 사용할 수 없습니다."
-
-#: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "Display mode"
 msgstr "표시 모드"
 
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
-msgid "Use settings"
-msgstr "설정 사용"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
 msgid "Manual"
 msgstr "수동"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose how FAQ output should be inserted for this post."
-msgstr "이 게시물에 FAQ 출력을 삽입하는 방법을 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose how Topic Expansion output should be inserted for this post."
-msgstr "이 게시물에 주제 확장 출력을 삽입하는 방법을 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "No AI modules are enabled for this post."
-msgstr "이 게시물에 대해 활성화된 AI 모듈이 없습니다."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates a meta title, meta description, and excerpt based on your current content. Apply suggestions and save the post to make changes live."
-msgstr "현재 콘텐츠를 기반으로 메타 제목, 메타 설명 및 발췌를 생성합니다. 제안을 적용하고 게시물을 저장하여 변경 사항을 적용하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Uses the focus keyphrase set for this post."
-msgstr "이 게시물에 설정된 포커스 키프레이즈를 사용합니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the language for AI-generated suggestions."
-msgstr "AI 생성 제안을 위한 언어를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Require the focus keyphrase to appear in suggestions."
-msgstr "포커스 키프레이즈가 제안에 나타나도록 요구합니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Applied. Save the post to make the changes live."
-msgstr "적용되었습니다. 변경 사항을 적용하려면 게시물을 저장하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one suggestion to apply."
-msgstr "적용할 제안을 하나 이상 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Describe the article you want to plan."
-msgstr "계획하려는 기사를 설명하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Defaults to the focus keyphrase."
-msgstr "포커스 키프레이즈로 기본 설정됩니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Set a focus keyphrase in the SEO panel."
-msgstr "SEO 패널에서 포커스 키프레이즈를 설정하세요."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Choose the output language for the outline."
-msgstr "개요의 출력 언어를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Select a structure that matches your topic."
-msgstr "주제와 일치하는 구조를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose a voice for section summaries."
-msgstr "섹션 요약을 위한 어조를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Control how many heading levels the outline includes."
-msgstr "개요에 포함할 제목 레벨 수를 제어합니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Include the focus keyword in outline headings."
-msgstr "개요 제목에 포커스 키워드를 포함합니다."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Outline length target"
-msgstr "개요 길이 목표"
-
-#: build/block-editor/airygen-editor.js
-msgid "Longer blueprints take more time. Please keep this window open."
-msgstr "긴 블루프린트는 더 많은 시간이 걸립니다. 이 창을 열어 두세요."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Keep outline"
-msgstr "개요 유지"
-
-#: build/block-editor/airygen-editor.js
-msgid "Keep your current headings and expand the article from them."
-msgstr "현재 제목을 유지하고 그로부터 기사를 확장합니다."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content Blueprint is for planning new articles. Applying will replace the post content."
-msgstr "콘텐츠 블루프린트는 새 기사를 계획하기 위한 것입니다. 적용하면 게시물 콘텐츠가 교체됩니다."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "It does not generate a full draft; it proposes section headings to guide your writing."
-msgstr "전체 초안을 생성하지 않습니다. 작성을 안내하는 섹션 제목을 제안합니다."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use this blueprint"
-msgstr "이 블루프린트 사용"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select a blueprint to apply."
-msgstr "적용할 블루프린트를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to apply blueprint content."
-msgstr "블루프린트 콘텐츠를 적용할 수 없습니다."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your topic…"
-msgstr "주제 분석 중…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Building outline structure…"
-msgstr "개요 구조 구축 중…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Refining sections…"
-msgstr "섹션 다듬는 중…"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Content source"
-msgstr "콘텐츠 소스"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Extract from editor content"
-msgstr "에디터 콘텐츠에서 추출"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose where the AI should read source content from."
-msgstr "AI가 소스 콘텐츠를 읽을 위치를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Custom content"
-msgstr "사용자 정의 콘텐츠"
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Paste the source content for the AI draft."
-msgstr "AI 초안을 위한 소스 콘텐츠를 붙여넣으세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Markdown formatting works best."
-msgstr "마크다운 형식이 가장 잘 작동합니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the language for the generated article."
-msgstr "생성된 기사의 언어를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the structure that best matches your topic."
-msgstr "주제와 가장 잘 일치하는 구조를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the voice and style for the draft."
-msgstr "초안의 어조와 스타일을 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "AI targets can vary by about ten percent from the selected length."
-msgstr "AI 목표는 선택한 길이에서 약 10% 정도 달라질 수 있습니다."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Longer articles take more time. Please keep this window open."
-msgstr "긴 기사는 더 많은 시간이 걸립니다. 이 창을 열어 두세요."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Use this article"
-msgstr "이 기사 사용"
-
-#: build/block-editor/airygen-editor.js
-msgid "Unable to apply Article Builder output."
-msgstr "기사 작성 도구 출력을 적용할 수 없습니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select an article to apply."
-msgstr "적용할 기사를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting can take up to ~90 seconds depending on length. Please keep this window open."
-msgstr "길이에 따라 작성하는 데 최대 ~90초가 걸릴 수 있습니다. 이 창을 열어 두세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting full sections…"
-msgstr "전체 섹션 작성 중…"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the output language for FAQs."
-msgstr "FAQ의 출력 언어를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the content structure for FAQ responses."
-msgstr "FAQ 응답을 위한 콘텐츠 구조를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the writing tone for answers."
-msgstr "답변의 작성 어조를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "How many questions to generate per request."
-msgstr "요청당 생성할 질문 수입니다."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates FAQ entries based on your current post content. Apply suggestions and save the post to publish updates."
-msgstr "현재 게시물 콘텐츠를 기반으로 FAQ 항목을 생성합니다. 제안을 적용하고 게시물을 저장하여 업데이트를 게시하세요."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Untitled FAQ"
-msgstr "제목 없는 FAQ"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one FAQ item to apply."
-msgstr "적용할 FAQ 항목을 하나 이상 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Drafting Q&A pairs…"
-msgstr "Q&A 쌍 작성 중…"
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose the output language for topics."
-msgstr "주제의 출력 언어를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Select the structure for topic suggestions."
-msgstr "주제 제안을 위한 구조를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Pick the writing tone for topics."
-msgstr "주제의 작성 어조를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Choose how long each topic description should be."
-msgstr "각 주제 설명의 길이를 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "How many topics to generate per request."
-msgstr "요청당 생성할 주제 수입니다."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Generates related topic ideas based on your current content. Apply suggestions and save the post to publish updates."
-msgstr "현재 콘텐츠를 기반으로 관련 주제 아이디어를 생성합니다. 제안을 적용하고 게시물을 저장하여 업데이트를 게시하세요."
-
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Untitled topic"
-msgstr "제목 없는 주제"
-
-#: build/block-editor/airygen-editor.js
-msgid "Select at least one topic to apply."
-msgstr "적용할 주제를 하나 이상 선택하세요."
-
-#: build/block-editor/airygen-editor.js
-msgid "Expanding related topics…"
-msgstr "관련 주제 확장 중…"
 
 #: build/block-editor/airygen-editor.js
 msgid "TOC display mode"
@@ -10228,18 +8310,6 @@ msgid "Renders the table of contents on the frontend."
 msgstr "프론트엔드에서 목차를 렌더링합니다."
 
 #: build/block-editor/airygen-editor.js
-msgid "Airygen FAQ"
-msgstr "Airygen FAQ"
-
-#: build/block-editor/airygen-editor.js
-msgid "Insert AI-generated FAQ output."
-msgstr "AI 생성 FAQ 출력을 삽입합니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Renders AI FAQ entries on the frontend."
-msgstr "프론트엔드에서 AI FAQ 항목을 렌더링합니다."
-
-#: build/block-editor/airygen-editor.js
 msgid "Airygen Breadcrumbs"
 msgstr "Airygen 브레드크럼"
 
@@ -10252,34 +8322,8 @@ msgid "Renders breadcrumbs on the frontend."
 msgstr "프론트엔드에서 브레드크럼을 렌더링합니다."
 
 #: build/block-editor/airygen-editor.js
-msgid "Airygen Topic Expansion"
-msgstr "Airygen 주제 확장"
-
-#: build/block-editor/airygen-editor.js
-msgid "Insert AI-generated related topics output."
-msgstr "AI 생성 관련 주제 출력을 삽입합니다."
-
-#: build/block-editor/airygen-editor.js
-msgid "Renders related topic ideas on the frontend."
-msgstr "프론트엔드에서 관련 주제 아이디어를 렌더링합니다."
-
-#: build/block-editor/airygen-editor.js
 msgid "Rebots Meta"
 msgstr "Robots 메타"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Applied. Save Changes to persist updates."
-msgstr "적용되었습니다. 업데이트를 유지하려면 변경 사항 저장을 클릭하세요."
-
-#. translators: %s is the thing to generate first, such as an outline or a draft.
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "No records yet. Generate %s to get started."
-msgstr "아직 레코드가 없습니다. 시작하려면 %s을(를) 생성하세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing content…"
-msgstr "콘텐츠 분석 중…"
 
 #: build/classic-editor/airygen-editor.js
 msgid "Total rules"
@@ -10377,174 +8421,10 @@ msgstr "기본값 상속 (%s)"
 msgid "Summary"
 msgstr "요약"
 
-#: build/classic-editor/airygen-editor.js
-msgid "Generate higher-CTR titles and meta descriptions."
-msgstr "더 높은 CTR 제목 및 메타 설명을 생성합니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generate structured outlines with section summaries."
-msgstr "섹션 요약이 포함된 구조화된 개요를 생성합니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Draft full articles with AI guidance and structured prompts."
-msgstr "AI 가이드 및 구조화된 프롬프트로 전체 기사 초안을 작성합니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Append frequently asked questions to the end of the article."
-msgstr "자주 묻는 질문을 기사 끝에 추가합니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Append related topic ideas after the FAQ section."
-msgstr "FAQ 섹션 다음에 관련 주제 아이디어를 추가합니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Uses the saved focus keyphrase."
-msgstr "저장된 포커스 키프레이즈를 사용합니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Include the focus keyphrase in the output."
-msgstr "출력에 포커스 키프레이즈를 포함합니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Used to guide the outline."
-msgstr "개요를 안내하는 데 사용됩니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for the outline."
-msgstr "개요의 어조를 선택하세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Heading depth for the outline."
-msgstr "개요의 제목 깊이입니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Basic"
-msgstr "기본"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Deep"
-msgstr "심화"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how long the outline should be."
-msgstr "개요가 얼마나 길어야 하는지 제어합니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Include the focus keyphrase in headings."
-msgstr "제목에 포커스 키프레이즈를 포함합니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Keep the existing outline when generating."
-msgstr "생성할 때 기존 개요를 유지합니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "an outline"
-msgstr "개요"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Choose where to extract source content."
-msgstr "소스 콘텐츠를 추출할 위치를 선택하세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the output language."
-msgstr "출력 언어를 선택하세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the writing style type."
-msgstr "작성 스타일 유형을 선택하세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for the draft."
-msgstr "초안의 어조를 선택하세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the target article length."
-msgstr "대상 기사 길이를 선택하세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Keep the existing headings when generating."
-msgstr "생성할 때 기존 제목을 유지합니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "a draft"
-msgstr "초안"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select output language."
-msgstr "출력 언어를 선택하세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for answers."
-msgstr "답변의 어조를 선택하세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how detailed each answer should be."
-msgstr "각 답변이 얼마나 상세해야 하는지 제어합니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Number of questions to generate."
-msgstr "생성할 질문 수입니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "questions"
-msgstr "질문"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select the tone for topics."
-msgstr "주제의 어조를 선택하세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Controls how detailed each topic is."
-msgstr "각 주제가 얼마나 상세한지 제어합니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Number of topics to generate."
-msgstr "생성할 주제 수입니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "topics"
-msgstr "주제"
-
 #: build/block-editor/airygen-editor.js
 #: build/classic-editor/airygen-editor.js
 msgid "(No title)"
 msgstr "(제목 없음)"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Analyzing your source…"
-msgstr "소스 분석 중…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting article sections…"
-msgstr "기사 섹션 작성 중…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Refining language and tone…"
-msgstr "언어 및 어조 다듬는 중…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generating FAQs can take a moment. Please keep this window open."
-msgstr "FAQ 생성에는 잠시 시간이 걸릴 수 있습니다. 이 창을 열어 두세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting questions…"
-msgstr "질문 작성 중…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Writing answers…"
-msgstr "답변 작성 중…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Generating topics can take a moment. Please keep this window open."
-msgstr "주제 생성에는 잠시 시간이 걸릴 수 있습니다. 이 창을 열어 두세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Drafting topic ideas…"
-msgstr "주제 아이디어 작성 중…"
-
-#: build/classic-editor/airygen-editor.js
-msgid "Refining list…"
-msgstr "목록 다듬는 중…"
 
 #: build/classic-editor/airygen-editor.js
 msgid "Focus keyphrase density is in range (0.5%–2%)."
@@ -10563,22 +8443,6 @@ msgid "Focus keyphrase is not set."
 msgstr "포커스 키프레이즈가 설정되지 않았습니다."
 
 #: build/classic-editor/airygen-editor.js
-msgid "This AI module is unavailable in your current plan."
-msgstr "현재 요금제로 이 AI 모듈을 사용할 수 없습니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Unable to complete the request."
-msgstr "요청을 완료할 수 없습니다."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select a suggestion to apply."
-msgstr "적용할 제안을 선택하세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "Select a record to apply."
-msgstr "적용할 레코드를 선택하세요."
-
-#: build/classic-editor/airygen-editor.js
 msgid "Save changes to apply your updates."
 msgstr "업데이트를 적용하려면 변경 사항을 저장하세요."
 
@@ -10589,39 +8453,6 @@ msgstr "저장되었습니다."
 #: build/classic-editor/airygen-editor.js
 msgid "Failed to save changes."
 msgstr "변경 사항을 저장하지 못했습니다."
-
-#. translators: %s is the estimated number of seconds.
-#: build/block-editor/airygen-editor.js
-#, php-format, js-format
-msgid "This can take up to ~%s seconds depending on the amount of content. Please keep this window open."
-msgstr "콘텐츠 양에 따라 최대 약 %s초가 걸릴 수 있습니다. 이 창을 계속 열어 두세요."
-
-msgid "Credit balance record not found"
-msgstr "크레딧 잔액 기록을 찾을 수 없습니다"
-
-#. translators: %s is the generated item type in plural form, e.g. "blueprints", "articles", or "drafts".
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "Longer %s take more time. Please keep this window open."
-msgstr "더 긴 %s은 시간이 더 오래 걸립니다. 이 창을 계속 열어 두세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "length"
-msgstr "길이"
-
-#. translators: 1: estimated duration label, e.g. "~15 seconds". 2: what affects the duration, e.g. "length" or "count".
-#: build/classic-editor/airygen-editor.js
-#, js-format
-msgid "This can take up to %1$s depending on %2$s. Please keep this window open."
-msgstr "%2$s에 따라 최대 %1$s까지 걸릴 수 있습니다. 이 창을 계속 열어 두세요."
-
-#: build/classic-editor/airygen-editor.js
-msgid "blueprints"
-msgstr "블루프린트"
-
-#: build/classic-editor/airygen-editor.js
-msgid "drafts"
-msgstr "초안"
 
 msgid "Sitewide SEO (scaled)"
 msgstr "사이트 전체 SEO (스케일됨)"
@@ -10675,9 +8506,6 @@ msgstr "작업 시간 초과 (초)"
 #: build/admin/airygen-app.js
 msgid "Check basic sitewide SEO health and configuration."
 msgstr "사이트 전체의 기본 SEO 상태와 구성을 확인합니다."
-
-msgid "Mirror WordPress Sitewide SEO diagnostics with Airygen-specific checks (SSL, Safe Browsing, focus keywords)."
-msgstr "WordPress 사이트 전체 SEO 진단을 Airygen 전용 검사(SSL, Safe Browsing, 포커스 키워드)와 함께 반영합니다."
 
 msgid "Mind map items contain invalid post data."
 msgstr "마인드맵 항목에 유효하지 않은 게시물 데이터가 포함되어 있습니다."
@@ -11001,14 +8829,6 @@ msgid "Uses the IndexNow protocol to push new and updated URLs to Bing and other
 msgstr "IndexNow 프로토콜을 사용하여 콘텐츠가 게시되는 즉시 새 URL을 Bing 및 기타 검색 엔진에 푸시합니다."
 
 #: build/admin/airygen-app.js
-msgid "Would you like AI to help you write article outlines, FAQ sets, or plan your full content strategy?"
-msgstr "AI가 기사 개요 작성, FAQ 세트 또는 전체 콘텐츠 전략 계획을 도와주기를 원하십니까?"
-
-#: build/admin/airygen-app.js
-msgid "A smart AI toolkit that generates article outlines, Content Blueprints, full Article drafts, and Deep FAQ sets from a keyword — making content creation faster and easier."
-msgstr "키워드에서 기사 아웃라인, 콘텐츠 블루프린트, 전체 기사 초안, 심층 FAQ 세트를 생성하는 스마트 AI 툴킷——콘텐츠 제작을 더 빠르고 쉽게 만들어 줍니다."
-
-#: build/admin/airygen-app.js
 msgid "Would you like AI tools like ChatGPT and Perplexity to more easily discover and cite your site?"
 msgstr "ChatGPT 및 Perplexity와 같은 AI 도구가 귀하의 사이트를 더 쉽게 발견하고 인용하기를 원하십니까?"
 
@@ -11023,26 +8843,6 @@ msgstr "자동으로 llms.txt 파일을 생성합니다 — AI를 위한 사이�
 #: build/admin/airygen-app.js
 msgid "Automatically converts your posts into AI-friendly Markdown so AI agents can read and understand your content without struggling to parse HTML."
 msgstr "게시물을 자동으로 AI 친화적인 Markdown으로 변환하여 AI 에이전트가 HTML 파싱 없이 콘텐츠를 읽고 이해할 수 있도록 합니다."
-
-#: build/admin/airygen-app.js
-msgid "Includes Deep FAQ, which automatically generates structured Q&A from your post content. AI search engines favor content that directly answers questions, boosting your visibility in AI-powered search results."
-msgstr "Deep FAQ를 포함하여 게시물 콘텐츠에서 구조화된 Q&A를 자동으로 생성합니다."
-
-#: build/admin/airygen-app.js
-msgid "Free"
-msgstr "무료"
-
-#: build/admin/airygen-app.js
-msgid "Requires a plan upgrade"
-msgstr "플랜 업그레이드 필요"
-
-#: build/admin/airygen-app.js
-msgid "Requires"
-msgstr "필요"
-
-#: build/admin/airygen-app.js
-msgid "plan to activate"
-msgstr "활성화할 플랜"
 
 #: build/admin/airygen-app.js
 msgid "Got it, don't show again"
@@ -11069,32 +8869,8 @@ msgid "Welcome to Airygen SEO!"
 msgstr "Airygen SEO에 오신 것을 환영합니다!"
 
 #: build/admin/airygen-app.js
-msgid "Answer 10 quick questions and we'll recommend the right SEO modules for your site — then enable them all with one click."
-msgstr "10가지 빠른 질문에 답하면 사이트에 맞는 SEO 모듈을 추천해 드립니다 — 그런 다음 한 번의 클릭으로 모두 활성화하세요."
-
-#: build/admin/airygen-app.js
 msgid "Don't worry — every question is just Yes or No. No technical knowledge needed. It takes about 2 minutes. 😊"
 msgstr "걱정하지 마세요 — 모든 질문은 예 또는 아니오입니다. 기술 지식이 필요하지 않습니다. 약 2분이 걸립니다. 😊"
-
-#: build/admin/airygen-app.js
-msgid "🎉 All done! Here's what we recommend based on your answers:"
-msgstr "🎉 완료! 귀하의 답변을 기반으로 권장하는 내용:"
-
-#: build/admin/airygen-app.js
-msgid "Will be enabled (included in your plan)"
-msgstr "활성화될 예정 (플랜에 포함됨)"
-
-#: build/admin/airygen-app.js
-msgid "Requires an upgrade to enable"
-msgstr "활성화하려면 업그레이드 필요"
-
-#: build/admin/airygen-app.js
-msgid "Upgrade to"
-msgstr "업그레이드하기"
-
-#: build/admin/airygen-app.js
-msgid "No modules selected. Click Finish to close the wizard."
-msgstr "선택된 모듈이 없습니다. 마법사를 닫으려면 완료를 클릭하세요."
 
 #: build/admin/airygen-app.js
 msgid "Setup Wizard"
@@ -11152,12 +8928,33 @@ msgstr "블록 간 간격 (px)"
 msgid "Content top margin (px)"
 msgstr "콘텐츠 상단 여백 (px)"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "The focus keyphrase is the main keyword or phrase this post is optimized for. AI modules use it to guide content generation — keeping the output relevant and keyword-focused."
-msgstr "포커스 키프레이즈는 이 게시물이 최적화된 주요 키워드입니다. AI 모듈은 콘텐츠 생성을 안내하는 데 사용합니다."
+#. Plugin URI of the plugin
+msgid "https://www.airygen.com/en/airygen-seo/introduction"
+msgstr "https://www.airygen.com/en/airygen-seo/introduction"
 
-#: build/block-editor/airygen-editor.js
-#: build/classic-editor/airygen-editor.js
-msgid "Focus keyphrase help"
-msgstr "포커스 키프레이즈 도움말"
+#. Description of the plugin
+msgid "Airygen SEO is a modular SEO toolkit for WordPress sites that need more than title and meta fields. It combines on-page SEO controls, structured data, technical SEO, internal link workflows, and automation tools in one plugin while keeping the editing experience inside WordPress."
+msgstr "Airygen SEO는 제목과 메타 필드 이상이 필요한 WordPress 사이트를 위한 모듈형 SEO 도구 모음입니다. 온페이지 SEO 제어, 구조화된 데이터, 기술적 SEO, 내부 링크 워크플로, 자동화 도구를 하나의 플러그인에 결합하면서 편집 경험은 WordPress 안에서 그대로 유지합니다."
+
+#. Author URI of the plugin
+msgid "https://www.airygen.com/"
+msgstr "https://www.airygen.com/"
+
+msgid "Transfer export settings filter must return an array."
+msgstr "전송 내보내기 설정 필터는 배열을 반환해야 합니다."
+
+#: build/admin/airygen-app.js
+msgid "Answer a few quick questions and we'll recommend the right SEO modules for your site — core modules are already enabled by default."
+msgstr "몇 가지 간단한 질문에 답하시면 사이트에 맞는 SEO 모듈을 추천해 드립니다. 핵심 모듈은 기본적으로 이미 활성화되어 있습니다."
+
+#: build/admin/airygen-app.js
+msgid "All done! Core modules (On-Page SEO, Breadcrumbs, Sitemap, Image SEO, Robots, Site Verification, Link Counter, Link Suggestions, Score Calculator) are already enabled by default."
+msgstr "모두 완료되었습니다! 핵심 모듈(On-Page SEO, 이동 경로, 사이트맵, Image SEO, 로봇, Site Verification, Link Counter, Link Suggestions, Score Calculator)은 기본적으로 이미 활성화되어 있습니다."
+
+#: build/admin/airygen-app.js
+msgid "Additional modules to enable based on your answers"
+msgstr "답변에 따라 활성화할 추가 모듈"
+
+#: build/admin/airygen-app.js
+msgid "No additional modules recommended. You can enable more from the dashboard anytime."
+msgstr "추천할 추가 모듈이 없습니다. 언제든지 알림판에서 더 많은 모듈을 활성화할 수 있습니다."
