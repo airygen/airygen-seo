@@ -841,4 +841,49 @@ final class TopicClusterRouteTest extends RestRouteTestCase {
 		$this->assertSame( 120, (int) ( $data['map']['nodes'][ (string) $l1 ]['x'] ?? 0 ) );
 		$this->assertSame( 360, (int) ( $data['map']['nodes'][ (string) $l2 ]['y'] ?? 0 ) );
 	}
+
+	/**
+	 * Site-wide group CRUD must be denied to non-admin (edit_posts-only) users.
+	 *
+	 * @return void
+	 */
+	public function test_group_crud_denied_for_contributor(): void {
+		$this->acting_as_contributor();
+
+		$create = $this->rest_post(
+			'/airygen/v1/topic-cluster/groups',
+			array( 'name' => 'Should Not Exist' )
+		);
+		$this->assertSame( 403, $create->get_status() );
+
+		$update = $this->rest_post(
+			'/airygen/v1/topic-cluster/groups/1',
+			array( 'name' => 'Hijacked' )
+		);
+		$this->assertSame( 403, $update->get_status() );
+
+		$delete = $this->rest_delete( '/airygen/v1/topic-cluster/groups/1' );
+		$this->assertSame( 403, $delete->get_status() );
+
+		$groups = $this->rest_get( '/airygen/v1/topic-cluster/groups' );
+		$this->assertSame( 403, $groups->get_status() );
+	}
+
+	/**
+	 * Post-scoped editor endpoints must stay reachable for edit_posts users.
+	 *
+	 * @return void
+	 */
+	public function test_post_scoped_endpoints_allowed_for_contributor(): void {
+		$this->acting_as_contributor();
+
+		$list = $this->rest_get( '/airygen/v1/topic-cluster/list' );
+		$this->assertNotSame( 403, $list->get_status() );
+
+		$summary = $this->rest_get(
+			'/airygen/v1/topic-cluster/summary',
+			array( 'post' => 1 )
+		);
+		$this->assertNotSame( 403, $summary->get_status() );
+	}
 }

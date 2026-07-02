@@ -67,6 +67,17 @@ abstract class RestRouteTestCase extends BaseTestCase {
 	}
 
 	/**
+	 * Create and authenticate a contributor (edit_posts, not manage_options) user.
+	 *
+	 * @return int User ID.
+	 */
+	protected function acting_as_contributor(): int {
+		$user_id = self::factory()->user->create( array( 'role' => 'contributor' ) );
+		wp_set_current_user( $user_id );
+		return $user_id;
+	}
+
+	/**
 	 * Dispatch a REST GET request to the server.
 	 *
 	 * @param string               $route Route path.

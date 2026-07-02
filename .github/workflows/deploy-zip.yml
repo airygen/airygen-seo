@@ -1,0 +1,102 @@
+name: Deploy zip to WordPress.org SVN
+
+# Manually deploy a stable release to WordPress.org using the pre-built zip that
+# build-release.yml already attached to the matching GitHub Release. No rebuild:
+# the zip asset is downloaded, unpacked, and handed to the SVN deploy action.
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to deploy (e.g. 1.2.3 or v1.2.3). Must resolve to a stable x.y.z version.'
+        required: true
+        type: string
+
+env:
+  PLUGIN_SLUG: airygen-seo
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Resolve and validate version
+        run: |
+          set -euo pipefail
+          tag="${{ inputs.tag }}"
+          version="${tag#v}"
+          if [[ ! "${version}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Tag '${tag}' does not resolve to a stable x.y.z version; refusing to deploy to WordPress.org."
+            exit 1
+          fi
+          echo "VERSION=${version}" >> "$GITHUB_ENV"
+          echo "Deploying version ${version} from tag ${tag}."
+
+      - name: Verify SVN credentials are configured
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        run: |
+          set -euo pipefail
+          if [[ -z "${SVN_USERNAME}" || -z "${SVN_PASSWORD}" ]]; then
+            echo "::error::SVN_USERNAME / SVN_PASSWORD secrets are not configured."
+            exit 1
+          fi
+
+      - name: Download release zip
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          asset="${PLUGIN_SLUG}-${VERSION}.zip"
+          echo "Downloading ${asset} from release ${{ inputs.tag }}"
+          gh release download "${{ inputs.tag }}" \
+            --repo "${{ github.repository }}" \
+            --pattern "${asset}" \
+            --dir .
+          if [ ! -f "${asset}" ]; then
+            echo "::error::Release asset ${asset} was not found on tag ${{ inputs.tag }}."
+            exit 1
+          fi
+          echo "ASSET=${asset}" >> "$GITHUB_ENV"
+
+      - name: Unpack zip into build directory
+        run: |
+          set -euo pipefail
+          rm -rf .release-build .unzipped
+          mkdir -p .release-build
+          unzip -q "${ASSET}" -d .unzipped
+          # The packaged zip nests the plugin under a top-level slug directory;
+          # deploy its contents so BUILD_DIR is the plugin root itself.
+          if [ -d ".unzipped/${PLUGIN_SLUG}" ]; then
+            rsync -a ".unzipped/${PLUGIN_SLUG}/" .release-build/
+          else
+            rsync -a .unzipped/ .release-build/
+          fi
+          if [ ! -f ".release-build/${PLUGIN_SLUG}.php" ]; then
+            echo "::error::Plugin main file ${PLUGIN_SLUG}.php missing after unpack; zip layout unexpected."
+            exit 1
+          fi
+
+      - name: Confirm packaged version matches the tag
+        run: |
+          set -euo pipefail
+          header_version="$(sed -nE 's/^[[:space:]]*\*[[:space:]]*Version:[[:space:]]*(.+)$/\1/p' ".release-build/${PLUGIN_SLUG}.php" | head -n1 | tr -d '[:space:]')"
+          stable_tag="$(sed -nE 's/^Stable tag:[[:space:]]*(.+)$/\1/p' .release-build/readme.txt | head -n1 | tr -d '[:space:]')"
+          echo "Header version: ${header_version} | readme Stable tag: ${stable_tag} | expected: ${VERSION}"
+          if [ "${header_version}" != "${VERSION}" ] || [ "${stable_tag}" != "${VERSION}" ]; then
+            echo "::error::Packaged version (${header_version}/${stable_tag}) does not match tag ${VERSION}."
+            exit 1
+          fi
+
+      - name: Deploy to WordPress.org SVN
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: ${{ env.PLUGIN_SLUG }}
+          VERSION: ${{ env.VERSION }}
+          BUILD_DIR: .release-build
