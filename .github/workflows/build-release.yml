@@ -96,7 +96,7 @@ jobs:
           set -euo pipefail
           rm -rf .release-build
           mkdir -p .release-build
-          rsync -a assets build config languages packages resources src vendor .release-build/
+          rsync -a assets build config languages resources src vendor .release-build/
           cp airygen-seo.php uninstall.php LICENSE composer.json readme.txt .release-build/
 
       - name: Create release zip
