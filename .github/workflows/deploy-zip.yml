@@ -21,6 +21,7 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: WordPress.org
 
     steps:
       - name: Resolve and validate version
