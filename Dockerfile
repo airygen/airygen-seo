@@ -13,9 +13,15 @@ RUN apt-get update && apt-get install -y \
 
 # PCOV: fast code-coverage driver for PHPUnit (kept off by default; the
 # `make coverage` target enables it per-run via -d pcov.enabled=1).
-RUN pecl install pcov \
-    && docker-php-ext-enable pcov \
-    && echo "pcov.enabled=0" > "$PHP_INI_DIR/conf.d/pcov.ini"
+# Built from the GitHub source tarball because pecl.php.net downloads 504
+# intermittently and break image builds.
+RUN set -eux; \
+    curl -fsSL -o /tmp/pcov.tar.gz https://github.com/krakjoe/pcov/archive/refs/tags/v1.0.12.tar.gz; \
+    mkdir -p /usr/src/pcov && tar -xzf /tmp/pcov.tar.gz -C /usr/src/pcov --strip-components=1; \
+    cd /usr/src/pcov && phpize && ./configure && make -j"$(nproc)" && make install; \
+    docker-php-ext-enable pcov; \
+    echo "pcov.enabled=0" > "$PHP_INI_DIR/conf.d/pcov.ini"; \
+    rm -rf /tmp/pcov.tar.gz /usr/src/pcov
 
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
     && sed -i 's/;date.timezone =.*/date.timezone = Asia\/Taipei/g' $PHP_INI_DIR/php.ini \
