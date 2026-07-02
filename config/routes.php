@@ -327,7 +327,7 @@ Route::group(
 
 		$router
 			->get( '/topic-cluster/list', array( TopicClusterController::class, 'handle_list' ) )
-			->permission( array( TopicClusterController::class, 'can_manage' ) )
+			->permission( array( TopicClusterController::class, 'can_contribute' ) )
 			->args(
 				array(
 					'post' => array(
@@ -339,7 +339,7 @@ Route::group(
 
 		$router
 			->post( '/topic-cluster/save', array( TopicClusterController::class, 'handle_save' ) )
-			->permission( array( TopicClusterController::class, 'can_manage' ) )
+			->permission( array( TopicClusterController::class, 'can_contribute' ) )
 			->args(
 				array(
 					'post'           => array(
@@ -363,7 +363,7 @@ Route::group(
 
 		$router
 			->get( '/topic-cluster/summary', array( TopicClusterController::class, 'handle_summary' ) )
-			->permission( array( TopicClusterController::class, 'can_manage' ) )
+			->permission( array( TopicClusterController::class, 'can_contribute' ) )
 			->args(
 				array(
 					'post' => array(
@@ -547,7 +547,7 @@ Route::group(
 
 		$router
 			->post( '/topic-cluster/relate', array( TopicClusterController::class, 'handle_relate' ) )
-			->permission( array( TopicClusterController::class, 'can_manage' ) )
+			->permission( array( TopicClusterController::class, 'can_contribute' ) )
 			->args(
 				array(
 					'post'           => array(
@@ -583,7 +583,7 @@ Route::group(
 
 		$router
 			->post( '/topic-cluster/unrelate', array( TopicClusterController::class, 'handle_unrelate' ) )
-			->permission( array( TopicClusterController::class, 'can_manage' ) )
+			->permission( array( TopicClusterController::class, 'can_contribute' ) )
 			->args(
 				array(
 					'relation'      => array(

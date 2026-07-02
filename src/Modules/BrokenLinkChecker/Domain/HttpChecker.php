@@ -99,6 +99,7 @@ final class HttpChecker {
 			'headers'             => array(),
 			'sslverify'           => apply_filters( 'https_ssl_verify', true ), // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound -- Core hook.
 			'limit_response_size' => 1024,
+			'reject_unsafe_urls'  => true,
 		);
 
 		// Requests (the HTTP transport) honours connect_timeout when provided.
@@ -125,7 +126,7 @@ final class HttpChecker {
 
 		try {
 			$index = random_int( 0, count( $agents ) - 1 );
-		} catch ( Throwable $exception ) {
+		} catch ( Throwable ) {
 			$index = 0;
 		}
 

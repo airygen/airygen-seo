@@ -32,7 +32,7 @@ jobs:
 
       - name: Validate version and decide publish
         id: validate
-        uses: airygen/actions/validate-plugin-version@main
+        uses: airygen/actions/validate-plugin-version@0ecef83e6722a6b76fb46c2f567fa4d76279d9bf # main
         with:
           plugin_file: ${{ env.PLUGIN_FILE }}
           placeholder_version: "0.0.0"

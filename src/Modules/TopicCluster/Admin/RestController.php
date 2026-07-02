@@ -23,11 +23,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 class RestController {
 
 	/**
-	 * Check whether the current user can manage topic clusters.
+	 * Check whether the current user can manage site-wide topic cluster configuration.
+	 *
+	 * Cluster groups and candidates are global objects, so their create/update/delete
+	 * endpoints require the same administrator capability every other module reserves for
+	 * site configuration. Author-facing, post-scoped endpoints use can_contribute() instead.
 	 *
 	 * @return bool
 	 */
 	public static function can_manage(): bool {
+		return current_user_can( 'manage_options' );
+	}
+
+	/**
+	 * Check whether the current user can use the post-scoped topic cluster editor endpoints.
+	 *
+	 * These endpoints operate on a specific post the caller is editing and enforce a
+	 * per-post current_user_can( 'edit_post', $post_id ) check inside the handler.
+	 *
+	 * @return bool
+	 */
+	public static function can_contribute(): bool {
 		return current_user_can( 'edit_posts' );
 	}
 
