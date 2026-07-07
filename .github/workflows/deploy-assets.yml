@@ -1,0 +1,99 @@
+name: Deploy assets to WordPress.org SVN
+
+# Manually push the plugin's WordPress.org assets (icon, banner, screenshots) to the
+# SVN /assets folder. Screenshots live in the repo under per-locale subdirectories
+# (.wordpress-org/<locale>/screenshot-N.png); this workflow flattens them into the flat
+# names WordPress.org expects (screenshot-N.png for the default English set, and
+# screenshot-N-<locale>.png for every other locale) before deploying. This does NOT
+# touch plugin code, tags, or the Stable tag, and does not require a release.
+
+on:
+  workflow_dispatch:
+
+env:
+  PLUGIN_SLUG: airygen-seo
+
+permissions:
+  contents: read
+
+jobs:
+  deploy-assets:
+    runs-on: ubuntu-latest
+    environment: WordPress.org
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify SVN credentials are configured
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+        run: |
+          set -euo pipefail
+          if [[ -z "${SVN_USERNAME}" || -z "${SVN_PASSWORD}" ]]; then
+            echo "::error::SVN_USERNAME / SVN_PASSWORD secrets are not configured."
+            exit 1
+          fi
+
+      - name: Flatten .wordpress-org into WordPress.org asset layout
+        run: |
+          set -euo pipefail
+          SRC=.wordpress-org
+          # Keep OUT workspace-relative: the 10up action resolves ASSETS_DIR
+          # relative to GITHUB_WORKSPACE, so an absolute path double-prefixes.
+          OUT=.wporg-assets-flat
+          rm -rf "${OUT}"; mkdir -p "${OUT}"
+
+          if [ ! -d "${SRC}" ]; then
+            echo "::error::${SRC}/ directory not found."
+            exit 1
+          fi
+
+          # Root-level, non-localized assets: icon-*, banner-*, *.svg. README.md is
+          # documentation only and must not be published to SVN.
+          shopt -s nullglob
+          for f in "${SRC}"/*; do
+            [ -f "${f}" ] || continue
+            base="$(basename "${f}")"
+            [ "${base}" = "README.md" ] && continue
+            cp "${f}" "${OUT}/${base}"
+          done
+
+          # Per-locale screenshots. The "en" subdirectory is the default (no suffix);
+          # every other locale gets a -<locale> suffix.
+          for dir in "${SRC}"/*/; do
+            [ -d "${dir}" ] || continue
+            locale="$(basename "${dir}")"
+            for f in "${dir}"screenshot-*.png; do
+              [ -e "${f}" ] || continue
+              base="$(basename "${f}")"          # screenshot-N.png
+              if [ "${locale}" = "en" ]; then
+                cp "${f}" "${OUT}/${base}"
+              else
+                num="${base#screenshot-}"; num="${num%.png}"
+                cp "${f}" "${OUT}/screenshot-${num}-${locale}.png"
+              fi
+            done
+          done
+
+          count="$(find "${OUT}" -maxdepth 1 -type f | wc -l)"
+          if [ "${count}" -eq 0 ]; then
+            echo "::error::No assets were produced from ${SRC}/ (add icon/banner/screenshot files first)."
+            exit 1
+          fi
+          echo "Flattened ${count} asset file(s):"
+          find "${OUT}" -maxdepth 1 -type f -printf '  %f\n' | sort
+          echo "ASSETS_OUT=${OUT}" >> "${GITHUB_ENV}"
+
+      - name: Deploy assets to WordPress.org SVN
+        uses: 10up/action-wordpress-plugin-asset-update@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: ${{ env.PLUGIN_SLUG }}
+          ASSETS_DIR: ${{ env.ASSETS_OUT }}
+          # This workflow only publishes /assets; ignore the rest of the checkout
+          # (src, .github, .wordpress-org sources) so the action does not bail on
+          # non-readme trunk changes.
+          IGNORE_OTHER_FILES: true

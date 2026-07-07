@@ -137,6 +137,17 @@ The following directories contain hand-written JavaScript and CSS that are shipp
 
 After step 4 the same files shipped under `build/` in the distributed plugin will be regenerated locally. Each regenerated file will carry the same `/*! ... */` header described above, making every compiled file traceable back to a public source path.
 
+== Screenshots ==
+
+1. Central dashboard — enable or disable every SEO module from one screen.
+2. In-editor content score — a live SEO score with a full pass/fail rule checklist, plus SERP snippet, keyphrases, and schema, right inside the post editor.
+3. Topic Cluster mind map — visualize pillar, cluster, and support relationships across your content.
+4. Score Calculator — tune the weight of each content-scoring rule to match your workflow.
+5. On-Page SEO — control which meta tags are emitted and build title/description templates from tokens.
+6. Schema Markup — live JSON-LD preview of the structured data printed in your page source.
+7. XML Sitemap — choose which post types and taxonomies appear and tune pagination.
+8. Robots Control — set default robots meta directives and manage robots.txt additions.
+
 == Changelog ==
 
 = 0.0.0 =
