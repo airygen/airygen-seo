@@ -767,6 +767,15 @@ const recordGroup = async ( browser, storageState, siteBaseUrl, dateOutputDir, l
 		},
 	} );
 
+	// Suppress the first-visit dashboard tour so it never overlays screenshots.
+	// The "Skip tour" button text is translated per locale, so seed its dismissal
+	// flag directly instead of trying to click it.
+	await context.addInitScript( () => {
+		try {
+			window.localStorage.setItem( 'airygen_dashboard_tour_v1', '1' );
+		} catch ( e ) {}
+	} );
+
 	const page = await context.newPage();
 
 	const url = `${ siteBaseUrl }/wp-admin/${ group.path.replace( /^\//, '' ) }`;

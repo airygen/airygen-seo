@@ -19,7 +19,7 @@ languages/*.json
 languages/*.mo
 !languages/untranslated/
 !languages/untranslated/*.json
-.docker/wp/schema/backup.sql
+.docker/wp/schema/
 # Claude Code local settings
 .claude/settings.local.json
 

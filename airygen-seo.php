@@ -33,6 +33,19 @@ define( 'AIRYGEN_VERSION', '0.0.0' );
 
 new \Airygen\Admin\Activation( AIRYGEN_PLUGIN_FILE );
 
+// Load bundled PHP translations. WordPress.org auto-loads translations delivered
+// to wp-content/languages/plugins, but this also covers the translations shipped
+// inside the plugin's own /languages directory (e.g. local/dev installs).
+add_action(
+	'init',
+	static function (): void {
+		load_plugin_textdomain(
+			'airygen-seo',
+			false,
+			dirname( plugin_basename( AIRYGEN_PLUGIN_FILE ) ) . '/languages'
+		);
+	}
+);
 
 add_action(
 	'plugins_loaded',
