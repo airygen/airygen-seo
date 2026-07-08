@@ -1,13 +1,13 @@
 name: Watch WordPress.org support forum
 
-# Poll the plugin's WordPress.org support forum RSS feed once a day and open a
-# GitHub Issue for every new topic. State lives in GitHub Issues (each topic
-# carries a hidden marker), so re-runs never duplicate. Trigger manually via the
-# Actions tab to backfill or test.
+# Poll the plugin's WordPress.org support forum RSS feed every 30 minutes and
+# open a GitHub Issue for every new topic. State lives in GitHub Issues (each
+# topic carries a hidden marker), so re-runs never duplicate. Trigger manually
+# via the Actions tab to backfill or test.
 
 on:
   schedule:
-    - cron: '0 0 * * *' # daily at 00:00 UTC
+    - cron: '*/30 * * * *' # every 30 minutes
   workflow_dispatch:
 
 permissions:
