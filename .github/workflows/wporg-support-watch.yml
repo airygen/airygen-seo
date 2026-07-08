@@ -1,0 +1,33 @@
+name: Watch WordPress.org support forum
+
+# Poll the plugin's WordPress.org support forum RSS feed every 30 minutes and
+# open a GitHub Issue for every new topic. State lives in GitHub Issues (each
+# topic carries a hidden marker), so re-runs never duplicate. Trigger manually
+# via the Actions tab to backfill or test.
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # every 30 minutes
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: wporg-support-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Poll feed and open issues for new topics
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_REPO: ${{ github.repository }}
+          PLUGIN_SLUG: airygen-seo
+        run: node scripts/wporg-support-watch.mjs

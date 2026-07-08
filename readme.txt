@@ -1,6 +1,6 @@
-=== Airygen SEO ===
+=== Airygen SEO – GEO & AEO for AI Search ===
 Contributors: airygen, terrylin
-Tags: seo, schema, sitemap, redirects, woocommerce
+Tags: seo, geo, aeo, ai-seo, wordpress-seo
 Requires at least: 6.3
 Tested up to: 7.0
 Stable tag: 0.0.0
