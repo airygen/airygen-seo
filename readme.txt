@@ -1,35 +1,42 @@
-=== Airygen SEO – GEO & AEO for AI Search ===
+=== Airygen SEO – Topic Clusters for SEO & GEO ===
 Contributors: airygen, terrylin
-Tags: seo, geo, aeo, ai-seo, wordpress-seo
+Tags: topic-cluster, geo, llms-txt, seo, ai-seo
 Requires at least: 6.3
 Tested up to: 7.0
 Stable tag: 0.0.0
 Requires PHP: 8.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl.html
-Modular WordPress SEO plugin with on-page controls, schema, social cards, sitemap, redirects, internal linking, indexing, and content tooling.
+Build topic clusters, find internal linking opportunities, and generate AI-readable files (llms.txt, Markdown). Works alongside your SEO plugin.
 
 == Description ==
 
-Airygen SEO is a modular SEO toolkit for WordPress sites that need more than title and meta fields. It combines on-page SEO controls, structured data, technical SEO, internal link workflows, and automation tools in one plugin while keeping the editing experience inside WordPress.
+Airygen SEO helps WordPress publishers build stronger topic clusters, discover internal linking opportunities, and generate AI-readable site files such as `llms.txt` and Markdown exports.
 
-Core areas included in the current plugin:
+Use it alongside your existing SEO plugin, or enable only the modules you need. It is built for content-heavy sites that want better structure, stronger internal links, and modern AI search visibility (GEO) — without replacing their whole SEO workflow. Designed for modern WordPress sites running PHP 8.1+.
 
-* On-page SEO fields for titles, descriptions, canonical URLs, robots directives, and focus keyphrases.
-* Score calculator with title pixel-width checks and SEO analysis helpers.
-* Social cards for Open Graph and Twitter / X sharing metadata.
-* Schema markup for common page contexts, including article, website, organization, author, and breadcrumb data.
-* XML sitemap support and robots controls.
-* Breadcrumbs, table of contents, related posts, and topic cluster tooling.
-* Image SEO attribute generation for missing image alt and title values.
-* Redirect management, 404 log handling, broken link monitoring, and link counting.
-* Internal link suggestions and sitewide SEO evaluation tools.
-* Instant indexing workflows and site verification settings.
-* Local SEO, author SEO, taxonomy SEO, hreflang, RSS feed signature, and WooCommerce SEO support.
-* LLMs.txt and Markdown-for-agents utilities for AI-readable site output.
-* Code snippet manager and notification integrations for operational workflows.
+= What makes it different =
 
-Airygen SEO is built for publishers, content teams, and site operators who want technical SEO controls, content optimization support, and maintenance workflows in a single plugin.
+* **Topic Cluster mind map** — visualize pillar, cluster, and support relationships across your content, and spot posts that sit outside any cluster.
+* **Internal link suggestions and link counting** — surface where new internal links belong and see how well each post is connected.
+* **Sitewide SEO evaluation** — score your whole site, not just one post at a time.
+* **llms.txt and Markdown-for-agents** — publish AI-readable versions of your site so LLMs and agents can understand it.
+* **Modular architecture** — turn on only the workflows you actually need.
+
+= Works alongside your existing SEO plugin =
+
+You do not have to replace your current SEO plugin to try Airygen SEO. Enable just the modules that add something new — topic clusters, internal linking, and AI-readable output — and leave your existing titles, meta, and schema untouched. When you are ready for more, you can hand additional SEO responsibilities to Airygen SEO one module at a time.
+
+= A complete SEO toolkit when you want it =
+
+Airygen SEO is also a full, modular SEO platform. When you choose to, it can take over on-page and technical SEO too:
+
+* On-page SEO fields for titles, descriptions, canonical URLs, robots directives, and focus keyphrases, with a live content score and SERP snippet preview.
+* Schema markup for article, website, organization, author, and breadcrumb contexts.
+* XML sitemaps, robots controls, redirects, 404 logging, and broken link monitoring.
+* Open Graph and Twitter / X social cards.
+* Image SEO, Local SEO, author SEO, taxonomy SEO, hreflang, RSS feed signature, and WooCommerce SEO.
+* Instant indexing, site verification, and notification integrations.
 
 Full source code is available on GitHub. Feature requests, bug reports, and contributions are welcome: https://github.com/airygen/airygen-seo
 
@@ -41,6 +48,18 @@ Full source code is available on GitHub. Feature requests, bug reports, and cont
 4. Review post, term, author, and sitewide SEO settings based on your content model.
 
 == Frequently Asked Questions ==
+
+= Can I use it alongside Yoast, Rank Math, AIOSEO, or SEOPress? =
+
+Yes. You can install Airygen SEO next to your current SEO plugin and enable only the modules that add something new — such as Topic Clusters, Internal Linking, and llms.txt / Markdown export — while leaving on-page metadata and schema to your existing plugin. Every module is opt-in, so you decide exactly what Airygen SEO outputs.
+
+= Do you provide a migration tool from other SEO plugins? =
+
+Yes. Airygen SEO includes a built-in migration tool that imports your existing SEO data from Yoast SEO, Rank Math, All in One SEO (AIOSEO), and SEOPress.
+
+The migration only reads from your current SEO plugin and copies the data into Airygen SEO's own fields. It never changes, overwrites, or deletes your original plugin's data — your existing SEO plugin keeps working exactly as before.
+
+This makes migrating safe to try: if you are not happy with Airygen SEO after importing, simply deactivate and delete it. Your original SEO plugin and all of its data remain fully intact.
 
 = What can I manage with Airygen SEO? =
 
@@ -80,7 +99,7 @@ Yes. Airygen SEO includes `llms.txt` and Markdown export features intended for a
 * Runtime Image SEO to fill missing image attributes using configurable templates.
 * Instant indexing, site verification, and notification modules for operational SEO workflows.
 * Local SEO, author SEO, taxonomy SEO, hreflang, RSS feed signature, and WooCommerce SEO extensions.
-* LLMs.txt, Markdown-for-agents, and code snippet tooling for modern publishing workflows.
+* LLMs.txt and Markdown-for-agents tooling for modern publishing workflows.
 
 == Source code ==
 
@@ -150,9 +169,9 @@ After step 4 the same files shipped under `build/` in the distributed plugin wil
 
 == Changelog ==
 
-= 0.0.0 =
+= 1.0.9 =
 
-* Initial development release.
+* First public release on WordPress.org.
 
 == External services ==
 
