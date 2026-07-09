@@ -30,6 +30,24 @@ jobs:
           sed -Ei "s/^(define\( 'AIRYGEN_VERSION', ')[^']+(' \);)$/\1${version}\2/" airygen-seo.php
           sed -Ei "s/^(Stable tag:\s*).*/\1${version}/" readme.txt
 
+      - name: Require changelog entry for this release
+        run: |
+          set -euo pipefail
+          raw_tag="${{ github.event.release.tag_name }}"
+          version="${raw_tag#v}"
+          # Only stable x.y.z releases are published to WordPress.org, so only
+          # they must carry a changelog entry. Pre-releases (e.g. 1.0.0-rc.1)
+          # are exempt.
+          if [[ ! "${version}" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Pre-release ${version}; skipping changelog check."
+            exit 0
+          fi
+          if ! grep -qE "^= ${version//./\\.} =$" readme.txt; then
+            echo "::error::readme.txt has no '= ${version} =' entry under == Changelog ==. Add one before releasing so WordPress.org shows accurate release notes."
+            exit 1
+          fi
+          echo "Found changelog entry for ${version}."
+
       - name: Validate and resolve version
         id: validate
         uses: airygen/actions/validate-plugin-version@0ecef83e6722a6b76fb46c2f567fa4d76279d9bf # main
