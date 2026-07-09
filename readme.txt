@@ -7,13 +7,13 @@ Stable tag: 0.0.0
 Requires PHP: 8.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl.html
-Build topic clusters, find internal linking opportunities, and generate AI-readable files (llms.txt, Markdown). Works alongside your SEO plugin.
+Build topic clusters, find internal linking opportunities, and generate AI-readable files (llms.txt, Markdown) for stronger SEO and GEO.
 
 == Description ==
 
 Airygen SEO helps WordPress publishers build stronger topic clusters, discover internal linking opportunities, and generate AI-readable site files such as `llms.txt` and Markdown exports.
 
-Use it alongside your existing SEO plugin, or enable only the modules you need. It is built for content-heavy sites that want better structure, stronger internal links, and modern AI search visibility (GEO) — without replacing their whole SEO workflow. Designed for modern WordPress sites running PHP 8.1+.
+It is built for content-heavy sites that want better structure, stronger internal links, and modern AI search visibility (GEO). Designed for modern WordPress sites running PHP 8.1+.
 
 = What makes it different =
 
@@ -22,10 +22,6 @@ Use it alongside your existing SEO plugin, or enable only the modules you need. 
 * **Sitewide SEO evaluation** — score your whole site, not just one post at a time.
 * **llms.txt and Markdown-for-agents** — publish AI-readable versions of your site so LLMs and agents can understand it.
 * **Modular architecture** — turn on only the workflows you actually need.
-
-= Works alongside your existing SEO plugin =
-
-You do not have to replace your current SEO plugin to try Airygen SEO. Enable just the modules that add something new — topic clusters, internal linking, and AI-readable output — and leave your existing titles, meta, and schema untouched. When you are ready for more, you can hand additional SEO responsibilities to Airygen SEO one module at a time.
 
 = A complete SEO toolkit when you want it =
 
@@ -48,10 +44,6 @@ Full source code is available on GitHub. Feature requests, bug reports, and cont
 4. Review post, term, author, and sitewide SEO settings based on your content model.
 
 == Frequently Asked Questions ==
-
-= Can I use it alongside Yoast, Rank Math, AIOSEO, or SEOPress? =
-
-Yes. You can install Airygen SEO next to your current SEO plugin and enable only the modules that add something new — such as Topic Clusters, Internal Linking, and llms.txt / Markdown export — while leaving on-page metadata and schema to your existing plugin. Every module is opt-in, so you decide exactly what Airygen SEO outputs.
 
 = Do you provide a migration tool from other SEO plugins? =
 
